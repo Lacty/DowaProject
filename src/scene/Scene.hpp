@@ -4,7 +4,7 @@
 
 enum class SceneType {
   Title,
-  Main,
+  GameMain,
   Result
 };
 
@@ -14,10 +14,11 @@ protected:
   
 public:
   Scene() = default;
-  virtual ~Scene();
+  virtual ~Scene() {};
   
   virtual void update() = 0;
   virtual void draw() = 0;
   
-  void setSceneType(const SceneType& type);
+  void setNextScene(const SceneType& type);
+  SceneType getSceneType();
 };

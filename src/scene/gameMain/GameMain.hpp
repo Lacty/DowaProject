@@ -3,11 +3,11 @@
 #include "../Scene.hpp"
 
 
-class Title : public Scene {
+class GameMain : public Scene {
 private:
   
 public:
-  Title();
+  GameMain();
   
   void update();
   void draw();

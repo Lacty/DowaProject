@@ -20,6 +20,11 @@
 		43B95190D86F410EB1394193 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C208751BA4C64AA9A0FEF572 /* Default-568h@2x.png */; };
 		53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */; };
 		9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35D261EFC1DD4236936029E3 /* MotionImplCoreMotion.mm */; };
+		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
+		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
+		ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */; };
+		ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE41BE764F000AF6824 /* SceneManager.cpp */; };
+		ACF91EEB1BE76AD000AF6824 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE91BE76AD000AF6824 /* GameMain.cpp */; };
 		BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24EAB30525624A3FA99EA6CD /* MotionManager.cpp */; };
 		C725DFFE121DAC7F00FA186B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C727C02B121B400300192073 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C725E001121DAC8F00FA186B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C725E000121DAC8F00FA186B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -46,6 +51,16 @@
 		57193DADEBDC4E54B24E0D9E /* MotionImplCoreMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionImplCoreMotion.h; path = ../blocks/MotionManager/src/cinder/MotionImplCoreMotion.h; sourceTree = "<group>"; };
 		68540AC17ABE427799CE74F6 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = DowaProjectApp.cpp; path = ../src/DowaProjectApp.cpp; sourceTree = "<group>"; };
+		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		ACF91EDA1BE757CD00AF6824 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
+		ACF91EDE1BE75ABC00AF6824 /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
+		ACF91EDF1BE75ABC00AF6824 /* Title.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Title.hpp; sourceTree = "<group>"; };
+		ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneMaker.cpp; sourceTree = "<group>"; };
+		ACF91EE21BE75BC600AF6824 /* SceneMaker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneMaker.hpp; sourceTree = "<group>"; };
+		ACF91EE41BE764F000AF6824 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
+		ACF91EE51BE764F000AF6824 /* SceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneManager.hpp; sourceTree = "<group>"; };
+		ACF91EE91BE76AD000AF6824 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
+		ACF91EEA1BE76AD000AF6824 /* GameMain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMain.hpp; sourceTree = "<group>"; };
 		B112C46395B542438FB8D300 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BBEC120E8DF24E54B3418175 /* MotionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionManager.h; path = ../blocks/MotionManager/src/cinder/MotionManager.h; sourceTree = "<group>"; };
 		C0EC8E147D564C46829F7611 /* CinderApp_ios.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = CinderApp_ios.png; path = ../resources/CinderApp_ios.png; sourceTree = "<group>"; };
@@ -127,6 +142,7 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ACF91ECE1BE7554E00AF6824 /* scene */,
 				96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */,
 			);
 			name = Source;
@@ -185,6 +201,40 @@
 				BBEC120E8DF24E54B3418175 /* MotionManager.h */,
 			);
 			name = cinder;
+			sourceTree = "<group>";
+		};
+		ACF91ECE1BE7554E00AF6824 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				ACF91EE81BE76AC200AF6824 /* gameMain */,
+				ACF91EDD1BE75AAF00AF6824 /* title */,
+				ACF91ED91BE757CD00AF6824 /* Scene.cpp */,
+				ACF91EDA1BE757CD00AF6824 /* Scene.hpp */,
+				ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */,
+				ACF91EE21BE75BC600AF6824 /* SceneMaker.hpp */,
+				ACF91EE41BE764F000AF6824 /* SceneManager.cpp */,
+				ACF91EE51BE764F000AF6824 /* SceneManager.hpp */,
+			);
+			name = scene;
+			path = ../src/scene;
+			sourceTree = "<group>";
+		};
+		ACF91EDD1BE75AAF00AF6824 /* title */ = {
+			isa = PBXGroup;
+			children = (
+				ACF91EDE1BE75ABC00AF6824 /* Title.cpp */,
+				ACF91EDF1BE75ABC00AF6824 /* Title.hpp */,
+			);
+			path = title;
+			sourceTree = "<group>";
+		};
+		ACF91EE81BE76AC200AF6824 /* gameMain */ = {
+			isa = PBXGroup;
+			children = (
+				ACF91EE91BE76AD000AF6824 /* GameMain.cpp */,
+				ACF91EEA1BE76AD000AF6824 /* GameMain.hpp */,
+			);
+			path = gameMain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */,
+				ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */,
+				ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */,
 				53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */,
+				ACF91EEB1BE76AD000AF6824 /* GameMain.cpp in Sources */,
 				BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
+				ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +382,7 @@
 		00692BF614FF149000D0A05E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -350,6 +406,7 @@
 		00692BF714FF149000D0A05E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
