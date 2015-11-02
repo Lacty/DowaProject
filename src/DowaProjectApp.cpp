@@ -11,7 +11,6 @@ using namespace ci::app;
 
 class DowaProjectApp : public AppNative {
 private:
-  SceneManager scene;
   
 public:
   void setup();
@@ -21,18 +20,18 @@ public:
 };
 
 void DowaProjectApp::setup() {
-  scene = SceneManager(SceneType::Title);
+  SceneManager::create(SceneType::Title);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {}
 
 void DowaProjectApp::update() {
-  scene.update();
+  SceneManager::update();
 }
 
 void DowaProjectApp::draw() {
 	gl::clear(Color(0.4f, 0.4f, 0.4f));
-  scene.draw();
+  SceneManager::draw();
 }
 
 CINDER_APP_NATIVE( DowaProjectApp, RendererGl )

@@ -1,11 +1,12 @@
 
 #include "Scene.hpp"
+#include "SceneManager.hpp"
 
 
 void Scene::setNextScene(const SceneType& type) {
-  this->type = type;
+  SceneManager::create(type);
 }
 
 SceneType Scene::getSceneType() {
-  return type;
+  return SceneManager::getSceneType();
 }

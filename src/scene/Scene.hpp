@@ -9,9 +9,6 @@ enum class SceneType {
 };
 
 class Scene {
-protected:
-  SceneType type;
-  
 public:
   Scene() = default;
   virtual ~Scene() {};

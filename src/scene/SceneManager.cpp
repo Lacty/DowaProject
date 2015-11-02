@@ -3,19 +3,25 @@
 #include "Scene.hpp"
 
 
-SceneManager::SceneManager(const SceneType& type) {
-  create(type);
+SceneManager& SceneManager::get() {
+  static SceneManager instance;
+  return instance;
 }
+
 
 void SceneManager::create(const SceneType& type) {
-  scene = maker.create(type);
+  get().type = type;
+  get().scene = get().maker.create(type);
 }
 
+SceneType SceneManager::getSceneType() {
+  return get().type;
+}
 
 void SceneManager::update() {
-  scene->update();
+  get().scene->update();
 }
 
 void SceneManager::draw() {
-  scene->draw();
+  get().scene->draw();
 }

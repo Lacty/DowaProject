@@ -14,14 +14,15 @@ private:
   SceneMaker maker;
   std::unique_ptr<Scene> scene;
   
-  void create(const SceneType& type);
+  static SceneManager& get();
   
-public:
   SceneManager() = default;
   
-  // ゲーム開始時に実行されるシーンを指定すること
-  SceneManager(const SceneType& type);
+public:
   
-  void update();
-  void draw();
+  static void create(const SceneType& type);
+  static SceneType getSceneType();
+  
+  static void update();
+  static void draw();
 };

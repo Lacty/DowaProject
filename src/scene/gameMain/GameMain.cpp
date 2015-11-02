@@ -3,9 +3,7 @@
 #include "cinder/gl/gl.h"
 
 
-GameMain::GameMain() {
-  type = SceneType::GameMain;
-}
+GameMain::GameMain() {}
 
 void GameMain::update() {
   

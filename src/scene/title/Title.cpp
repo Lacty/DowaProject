@@ -3,9 +3,7 @@
 #include "cinder/gl/gl.h"
 
 
-Title::Title() {
-  type = SceneType::Title;
-}
+Title::Title() {}
 
 void Title::update() {
   setNextScene(SceneType::GameMain);
