@@ -1,14 +1,14 @@
-//
-//  SceneMaker.hpp
-//  DowaProject
-//
-//  Created by Yanai on 2015/11/02.
-//
-//
 
-#ifndef SceneMaker_hpp
-#define SceneMaker_hpp
+#pragma once
+#include <memory>
 
-#include <stdio.h>
 
-#endif /* SceneMaker_hpp */
+class Scene;
+enum class SceneType;
+
+class SceneMaker {
+public:
+  SceneMaker() = default;
+  
+  std::unique_ptr<Scene> create(const SceneType& type) const;
+};
