@@ -1,14 +1,11 @@
-//
-//  Title.hpp
-//  DowaProject
-//
-//  Created by Yanai on 2015/11/02.
-//
-//
 
-#ifndef Title_hpp
-#define Title_hpp
+#pragma once
+#include "../Scene.hpp"
 
-#include <stdio.h>
 
-#endif /* Title_hpp */
+class Title : public Scene {
+private:
+public:
+  void update();
+  void draw();
+};
