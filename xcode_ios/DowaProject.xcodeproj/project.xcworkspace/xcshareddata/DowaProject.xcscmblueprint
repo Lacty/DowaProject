@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DA25DA7E6BF47877BB596659BE0F0B3F65FD7211",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9BE65ACB015AB9F0262E22BE0CEA1462FDBAE2C4" : 0,
+    "DA25DA7E6BF47877BB596659BE0F0B3F65FD7211" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "37D81C4A-CDB8-48D2-96DE-CBF122F91400",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9BE65ACB015AB9F0262E22BE0CEA1462FDBAE2C4" : "",
+    "DA25DA7E6BF47877BB596659BE0F0B3F65FD7211" : "DowaProject\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DowaProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "xcode_ios\/DowaProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lacty\/Cinder-Sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BE65ACB015AB9F0262E22BE0CEA1462FDBAE2C4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lacty\/DowaProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA25DA7E6BF47877BB596659BE0F0B3F65FD7211"
+    }
+  ]
+}
