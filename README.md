@@ -16,17 +16,17 @@
 
 
     #include "scene/gameMain/GameMain.hpp"
-    
+
     class GameMain {
     private:
       Vec2f mPos;
       Player mPlayer;
-      
+
     public:
       GameMain();
-      
+
       void update();
       void draw();
-      
+
       Vec2f getPos();
     };
