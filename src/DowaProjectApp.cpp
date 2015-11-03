@@ -5,6 +5,8 @@
 #include "scene/Scene.hpp"
 #include "scene/SceneManager.hpp"
 
+#include "resource/ResourceManager.hpp"
+
 
 using namespace ci;
 using namespace ci::app;

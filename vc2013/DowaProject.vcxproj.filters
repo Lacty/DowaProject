@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -12,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{8fdb4afc-bbad-42b6-a4c7-21f852a51b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scene">
+      <UniqueIdentifier>{531936d6-7653-4e15-acad-7bddabd5f9cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scene\Game Main">
+      <UniqueIdentifier>{a2db5609-81ec-4f0c-9ecf-ca2d5b82f22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scene\Title">
+      <UniqueIdentifier>{94a3e4d8-d908-4dd4-86e9-6f4d8a510175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scene\Result">
+      <UniqueIdentifier>{6741e86c-1494-41f6-965b-08d75b21c912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Resource">
+      <UniqueIdentifier>{d19547b8-8e58-4b9a-907a-c69ca7f11ae0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -20,11 +39,56 @@
     <ClCompile Include="..\src\DowaProjectApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\scene\Scene.cpp">
+      <Filter>System\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneMaker.cpp">
+      <Filter>System\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneManager.cpp">
+      <Filter>System\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\gameMain\GameMain.cpp">
+      <Filter>System\Scene\Game Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\title\Title.cpp">
+      <Filter>System\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\result\Result.cpp">
+      <Filter>System\Scene\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\ResourceManager.cpp">
+      <Filter>System\Resource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="..\src\scene\Scene.hpp">
+      <Filter>System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneMaker.hpp">
+      <Filter>System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneManager.hpp">
+      <Filter>System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\gameMain\GameMain.hpp">
+      <Filter>System\Scene\Game Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\title\Title.hpp">
+      <Filter>System\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\result\Result.hpp">
+      <Filter>System\Scene\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceManager.hpp">
+      <Filter>System\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp">
+      <Filter>System\Resource</Filter>
+    </ClInclude>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
