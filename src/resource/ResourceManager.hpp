@@ -25,7 +25,7 @@ namespace dowa {
 
     class AudioResource {
     private:
-      std::unordered_map <AudioKey, Audio> mappedResource;
+      std::unordered_map <AudioKey, Audio> mMappedResource;
 
     public:
       AudioResource();
@@ -38,7 +38,7 @@ namespace dowa {
 
     class TextureResource {
     private:
-      std::unordered_map<TextureKey, ci::gl::Texture> mappedResource;
+      std::unordered_map<TextureKey, ci::gl::Texture> mMappedResource;
 
     public:
       TextureResource();

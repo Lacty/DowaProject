@@ -10,9 +10,9 @@ hidden::AudioResource::AudioResource() {
 }
 
 bool hidden::AudioResource::insert(std::string path, AudioKey key) {
-  hidden::AudioIterator it = mappedResource.find(key);
+  hidden::AudioIterator it = mMappedResource.find(key);
 
-  if (it != mappedResource.end()) {
+  if (it != mMappedResource.end()) {
     return false;
   }
 
@@ -31,13 +31,13 @@ bool hidden::AudioResource::insert(std::string path, AudioKey key) {
 
   std::pair<AudioKey, hidden::Audio> res (key, temp);
 
-  mappedResource.insert(res);
+  mMappedResource.insert(res);
 
   return true;
 }
 
 hidden::Audio hidden::AudioResource::get(AudioKey key) {
-  return mappedResource.find(key)->second;
+  return mMappedResource.find(key)->second;
 }
 
 //Audio Resource
@@ -49,9 +49,9 @@ hidden::TextureResource::TextureResource() {
 }
 
 bool hidden::TextureResource::insert(std::string path, TextureKey key) {
-  hidden::TextureIterator it = mappedResource.find(key);
+  hidden::TextureIterator it = mMappedResource.find(key);
 
-  if (it != mappedResource.end()) {
+  if (it != mMappedResource.end()) {
     return false;
   }
 
@@ -61,13 +61,13 @@ bool hidden::TextureResource::insert(std::string path, TextureKey key) {
 
   std::pair<TextureKey, gl::Texture> res (key, temp);
 
-  mappedResource.insert(res);
+  mMappedResource.insert(res);
 
   return true;
 }
 
 ci::gl::Texture hidden::TextureResource::get(TextureKey key) {
-  return mappedResource.find(key)->second;
+  return mMappedResource.find(key)->second;
 }
 
 //Texture Resource
