@@ -10,9 +10,9 @@ enum class SceneType;
 
 class SceneManager {
 private:
-  SceneType type;
-  SceneMaker maker;
-  std::unique_ptr<Scene> scene;
+  SceneType mType;
+  SceneMaker mMaker;
+  std::unique_ptr<Scene> mScene;
   
   static SceneManager& get();
   

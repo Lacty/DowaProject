@@ -10,18 +10,18 @@ SceneManager& SceneManager::get() {
 
 
 void SceneManager::create(const SceneType& type) {
-  get().type = type;
-  get().scene = get().maker.create(type);
+  get().mType = type;
+  get().mScene = get().mMaker.create(type);
 }
 
 SceneType SceneManager::getSceneType() {
-  return get().type;
+  return get().mType;
 }
 
 void SceneManager::update() {
-  get().scene->update();
+  get().mScene->update();
 }
 
 void SceneManager::draw() {
-  get().scene->draw();
+  get().mScene->draw();
 }

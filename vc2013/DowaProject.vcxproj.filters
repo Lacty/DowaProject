@@ -30,6 +30,17 @@
     </Filter>
     <Filter Include="System\Resource">
       <UniqueIdentifier>{d19547b8-8e58-4b9a-907a-c69ca7f11ae0}</UniqueIdentifier>
+    <Filter Include="Source Files\scene">
+      <UniqueIdentifier>{f9ab6403-a20d-4890-b7cb-fdd1be0dc805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\title">
+      <UniqueIdentifier>{6f08cc79-7e5b-460b-aed8-a6044e2e013c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain">
+      <UniqueIdentifier>{c2ac1718-3ff9-46ee-8352-6c6fe4dba9c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\result">
+      <UniqueIdentifier>{aa634fed-106f-4f0f-a3a6-79ab32df19f7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -89,8 +100,46 @@
     <ClInclude Include="..\src\resource\ResourceKeys.hpp">
       <Filter>System\Resource</Filter>
     </ClInclude>
+    <ClCompile Include="..\src\scene\Scene.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneMaker.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneManager.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\title\Title.cpp">
+      <Filter>Source Files\scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\gameMain\GameMain.cpp">
+      <Filter>Source Files\scene\gameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\result\Result.cpp">
+      <Filter>Source Files\scene\result</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\Scene.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneMaker.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneManager.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\title\Title.hpp">
+      <Filter>Source Files\scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\gameMain\GameMain.hpp">
+      <Filter>Source Files\scene\gameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\result\Result.hpp">
+      <Filter>Source Files\scene\result</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
