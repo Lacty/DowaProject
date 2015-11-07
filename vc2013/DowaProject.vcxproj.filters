@@ -1,86 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
-    </Filter>
-    <Filter Include="Source Files\scene">
-      <UniqueIdentifier>{f9ab6403-a20d-4890-b7cb-fdd1be0dc805}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\scene\title">
-      <UniqueIdentifier>{6f08cc79-7e5b-460b-aed8-a6044e2e013c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\scene\gameMain">
-      <UniqueIdentifier>{c2ac1718-3ff9-46ee-8352-6c6fe4dba9c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\scene\result">
-      <UniqueIdentifier>{aa634fed-106f-4f0f-a3a6-79ab32df19f7}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\DowaProjectApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\DowaProjectApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClInclude Include="..\include\Resources.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClCompile Include="..\src\scene\Scene.cpp">
-      <Filter>Source Files\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\SceneMaker.cpp">
-      <Filter>Source Files\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\SceneManager.cpp">
-      <Filter>Source Files\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\title\Title.cpp">
-      <Filter>Source Files\scene\title</Filter>
-    </ClCompile>
+    <ClCompile Include="..\src\DowaProjectApp.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp">
-      <Filter>Source Files\scene\gameMain</Filter>
+      <Filter>System\Scenes\Game Main</Filter>
     </ClCompile>
     <ClCompile Include="..\src\scene\result\Result.cpp">
-      <Filter>Source Files\scene\result</Filter>
+      <Filter>System\Scenes\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\Scene.cpp">
+      <Filter>System\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneMaker.cpp">
+      <Filter>System\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneManager.cpp">
+      <Filter>System\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\title\Title.cpp">
+      <Filter>System\Scenes\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\ResourceManager.cpp">
+      <Filter>System\Resources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\Resources.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\Scene.hpp">
-      <Filter>Source Files\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\SceneMaker.hpp">
-      <Filter>Source Files\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\SceneManager.hpp">
-      <Filter>Source Files\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\title\Title.hpp">
-      <Filter>Source Files\scene\title</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp">
-      <Filter>Source Files\scene\gameMain</Filter>
+      <Filter>System\Scenes\Game Main</Filter>
     </ClInclude>
     <ClInclude Include="..\src\scene\result\Result.hpp">
-      <Filter>Source Files\scene\result</Filter>
+      <Filter>System\Scenes\Result</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\scene\Scene.hpp">
+      <Filter>System\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneMaker.hpp">
+      <Filter>System\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneManager.hpp">
+      <Filter>System\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\title\Title.hpp">
+      <Filter>System\Scenes\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp">
+      <Filter>System\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceManager.hpp">
+      <Filter>System\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Cinder Resources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{793c8e41-0686-48b8-abdd-61bb06fe69a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scenes">
+      <UniqueIdentifier>{cf36267b-d5f6-4b62-8481-2aad7efba12c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scenes\Game Main">
+      <UniqueIdentifier>{f9226eab-f27d-4e51-b4dd-385dd64d81e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scenes\Result">
+      <UniqueIdentifier>{4c9fc18c-8ed4-4d75-ad21-2d63e16d5438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Scenes\Title">
+      <UniqueIdentifier>{b34a0de8-4091-4526-ab18-13c41bc2ae83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Resources">
+      <UniqueIdentifier>{8cf6c2af-d695-45ca-a700-c600085d6cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cinder Resources">
+      <UniqueIdentifier>{e3f3a22d-1446-4529-a763-f2bc51879fcb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
-      <Filter>Resource Files</Filter>
+      <Filter>Cinder Resources</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>

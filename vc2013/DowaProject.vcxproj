@@ -65,7 +65,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder-$(PlatformToolset)_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>"..\..\cinder_0.8.6\lib\msw\$(PlatformTarget)"</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\cinder_0.8.6\lib\msw\$(PlatformTarget);..\..\cinder_0.8.6_mac\lib\msw\$(PlatformTarget)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -76,8 +76,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;"..\..\cinder_0.8.6_mac\include";"..\..\cinder_0.8.6_mac\boost"</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;PRODUCT_NAME=$(ProjectName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\cinder_0.8.6\boost;..\..\cinder_0.8.6\include;..\..\cinder_0.8.6_mac\include;..\..\cinder_0.8.6_mac\boost</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
@@ -92,7 +92,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder-$(PlatformToolset).lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>"..\..\cinder_0.8.6_mac\lib\msw\$(PlatformTarget)"</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\cinder_0.8.6\lib\msw\$(PlatformTarget);..\..\cinder_0.8.6_mac\lib\msw\$(PlatformTarget)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <GenerateMapFile>true</GenerateMapFile>
       <SubSystem>Windows</SubSystem>
@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp" />
+    <ClCompile Include="..\src\resource\ResourceManager.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
     <ClCompile Include="..\src\scene\result\Result.cpp" />
     <ClCompile Include="..\src\scene\Scene.cpp" />
@@ -117,6 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
+    <ClInclude Include="..\src\resource\ResourceManager.hpp" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />
     <ClInclude Include="..\src\scene\result\Result.hpp" />
     <ClInclude Include="..\src\scene\Scene.hpp" />
