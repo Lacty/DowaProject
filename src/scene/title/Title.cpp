@@ -1,8 +1,6 @@
-
 #include "Title.hpp"
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
-
 
 Title::Title() {}
 

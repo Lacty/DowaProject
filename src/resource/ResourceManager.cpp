@@ -45,9 +45,9 @@ hidden::Audio hidden::AudioResource::get(int key) {
 //Texture Resource
 
 hidden::TextureResource::TextureResource() {
-  //Tweak & Fix : リソース管理のコンストラクタじゃなくても動くので、
-  //シーンができ次第そいつらのコンストラクタに入れる
-  //ここで一気に読み込むと重いので
+  //Tweak & Fix : Place the insert function where you will use the textures
+  //It will work the same way
+  //inserting all the textures here may cause the program to be slower
 
   insert("object/DownVeil.png", TextureKey::DownVeil);
   insert("object/VeilSpace", TextureKey::VeilSpace);
@@ -66,7 +66,8 @@ hidden::TextureResource::TextureResource() {
   insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
   insert("background/title/SphereRed.png", TextureKey::SphereRed);
 
-  //Tweak it: 後でCinderellaTextureKeyを短い名前にtypedef
+  //Tweak it: Change the CinderellaTextureKey to something more readable
+  //Make it shorter with typedef
   insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
   insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
   insert("character/cinderella/3.png", CinderellaTextureKey::CharacterRight);
