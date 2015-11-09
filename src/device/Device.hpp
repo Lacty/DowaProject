@@ -6,8 +6,8 @@
 
 class Device {
 private:
-  static bool mIsTouchBegan;
-  static ci::Vec2f mTouchPos;
+  bool mIsTouchBegan;
+  ci::Vec2f mTouchPos;
   
   static Device& get();
   
