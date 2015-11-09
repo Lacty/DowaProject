@@ -49,8 +49,11 @@ hidden::TextureResource::TextureResource() {
   //It will work the same way
   //inserting all the textures here may cause the program to be slower
 
+  //Use it Right : When you insert some texture, do a fail check with it
+  //the insert function returns a bool value when executed
+
   insert("object/DownVeil.png", TextureKey::DownVeil);
-  insert("object/VeilSpace", TextureKey::VeilSpace);
+  insert("object/VeilSpace.png", TextureKey::VeilSpace);
 
   insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
   insert("background/title/FeatherBook.png", TextureKey::FeatherBook);
@@ -75,8 +78,8 @@ hidden::TextureResource::TextureResource() {
   insert("background/gameMain/cinderella/2.jpg", CinderellaTextureKey::Forest);
   insert("background/gameMain/cinderella/3.jpg", CinderellaTextureKey::Town3Houses);
   insert("background/gameMain/cinderella/4.jpg", CinderellaTextureKey::TownBridge);
-  insert("background/gameMain/cinderella/5.jpg", CinderellaTextureKey::Town2Houses);
-  insert("background/gameMain/cinderella/6.jpg", CinderellaTextureKey::Bridge);
+  insert("background/gameMain/cinderella/5.png", CinderellaTextureKey::Town2Houses);
+  insert("background/gameMain/cinderella/6.png", CinderellaTextureKey::Bridge);
   insert("background/gameMain/cinderella/7.jpg", CinderellaTextureKey::Castle);
 }
 
@@ -89,7 +92,7 @@ bool hidden::TextureResource::insert(std::string path, int key) {
 
   gl::Texture temp;
 
-  temp = gl::Texture(loadImage(ci::app::loadAsset("images/donut_0.png")));
+  temp = gl::Texture(loadImage(ci::app::loadAsset(path)));
 
   std::pair<int, gl::Texture> res (key, temp);
 
