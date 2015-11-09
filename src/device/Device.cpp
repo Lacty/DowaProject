@@ -18,8 +18,6 @@ ci::Vec2f Device::mTouchPos = ci::Vec2f::zero();
 
 void Device::enable() {
   get();
-  mIsTouchBegan = false;
-  mTouchPos = ci::Vec2f::zero();
   ci::MotionManager::enable();
 }
 
