@@ -1,3 +1,4 @@
+
 #include "ResourceManager.hpp"
 
 using namespace ci;
