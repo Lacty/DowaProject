@@ -1,6 +1,7 @@
 
 #include "SceneManager.hpp"
 #include "Scene.hpp"
+#include "../object/Task.hpp"
 
 
 SceneManager& SceneManager::get() {
@@ -20,8 +21,10 @@ SceneType SceneManager::getSceneType() {
 
 void SceneManager::update() {
   get().mScene->update();
+  Task::update();
 }
 
 void SceneManager::draw() {
   get().mScene->draw();
+  Task::draw();
 }
