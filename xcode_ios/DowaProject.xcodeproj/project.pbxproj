@@ -20,6 +20,8 @@
 		43B95190D86F410EB1394193 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C208751BA4C64AA9A0FEF572 /* Default-568h@2x.png */; };
 		53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */; };
 		9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35D261EFC1DD4236936029E3 /* MotionImplCoreMotion.mm */; };
+		AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */; };
+		ACE26C211BEB3B680065C6B4 /* Select.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE26C1F1BEB3B680065C6B4 /* Select.cpp */; };
 		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
 		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
 		ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */; };
@@ -52,6 +54,10 @@
 		57193DADEBDC4E54B24E0D9E /* MotionImplCoreMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionImplCoreMotion.h; path = ../blocks/MotionManager/src/cinder/MotionImplCoreMotion.h; sourceTree = "<group>"; };
 		68540AC17ABE427799CE74F6 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = DowaProjectApp.cpp; path = ../src/DowaProjectApp.cpp; sourceTree = "<group>"; };
+		AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
+		AC0DB5D91BEDA14E00E9EFC0 /* Device.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Device.hpp; sourceTree = "<group>"; };
+		ACE26C1F1BEB3B680065C6B4 /* Select.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Select.cpp; sourceTree = "<group>"; };
+		ACE26C201BEB3B680065C6B4 /* Select.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Select.hpp; sourceTree = "<group>"; };
 		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		ACF91EDA1BE757CD00AF6824 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		ACF91EDE1BE75ABC00AF6824 /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AC0DB5D71BEDA14400E9EFC0 /* device */,
 				ACF91ECE1BE7554E00AF6824 /* scene */,
 				96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */,
 			);
@@ -206,6 +213,16 @@
 			name = cinder;
 			sourceTree = "<group>";
 		};
+		AC0DB5D71BEDA14400E9EFC0 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */,
+				AC0DB5D91BEDA14E00E9EFC0 /* Device.hpp */,
+			);
+			name = device;
+			path = ../src/device;
+			sourceTree = "<group>";
+		};
 		ACF91ECE1BE7554E00AF6824 /* scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +235,8 @@
 				ACF91EE21BE75BC600AF6824 /* SceneMaker.hpp */,
 				ACF91EE41BE764F000AF6824 /* SceneManager.cpp */,
 				ACF91EE51BE764F000AF6824 /* SceneManager.hpp */,
+				ACE26C1F1BEB3B680065C6B4 /* Select.cpp */,
+				ACE26C201BEB3B680065C6B4 /* Select.hpp */,
 			);
 			name = scene;
 			path = ../src/scene;
@@ -278,7 +297,7 @@
 			attributes = {
 				TargetAttributes = {
 					00692BCE14FF149000D0A05E = {
-						DevelopmentTeam = X38UZ9C4BD;
+						DevelopmentTeam = F68WFR3SW2;
 					};
 				};
 			};
@@ -324,6 +343,8 @@
 				ACF91EEB1BE76AD000AF6824 /* GameMain.cpp in Sources */,
 				ACF91EEF1BE8069000AF6824 /* Result.cpp in Sources */,
 				BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */,
+				ACE26C211BEB3B680065C6B4 /* Select.cpp in Sources */,
+				AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
 				ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */,
 			);
@@ -411,6 +432,7 @@
 					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"",
 					"-lz",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.libcinder.DowaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -435,6 +457,7 @@
 					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"",
 					"-lz",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.libcinder.DowaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

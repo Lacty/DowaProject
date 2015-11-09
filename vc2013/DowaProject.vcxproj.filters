@@ -25,6 +25,12 @@
     <Filter Include="Source Files\scene\result">
       <UniqueIdentifier>{aa634fed-106f-4f0f-a3a6-79ab32df19f7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\resource">
+      <UniqueIdentifier>{2793f00b-0b23-45b3-b25e-88c7137d3394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\device">
+      <UniqueIdentifier>{e8dfd8ef-41eb-45e7-94dd-986078a30b93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -54,6 +60,12 @@
     <ClCompile Include="..\src\scene\result\Result.cpp">
       <Filter>Source Files\scene\result</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\resource\ResourceManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\device\Device.cpp">
+      <Filter>Source Files\device</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -76,6 +88,15 @@
     </ClInclude>
     <ClInclude Include="..\src\scene\result\Result.hpp">
       <Filter>Source Files\scene\result</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceManager.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\device\Device.hpp">
+      <Filter>Source Files\device</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

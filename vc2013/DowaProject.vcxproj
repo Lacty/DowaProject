@@ -51,7 +51,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\include;"..\..\cinder_0.8.6\include";"..\..\cinder_0.8.6\boost";"..\..\cinder_0.8.6\include\freetype2"</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;PRODUCT_NAME=$(ProjectName);DEBUG;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;PRODUCT_NAME=$(ProjectName);DEBUG;_ITERATOR_DEBUG_LEVEL = 0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;"..\..\cinder_0.8.6_mac\include";"..\..\cinder_0.8.6_mac\boost"</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\cinder_0.8.6\include;..\..\cinder_0.8.6\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;PRODUCT_NAME=$(ProjectName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -92,7 +92,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder-$(PlatformToolset).lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>"..\..\cinder_0.8.6_mac\lib\msw\$(PlatformTarget)"</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>"..\..\cinder_0.8.6\lib\msw\$(PlatformTarget)"</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <GenerateMapFile>true</GenerateMapFile>
       <SubSystem>Windows</SubSystem>
@@ -107,7 +107,9 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\device\Device.cpp" />
     <ClCompile Include="..\src\DowaProjectApp.cpp" />
+    <ClCompile Include="..\src\resource\ResourceManager.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
     <ClCompile Include="..\src\scene\result\Result.cpp" />
     <ClCompile Include="..\src\scene\Scene.cpp" />
@@ -117,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\src\device\Device.hpp" />
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
+    <ClInclude Include="..\src\resource\ResourceManager.hpp" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />
     <ClInclude Include="..\src\scene\result\Result.hpp" />
     <ClInclude Include="..\src\scene\Scene.hpp" />
