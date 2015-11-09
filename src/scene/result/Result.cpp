@@ -3,7 +3,6 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 
-
 Result::Result() {}
 
 void Result::update() {
