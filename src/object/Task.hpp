@@ -23,6 +23,8 @@ public:
   
   static void clear();
   
+private: void collisionUpdate(const std::shared_ptr<Object>& obj);
+public:
   static void update();
   static void draw();
 };
