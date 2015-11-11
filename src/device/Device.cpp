@@ -15,7 +15,7 @@ Device& Device::get() {
 
 void Device::enable() {
   get();
-  ci::MotionManager::enable();
+  //ci::MotionManager::enable();
 }
 
 bool Device::isDataAvailable() {

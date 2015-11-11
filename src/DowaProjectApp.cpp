@@ -23,7 +23,7 @@ public:
 
 void DowaProjectApp::setup() {
   Device::enable();
-  SceneManager::create(SceneType::Title);
+  SceneManager::create(SceneType::Test);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
@@ -41,9 +41,6 @@ void DowaProjectApp::touchesBegan(TouchEvent event) {
 
 void DowaProjectApp::update() {
   SceneManager::update();
-  if (Device::isTouchBegan()) {
-    console() << Device::getTouchPos() << std::endl;
-  }
 }
 
 void DowaProjectApp::draw() {
