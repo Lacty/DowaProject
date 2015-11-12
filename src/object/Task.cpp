@@ -33,7 +33,7 @@ void Task::collisionUpdate(const std::shared_ptr<Object>& obj) {
     
     else // Run if both are set ColliderType
     {
-      if (isCollisionRectToRect(obj, compare.second)) {
+      if (dowa::isCollisionRectToRect(obj, compare.second)) {
         obj->onCollisionUpdate();
       }
     }
