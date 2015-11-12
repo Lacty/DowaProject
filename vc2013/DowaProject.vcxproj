@@ -107,19 +107,27 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\collision\Collision.cpp" />
     <ClCompile Include="..\src\device\Device.cpp" />
     <ClCompile Include="..\src\DowaProjectApp.cpp" />
+    <ClCompile Include="..\src\object\Object.cpp" />
+    <ClCompile Include="..\src\object\Task.cpp" />
     <ClCompile Include="..\src\resource\ResourceManager.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
     <ClCompile Include="..\src\scene\result\Result.cpp" />
     <ClCompile Include="..\src\scene\Scene.cpp" />
     <ClCompile Include="..\src\scene\SceneMaker.cpp" />
     <ClCompile Include="..\src\scene\SceneManager.cpp" />
+    <ClCompile Include="..\src\scene\Select.cpp" />
+    <ClCompile Include="..\src\scene\test\Test.cpp" />
     <ClCompile Include="..\src\scene\title\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\src\collision\Collision.hpp" />
     <ClInclude Include="..\src\device\Device.hpp" />
+    <ClInclude Include="..\src\object\Object.hpp" />
+    <ClInclude Include="..\src\object\Task.hpp" />
     <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
     <ClInclude Include="..\src\resource\ResourceManager.hpp" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />
@@ -127,6 +135,8 @@
     <ClInclude Include="..\src\scene\Scene.hpp" />
     <ClInclude Include="..\src\scene\SceneMaker.hpp" />
     <ClInclude Include="..\src\scene\SceneManager.hpp" />
+    <ClInclude Include="..\src\scene\Select.hpp" />
+    <ClInclude Include="..\src\scene\test\Test.hpp" />
     <ClInclude Include="..\src\scene\title\Title.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
