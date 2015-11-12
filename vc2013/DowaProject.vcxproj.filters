@@ -90,6 +90,9 @@
     <ClCompile Include="..\src\collision\Collision.cpp">
       <Filter>Source Files\collision</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\resource\DataManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -136,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="..\src\collision\Collision.hpp">
       <Filter>Source Files\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\DataManager.hpp">
+      <Filter>Source Files\resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
