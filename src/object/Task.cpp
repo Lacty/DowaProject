@@ -1,6 +1,7 @@
 
 #include "Task.hpp"
 #include "Object.hpp"
+#include "../collision/Collision.hpp"
 #include <assert.h>
 
 
@@ -9,14 +10,34 @@ Task& Task::get() {
   return instance;
 }
 
-void Task::add(const std::string &key, const std::shared_ptr<Object> &obj) {
+void Task::add(const std::string &key, const std::shared_ptr<Object>& obj) {
   assert(get().mMap[key] == nullptr);
   get().mMap[key] = obj;
 }
 
-std::shared_ptr<Object> Task::find(const std::string &key) {
+std::shared_ptr<Object> Task::find(const std::string& key) {
   assert(get().mMap[key] == nullptr);
   return get().mMap[key];
+}
+
+void Task::clear() {
+  get().mMap.clear();
+}
+
+void Task::collisionUpdate(const std::shared_ptr<Object>& obj) {
+  if (obj->isColliderTypeNone()) return;
+  
+  for (auto& compare : get().mMap) {
+    if (compare.second->isColliderTypeNone()) continue;
+    else if (obj == compare.second) continue;
+    
+    else // Run if both are set ColliderType
+    {
+      if (isCollisionRectToRect(obj, compare.second)) {
+        obj->onCollisionUpdate();
+      }
+    }
+  }
 }
 
 void Task::update() {
@@ -28,13 +49,14 @@ void Task::update() {
         obj.second->setState(Object::State::Active);
         break;
       }
-        
+      
       case Object::State::Active :
       {
+        get().collisionUpdate(obj.second);
         obj.second->update();
         break;
       }
-        
+      
       case Object::State::Dead :
       {
         get().mMap.erase(obj.second->getName());

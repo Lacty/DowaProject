@@ -1,5 +1,6 @@
 
 #include "Object.hpp"
+#include "Task.hpp"
 
 
 Object::Object() :
@@ -52,4 +53,16 @@ void Object::setName(const std::string& name) {
 
 const std::string Object::getName() const {
   return mName;
+}
+
+const ci::Vec3f Object::getPos() const {
+  return mPos;
+}
+
+const ci::Vec3f Object::getSize() const {
+  return mSize;
+}
+
+const ci::Vec3f Object::getRotate() const {
+  return mRotate;
 }

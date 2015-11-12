@@ -31,6 +31,15 @@
     <Filter Include="Source Files\device">
       <UniqueIdentifier>{e8dfd8ef-41eb-45e7-94dd-986078a30b93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\scene\test">
+      <UniqueIdentifier>{a7608591-7e5a-4eed-8153-17d1965da772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object">
+      <UniqueIdentifier>{8d1e51b2-772e-4da5-8692-0d39189daa4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\collision">
+      <UniqueIdentifier>{50007122-294b-452d-8c30-e39769944e72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -66,6 +75,21 @@
     <ClCompile Include="..\src\device\Device.cpp">
       <Filter>Source Files\device</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\scene\test\Test.cpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\Select.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\object\Object.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\object\Task.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\collision\Collision.cpp">
+      <Filter>Source Files\collision</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -97,6 +121,21 @@
     </ClInclude>
     <ClInclude Include="..\src\device\Device.hpp">
       <Filter>Source Files\device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Test.hpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\Select.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\object\Object.hpp">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\object\Task.hpp">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\collision\Collision.hpp">
+      <Filter>Source Files\collision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
