@@ -1,7 +1,7 @@
 
 #pragma once
 #include <string>
-
+#include "../../../cinder_0.8.6/include/cinder/app/AppNative.h"
 
 class Object {
 public:
