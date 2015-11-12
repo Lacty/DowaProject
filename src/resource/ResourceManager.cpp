@@ -46,7 +46,7 @@ hidden::Audio hidden::AudioResource::get(int key) {
 //Texture Resource
 
 hidden::TextureResource::TextureResource() {
-  //Tweak & Fix : Place the insert function where you will use the textures
+  //Tweak : Place the insert function where you will use the textures
   //It will work the same way
   //inserting all the textures here may cause the program to be slower
 
