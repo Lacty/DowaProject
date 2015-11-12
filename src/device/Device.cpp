@@ -62,16 +62,16 @@ ci::Vec3f Device::getRotationRate() {
 }
 
 void Device::setTouchState(bool isTouch, const ci::Vec2f& pos) {
-  mIsTouchBegan = isTouch;
-  mTouchPos = pos;
+  get().mIsTouchBegan = isTouch;
+  get().mTouchPos = pos;
 }
 
 bool Device::isTouchBegan() {
-  return mIsTouchBegan;
+  return get().mIsTouchBegan;
 }
 
 ci::Vec2f Device::getTouchPos() {
-  return mTouchPos;
+  return get().mTouchPos;
 }
 
 #endif

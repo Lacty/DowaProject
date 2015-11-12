@@ -112,6 +112,7 @@
     <ClCompile Include="..\src\DowaProjectApp.cpp" />
     <ClCompile Include="..\src\object\Object.cpp" />
     <ClCompile Include="..\src\object\Task.cpp" />
+    <ClCompile Include="..\src\resource\DataManager.cpp" />
     <ClCompile Include="..\src\resource\ResourceManager.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
     <ClCompile Include="..\src\scene\result\Result.cpp" />
@@ -128,6 +129,7 @@
     <ClInclude Include="..\src\device\Device.hpp" />
     <ClInclude Include="..\src\object\Object.hpp" />
     <ClInclude Include="..\src\object\Task.hpp" />
+    <ClInclude Include="..\src\resource\DataManager.hpp" />
     <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
     <ClInclude Include="..\src\resource\ResourceManager.hpp" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />

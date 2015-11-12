@@ -2,7 +2,7 @@
 #include "Collision.hpp"
 
 
-bool isCollisionRectToRect(const std::shared_ptr<Object>& obj1,
+bool dowa::isCollisionRectToRect(const std::shared_ptr<Object>& obj1,
                            const std::shared_ptr<Object>& obj2)
 {
   float left1   = obj1->getPos().x - obj1->getSize().x * 0.5f;
@@ -27,7 +27,7 @@ bool isCollisionRectToRect(const std::shared_ptr<Object>& obj1,
   return false;
 }
 
-bool isCollisionCircleTpCircle(const std::shared_ptr<Object>& obj1,
+bool dowa::isCollisionCircleToCircle(const std::shared_ptr<Object>& obj1,
                                const std::shared_ptr<Object>& obj2)
 {
   if ((obj1->getPos().x - obj2->getPos().x) * 2 + (obj1->getPos().y - obj2->getPos().y) * 2 <= (obj1->getSize().x + obj2->getSize().x) * 2) {
