@@ -18,7 +18,7 @@ std::unique_ptr<Scene> SceneMaker::create(const SceneType& type) const {
     { SceneType::GameMain, []{ return make_unique<GameMain>(); } },
     { SceneType::Result,   []{ return make_unique<Result>();   } },
     
-    { SceneType::Test, []{ return make_unique<Test>(); } }
+    { SceneType::Test,     []{ return make_unique<Test>();     } }
   };
   
   return std::move((list.find(type)->second)());

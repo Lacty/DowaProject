@@ -7,7 +7,6 @@ Device& Device::get() {
   return instance;
 }
 
-
 //-----------------------------------------------//
 #if !defined(CINDER_MSW)
 
@@ -15,7 +14,7 @@ Device& Device::get() {
 
 void Device::enable() {
   get();
-  //ci::MotionManager::enable();
+  ci::MotionManager::enable();
 }
 
 bool Device::isDataAvailable() {
