@@ -21,6 +21,12 @@
 		53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */; };
 		9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35D261EFC1DD4236936029E3 /* MotionImplCoreMotion.mm */; };
 		AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */; };
+		AC31702A1BF5BA30001F589B /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170251BF5BA30001F589B /* DataManager.cpp */; };
+		AC31702B1BF5BA30001F589B /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170281BF5BA30001F589B /* ResourceManager.cpp */; };
+		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
+		ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081DB1BF317CD005FB898 /* Test.cpp */; };
+		ACDB32F21BEF124F00046195 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F01BEF124F00046195 /* Object.cpp */; };
+		ACDB32FA1BF040F000046195 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F81BF040F000046195 /* Task.cpp */; };
 		ACE26C211BEB3B680065C6B4 /* Select.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE26C1F1BEB3B680065C6B4 /* Select.cpp */; };
 		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
 		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
@@ -56,6 +62,19 @@
 		96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = DowaProjectApp.cpp; path = ../src/DowaProjectApp.cpp; sourceTree = "<group>"; };
 		AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
 		AC0DB5D91BEDA14E00E9EFC0 /* Device.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Device.hpp; sourceTree = "<group>"; };
+		AC3170251BF5BA30001F589B /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManager.cpp; sourceTree = "<group>"; };
+		AC3170261BF5BA30001F589B /* DataManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataManager.hpp; sourceTree = "<group>"; };
+		AC3170271BF5BA30001F589B /* ResourceKeys.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceKeys.hpp; sourceTree = "<group>"; };
+		AC3170281BF5BA30001F589B /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
+		AC3170291BF5BA30001F589B /* ResourceManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceManager.hpp; sourceTree = "<group>"; };
+		ACA081D71BF25720005FB898 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
+		ACA081D81BF25720005FB898 /* Collision.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
+		ACA081DB1BF317CD005FB898 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		ACA081DC1BF317CD005FB898 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
+		ACDB32F01BEF124F00046195 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		ACDB32F11BEF124F00046195 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
+		ACDB32F81BF040F000046195 /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
+		ACDB32F91BF040F000046195 /* Task.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Task.hpp; sourceTree = "<group>"; };
 		ACE26C1F1BEB3B680065C6B4 /* Select.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Select.cpp; sourceTree = "<group>"; };
 		ACE26C201BEB3B680065C6B4 /* Select.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Select.hpp; sourceTree = "<group>"; };
 		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
@@ -151,6 +170,9 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AC3170241BF5BA30001F589B /* resource */,
+				ACA081D61BF2570E005FB898 /* collision */,
+				ACDB32EF1BEF120900046195 /* object */,
 				AC0DB5D71BEDA14400E9EFC0 /* device */,
 				ACF91ECE1BE7554E00AF6824 /* scene */,
 				96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */,
@@ -223,9 +245,54 @@
 			path = ../src/device;
 			sourceTree = "<group>";
 		};
+		AC3170241BF5BA30001F589B /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				AC3170251BF5BA30001F589B /* DataManager.cpp */,
+				AC3170261BF5BA30001F589B /* DataManager.hpp */,
+				AC3170271BF5BA30001F589B /* ResourceKeys.hpp */,
+				AC3170281BF5BA30001F589B /* ResourceManager.cpp */,
+				AC3170291BF5BA30001F589B /* ResourceManager.hpp */,
+			);
+			name = resource;
+			path = ../src/resource;
+			sourceTree = "<group>";
+		};
+		ACA081D61BF2570E005FB898 /* collision */ = {
+			isa = PBXGroup;
+			children = (
+				ACA081D71BF25720005FB898 /* Collision.cpp */,
+				ACA081D81BF25720005FB898 /* Collision.hpp */,
+			);
+			name = collision;
+			path = ../src/collision;
+			sourceTree = "<group>";
+		};
+		ACA081DA1BF317B1005FB898 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				ACA081DB1BF317CD005FB898 /* Test.cpp */,
+				ACA081DC1BF317CD005FB898 /* Test.hpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		ACDB32EF1BEF120900046195 /* object */ = {
+			isa = PBXGroup;
+			children = (
+				ACDB32F01BEF124F00046195 /* Object.cpp */,
+				ACDB32F11BEF124F00046195 /* Object.hpp */,
+				ACDB32F81BF040F000046195 /* Task.cpp */,
+				ACDB32F91BF040F000046195 /* Task.hpp */,
+			);
+			name = object;
+			path = ../src/object;
+			sourceTree = "<group>";
+		};
 		ACF91ECE1BE7554E00AF6824 /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				ACA081DA1BF317B1005FB898 /* test */,
 				ACF91EEC1BE8067C00AF6824 /* result */,
 				ACF91EE81BE76AC200AF6824 /* gameMain */,
 				ACF91EDD1BE75AAF00AF6824 /* title */,
@@ -336,17 +403,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA081D91BF25720005FB898 /* Collision.cpp in Sources */,
 				ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */,
 				ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */,
+				ACDB32F21BEF124F00046195 /* Object.cpp in Sources */,
 				ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */,
+				AC31702A1BF5BA30001F589B /* DataManager.cpp in Sources */,
 				53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */,
 				ACF91EEB1BE76AD000AF6824 /* GameMain.cpp in Sources */,
 				ACF91EEF1BE8069000AF6824 /* Result.cpp in Sources */,
 				BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */,
+				ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */,
 				ACE26C211BEB3B680065C6B4 /* Select.cpp in Sources */,
+				AC31702B1BF5BA30001F589B /* ResourceManager.cpp in Sources */,
 				AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
 				ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */,
+				ACDB32FA1BF040F000046195 /* Task.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +450,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/MotionManager/src";
@@ -405,7 +478,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,6 +497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DowaProject_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
 					"\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"",
 					"-lz",
@@ -435,6 +509,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.libcinder.DowaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -449,6 +524,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DowaProject_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
 					"\"$(CINDER_PATH)/lib/libcinder-iphone.a\"",
 					"-lz",
@@ -460,6 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.libcinder.DowaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
