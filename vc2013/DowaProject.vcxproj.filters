@@ -78,9 +78,6 @@
     <ClCompile Include="..\src\scene\test\Test.cpp">
       <Filter>Source Files\scene\test</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\scene\Select.cpp">
-      <Filter>Source Files\scene</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\object\Object.cpp">
       <Filter>Source Files\object</Filter>
     </ClCompile>
@@ -127,9 +124,6 @@
     </ClInclude>
     <ClInclude Include="..\src\scene\test\Test.hpp">
       <Filter>Source Files\scene\test</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\Select.hpp">
-      <Filter>Source Files\scene</Filter>
     </ClInclude>
     <ClInclude Include="..\src\object\Object.hpp">
       <Filter>Source Files\object</Filter>
