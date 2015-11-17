@@ -11,7 +11,7 @@ void Object::setState(const State& state) {
   mState = state;
 }
 
-const Object::State Object::getState() const {
+const Object::State& Object::getState() const {
   return mState;
 }
 
@@ -31,7 +31,7 @@ void Object::setColliderType(const Collider& type) {
   mCollider = type;
 }
 
-const Object::Collider Object::getColliderType() const {
+const Object::Collider& Object::getColliderType() const {
   return mCollider;
 }
 
@@ -51,18 +51,18 @@ void Object::setName(const std::string& name) {
   mName = name;
 }
 
-const std::string Object::getName() const {
+const std::string& Object::getName() const {
   return mName;
 }
 
-const ci::Vec3f Object::getPos() const {
+const ci::Vec3f& Object::getPos() const {
   return mPos;
 }
 
-const ci::Vec3f Object::getSize() const {
+const ci::Vec3f& Object::getSize() const {
   return mSize;
 }
 
-const ci::Vec3f Object::getRotate() const {
+const ci::Vec3f& Object::getRotate() const {
   return mRotate;
 }

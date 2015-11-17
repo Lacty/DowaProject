@@ -20,5 +20,5 @@ public:
   virtual void draw() = 0;
   
   void setNextScene(const SceneType& type);
-  SceneType getSceneType();
+  const SceneType getSceneType() const;
 };

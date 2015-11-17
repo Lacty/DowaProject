@@ -7,6 +7,6 @@ void Scene::setNextScene(const SceneType& type) {
   SceneManager::create(type);
 }
 
-SceneType Scene::getSceneType() {
+const SceneType Scene::getSceneType() const {
   return SceneManager::getSceneType();
 }

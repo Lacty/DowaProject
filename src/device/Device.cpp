@@ -7,7 +7,6 @@ Device& Device::get() {
   return instance;
 }
 
-
 //-----------------------------------------------//
 #if !defined(CINDER_MSW)
 
@@ -15,18 +14,18 @@ Device& Device::get() {
 
 void Device::enable() {
   get();
-  //ci::MotionManager::enable();
+  ci::MotionManager::enable();
 }
 
-bool Device::isDataAvailable() {
+const bool Device::isDataAvailable() {
   return ci::MotionManager::isDataAvailable();
 }
 
-ci::Quatf Device::getRotation() {
+const ci::Quatf Device::getRotation() {
   return ci::MotionManager::getRotation();
 }
 
-ci::Vec3f Device::getRotationRate() {
+const ci::Vec3f Device::getRotationRate() {
   return ci::MotionManager::getRotationRate();
 }
 
@@ -35,11 +34,11 @@ void Device::setTouchState(bool isTouch, const ci::Vec2f& pos) {
   get().mTouchPos = pos;
 }
 
-bool Device::isTouchBegan() {
+const bool Device::isTouchBegan() {
   return get().mIsTouchBegan;
 }
 
-ci::Vec2f Device::getTouchPos() {
+const ci::Vec2f Device::getTouchPos() {
   return get().mTouchPos;
 }
 
@@ -50,29 +49,29 @@ void Device::enable() {
   get();
 }
 
-bool Device::isDataAvailable() {
+const bool Device::isDataAvailable() {
   return true;
 }
 
-ci::Quatf Device::getRotation() {
+const ci::Quatf Device::getRotation() {
   return ci::Quatf(0, 0, 0, 0);
 }
 
-ci::Vec3f Device::getRotationRate() {
+const ci::Vec3f Device::getRotationRate() {
   return ci::Vec3f::zero();
 }
 
 void Device::setTouchState(bool isTouch, const ci::Vec2f& pos) {
-  mIsTouchBegan = isTouch;
-  mTouchPos = pos;
+  get().mIsTouchBegan = isTouch;
+  get().mTouchPos = pos;
 }
 
-bool Device::isTouchBegan() {
-  return mIsTouchBegan;
+const bool Device::isTouchBegan() {
+  return get().mIsTouchBegan;
 }
 
-ci::Vec2f Device::getTouchPos() {
-  return mTouchPos;
+const ci::Vec2f Device::getTouchPos() {
+  return get().mTouchPos;
 }
 
 #endif

@@ -3,8 +3,8 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 
-
-void Test::update() {}
+void Test::update() {
+}
 
 void Test::draw() {
   ci::gl::pushModelView();
