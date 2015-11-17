@@ -20,6 +20,7 @@ void SceneManager::create(const SceneType &scene) {
 void SceneManager::setNextScene(const SceneType& scene, const FadeType& fade) {
   get().mFadeIn = fade;
   get().mSceneType = scene;
+  get().mScene = get().mMaker.create(scene);
 }
 
 SceneType SceneManager::getSceneType() {
