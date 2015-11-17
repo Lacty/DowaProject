@@ -5,22 +5,23 @@
 #include <memory>
 
 
-class Scene;
-enum class SceneType;
-
 class SceneManager {
 private:
-  SceneType mType;
+  SceneType mSceneType;
+  FadeType mFadeOut, mFadeIn;
   SceneMaker mMaker;
   std::unique_ptr<Scene> mScene;
+  bool isDuringFade;
   
   static SceneManager& get();
   
-  SceneManager() = default;
+  SceneManager();
+  
+  void create(const SceneType& scene);
   
 public:
   
-  static void create(const SceneType& type);
+  static void setNextScene(const SceneType& scene, const FadeType& fade);
   static SceneType getSceneType();
   
   static void update();
