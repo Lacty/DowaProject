@@ -6,7 +6,7 @@
 Title::Title() {}
 
 void Title::update() {
-  setNextScene(SceneType::GameMain);
+  setNextScene(SceneType::GameMain, FadeType::None);
 }
 
 void Title::draw() {
