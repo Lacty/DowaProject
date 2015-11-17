@@ -21,6 +21,8 @@
 		53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */; };
 		9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35D261EFC1DD4236936029E3 /* MotionImplCoreMotion.mm */; };
 		AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */; };
+		AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A261BFB359500345AA5 /* FadeIn.cpp */; };
+		AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A281BFB359500345AA5 /* FadeOut.cpp */; };
 		AC31702A1BF5BA30001F589B /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170251BF5BA30001F589B /* DataManager.cpp */; };
 		AC31702B1BF5BA30001F589B /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC3170281BF5BA30001F589B /* ResourceManager.cpp */; };
 		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
@@ -61,6 +63,11 @@
 		96366FBAD7F24B33845C09FA /* DowaProjectApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = DowaProjectApp.cpp; path = ../src/DowaProjectApp.cpp; sourceTree = "<group>"; };
 		AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
 		AC0DB5D91BEDA14E00E9EFC0 /* Device.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Device.hpp; sourceTree = "<group>"; };
+		AC2D3A251BFB359500345AA5 /* FadeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeBase.h; sourceTree = "<group>"; };
+		AC2D3A261BFB359500345AA5 /* FadeIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FadeIn.cpp; sourceTree = "<group>"; };
+		AC2D3A271BFB359500345AA5 /* FadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeIn.h; sourceTree = "<group>"; };
+		AC2D3A281BFB359500345AA5 /* FadeOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FadeOut.cpp; sourceTree = "<group>"; };
+		AC2D3A291BFB359500345AA5 /* FadeOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeOut.h; sourceTree = "<group>"; };
 		AC3170251BF5BA30001F589B /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManager.cpp; sourceTree = "<group>"; };
 		AC3170261BF5BA30001F589B /* DataManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataManager.hpp; sourceTree = "<group>"; };
 		AC3170271BF5BA30001F589B /* ResourceKeys.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceKeys.hpp; sourceTree = "<group>"; };
@@ -242,6 +249,18 @@
 			path = ../src/device;
 			sourceTree = "<group>";
 		};
+		AC2D3A241BFB359500345AA5 /* fade */ = {
+			isa = PBXGroup;
+			children = (
+				AC2D3A251BFB359500345AA5 /* FadeBase.h */,
+				AC2D3A261BFB359500345AA5 /* FadeIn.cpp */,
+				AC2D3A271BFB359500345AA5 /* FadeIn.h */,
+				AC2D3A281BFB359500345AA5 /* FadeOut.cpp */,
+				AC2D3A291BFB359500345AA5 /* FadeOut.h */,
+			);
+			path = fade;
+			sourceTree = "<group>";
+		};
 		AC3170241BF5BA30001F589B /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +308,7 @@
 		ACF91ECE1BE7554E00AF6824 /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				AC2D3A241BFB359500345AA5 /* fade */,
 				ACA081DA1BF317B1005FB898 /* test */,
 				ACF91EEC1BE8067C00AF6824 /* result */,
 				ACF91EE81BE76AC200AF6824 /* gameMain */,
@@ -412,7 +432,9 @@
 				AC31702B1BF5BA30001F589B /* ResourceManager.cpp in Sources */,
 				AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
+				AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */,
 				ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */,
+				AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */,
 				ACDB32FA1BF040F000046195 /* Task.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
