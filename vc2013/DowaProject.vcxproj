@@ -114,6 +114,8 @@
     <ClCompile Include="..\src\object\Task.cpp" />
     <ClCompile Include="..\src\resource\DataManager.cpp" />
     <ClCompile Include="..\src\resource\ResourceManager.cpp" />
+    <ClCompile Include="..\src\scene\fade\FadeIn.cpp" />
+    <ClCompile Include="..\src\scene\fade\FadeOut.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
     <ClCompile Include="..\src\scene\result\Result.cpp" />
     <ClCompile Include="..\src\scene\Scene.cpp" />
@@ -131,6 +133,9 @@
     <ClInclude Include="..\src\resource\DataManager.hpp" />
     <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
     <ClInclude Include="..\src\resource\ResourceManager.hpp" />
+    <ClInclude Include="..\src\scene\fade\FadeBase.h" />
+    <ClInclude Include="..\src\scene\fade\FadeIn.h" />
+    <ClInclude Include="..\src\scene\fade\FadeOut.h" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />
     <ClInclude Include="..\src\scene\result\Result.hpp" />
     <ClInclude Include="..\src\scene\Scene.hpp" />

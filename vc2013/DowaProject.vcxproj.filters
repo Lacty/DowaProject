@@ -40,6 +40,15 @@
     <Filter Include="Source Files\collision">
       <UniqueIdentifier>{50007122-294b-452d-8c30-e39769944e72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\scene\fade">
+      <UniqueIdentifier>{abf6d299-3b18-48ae-b3cb-64f1ad5ec955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\fade\fadeOut">
+      <UniqueIdentifier>{13754c89-cc06-47ea-929f-d5f2b28b562a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\fade\fadeIn">
+      <UniqueIdentifier>{289ac625-acff-4677-956e-40b885f469a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -90,6 +99,12 @@
     <ClCompile Include="..\src\resource\DataManager.cpp">
       <Filter>Source Files\resource</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\scene\fade\FadeIn.cpp">
+      <Filter>Source Files\scene\fade\fadeIn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\fade\FadeOut.cpp">
+      <Filter>Source Files\scene\fade\fadeOut</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -136,6 +151,15 @@
     </ClInclude>
     <ClInclude Include="..\src\resource\DataManager.hpp">
       <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeBase.h">
+      <Filter>Source Files\scene\fade</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeIn.h">
+      <Filter>Source Files\scene\fade\fadeIn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeOut.h">
+      <Filter>Source Files\scene\fade\fadeOut</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
