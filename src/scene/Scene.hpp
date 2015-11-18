@@ -2,6 +2,8 @@
 #pragma once
 
 
+enum class FadeType;
+
 enum class SceneType {
   Title,
   Select,
@@ -9,18 +11,6 @@ enum class SceneType {
   Result,
   
   Test
-};
-
-enum class FadeType {
-  None,
-  
-  FullScreen,
-  Circle,
-  Vell,
-  FromLeft,
-  FromRight,
-  BothSide,
-  Hole
 };
 
 class Scene {
