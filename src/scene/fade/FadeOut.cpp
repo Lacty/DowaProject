@@ -21,43 +21,43 @@ void FadeOut::setType(FadeType type,
 	int time, Color color, bool isUseEasing) {
 
 	switch (type) {
-	case FullScreen:
+	case FadeType::FullScreen:
 		fade = [=] {
 			fullScreenFade(time, color, isUseEasing);
 		};
 		break;
 
-	case Circle:
+	case FadeType::Circle:
 		fade = [=] {
 			circleScalingFade(time, color, isUseEasing);
 		};
 		break;
 
-	case Vell:
+	case FadeType::Vell:
 		fade = [=] {
 			veilDownFade(time, color, isUseEasing);
 		};
 		break;
 
-	case FromLeft:
+	case FadeType::FromLeft:
 		fade = [=] {
 			fromLeftCurtainFade(time, color, isUseEasing);
 		};
 		break;
 
-	case FromRight:
+	case FadeType::FromRight:
 		fade = [=] {
 			fromRightCurtainFade(time, color, isUseEasing);
 		};
 		break;
 
-	case BothSide:
+	case FadeType::BothSide:
 		fade = [=] {
 			centerCurtainFade(time, color, isUseEasing);
 		};
 		break;
 
-	case Hole:
+	case FadeType::Hole:
 		fade = [=] {
 			pinHoleFade(time, 0.0f, 50, color, isUseEasing);
 		};

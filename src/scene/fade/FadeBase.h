@@ -15,7 +15,7 @@ using namespace ci::app;
 using namespace std;
 
 
-enum FadeType {
+enum class FadeType {
 None,
 
 FullScreen,
