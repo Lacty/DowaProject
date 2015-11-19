@@ -4,8 +4,7 @@
 #include "../object/Task.hpp"
 
 
-SceneManager::SceneManager() :
-isDuringFade(false) {}
+SceneManager::SceneManager() {}
 
 SceneManager& SceneManager::get() {
   static SceneManager instance;
@@ -14,17 +13,16 @@ SceneManager& SceneManager::get() {
 
 
 void SceneManager::create(const SceneType &scene) {
+  get().mCurrentType = scene;
   get().mScene = get().mMaker.create(scene);
 }
 
 void SceneManager::setNextScene(const SceneType& scene, const FadeType& fade) {
-  get().mFadeIn = fade;
-  get().mSceneType = scene;
-  get().mScene = get().mMaker.create(scene);
+  get().mNextType = scene;
 }
 
 SceneType SceneManager::getSceneType() {
-  return get().mSceneType;
+  return get().mCurrentType;
 }
 
 void SceneManager::update() {

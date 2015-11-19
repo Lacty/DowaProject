@@ -1,25 +1,33 @@
 
 #pragma once
+#include <memory>
+
 #include "SceneMaker.hpp"
 #include "Scene.hpp"
-#include <memory>
+
+#include "fade/FadeBase.h"
+#include "fade/FadeIn.h"
+#include "fade/FadeOut.h"
+
 
 
 class SceneManager {
 private:
-  SceneType mSceneType;
-  FadeType mFadeOut, mFadeIn;
+  SceneType mCurrentType;
+  SceneType mNextType;
   SceneMaker mMaker;
   std::unique_ptr<Scene> mScene;
-  bool isDuringFade;
+  
+  FadeIn mFadeIn;
+  FadeOut mFadeOut;
   
   static SceneManager& get();
   
   SceneManager();
   
-  void create(const SceneType& scene);
-  
 public:
+  
+  static void create(const SceneType& scene);
   
   static void setNextScene(const SceneType& scene, const FadeType& fade);
   static SceneType getSceneType();
