@@ -23,6 +23,7 @@ public:
 
 void DowaProjectApp::setup() {
   Device::enable();
+  SceneManager::create(SceneType::Test);
   SceneManager::setNextScene(SceneType::Test, FadeType::None);
 }
 
