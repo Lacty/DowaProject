@@ -1,5 +1,9 @@
 
-#include "FadeOut.h"
+#include "FadeOut.hpp"
+
+using namespace ci;
+using namespace ci::app;
+using namespace std;
 
 
 FadeOut::FadeOut() {
@@ -21,6 +25,10 @@ void FadeOut::setType(FadeType type,
 	int time, Color color, bool isUseEasing) {
 
 	switch (type) {
+
+	case FadeType::None:
+		break;
+	
 	case FadeType::FullScreen:
 		fade = [=] {
 			fullScreenFade(time, color, isUseEasing);
@@ -183,14 +191,27 @@ void FadeOut::circleScalingFade(int time, Color color, bool isUseEasing) {
 		if (!mIsEndInit) {
 
 			mPattern = CIRCLE_SCALING_FADE;
-			mInterval = (60 * time);
-			mSpeed = (1.0f / mInterval);
 
-			mHideCircle.emplace_back();
+			if (!isUseEasing) {
+				mInterval = (60 * time);
+				mSpeed = (1.0f / mInterval);
 
-			mHideCircle[0].mPos = Vec3f::zero();
-			mHideCircle[0].mSize = 0.0f;
-			mHideCircle[0].mColor = ColorA(color, 0.0f);
+				mHideCircle.emplace_back();
+
+				mHideCircle[0].mPos = Vec3f::zero();
+				mHideCircle[0].mSize = 0.0f;
+				mHideCircle[0].mColor = ColorA(color, 0.0f);
+			}
+			if (isUseEasing) {
+				mHideEasingCircle.emplace_back();
+
+				mHideEasingCircle[0].mPos = Vec2f::zero();
+				mHideEasingCircle[0].mSize = 0.0f;
+				mHideEasingCircle[0].mEndSize = windowOutPos;
+				mHideEasingCircle[0].mColor = ColorA(color, 0.0f);
+				mHideEasingCircle[0].mAlpha = 0.0f;
+				mHideEasingCircle[0].mEndAlpha = 1.0f;
+			}
 
 			mIsEndInit = true;
 		}
@@ -501,11 +522,17 @@ void FadeOut::pinHoleFade(
 
 void FadeOut::draw() {
 
+	if (!mCanStart)return;
+
 	gl::pushModelView();
 	gl::translate(getWindowCenter());
 	gl::enableAlphaBlending();
 
 	switch (mPattern) {
+
+	case NONE:
+		return;
+		break;
 
 	case FULL_SCREEN_FADE:
 		for (unsigned int i = 0; i < mHideCube.size(); ++i) {

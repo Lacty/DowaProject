@@ -152,14 +152,14 @@
     <ClInclude Include="..\src\resource\DataManager.hpp">
       <Filter>Source Files\resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\scene\fade\FadeBase.h">
-      <Filter>Source Files\scene\fade</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\fade\FadeIn.h">
+    <ClInclude Include="..\src\scene\fade\FadeIn.hpp">
       <Filter>Source Files\scene\fade\fadeIn</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\scene\fade\FadeOut.h">
+    <ClInclude Include="..\src\scene\fade\FadeOut.hpp">
       <Filter>Source Files\scene\fade\fadeOut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeBase.hpp">
+      <Filter>Source Files\scene\fade</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
