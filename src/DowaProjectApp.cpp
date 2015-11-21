@@ -23,7 +23,7 @@ public:
 
 void DowaProjectApp::setup() {
   Device::enable();
-  SceneManager::setNextScene(SceneType::Test, FadeType::None);
+  SceneManager::create(SceneType::Test);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
