@@ -92,6 +92,7 @@ protected:
 	std::vector<EasingCircleDate>mHideEasingCircle;
 	struct EasingCylinderDate {
 		ci::Anim<float>mStartPos;
+		ci::Anim<float>mEndStartPos;
 		ci::Anim<float>mEndPos;
 		int mSliceCount;
 		ci::ColorA mColor;
