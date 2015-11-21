@@ -133,9 +133,9 @@
     <ClInclude Include="..\src\resource\DataManager.hpp" />
     <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
     <ClInclude Include="..\src\resource\ResourceManager.hpp" />
-    <ClInclude Include="..\src\scene\fade\FadeBase.h" />
-    <ClInclude Include="..\src\scene\fade\FadeIn.h" />
-    <ClInclude Include="..\src\scene\fade\FadeOut.h" />
+    <ClInclude Include="..\src\scene\fade\FadeBase.hpp" />
+    <ClInclude Include="..\src\scene\fade\FadeIn.hpp" />
+    <ClInclude Include="..\src\scene\fade\FadeOut.hpp" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />
     <ClInclude Include="..\src\scene\result\Result.hpp" />
     <ClInclude Include="..\src\scene\Scene.hpp" />

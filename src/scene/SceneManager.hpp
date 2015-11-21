@@ -5,9 +5,9 @@
 #include "SceneMaker.hpp"
 #include "Scene.hpp"
 
-#include "fade/FadeBase.h"
-#include "fade/FadeIn.h"
-#include "fade/FadeOut.h"
+#include "fade/FadeBase.hpp"
+#include "fade/FadeIn.hpp"
+#include "fade/FadeOut.hpp"
 
 
 

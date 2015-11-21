@@ -1,5 +1,8 @@
 
-#include "FadeIn.h"
+#include "FadeIn.hpp"
+using namespace ci;
+using namespace ci::app;
+using namespace std;
 
 
 FadeIn::FadeIn() {
@@ -20,6 +23,10 @@ void FadeIn::setType(FadeType type,
 	int time, Color color, bool isUseEasing) {
 
 	switch (type) {
+
+	case FadeType::None:
+		break;
+
 	case FadeType::FullScreen:
 		fade = [=] {
 			fullScreenFade(time, color, isUseEasing);
@@ -521,199 +528,93 @@ void FadeIn::pinHoleFade(
 
 void FadeIn::draw() {
 
+	if (!mCanStart)return;
+
+	gl::pushModelView();
+	gl::translate(getWindowCenter());
+	gl::enableAlphaBlending();
+
 	switch (mPattern) {
-#pragma region case FULL_SCREEN_FADE:
+
+	case NONE:
+		return;
+		break;
+
 	case FULL_SCREEN_FADE:
-
 		for (unsigned int i = 0; i < mHideCube.size(); ++i) {
-
-			//表示位置を中心に移動・透明度追加・色を変更
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
-
-			gl::enableAlphaBlending();
-
-			gl::color(mHideCube[i].mColor);
-
-			//描画
-			gl::drawCube(mHideCube[i].mPos, mHideCube[i].mSize);
-
-			//全て元に戻す
-			gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-
-			gl::disableAlphaBlending();
-
-			gl::popModelView();
-
+			if (!mIsUseEasing) {
+				gl::color(mHideCube[i].mColor);
+				gl::drawCube(mHideCube[i].mPos, mHideCube[i].mSize);
+				gl::color(1.0f, 1.0f, 1.0f, 1.0f);
+			}
 		}
-
+		for (unsigned int i = 0; i < mHideEasingCube.size(); ++i) {
+			if (mIsUseEasing) {
+				gl::color(mHideEasingCube[i].mColor);
+				gl::drawCube(Vec3f(mHideEasingCube[i].mPos, 0),
+					Vec3f(mHideEasingCube[i].mSize, 0));
+				gl::color(1.0f, 1.0f, 1.0f, 1.0f);
+			}
+		}
 		break;
-#pragma endregion
-#pragma region case CIRCLE_SCALING_FADE:
+
 	case CIRCLE_SCALING_FADE:
-
 		for (unsigned int i = 0; i < mHideCircle.size(); ++i) {
-
-			//透明度追加・表示位置を中心に移動・色を変更
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
-
-			gl::enableAlphaBlending();
-
 			gl::color(mHideCircle[i].mColor);
-
-			//描画
-			gl::drawSolidCircle(mHideCircle[i].mPos.xy(), mHideCircle[i].mSize);
-
-			//全て元に戻す
+			gl::drawSolidCircle(
+				mHideCircle[i].mPos.xy(), mHideCircle[i].mSize);
 			gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-
-			gl::disableAlphaBlending();
-
-			gl::popModelView();
-
 		}
-
 		break;
-#pragma endregion
-#pragma region case VEIL_FADE:
+
 	case VEIL_FADE:
-
 		for (unsigned int i = 0; i < mHideCube.size(); ++i) {
-
-			//透明度追加・表示位置を中心に移動・色を変更
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
-
-			gl::enableAlphaBlending();
-
 			gl::color(mHideCube[i].mColor);
-
-			//描画
 			gl::drawCube(mHideCube[i].mPos, mHideCube[i].mSize);
-
-			//全て元に戻す
 			gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-
-			gl::disableAlphaBlending();
-
-			gl::popModelView();
-
 		}
-
 		break;
-#pragma endregion
-#pragma region case FROM_LEFT_CURTAIN_FADE:
+
 	case FROM_LEFT_CURTAIN_FADE:
-
 		for (unsigned int i = 0; i < mHideCube.size(); ++i) {
-
-			//透明度追加・表示位置を中心に移動・色を変更
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
-
-			gl::enableAlphaBlending();
-
 			gl::color(mHideCube[i].mColor);
-
-			//描画
 			gl::drawCube(mHideCube[i].mPos, mHideCube[i].mSize);
-
-			//全て元に戻す
 			gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-
-			gl::disableAlphaBlending();
-
-			gl::popModelView();
-
 		}
-
 		break;
-#pragma endregion
-#pragma region case FROM_RIGHT_CURTAIN_FADE:
+
 	case FROM_RIGHT_CURTAIN_FADE:
-
 		for (unsigned int i = 0; i < mHideCube.size(); ++i) {
-
-			//透明度追加・表示位置を中心に移動・色を変更
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
-
-			gl::enableAlphaBlending();
-
 			gl::color(mHideCube[i].mColor);
-
-			//描画
 			gl::drawCube(mHideCube[i].mPos, mHideCube[i].mSize);
-
-			//全て元に戻す
 			gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-
-			gl::disableAlphaBlending();
-
-			gl::popModelView();
-
 		}
-
 		break;
-#pragma endregion
-#pragma region case CENTER_CURTAIN_FADE:
+
 	case CENTER_CURTAIN_FADE:
-
 		for (unsigned int i = 0; i < mHideCube.size(); ++i) {
-
-			//透明度追加・表示位置を中心に移動・色を変更
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
-
-			gl::enableAlphaBlending();
-
 			gl::color(mHideCube[i].mColor);
-
-			//描画
 			gl::drawCube(mHideCube[i].mPos, mHideCube[i].mSize);
-
-			//全て元に戻す
 			gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-
-			gl::disableAlphaBlending();
-
-			gl::popModelView();
-
 		}
-
 		break;
-#pragma endregion
-#pragma region case PIN_HOLE_FADE:
+
 	case PIN_HOLE_FADE:
-
 		for (unsigned int i = 0; i < mHideCylinder.size(); ++i) {
-
-			//透明度追加・表示位置を中心に移動・色を変更・画像の貼り付け
-			gl::pushModelView();
-			gl::translate(getWindowCenter());
 			gl::rotate(Vec3f(90, 0, 0));
-
-			gl::enableAlphaBlending();
-
 			gl::color(mHideCylinder[i].mColor);
-
-			//描画
 			gl::drawCylinder(
 				mHideCylinder[i].mStartPos,
 				mHideCylinder[i].mEndPos,
 				0.1f,
 				mHideCylinder[i].mSliceCount);
-
-			//全て元に戻す			
 			gl::color(Color(1, 1, 1));
-			gl::popModelView();
-
 		}
-
 		break;
-#pragma endregion
 	}
+
+	gl::disableAlphaBlending();
+	gl::popModelView();
 
 }
 
