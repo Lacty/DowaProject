@@ -55,6 +55,10 @@ Title::Title()
 
 void Title::update()
 {
+    
+  mSphereMotion++;
+    
+    
   mKanaLetterTaRect = ci::Rectf( 130, 80 + sin(M_PI * 2 / 240 * mSphereMotion) * 2,
                                  220, 170 + sin(M_PI * 2 / 240 * mSphereMotion) * 2);
   
@@ -75,15 +79,14 @@ void Title::update()
   
   mSphereRedRect = ci::Rectf( 350, 173 + sin(M_PI * 2 / 240 * mSphereMotion) * 7,
                                420, 243 + sin(M_PI * 2 / 240 * mSphereMotion) * 7);
-  
-  mSphereMotion++;
 }
 
 void Title::draw()
 {
-  ci::gl::pushModelView();
-  
+    
   Title::update();
+    
+  ci::gl::pushModelView();
   
   ci::gl::clear();
   cinder::gl::enableAlphaBlending(true); // αチャンネル有効
@@ -103,6 +106,6 @@ void Title::draw()
   
   ci::gl::draw( mLogo, mLogoRect);
   ci::gl::draw( mTapToStartEng, mTapToStartEngRect);
-  
+    
   ci::gl::popModelView();
 }
