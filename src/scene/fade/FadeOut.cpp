@@ -214,10 +214,11 @@ void FadeOut::circleScalingFade(int time, Color color, bool isUseEasing) {
 				mHideEasingCircle[0].mSize = 0.0f;
 				mHideEasingCircle[0].mEndSize = windowOutPos;
 
-				mHideEasingCircle[0].mColor = ColorA(color, 0.0f);
-
 				mHideEasingCircle[0].mAlpha = 0.0f;
 				mHideEasingCircle[0].mEndAlpha = 1.0f;
+
+				mHideEasingCircle[0].mColor = ColorA(
+					color, mHideEasingCircle[0].mAlpha);
 			}
 
 			mIsEndInit = true;
