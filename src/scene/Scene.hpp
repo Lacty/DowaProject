@@ -21,6 +21,6 @@ public:
   virtual void update() = 0;
   virtual void draw() = 0;
   
-  void setNextScene(const SceneType& scene, const FadeType& fade);
+  void setNextScene(const SceneType& scene, const FadeType& fadeIn, const FadeType& fadeOut);
   const SceneType getSceneType() const;
 };

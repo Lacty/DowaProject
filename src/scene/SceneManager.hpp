@@ -23,13 +23,15 @@ private:
   
   static SceneManager& get();
   
+   bool isDuringFade();
+  
   SceneManager();
   
 public:
   
   static void create(const SceneType& scene);
   
-  static void setNextScene(const SceneType& scene, const FadeType& fade);
+  static void setNextScene(const SceneType& scene, const FadeType& fadeIn, const FadeType& fadeOut);
   static SceneType getSceneType();
   
   static void update();

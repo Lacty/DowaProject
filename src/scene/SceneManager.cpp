@@ -12,13 +12,19 @@ SceneManager& SceneManager::get() {
 }
 
 
+bool SceneManager::isDuringFade() {
+  return get().mCurrentType != get().mNextType;
+}
+
 void SceneManager::create(const SceneType &scene) {
   get().mCurrentType = scene;
   get().mScene = get().mMaker.create(scene);
 }
 
-void SceneManager::setNextScene(const SceneType& scene, const FadeType& fade) {
+void SceneManager::setNextScene(const SceneType& scene, const FadeType& fadeIn, const FadeType& fadeOut) {
   get().mNextType = scene;
+  get().mFadeIn.setType(fadeIn);
+  get().mFadeOut.setType(fadeOut);
 }
 
 SceneType SceneManager::getSceneType() {
@@ -28,9 +34,15 @@ SceneType SceneManager::getSceneType() {
 void SceneManager::update() {
   get().mScene->update();
   Task::update();
+  
+  if (!get().isDuringFade()) return;
+  if (!get().mFadeIn.getIsEnd()) return;
+  get().create(get().mNextType);
 }
 
 void SceneManager::draw() {
   get().mScene->draw();
   Task::draw();
+  get().mFadeIn.draw();
+  get().mFadeOut.draw();
 }

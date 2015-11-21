@@ -3,7 +3,11 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 
+#include "SceneManager.hpp"
+
+
 void Test::update() {
+  SceneManager::setNextScene(SceneType::Title, FadeType::Circle, FadeType::Circle);
 }
 
 void Test::draw() {
