@@ -91,8 +91,8 @@
 		ACF91EE51BE764F000AF6824 /* SceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneManager.hpp; sourceTree = "<group>"; };
 		ACF91EE91BE76AD000AF6824 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
 		ACF91EEA1BE76AD000AF6824 /* GameMain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMain.hpp; sourceTree = "<group>"; };
-		ACF91EED1BE8069000AF6824 /* Result.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Result.cpp; sourceTree = "<group>"; };
-		ACF91EEE1BE8069000AF6824 /* Result.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Result.hpp; sourceTree = "<group>"; };
+		ACF91EED1BE8069000AF6824 /* Result.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = Result.cpp; sourceTree = "<group>"; tabWidth = 2; };
+		ACF91EEE1BE8069000AF6824 /* Result.hpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = Result.hpp; sourceTree = "<group>"; tabWidth = 2; };
 		B112C46395B542438FB8D300 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BBEC120E8DF24E54B3418175 /* MotionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionManager.h; path = ../blocks/MotionManager/src/cinder/MotionManager.h; sourceTree = "<group>"; };
 		C0EC8E147D564C46829F7611 /* CinderApp_ios.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = CinderApp_ios.png; path = ../resources/CinderApp_ios.png; sourceTree = "<group>"; };
@@ -517,15 +517,44 @@
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
 					"\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"",
 					"-lz",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_calib3d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_contrib.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_core.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_features2d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_flann.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_imgproc.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_legacy.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_ml.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_nonfree.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_objdetect.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_photo.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_video.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_stitching.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_videostab.a\"",
 				);
 				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
-					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"",
+					"\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"",
 					"-lz",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_calib3d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_contrib.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_core.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_features2d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_flann.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_imgproc.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_legacy.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_ml.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_nonfree.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_objdetect.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_photo.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_video.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_stitching.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_videostab.a\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.libcinder.DowaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/MotionManager/src \"$(CINDER_PATH)/blocks/opencv/include\" \"$(CINDER_PATH)/blocks/opencv/include/opencv2\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -544,15 +573,44 @@
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
 					"\"$(CINDER_PATH)/lib/libcinder-iphone.a\"",
 					"-lz",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_calib3d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_contrib.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_core.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_features2d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_flann.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_imgproc.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_legacy.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_ml.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_nonfree.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_objdetect.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_photo.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_video.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_stitching.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_videostab.a\"",
 				);
 				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
-					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"",
+					"\"$(CINDER_PATH)/lib/libcinder-iphone.a\"",
 					"-lz",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_calib3d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_contrib.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_core.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_features2d.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_flann.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_imgproc.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_legacy.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_ml.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_nonfree.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_objdetect.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_photo.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_video.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_stitching.a\"",
+					"\"$(CINDER_PATH)/blocks/opencv/lib/ios/libopencv_videostab.a\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.libcinder.DowaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/MotionManager/src \"$(CINDER_PATH)/blocks/opencv/include\" \"$(CINDER_PATH)/blocks/opencv/include/opencv2\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
