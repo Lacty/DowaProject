@@ -17,7 +17,7 @@ public:
   
 private:
   
-  float mSphereMotion; // ボール微動
+  int mSphereMotion; // ボール微動
   
   // 背景
   ci::gl::Texture mTitleBack;
