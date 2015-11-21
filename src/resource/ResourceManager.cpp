@@ -30,9 +30,7 @@ bool hidden::AudioResource::insert(std::string path, int key) {
 
   ctx->enable();
 
-  std::pair<int, hidden::Audio> res (key, temp);
-
-  mMappedResource.insert(res);
+  mMappedResource.insert(std::make_pair(key,temp));
 
   return true;
 }
@@ -95,9 +93,7 @@ bool hidden::TextureResource::insert(std::string path, int key) {
 
   temp = gl::Texture(loadImage(ci::app::loadAsset(path)));
 
-  std::pair<int, gl::Texture> res (key, temp);
-
-  mMappedResource.insert(res);
+  mMappedResource.insert(std::make_pair(key,temp));
 
   return true;
 }

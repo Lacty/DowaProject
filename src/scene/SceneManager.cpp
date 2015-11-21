@@ -11,7 +11,6 @@ SceneManager& SceneManager::get() {
   return instance;
 }
 
-
 void SceneManager::create(const SceneType &scene) {
   get().mCurrentType = scene;
   get().mScene = get().mMaker.create(scene);
