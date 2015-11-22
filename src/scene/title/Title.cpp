@@ -1,19 +1,31 @@
 
+
+// iPad画面サイズ
+// iPhone画面サイズ
+// 注意！横画面にしてもxとyの座標は変わらない可能性あり
+// どうしてもうまくいかない場合はxとyを逆にしてみること
+// デバッグ用cpp リリースのときは無駄な文を消すこと iostream、usingなど
+
 #include "Title.hpp"
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
 #include <math.h>
+#include <iostream> // Debug
+
+using namespace std; // Debug
 
 Title::Title()
 {
+  
   // 背景
   mTitleBack = (loadImage(cinder::app::loadAsset("background/title/TitleBack.jpg")));
   
   // 本とペン 「描画する画像が大きすぎてちっちゃく描画したときにジャギが発生していた為、元画像を 912 × 768 にリサイズ」
   mFeatherBook = (loadImage(cinder::app::loadAsset("background/title/FeatherBook.png")));
   mFeatherBookRect = ci::Rectf(150, 15, 430, 250); // size = 280, 235
+  
   // スカーフみたいなやつ
   mTrace = (loadImage(cinder::app::loadAsset("background/title/Trace.png")));
   mTraceRect = ci::Rectf( 120, 50, 340, 245); // size = 220, 195
@@ -89,23 +101,26 @@ void Title::draw()
   ci::gl::pushModelView();
   
   ci::gl::clear();
+  
   cinder::gl::enableAlphaBlending(true); // αチャンネル有効
   
-  ci::gl::draw( mTitleBack, ci::app::getWindowBounds());
-  ci::gl::draw( mFeatherBook, mFeatherBookRect);
-  ci::gl::draw( mTrace, mTraceRect);
+  ci::gl::draw( mTitleBack, ci::app::getWindowBounds()); // 背景
+  ci::gl::draw( mFeatherBook, mFeatherBookRect); // 本とペン
+  ci::gl::draw( mTrace, mTraceRect); // スカーフみたいなやつ
   
-  ci::gl::draw( mKanaLetterTa, mKanaLetterTaRect);
-  ci::gl::draw( mKanaLetterMa, mKanaLetterMaRect);
-  ci::gl::draw( mKanaLetterKo, mKanaLetterKoRect);
-  ci::gl::draw( mKanaLetterRo, mKanaLetterRoRect);
+  ci::gl::draw( mKanaLetterTa, mKanaLetterTaRect); // た
+  ci::gl::draw( mKanaLetterMa, mKanaLetterMaRect); // ま
+  ci::gl::draw( mKanaLetterKo, mKanaLetterKoRect); // こ
+  ci::gl::draw( mKanaLetterRo, mKanaLetterRoRect); // ろ
   
-  ci::gl::draw( mSphereBlue, mSphereBlueRect);
-  ci::gl::draw( mSphereGreen, mSphereGreenRect);
-  ci::gl::draw( mSphereRed, mSphereRedRect);
+  ci::gl::draw( mSphereBlue, mSphereBlueRect); // ボール青
+  ci::gl::draw( mSphereGreen, mSphereGreenRect); // ボール緑
+  ci::gl::draw( mSphereRed, mSphereRedRect); // ボール赤
   
-  ci::gl::draw( mLogo, mLogoRect);
-  ci::gl::draw( mTapToStartEng, mTapToStartEngRect);
+  ci::gl::draw( mLogo, mLogoRect); // TAMACORO
+  ci::gl::draw( mTapToStartEng, mTapToStartEngRect); // タッチしてスタート！
+  
+  cinder::gl::enableAlphaBlending(false); // αチャンネル無効
     
   ci::gl::popModelView();
 }
