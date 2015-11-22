@@ -32,7 +32,7 @@ void DowaProjectApp::setup() {
   Device::enable();
   dowa::ResourceManager::enable();
   SceneManager::enable();
-  SceneManager::create(SceneType::Title);
+  SceneManager::create(SceneType::Test);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
