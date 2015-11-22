@@ -7,6 +7,8 @@
 #include "scene/Scene.hpp"
 #include "scene/SceneManager.hpp"
 
+#include "resource/ResourceManager.hpp"
+
 using namespace ci;
 using namespace ci::app;
 
@@ -15,6 +17,11 @@ private:
   
 public:
   void setup();
+  
+  void prepareSettings(Settings* settings) {
+    settings->disableFrameRate();
+  }
+  
   void mouseDown(MouseEvent event);
   void touchesBegan(TouchEvent event);
   void update();
@@ -23,8 +30,9 @@ public:
 
 void DowaProjectApp::setup() {
   Device::enable();
-  SceneManager::create(SceneType::Test);
-  SceneManager::setNextScene(SceneType::Test, FadeType::None);
+  dowa::ResourceManager::enable();
+  SceneManager::enable();
+  SceneManager::create(SceneType::Title);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {

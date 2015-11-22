@@ -7,31 +7,19 @@
 #include "cinder/Timeline.h"
 #include "cinder/Tween.h"
 
+#include "../Scene.hpp"
+
 #include <vector>
 #include <functional>
 
-using namespace ci;
-using namespace ci::app;
-using namespace std;
-
-
-enum class FadeType {
-None,
-
-FullScreen,
-Circle,
-Vell,
-FromLeft,
-FromRight,
-BothSide,
-Hole
-};
 
 class FadeBase {
 
 protected:
 
 	enum FadeTypeName {
+		//無し
+		NONE,
 		//全画面のα値変化でfade
 		FULL_SCREEN_FADE,
 		//画面の中心から円が出て、拡縮とα値変化でfade
@@ -53,12 +41,12 @@ protected:
 
 	//Objects
 	struct ObjectBase {
-		Vec3f mPos;
-		ColorA mColor;
+		ci::Vec3f mPos;
+		ci::ColorA mColor;
 	};
 
 	struct CubeDate :ObjectBase {
-		Vec3f mSize;
+		ci::Vec3f mSize;
 	};
 	std::vector<CubeDate>mHideCube;
 	struct CircleDate :ObjectBase {
@@ -69,34 +57,35 @@ protected:
 		float mStartPos;
 		float mEndPos;
 		int mSliceCount;
-		ColorA mColor;
+		ci::ColorA mColor;
 	};
 	std::vector<CylinderDate>mHideCylinder;
 
 	//EasingObjects
 	struct EasingObjectBase {
-		Anim<Vec2f>mPos;
-		Anim<Vec2f>mEndPos;
-		ColorA mColor;
-		Anim<float>mAlpha;
-		Anim<float>mEndAlpha;
+		ci::Anim<ci::Vec2f>mPos;
+		ci::Anim<ci::Vec2f>mEndPos;
+		ci::ColorA mColor;
+		ci::Anim<float>mAlpha;
+		ci::Anim<float>mEndAlpha;
 	};
 
 	struct EasingCubeDate :EasingObjectBase {
-		Anim<Vec2f>mSize;
-		Anim<Vec2f>mEndSize;
+		ci::Anim<ci::Vec2f>mSize;
+		ci::Anim<ci::Vec2f>mEndSize;
 	};
 	std::vector<EasingCubeDate>mHideEasingCube;
 	struct EasingCircleDate :EasingObjectBase {
-		Anim<float>mSize;
-		Anim<float>mEndSize;
+		ci::Anim<float>mSize;
+		ci::Anim<float>mEndSize;
 	};
 	std::vector<EasingCircleDate>mHideEasingCircle;
 	struct EasingCylinderDate {
-		Anim<float>mStartPos;
-		Anim<float>mEndPos;
+		ci::Anim<float>mStartPos;
+		ci::Anim<float>mEndStartPos;
+		ci::Anim<float>mEndPos;
 		int mSliceCount;
-		ColorA mColor;
+		ci::ColorA mColor;
 	};
 	std::vector<EasingCylinderDate>mHideEasingCylinder;
 
@@ -115,22 +104,22 @@ protected:
 
 //-----------------------------------------------------
 
-static void lightUp(Rectf rectState, Color color) {
+static void lightUp(ci::Rectf rectState, ci::Color color) {
 
-	ColorA lightColor =
-		ColorA(color, 0.2f);
+	ci::ColorA lightColor =
+		ci::ColorA(color, 0.2f);
 
-	gl::pushModelView();
+	ci::gl::pushModelView();
 
-	gl::translate(getWindowCenter());
-	gl::enableAlphaBlending();
-	gl::color(lightColor);
+	ci::gl::translate(ci::app::getWindowCenter());
+	ci::gl::enableAlphaBlending();
+	ci::gl::color(lightColor);
 
-	gl::drawSolidRect(rectState);
+	ci::gl::drawSolidRect(rectState);
 
-	gl::color(1.0f, 1.0f, 1.0f, 1.0f);
-	gl::disableAlphaBlending();
+	ci::gl::color(1.0f, 1.0f, 1.0f, 1.0f);
+	ci::gl::disableAlphaBlending();
 
-	gl::popModelView();
+	ci::gl::popModelView();
 
 }

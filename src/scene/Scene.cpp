@@ -3,8 +3,12 @@
 #include "SceneManager.hpp"
 
 
-void Scene::setNextScene(const SceneType& scene, const FadeType& fade) {
-  SceneManager::setNextScene(scene, fade);
+void Scene::setNextScene(const SceneType& scene, const FadeType& fadeIn) {
+  SceneManager::setNextScene(scene, fadeIn);
+}
+
+void Scene::setFadeOut(const FadeType &fadeOut) {
+  SceneManager::setFadeOut(fadeOut);
 }
 
 const SceneType Scene::getSceneType() const {

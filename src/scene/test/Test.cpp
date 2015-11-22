@@ -3,13 +3,19 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 
+#include "../../device/Device.hpp"
+
+
+Test::Test() {
+  //setFadeOut(FadeType::FullScreen);
+}
+
 void Test::update() {
+  //if (Device::isTouchBegan())
+    setFadeOut(FadeType::FullScreen);
+  //setNextScene(SceneType::Test, FadeType::Circle);
 }
 
 void Test::draw() {
-  ci::gl::pushModelView();
-  ci::gl::translate(ci::app::getWindowCenter());
-  ci::gl::color(ci::Color(1, 1, 1));
-  ci::gl::drawCube(ci::Vec3f::zero(), ci::Vec3f(100, 100, 100));
-  ci::gl::popModelView();
+  
 }

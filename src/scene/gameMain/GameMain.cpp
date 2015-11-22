@@ -6,7 +6,7 @@
 GameMain::GameMain() {}
 
 void GameMain::update() {
-  setNextScene(SceneType::Result, FadeType::None);
+  //setNextScene(SceneType::Result, FadeType::None);
 }
 
 void GameMain::draw() {

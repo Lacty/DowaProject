@@ -7,7 +7,8 @@ using namespace dowa;
 //Audio Resource
 
 hidden::AudioResource::AudioResource() {
-  //insert(filepath, AudioKey.TheKey);  
+  Audio temp;
+  mMappedResource.insert(std::make_pair(AudioKey::Key, temp));
 }
 
 bool hidden::AudioResource::insert(std::string path, int key) {
@@ -54,20 +55,6 @@ hidden::TextureResource::TextureResource() {
   insert("object/DownVeil.png", TextureKey::DownVeil);
   insert("object/VeilSpace.png", TextureKey::VeilSpace);
 
-  insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
-  insert("background/title/FeatherBook.png", TextureKey::FeatherBook);
-  insert("background/title/Logo.png", TextureKey::Logo);
-  insert("background/title/TapToStartEng.png", TextureKey::TapToStartEng);
-  insert("background/title/TapToStartJap.png", TextureKey::TapToStartJap);
-  insert("background/title/Trace.png", TextureKey::Trace);
-  insert("background/title/KanaLetterTa.png", TextureKey::LetterTa);
-  insert("background/title/KanaLetterMa.png", TextureKey::LetterMa);
-  insert("background/title/KanaLetterKo.png", TextureKey::LetterKo);
-  insert("background/title/KanaLetterRo.png", TextureKey::LetterRo);
-  insert("background/title/SphereBlue.png", TextureKey::SphereBlue);
-  insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
-  insert("background/title/SphereRed.png", TextureKey::SphereRed);
-
   //Tweak it: Change the CinderellaTextureKey to something more readable
   //Make it shorter with typedef
   insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
@@ -103,3 +90,12 @@ ci::gl::Texture hidden::TextureResource::get(int key) {
 }
 
 //Texture Resource
+
+//Resource Manager
+
+void ResourceManager::enable(){
+  audio();
+  texture();
+}
+
+//Resource Manager

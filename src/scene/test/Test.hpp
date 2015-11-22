@@ -5,7 +5,7 @@
 class Test : public Scene {
 private:
 public:
-  Test() = default;
+  Test();
   
   void update();
   void draw();

@@ -69,6 +69,8 @@ namespace dowa {
       static hidden::TexRes tex;
       return tex;
     }
+
+    static void enable();
   };
 
 }

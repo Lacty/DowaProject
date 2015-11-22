@@ -5,9 +5,9 @@
 #include "SceneMaker.hpp"
 #include "Scene.hpp"
 
-#include "fade/FadeBase.h"
-#include "fade/FadeIn.h"
-#include "fade/FadeOut.h"
+#include "fade/FadeBase.hpp"
+#include "fade/FadeIn.hpp"
+#include "fade/FadeOut.hpp"
 
 
 
@@ -23,13 +23,18 @@ private:
   
   static SceneManager& get();
   
+   bool isDuringFade();
+  
   SceneManager();
   
 public:
   
+  static void enable();
+  
   static void create(const SceneType& scene);
   
-  static void setNextScene(const SceneType& scene, const FadeType& fade);
+  static void setNextScene(const SceneType& scene, const FadeType& fadeIn);
+  static void setFadeOut(const FadeType& fadeOut);
   static SceneType getSceneType();
   
   static void update();
