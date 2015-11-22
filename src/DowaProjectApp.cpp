@@ -15,6 +15,11 @@ private:
   
 public:
   void setup();
+  
+  void prepareSettings(Settings* settings) {
+    settings->disableFrameRate();
+  }
+  
   void mouseDown(MouseEvent event);
   void touchesBegan(TouchEvent event);
   void update();
@@ -23,6 +28,7 @@ public:
 
 void DowaProjectApp::setup() {
   Device::enable();
+  SceneManager::enable();
   SceneManager::create(SceneType::Test);
 }
 
