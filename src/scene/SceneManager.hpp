@@ -29,9 +29,12 @@ private:
   
 public:
   
+  static void enable();
+  
   static void create(const SceneType& scene);
   
-  static void setNextScene(const SceneType& scene, const FadeType& fadeIn, const FadeType& fadeOut);
+  static void setNextScene(const SceneType& scene, const FadeType& fadeIn);
+  static void setFadeOut(const FadeType& fadeOut);
   static SceneType getSceneType();
   
   static void update();
