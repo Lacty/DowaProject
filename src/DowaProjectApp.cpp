@@ -11,6 +11,7 @@
 
 using namespace ci;
 using namespace ci::app;
+using namespace dowa;
 
 class DowaProjectApp : public AppNative {
 private:
