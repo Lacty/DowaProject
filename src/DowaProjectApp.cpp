@@ -7,6 +7,8 @@
 #include "scene/Scene.hpp"
 #include "scene/SceneManager.hpp"
 
+#include "resource/ResourceManager.hpp"
+
 using namespace ci;
 using namespace ci::app;
 
@@ -28,6 +30,7 @@ public:
 
 void DowaProjectApp::setup() {
   Device::enable();
+  dowa::ResourceManager::enable();
   SceneManager::enable();
   SceneManager::create(SceneType::Test);
 }

@@ -1,7 +1,7 @@
 
 #pragma once
 #include "../Scene.hpp"
-
+#include "../fade/FadeBase.hpp"
 
 class GameMain : public Scene {
 private:

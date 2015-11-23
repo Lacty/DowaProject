@@ -11,7 +11,6 @@ SceneManager& SceneManager::get() {
   return instance;
 }
 
-
 bool SceneManager::isDuringFade() {
   return get().mCurrentType != get().mNextType;
 }
