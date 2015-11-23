@@ -107,8 +107,6 @@ void Title::update()
 void Title::draw()
 {
 
-  Title::update();
-
   ci::gl::pushModelView();
 
   ci::gl::clear();
