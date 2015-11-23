@@ -2,6 +2,8 @@
 #include "Device.hpp"
 
 
+using namespace dowa;
+
 Device& Device::get() {
   static Device instance;
   return instance;

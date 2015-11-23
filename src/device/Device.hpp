@@ -4,6 +4,8 @@
 #include "cinder/gl/gl.h"
 
 
+namespace dowa {
+
 class Device {
 private:
   bool mIsTouchBegan;
@@ -24,3 +26,5 @@ public:
   static const bool isTouchBegan();
   static const ci::Vec2f getTouchPos();
 };
+
+}  // dowa
