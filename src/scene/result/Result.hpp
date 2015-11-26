@@ -2,9 +2,6 @@
 #pragma once
 #include "../Scene.hpp"
 
-
-
-
 class Result : public Scene 
 {
 private:
@@ -18,10 +15,7 @@ private:
 	{
 		mScreen1,
 		mScreen2,
-		mScreen3,
-		mScreen4,
-		mScreen5,
-		mScreen6
+		mScreen3
 	};
 public:
   Result();
