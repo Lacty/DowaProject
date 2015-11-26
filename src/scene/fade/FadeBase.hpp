@@ -7,21 +7,11 @@
 #include "cinder/Timeline.h"
 #include "cinder/Tween.h"
 
+#include "../Scene.hpp"
+
 #include <vector>
 #include <functional>
 
-
-enum class FadeType {
-	None,
-
-	FullScreen,
-	Circle,
-	Vell,
-	FromLeft,
-	FromRight,
-	BothSide,
-	Hole
-};
 
 class FadeBase {
 
