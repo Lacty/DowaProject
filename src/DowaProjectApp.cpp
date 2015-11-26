@@ -30,8 +30,12 @@ public:
 };
 
 void DowaProjectApp::setup() {
+  getSignalSupportedOrientations().connect([]() {
+    return InterfaceOrientation::LandscapeLeft | InterfaceOrientation::LandscapeRight;
+  });
+
   Device::enable();
-  dowa::ResourceManager::enable();
+  //dowa::ResourceManager::enable();
   SceneManager::enable();
   SceneManager::create(SceneType::Test);
 }
