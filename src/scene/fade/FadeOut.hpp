@@ -8,8 +8,6 @@ class FadeOut :public FadeBase {
 
 private:
 
-	std::function<void()>fade;
-
 	void fullScreenFade(
 		int endTime = 2,
 		ci::Color color = ci::Color::black(),
@@ -56,6 +54,8 @@ public:
 		);
 
 	bool getIsEnd();
+
+	void update();
 
 	void draw();
 

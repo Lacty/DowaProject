@@ -6,11 +6,12 @@ using namespace std;
 
 
 FadeIn::FadeIn() {
-	mPattern = FULL_SCREEN_FADE;
+	mPattern = NONE;
 
 	mCanStart =
 		mIsEnd =
-		mIsEndInit = false;
+		mIsEndInit =
+		mIsEndEasing = false;
 }
 
 bool FadeIn::getIsEnd() {
@@ -29,49 +30,36 @@ void FadeIn::setType(FadeType type,
 		break;
 
 	case FadeType::FullScreen:
-		fade = [=] {
-			fullScreenFade(time, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::FULL_SCREEN_FADE;
 		break;
 
 	case FadeType::Circle:
-		fade = [=] {
-			circleScalingFade(time, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::CIRCLE_SCALING_FADE;
 		break;
 
 	case FadeType::Vell:
-		fade = [=] {
-			veilDownFade(time, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::VEIL_FADE;
 		break;
 
 	case FadeType::FromLeft:
-		fade = [=] {
-			fromLeftCurtainFade(time, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::FROM_LEFT_CURTAIN_FADE;
 		break;
 
 	case FadeType::FromRight:
-		fade = [=] {
-			fromRightCurtainFade(time, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::FROM_RIGHT_CURTAIN_FADE;
 		break;
 
 	case FadeType::BothSide:
-		fade = [=] {
-			centerCurtainFade(time, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::CENTER_CURTAIN_FADE;
 		break;
 
 	case FadeType::Hole:
-		fade = [=] {
-			pinHoleFade(time, 0.0f, 50, color, isUseEasing);
-		};
+		mPattern = FadeTypeName::PIN_HOLE_FADE;
 		break;
 	}
-
-	fade();
+	mTime = time;
+	mColorIn = color;
+	mIsUseEasingIn = isUseEasing;
 }
 
 //---------------------------------------------------
@@ -152,7 +140,6 @@ void FadeIn::fullScreenFade(int time, Color color, bool isUseEasing) {
 
 						mHideCube.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 				}
@@ -177,7 +164,6 @@ void FadeIn::fullScreenFade(int time, Color color, bool isUseEasing) {
 
 						mHideEasingCube.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 				}
@@ -263,8 +249,7 @@ void FadeIn::circleScalingFade(int time, Color color, bool isUseEasing) {
 
 						mHideCircle.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 
@@ -295,8 +280,7 @@ void FadeIn::circleScalingFade(int time, Color color, bool isUseEasing) {
 
 						mHideEasingCircle.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 
@@ -378,7 +362,6 @@ void FadeIn::veilDownFade(int time, Color color, bool isUseEasing) {
 
 						mHideCube.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 
@@ -400,8 +383,7 @@ void FadeIn::veilDownFade(int time, Color color, bool isUseEasing) {
 
 						mHideEasingCube.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 
@@ -484,7 +466,6 @@ void FadeIn::fromLeftCurtainFade(int time, Color color, bool isUseEasing) {
 
 						mHideCube.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 
@@ -506,8 +487,7 @@ void FadeIn::fromLeftCurtainFade(int time, Color color, bool isUseEasing) {
 
 						mHideEasingCube.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 
@@ -592,7 +572,6 @@ void FadeIn::fromRightCurtainFade(int time, Color color, bool isUseEasing) {
 
 						mHideCube.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 
@@ -614,8 +593,7 @@ void FadeIn::fromRightCurtainFade(int time, Color color, bool isUseEasing) {
 
 						mHideEasingCube.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 
@@ -720,7 +698,6 @@ void FadeIn::centerCurtainFade(int time, Color color, bool isUseEasing) {
 
 						mHideCube.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 				}
@@ -749,8 +726,7 @@ void FadeIn::centerCurtainFade(int time, Color color, bool isUseEasing) {
 
 						mHideEasingCube.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 				}
@@ -832,7 +808,6 @@ void FadeIn::pinHoleFade(
 
 						mHideCylinder.clear();
 
-						mCanStart = false;
 						mIsEnd = true;
 					}
 
@@ -853,8 +828,7 @@ void FadeIn::pinHoleFade(
 
 						mHideEasingCylinder.clear();
 
-						mCanStart =
-							mIsUseEasing = false;
+						mIsUseEasing = false;
 						mIsEnd = true;
 					}
 
@@ -868,6 +842,45 @@ void FadeIn::pinHoleFade(
 }
 
 //---------------------------------------------
+
+void FadeIn::update() {
+
+	switch (mPattern) {
+
+	case NONE:
+		return;
+		break;
+
+	case FULL_SCREEN_FADE:
+		fullScreenFade(mTime, mColorIn, mIsUseEasingIn);
+		break;
+
+	case CIRCLE_SCALING_FADE:
+		circleScalingFade(mTime, mColorIn, mIsUseEasingIn);
+		break;
+
+	case VEIL_FADE:
+		veilDownFade(mTime, mColorIn, mIsUseEasingIn);
+		break;
+
+	case FROM_LEFT_CURTAIN_FADE:
+		fromLeftCurtainFade(mTime, mColorIn, mIsUseEasingIn);
+		break;
+
+	case FROM_RIGHT_CURTAIN_FADE:
+		fromRightCurtainFade(mTime, mColorIn, mIsUseEasingIn);
+		break;
+
+	case CENTER_CURTAIN_FADE:
+		centerCurtainFade(mTime, mColorIn, mIsUseEasingIn);
+		break;
+
+	case PIN_HOLE_FADE:
+		pinHoleFade(mTime, 0.0f, 50, mColorIn, mIsUseEasingIn);
+		break;
+	}
+
+}
 
 void FadeIn::draw() {
 
