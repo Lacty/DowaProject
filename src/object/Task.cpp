@@ -12,6 +12,8 @@ Task& Task::get() {
 
 void Task::add(const std::string &key, const std::shared_ptr<Object>& obj) {
   assert(get().mMap[key] == nullptr);
+  obj->setName(key);
+  obj->setState(Object::State::Awake);
   get().mMap[key] = obj;
 }
 
@@ -34,7 +36,8 @@ void Task::collisionUpdate(const std::shared_ptr<Object>& obj) {
     else // Run if both are set ColliderType
     {
       if (dowa::isCollisionRectToRect(obj, compare.second)) {
-        obj->onCollisionUpdate();
+        obj->onCollisionUpdate(compare.second);
+        compare.second->onCollisionUpdate(obj);
       }
     }
   }

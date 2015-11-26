@@ -52,7 +52,7 @@ public:
   virtual void setup() = 0;
   virtual void update() = 0;
   virtual void draw() = 0;
-  virtual void onCollisionUpdate() {};
+  virtual void onCollisionUpdate(const std::shared_ptr<Object>& compare) {};
   
 protected:
   std::string mName;

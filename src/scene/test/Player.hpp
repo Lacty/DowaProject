@@ -1,14 +1,14 @@
 //
-//  Wall.hpp
+//  Player.hpp
 //  DowaProject
 //
 //  Created by Yanai on 2015/11/26.
 //
 //
 
-#ifndef Wall_hpp
-#define Wall_hpp
+#ifndef Player_hpp
+#define Player_hpp
 
 #include <stdio.h>
 
-#endif /* Wall_hpp */
+#endif /* Player_hpp */
