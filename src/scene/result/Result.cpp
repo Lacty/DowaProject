@@ -2,7 +2,8 @@
 #include "Result.hpp"
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
-
+#include "../../device/Device.hpp"
+#include "../../scene/SceneManager.hpp"
 
 Result::Result() 
 {
@@ -11,12 +12,23 @@ Result::Result()
 	mCount = 0;
 	mr = 0.0f;
 	
+	
 }
 
 void Result::update() 
 {
 	mCount += 1;
 	mr += 0.5f;
+
+	//âÊñ êÿÇËë÷Ç¶
+	if (Device::isTouchBegan())
+	{
+		//gamemainâÊñ Ç÷
+		SceneManager::create(SceneType::GameMain);
+
+	}
+
+
 
 	switch (mChange)
 	{
@@ -72,11 +84,11 @@ void Result::draw() {
 	{
 	case mScreen1:
 		ci::gl::pushModelView();
-		
+
 		ci::gl::translate(ci::app::getWindowCenter());
 		ci::gl::translate(ci::Vec3f(0.0f,0.0f,mr));
 		ci::gl::color(ci::Color(1, 1, 1));
-	
+		
 		ci::gl::drawCube(ci::Vec3f::zero(), ci::Vec3f(300, 100, 100));
 	
 		ci::gl::popModelView();
