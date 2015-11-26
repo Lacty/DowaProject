@@ -1,21 +1,16 @@
 
 #include "Test.hpp"
-#include "cinder/app/AppNative.h"
-#include "cinder/gl/gl.h"
 
-#include "../../device/Device.hpp"
+#include "../../object/Task.hpp"
+#include "Player.hpp"
+#include "Enemy.hpp"
 
 
 Test::Test() {
-  //setFadeOut(FadeType::FullScreen);
+  Task::add("Player", std::make_shared<Player>());
+  Task::add("Enemy", std::make_shared<Enemy>());
 }
 
-void Test::update() {
-  //if (Device::isTouchBegan())
-    setFadeOut(FadeType::FullScreen);
-  //setNextScene(SceneType::Test, FadeType::Circle);
-}
+void Test::update() {}
 
-void Test::draw() {
-  
-}
+void Test::draw() {}
