@@ -845,6 +845,8 @@ void FadeIn::pinHoleFade(
 
 void FadeIn::update() {
 
+	if (!mCanStart)return;
+
 	switch (mPattern) {
 
 	case NONE:

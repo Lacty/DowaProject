@@ -816,6 +816,8 @@ void FadeOut::pinHoleFade(
 
 void FadeOut::update() {
 
+	if (!mCanStart)return;
+
 	switch (mPattern) {
 
 	case NONE:
