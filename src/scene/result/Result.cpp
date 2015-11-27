@@ -5,44 +5,39 @@
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
 
-Result::Result() 
+Result::Result()
 {
-	mChange = mScreen1;
+	mChange = mScreen1;  
 
-	mCount = 0;
+	mCount = 0.0f;
 	mr = 0.0f;
-	
-	
+
+	//äeâÊëúÇÃç¿ïW
+	mSelectpos = ci::Rectf(0, 0, 200, 100);
+	mRetrypos = ci::Rectf(-250, 0, -50, 100);
+	mFinpos = ci::Rectf(150,150,250,200);
+	mFontpos = ci::Rectf(-150, -100, 150, 0);
 }
 
 void Result::update() 
 {
-	mCount += 1;
-	mr += 0.5f;
-
-	//âÊñ êÿÇËë÷Ç¶
-	if (dowa::Device::isTouchBegan())
-	{
-		//gamemainâÊñ Ç÷
-		SceneManager::create(SceneType::GameMain);
-
-	}
-
-
+	mCount += 0.5f;
+	mr += 0.1f;
 
 	switch (mChange)
 	{
 	case mScreen1:
-		if (mCount == 100)
+		if (mCount == 200.0f)
 		{
 			mChange = mScreen2;
 
-			mr = 0.0f;
+			 mr = 0.0f;
+
 		}
 		break;
 
 	case mScreen2:
-		if (mCount == 200)
+		if (mCount == 500.0f)
 		{
 			mChange = mScreen3;
 			mr = 0.0f;
@@ -59,18 +54,19 @@ void Result::update()
 	}
 }
 
-void Result::draw() {
+void Result::draw() 
+{	
+	std::cout << "count" << mCount << std::endl;
 	switch (mChange)
 	{
 	case mScreen1:
+
 		ci::gl::pushModelView();
 
 		ci::gl::translate(ci::app::getWindowCenter());
 		ci::gl::translate(ci::Vec3f(0.0f,0.0f,mr));
 		ci::gl::color(ci::Color(1, 1, 1));
-		
-		ci::gl::drawCube(ci::Vec3f::zero(), ci::Vec3f(300, 100, 100));
-	
+		ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Font), mFontpos);
 		ci::gl::popModelView();
 		break;
 
@@ -78,11 +74,9 @@ void Result::draw() {
 
 		//background
 		ci::gl::pushModelView();
-
-		ci::gl::translate(ci::app::getWindowCenter());
 		ci::gl::translate(ci::Vec3f(0.0f, 0.0f, mr));
-		ci::gl::color(ci::Color(0, 1, 1));
-		ci::gl::drawCube(ci::Vec3f::zero(), ci::Vec3f(800, 500, 0));
+		ci::gl::color(ci::Color(1, 1, 1));
+		ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Back), ci::app::getWindowBounds());
 
 		ci::gl::popModelView();
 
@@ -90,38 +84,30 @@ void Result::draw() {
 	case mScreen3:
 		//background
 		ci::gl::pushModelView();
-
-		ci::gl::translate(ci::app::getWindowCenter());
-		ci::gl::color(ci::Color(0, 1, 1));
-		ci::gl::drawCube(ci::Vec3f::zero(), ci::Vec3f(800, 500, 0));
-
+		ci::gl::color(ci::Color(1, 1, 1));
+		ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Back), ci::app::getWindowBounds());
 		ci::gl::popModelView();
 
 		//fin
 		ci::gl::pushModelView();
-
 		ci::gl::translate(ci::app::getWindowCenter());
-		ci::gl::color(ci::Color(1, 0, 0));
-		ci::gl::drawCube(ci::Vec3f(200, 150, 0), ci::Vec3f(130, 100, 0));
-
+		ci::gl::color(ci::Color(1, 1, 1));
+		ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Fin), mFinpos);
 		ci::gl::popModelView();
 
 		//selection
 		ci::gl::pushModelView();
-
 		ci::gl::translate(ci::app::getWindowCenter());
-		ci::gl::color(ci::Color(0, 0, 1));
-		ci::gl::drawCube(ci::Vec3f(150, 0, 0), ci::Vec3f(200, 100, 0));
-
+		ci::gl::color(ci::Color(1, 1, 1));
+		ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Select), mSelectpos);
 		ci::gl::popModelView();
 
 		//retry
+		
 		ci::gl::pushModelView();
-
 		ci::gl::translate(ci::app::getWindowCenter());
-		ci::gl::color(ci::Color(0, 0, 0));
-		ci::gl::drawCube(ci::Vec3f(-150, 0, 0), ci::Vec3f(200, 100, 0));
-
+		ci::gl::color(ci::Color(1, 1, 1));
+		ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Retry), mRetrypos);
 		ci::gl::popModelView();
 
 		break;

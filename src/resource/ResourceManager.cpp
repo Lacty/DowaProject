@@ -67,6 +67,14 @@ hidden::TextureResource::TextureResource() {
   insert("background/gameMain/cinderella/5.png", CinderellaTextureKey::Town2Houses);
   insert("background/gameMain/cinderella/6.png", CinderellaTextureKey::Bridge);
   insert("background/gameMain/cinderella/7.jpg", CinderellaTextureKey::Castle);
+
+  // result—p‚Ìresource
+
+  insert("background/result/Back.jpg", TextureKey::Back);
+  insert("background/result/Retry.jpg", TextureKey::Retry);
+  insert("background/result/Select.jpg", TextureKey::Select);
+  insert("background/result/Fin.jpg", TextureKey::Fin);
+  insert("background/result/Font.png", TextureKey::Font);
 }
 
 bool hidden::TextureResource::insert(std::string path, int key) {
