@@ -1,14 +1,8 @@
-//
-//  Utility.hpp
-//  DowaProject
-//
-//  Created by Yanai on 2015/11/26.
-//
-//
 
-#ifndef Utility_hpp
-#define Utility_hpp
+#pragma once
+#include "cinder/Vector.h"
 
-#include <stdio.h>
 
-#endif /* Utility_hpp */
+ci::Vec2f floorv2(const ci::Vec2f& in, int len);
+
+double floor2(double in, int len);
