@@ -66,3 +66,7 @@ const ci::Vec3f& Object::getSize() const {
 const ci::Vec3f& Object::getRotate() const {
   return mRotate;
 }
+
+const ci::ColorA& Object::getColor() const {
+  return mColor;
+}

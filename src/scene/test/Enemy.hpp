@@ -3,15 +3,16 @@
 #include "../../object/Object.hpp"
 
 
-class Player : public Object {
+class Enemy : public Object {
 private:
-
 public:
-  Player();
+  Enemy();
   
   void setup();
   void update();
   void draw();
+  
+  int getX() { return mPos.x; }
   
   void onCollisionUpdate(const std::shared_ptr<Object>& compare);
 };
