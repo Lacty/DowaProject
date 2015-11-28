@@ -1,7 +1,17 @@
 
+
+/*
+ 
+ iPad画面サイズ 768 × 1024
+ iPhone画面サイズ 320 × 568
+ 注意！横画面にしてもxとyの座標は変わらない可能性あり
+ どうしてもうまくいかない場合はxとyを逆にしてみること
+ ビルドするときの注意事項 Deployment Info -> Device Orientation
+ Landscape Left,Landscape Right にチェックを入れること、それ以外はチェックを外す
+ 
+ */
+
 #include "Title.hpp"
-<<<<<<< HEAD
-=======
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Texture.h"
@@ -13,6 +23,9 @@
 
 Title::Title()
 {
+  
+  // デバッグ
+  std::cout << "Title.cpp dowa::getWindowSize()" << dowa::getWindowSize() << std::endl;
   
   // デバイスのウィンドサイズを取得し、代入
   mDeviceWindowHeight = dowa::getWindowHeight();
@@ -52,7 +65,7 @@ void Title::update()
   
   if(dowa::Device::isTouchBegan()) // タッチされたらシーン切り替え
   {
-    SceneManager::create(SceneType::Result); // とりあえずリザルトに切り替え
+    SceneManager::create(SceneType::Test); // とりあえずリザルトに切り替え
   }
 
   mSphereMotion++;
@@ -99,12 +112,34 @@ void Title::draw()
 {
 
   ci::gl::pushModelView();
->>>>>>> 18d3a5aa9e32eb0d1ce1ed2543fed03561d40a18
 
+  ci::gl::clear();
+  
+  cinder::gl::enableAlphaBlending(true); // αチャンネル有効
 
-Title::Title() {}
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TitleBack), ci::app::getWindowBounds()); // 背景
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::FeatherBook), mFeatherBookRect); // 本とペン
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Trace), mTraceRect); // 羽
 
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterTa), mKanaLetterTaRect); // た
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterMa), mKanaLetterMaRect); // ま
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterKo), mKanaLetterKoRect); // こ
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterRo), mKanaLetterRoRect); // ろ
 
-void Title::update() {}
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::SphereBlue), mSphereBlueRect); // 青
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::SphereGreen), mSphereGreenRect); // 緑
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::SphereRed), mSphereRedRect); // 赤
 
-void Title::draw() {}
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Logo), mLogoRect); // TAMACORO
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TapToStartEng), mTapToStartEngRect); // タッチしてスタート！
+  
+  cinder::gl::enableAlphaBlending(false); // αチャンネル無効
+  
+  //std::cout
+  //<< "mDeviceWindowWidth = " << mDeviceWindowWidth << std::endl
+  //<< "mDeviceWindowHeight = " << mDeviceWindowHeight
+  //<< std::endl;
+    
+  ci::gl::popModelView();
+  
+}
