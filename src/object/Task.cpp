@@ -18,7 +18,7 @@ void Task::add(const std::string &key, const std::shared_ptr<Object>& obj) {
 }
 
 std::shared_ptr<Object> Task::find(const std::string& key) {
-  assert(get().mMap[key] == nullptr);
+  assert(get().mMap[key] != nullptr);
   return get().mMap[key];
 }
 
