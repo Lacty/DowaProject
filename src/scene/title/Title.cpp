@@ -19,13 +19,14 @@
 #include <math.h>
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
+#include "../../window/Window.hpp"
 
 Title::Title()
 {
   
   // デバイスのウィンドサイズを取得し、代入
-  mDeviceWindowHeight = ci::app::getWindowHeight();
-  mDeviceWindowWidth = ci::app::getWindowWidth();
+  mDeviceWindowHeight = dowa::getWindowHeight();
+  mDeviceWindowWidth = dowa::getWindowWidth();
   
   // 画像読み込み
   dowa::ResourceManager::texture().insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
@@ -43,17 +44,17 @@ Title::Title()
   
   
   // 画像座標設定
-  mFeatherBookRect = ci::Rectf(mDeviceWindowHeight / 5,  mDeviceWindowWidth / 20,
-                               mDeviceWindowHeight / 1.2, mDeviceWindowWidth / 1.28); // 本とペン
+  mFeatherBookRect = ci::Rectf(mDeviceWindowWidth / 5,  mDeviceWindowHeight / 20,
+                               mDeviceWindowWidth / 1.2, mDeviceWindowHeight / 1.28); // 本とペン
   
-  mTraceRect = ci::Rectf(mDeviceWindowHeight / 4.7, mDeviceWindowWidth / 6.5,
-                         mDeviceWindowHeight / 1.5, mDeviceWindowWidth / 1.3); // 羽
+  mTraceRect = ci::Rectf(mDeviceWindowWidth / 4.7, mDeviceWindowHeight / 6.5,
+                         mDeviceWindowWidth / 1.5, mDeviceWindowHeight / 1.3); // 羽
   
-  mLogoRect = ci::Rectf(mDeviceWindowHeight / 3.5, mDeviceWindowWidth / 1.6,
-                        mDeviceWindowHeight / 2, mDeviceWindowWidth / 1.45); // TAMACORO
+  mLogoRect = ci::Rectf(mDeviceWindowWidth / 3.5, mDeviceWindowHeight / 1.6,
+                        mDeviceWindowWidth / 2, mDeviceWindowHeight / 1.45); // TAMACORO
   
-  mTapToStartEngRect = ci::Rectf(mDeviceWindowHeight / 3.3, mDeviceWindowWidth / 1.22,
-                                 mDeviceWindowHeight / 1.35, mDeviceWindowWidth / 1.12); // タッチしてスタート！
+  mTapToStartEngRect = ci::Rectf(mDeviceWindowWidth / 3.3, mDeviceWindowHeight / 1.22,
+                                 mDeviceWindowWidth / 1.35, mDeviceWindowHeight / 1.12); // タッチしてスタート！
 }
 
 void Title::update()
@@ -67,40 +68,40 @@ void Title::update()
   mSphereMotion++;
 
 
-  mKanaLetterTaRect = ci::Rectf(mDeviceWindowHeight / 4.5,
-                                mDeviceWindowWidth / 4 + sin(M_PI * 2 / 240 * mSphereMotion) * 2,
-                                mDeviceWindowHeight / 2.5,
-                                mDeviceWindowWidth / 2 + sin(M_PI * 2 / 240 * mSphereMotion) * 2); // た
+  mKanaLetterTaRect = ci::Rectf(mDeviceWindowWidth / 4.5,
+                                mDeviceWindowHeight / 4 + sin(M_PI * 2 / 240 * mSphereMotion) * 2,
+                                mDeviceWindowWidth / 2.5,
+                                mDeviceWindowHeight / 2 + sin(M_PI * 2 / 240 * mSphereMotion) * 2); // た
   
-  mKanaLetterMaRect = ci::Rectf(mDeviceWindowHeight / 2.7,
-                                mDeviceWindowWidth / 10 + sin(M_PI * 2 / 240 * mSphereMotion) * -2,
-                                mDeviceWindowHeight / 1.77,
-                                mDeviceWindowWidth / 3 + sin(M_PI * 2 / 240 * mSphereMotion) * -2); // ま
+  mKanaLetterMaRect = ci::Rectf(mDeviceWindowWidth / 2.7,
+                                mDeviceWindowHeight / 10 + sin(M_PI * 2 / 240 * mSphereMotion) * -2,
+                                mDeviceWindowWidth / 1.77,
+                                mDeviceWindowHeight / 3 + sin(M_PI * 2 / 240 * mSphereMotion) * -2); // ま
 
-  mKanaLetterKoRect = ci::Rectf(mDeviceWindowHeight / 2.1,
-                                mDeviceWindowWidth / 3.1 + sin(M_PI * 2 / 240 * mSphereMotion) * 3,
-                                mDeviceWindowHeight / 1.5,
-                                mDeviceWindowWidth / 1.8 + sin(M_PI * 2 / 240 * mSphereMotion) * 3); // こ
+  mKanaLetterKoRect = ci::Rectf(mDeviceWindowWidth / 2.1,
+                                mDeviceWindowHeight / 3.1 + sin(M_PI * 2 / 240 * mSphereMotion) * 3,
+                                mDeviceWindowWidth / 1.5,
+                                mDeviceWindowHeight / 1.8 + sin(M_PI * 2 / 240 * mSphereMotion) * 3); // こ
 
-  mKanaLetterRoRect = ci::Rectf(mDeviceWindowHeight / 1.6,
-                                mDeviceWindowWidth / 6 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5,
-                                mDeviceWindowHeight / 1.22,
-                                mDeviceWindowWidth / 2.5 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5); // ろ
+  mKanaLetterRoRect = ci::Rectf(mDeviceWindowWidth / 1.6,
+                                mDeviceWindowHeight / 6 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5,
+                                mDeviceWindowWidth / 1.22,
+                                mDeviceWindowHeight / 2.5 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5); // ろ
   
-  mSphereBlueRect = ci::Rectf(mDeviceWindowHeight / 1.8,
-                              mDeviceWindowWidth / 7.9 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5,
-                              mDeviceWindowHeight / 1.55,
-                              mDeviceWindowWidth / 4.1 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5); // 青
+  mSphereBlueRect = ci::Rectf(mDeviceWindowWidth / 1.8,
+                              mDeviceWindowHeight / 7.9 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5,
+                              mDeviceWindowWidth / 1.55,
+                              mDeviceWindowHeight / 4.1 + sin(M_PI * 2 / 240 * mSphereMotion) * 1.5); // 青
   
-  mSphereGreenRect = ci::Rectf(mDeviceWindowHeight / 5.8,
-                               mDeviceWindowWidth / 2.0 + sin(M_PI * 2 / 240 * mSphereMotion) * -1.5,
-                               mDeviceWindowHeight / 3.28,
-                               mDeviceWindowWidth / 1.5 + sin(M_PI * 2 / 240 * mSphereMotion) * -1.5); // 緑
+  mSphereGreenRect = ci::Rectf(mDeviceWindowWidth / 5.8,
+                               mDeviceWindowHeight / 2.0 + sin(M_PI * 2 / 240 * mSphereMotion) * -1.5,
+                               mDeviceWindowWidth / 3.28,
+                               mDeviceWindowHeight / 1.5 + sin(M_PI * 2 / 240 * mSphereMotion) * -1.5); // 緑
   
-  mSphereRedRect = ci::Rectf(mDeviceWindowHeight / 1.6,
-                             mDeviceWindowWidth / 1.8 + sin(M_PI * 2 / 240 * mSphereMotion) * -2.5,
-                             mDeviceWindowHeight / 1.27,
-                             mDeviceWindowWidth  / 1.3 + sin(M_PI * 2 / 240 * mSphereMotion) * -2.5); // 赤
+  mSphereRedRect = ci::Rectf(mDeviceWindowWidth / 1.6,
+                             mDeviceWindowHeight / 1.8 + sin(M_PI * 2 / 240 * mSphereMotion) * -2.5,
+                             mDeviceWindowWidth / 1.27,
+                             mDeviceWindowHeight  / 1.3 + sin(M_PI * 2 / 240 * mSphereMotion) * -2.5); // 赤
   
 }
 
