@@ -10,7 +10,7 @@ mPos(ci::Vec3f::zero()),
 mForcus(Forcus::None) {}
 
 Camera::Camera(float fov, float near, float far) {
-  mCamera.setPerspective(fov, dowa::getWindowAspectRatio(), near, far);
+  mCamera.setPerspective(fov, ci::app::getWindowAspectRatio(), near, far);
 }
 
 
