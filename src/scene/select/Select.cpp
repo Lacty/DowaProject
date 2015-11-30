@@ -5,10 +5,10 @@
 
 Select::Select() {
 
+	
+
 	y_angle = 0.0f;
 	ry = 0.0f;
-
-
 
 	mDeviceWindowHeight = ci::app::getWindowHeight();
 	mDeviceWindowWidth = ci::app::getWindowWidth();
@@ -16,6 +16,8 @@ Select::Select() {
 
 	stage1.pos = ci::Vec3f(-200.0f, 0.0f, 0.0f);
 	stage1.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
+	stage1.resize = ci::Vec3f(10.0f, 10.0f, 10.0f);
+	stage1.resize_angle = ci::Vec3f(0.0f, 0.0f, 0.0f);
 
 	stage2.pos = ci::Vec3f(0.0f, -150.0f, 0.0f),
 		stage2.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
@@ -37,15 +39,28 @@ void Select::keyDown(ci::app::KeyEvent event)
 
 	if (event.getCode() == ci::app::KeyEvent::KEY_SPACE)
 	{
-
+		
 	}
 
 }
 
 void Select::update() {
 	//setNextScene(SceneType::GameMain, FadeType::None);
-	ry = std::sin(y_angle) * 10.0f;
-	y_angle += 0.005f;
+	//-------------------------------------------------------------
+	//è„â∫î˜ìÆ
+	ry = std::cos(y_angle) * 10.0f;
+    y_angle += 0.005f;
+	//-------------------------------------------------------------
+	//-------------------------------------------------------------
+	//ägëÂèkè¨
+	stage1.resize.x = std::sin(stage1.resize_angle.x) * 10.0f;
+	stage1.resize.y = std::sin(stage1.resize_angle.y) * 10.0f;
+	if (!isOnCursor)
+	{
+		stage1.resize_angle.x += 0.005f;
+		stage1.resize_angle.y += 0.005f;
+	}
+	//-------------------------------------------------------------
 	if (isDecided==true)
 	{
 		
@@ -117,7 +132,7 @@ void Select::draw() {
 	ci::gl::translate(ci::app::getWindowCenter());
 	ci::gl::color(ci::Color(1, 1, 0));
 	ci::gl::drawCube(ci::Vec3f(stage1.pos.x, stage1.pos.y + ry, stage1.pos.z),
-		ci::Vec3f(stage1.size.x, stage1.size.y, stage1.size.z));
+		ci::Vec3f(stage1.size.x + stage1.resize.x, stage1.size.y + stage1.resize.y, stage1.size.z));
 	ci::gl::popModelView();
 
 	//stage2

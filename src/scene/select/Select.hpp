@@ -17,6 +17,7 @@ class Select : public Scene {
 private:
 	Device* selectDevice;
 
+
 	float ry;
 	float y_angle;
 	float mDeviceWindowHeight, mDeviceWindowWidth;
@@ -36,6 +37,7 @@ private:
 	bool isSelected;
 	bool isDecided;
 
+	
 	
 	class Device;
 public:

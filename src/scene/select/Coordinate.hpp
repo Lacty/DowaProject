@@ -7,6 +7,7 @@ struct Stage
 {
 	 ci::Vec3f pos;
 	ci::Vec3f size;
-	float ry;
-	float y_angle;
+	ci::Vec3f resize;
+	ci::Vec3f resize_angle;
+
 };
