@@ -45,6 +45,8 @@ public:
 	Stage stage1;
 	Stage stage2;
 	Stage stage3;
+	//git更新確認用
+	Stage stage4;
 
 	Select();
 
