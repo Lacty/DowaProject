@@ -7,23 +7,18 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
 #include <math.h>
-
 #include "../../scene/SceneManager.hpp"
-
 
 
 class Select : public Scene {
 private:
 	
-	static Select& get();
-
 	float mry;
 	float my_angle;
 	float mDeviceWindowHeight, mDeviceWindowWidth;
 	ci::Vec2f mtouchPos;
-	
-
 	int mSelectedStage_id;
+	
 	enum Stage_id
 	{
 		mNone,
@@ -32,10 +27,8 @@ private:
 		mStage3,
 	};
 	
-	bool isOnCursor;
 	bool isSelected;
 	bool isDecided;
-
 
 	struct Stage
 	{
@@ -46,20 +39,19 @@ private:
 
 	};
 	
-	class Device;
+	ci::Rectf mBackgroundapos;
+	ci::Rectf mStageinfpos;
+	ci::Rectf mStage1pos;
+	ci::Rectf mStage2pos;
+	ci::Rectf mStage3pos;
+	
 public:
 	
 	Stage stage1;
 	Stage stage2;
 	Stage stage3;
-	//git更新確認用
-	Stage stage4;
-
-
-	Select();
-	//void 
 	
+	Select();
 	void update();
 	void draw();
-
 };
