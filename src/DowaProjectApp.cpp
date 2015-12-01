@@ -31,15 +31,15 @@ public:
 
 void DowaProjectApp::setup() {
 #if defined(CINDER_COCOA_TOUCH)
-  getSignalSupportedOrientations().connect([]() {
-    return InterfaceOrientation::LandscapeLeft | InterfaceOrientation::LandscapeRight;
-  });
+  //getSignalSupportedOrientations().connect([]() {
+  //  return InterfaceOrientation::LandscapeLeft | InterfaceOrientation::LandscapeRight;
+  //});
 #endif
 
   Device::enable();
-  //dowa::ResourceManager::enable();
+  dowa::ResourceManager::enable();
   SceneManager::enable();
-  SceneManager::create(SceneType::Test);
+  SceneManager::create(SceneType::Title);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {

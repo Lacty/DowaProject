@@ -1,11 +1,12 @@
 
 #include "Player.hpp"
 #include "../../object/Task.hpp"
+#include "../../device/Device.hpp"
 
 
 Player::Player() {
-  mPos = ci::Vec3f(ci::app::getWindowCenter(), 0);
-  mSize = ci::Vec3f(50, 50, 50);
+  mPos = ci::Vec3f(0, 0, 0);
+  mSize = ci::Vec3f(50, 50, 2);
   
   setColliderType(Collider::Rect);
 }
@@ -14,7 +15,11 @@ Player::Player() {
 void Player::setup() {}
 
 void Player::update() {
-  mPos.x += 1;
+  static bool touch = true;
+  mPos.x += touch ? 1 : 0;
+  
+  if (!dowa::Device::isTouchBegan()) return;
+  touch = !touch;
 }
 
 void Player::draw() {
@@ -27,5 +32,5 @@ void Player::draw() {
 
 
 void Player::onCollisionUpdate(const std::shared_ptr<Object>& compare) {
-  compare->setState(State::Dead);
+  //compare->setState(State::Dead);
 }

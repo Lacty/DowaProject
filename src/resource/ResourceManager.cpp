@@ -7,8 +7,19 @@ using namespace dowa;
 //Audio Resource
 
 hidden::AudioResource::AudioResource() {
-  Audio temp;
-  mMappedResource.insert(std::make_pair(AudioKey::Key, temp));
+  //Tweak : Place the insert function where you will use the audio files
+  //It will work the same way
+  //inserting all the audio files here may cause the program to be slower
+
+  //Use it Right : When you insert some audio file, do a fail check with it
+  //the insert function returns a bool value when executed
+
+  insert("sound/bgm/menu.wav", AudioKey::Menu);
+  insert("sound/bgm/cinderella/town.wav", CinderellaAudioKey::Town);
+  insert("sound/bgm/cinderella/castle.wav", CinderellaAudioKey::Castle);
+
+  insert("sound/se/gamestart.wav", AudioKey::GameStartSE);
+  insert("sound/se/stageselected.wav", AudioKey::StageSelectSE);
 }
 
 bool hidden::AudioResource::insert(std::string path, int key) {
@@ -67,6 +78,14 @@ hidden::TextureResource::TextureResource() {
   insert("background/gameMain/cinderella/5.png", CinderellaTextureKey::Town2Houses);
   insert("background/gameMain/cinderella/6.png", CinderellaTextureKey::Bridge);
   insert("background/gameMain/cinderella/7.jpg", CinderellaTextureKey::Castle);
+
+  // result—p‚Ìresource
+
+  insert("background/result/Back.jpg", TextureKey::Back);
+  insert("background/result/Retry.jpg", TextureKey::Retry);
+  insert("background/result/Select.jpg", TextureKey::Select);
+  insert("background/result/Fin.jpg", TextureKey::Fin);
+  insert("background/result/Font.png", TextureKey::Font);
 }
 
 bool hidden::TextureResource::insert(std::string path, int key) {

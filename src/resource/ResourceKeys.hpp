@@ -24,7 +24,15 @@ namespace dowa {
 
 class AudioKey {
 public:
-  static const int Key = dowa::AudConst::ACCommon;
+  static const int Menu = dowa::AudConst::ACCommon;
+  static const int GameStartSE = dowa::AudConst::ACCommon + 1;
+  static const int StageSelectSE = dowa::AudConst::ACCommon + 2;
+};
+
+class CinderellaAudioKey{
+public:
+  static const int Town = dowa::AudConst::ACCinderella;
+  static const int Castle = dowa::AudConst::ACCinderella + 1;
 };
 
 class TextureKey {
@@ -47,6 +55,16 @@ public:
   static const int SphereBlue = dowa::TexConst::TCCommon + 12;
   static const int SphereGreen = dowa::TexConst::TCCommon + 13;
   static const int SphereRed = dowa::TexConst::TCCommon + 14;
+
+  // result—p‚Ìresource
+
+  static const int Back = dowa::TexConst::TCCommon + 15;
+  static const int Retry = dowa::TexConst::TCCommon + 16;
+  static const int Select = dowa::TexConst::TCCommon + 17;
+  static const int Fin = dowa::TexConst::TCCommon + 18;
+  static const int Font = dowa::TexConst::TCCommon + 19;
+
+
 };
 
 class CinderellaTextureKey{

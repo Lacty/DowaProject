@@ -3,9 +3,8 @@
 
 
 Enemy::Enemy() {
-  mPos = ci::Vec3f(ci::app::getWindowCenter().x + 100,
-                   ci::app::getWindowCenter().y, 0);
-  mSize = ci::Vec3f(50, 50, 50);
+  mPos = ci::Vec3f(50, 0, 0);
+  mSize = ci::Vec3f(50, 50, 2);
   
   setColliderType(Collider::Rect);
 }
