@@ -1,7 +1,6 @@
 
 #pragma once
 #include "../Scene.hpp"
-#include "Coordinate.hpp"
 #include "../../device/Device.hpp"
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
@@ -12,16 +11,16 @@
 #include "../../scene/SceneManager.hpp"
 
 
-class Device;
+
 class Select : public Scene {
 private:
-	Device* selectDevice;
+	
+	static Select& get();
 
-
-	float ry;
-	float y_angle;
+	float mry;
+	float my_angle;
 	float mDeviceWindowHeight, mDeviceWindowWidth;
-
+	ci::Vec2f mtouchPos;
 	
 
 	int mSelectedStage_id;
@@ -37,7 +36,15 @@ private:
 	bool isSelected;
 	bool isDecided;
 
-	
+
+	struct Stage
+	{
+		ci::Vec3f pos;
+		ci::Vec3f size;
+		ci::Vec3f resize;
+		ci::Vec3f resize_angle;
+
+	};
 	
 	class Device;
 public:
@@ -48,10 +55,11 @@ public:
 	//git更新確認用
 	Stage stage4;
 
-	Select();
 
-	void keyDown(ci::app::KeyEvent event);
-	void mouseDown(ci::app::MouseEvent event);
+	Select();
+	//void 
+	
 	void update();
 	void draw();
+
 };

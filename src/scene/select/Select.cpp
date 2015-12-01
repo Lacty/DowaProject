@@ -7,8 +7,9 @@ Select::Select() {
 
 	
 
-	y_angle = 0.0f;
-	ry = 0.0f;
+	my_angle = 0.0f;
+	mry = 0.0f;
+	//mtouchPos = dowa::Device::getTouchPos();//ci::Vec2f(0.0f, 0.0f);
 
 	mDeviceWindowHeight = ci::app::getWindowHeight();
 	mDeviceWindowWidth = ci::app::getWindowWidth();
@@ -33,23 +34,12 @@ Select::Select() {
 	mSelectedStage_id = mStage3;
 }
 
-void Select::keyDown(ci::app::KeyEvent event)
-{
-
-
-	if (event.getCode() == ci::app::KeyEvent::KEY_SPACE)
-	{
-		
-	}
-
-}
-
 void Select::update() {
 	//setNextScene(SceneType::GameMain, FadeType::None);
 	//-------------------------------------------------------------
 	//上下微動
-	ry = std::cos(y_angle) * 10.0f;
-    y_angle += 0.005f;
+	mry = std::cos(my_angle) * 10.0f;
+    my_angle += 0.005f;
 	//-------------------------------------------------------------
 	//-------------------------------------------------------------
 	//拡大縮小
@@ -61,30 +51,32 @@ void Select::update() {
 		stage1.resize_angle.y += 0.005f;
 	}
 	//-------------------------------------------------------------
-	if (isDecided==true)
+	
+	
+	if (dowa::Device::isTouchBegan())
 	{
-		
-			SceneManager::create(SceneType::GameMain);
+		std::cout << "タッチしました" << std::endl;
+		//SceneManager::create(SceneType::Select);
+	
+		mtouchPos = dowa::Device::getTouchPos();
+		if (mtouchPos.x >= stage1.pos.x && mtouchPos.x <= stage1.size.x
+			&& mtouchPos.y >= stage1.pos.y && mtouchPos.y <= stage1.size.y)
+		{
+			SceneManager::create(SceneType::Result);
+		}
 		
 	}
 	
+	
+	std::cout << "タッチした位置:" << mtouchPos << std::endl;
+
+	
+
 }
-
-void Select::mouseDown(ci::app::MouseEvent event)
-{
-
-	if (dowa::Device::isTouchBegan){
-		if (event.getX() >= stage1.pos.x && event.getX() <= stage1.pos.x + stage1.size.x
-			&& event.getY() >= stage1.pos.y && event.getY() <= stage1.pos.y + stage1.size.y)
-		{
-			isDecided = true;
-
-		}
-	}
-}
-
 
 void Select::draw() {
+	
+	
 
 	//background
 	ci::gl::pushModelView();
@@ -131,7 +123,7 @@ void Select::draw() {
 	ci::gl::pushModelView();
 	ci::gl::translate(ci::app::getWindowCenter());
 	ci::gl::color(ci::Color(1, 1, 0));
-	ci::gl::drawCube(ci::Vec3f(stage1.pos.x, stage1.pos.y + ry, stage1.pos.z),
+	ci::gl::drawCube(ci::Vec3f(stage1.pos.x, stage1.pos.y + mry, stage1.pos.z),
 		ci::Vec3f(stage1.size.x + stage1.resize.x, stage1.size.y + stage1.resize.y, stage1.size.z));
 	ci::gl::popModelView();
 
@@ -139,7 +131,7 @@ void Select::draw() {
 	ci::gl::pushModelView();
 	ci::gl::translate(ci::app::getWindowCenter());
 	ci::gl::color(ci::Color(1, 0, 0));
-	ci::gl::drawCube(ci::Vec3f(stage2.pos.x, stage2.pos.y + ry, stage2.pos.z),
+	ci::gl::drawCube(ci::Vec3f(stage2.pos.x, stage2.pos.y + mry, stage2.pos.z),
 		ci::Vec3f(stage2.size.x, stage2.size.y, stage2.size.z));
 	ci::gl::popModelView();
 
@@ -147,7 +139,7 @@ void Select::draw() {
 	ci::gl::pushModelView();
 	ci::gl::translate(ci::app::getWindowCenter());
 	ci::gl::color(ci::Color(1, 1, 0));
-	ci::gl::drawCube(ci::Vec3f(stage3.pos.x, stage3.pos.y + ry, stage3.pos.z),
+	ci::gl::drawCube(ci::Vec3f(stage3.pos.x, stage3.pos.y + mry, stage3.pos.z),
 		ci::Vec3f(stage3.size.x, stage3.size.y, stage3.size.z));
 	ci::gl::popModelView();
 
@@ -158,8 +150,5 @@ void Select::draw() {
 	ci::gl::color(ci::Color();
 	ci::gl::drawCube();
 	ci::gl::popModelView();
-
 	*/
-
-
 }
