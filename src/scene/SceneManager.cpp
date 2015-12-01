@@ -41,6 +41,9 @@ void SceneManager::update() {
   get().mScene->update();
   Task::update();
   
+  get().mFadeIn.update();
+  get().mFadeOut.update();
+  
   if (get().mCurrentType == get().mNextType) return;
   if (!get().mFadeIn.getIsEnd()) return;
   get().create(get().mNextType);
