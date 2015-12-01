@@ -32,7 +32,7 @@ private:
   
 public:
   Camera();
-  Camera(float fov, float near, float far);
+  Camera(float fov, float _near, float _far);
   
   void setForcusNum(const Forcus forcus);
   
