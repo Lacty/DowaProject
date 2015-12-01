@@ -49,6 +49,9 @@
     <Filter Include="Source Files\scene\fade\fadeIn">
       <UniqueIdentifier>{289ac625-acff-4677-956e-40b885f469a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\scene\test\camera">
+      <UniqueIdentifier>{086722d8-22d7-4abc-806f-e2549d1c38a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -105,6 +108,15 @@
     <ClCompile Include="..\src\scene\fade\FadeOut.cpp">
       <Filter>Source Files\scene\fade\fadeOut</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\scene\test\camera\Camera.cpp">
+      <Filter>Source Files\scene\test\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\test\Enemy.cpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\test\Player.cpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -160,6 +172,15 @@
     </ClInclude>
     <ClInclude Include="..\src\scene\fade\FadeBase.hpp">
       <Filter>Source Files\scene\fade</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\camera\Camera.hpp">
+      <Filter>Source Files\scene\test\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Enemy.hpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Player.hpp">
+      <Filter>Source Files\scene\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
