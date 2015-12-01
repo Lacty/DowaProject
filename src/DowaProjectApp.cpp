@@ -37,7 +37,7 @@ void DowaProjectApp::setup() {
 #endif
 
   Device::enable();
-  //dowa::ResourceManager::enable();
+  dowa::ResourceManager::enable();
   SceneManager::enable();
   SceneManager::create(SceneType::Test);
 }
