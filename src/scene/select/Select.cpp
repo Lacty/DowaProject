@@ -11,8 +11,8 @@ Select::Select() {
 	mDeviceWindowHeight = ci::app::getWindowHeight();
 	mDeviceWindowWidth = ci::app::getWindowWidth();
 
-	//stage1.pos = ci::Vec3f(150.0f, 250.0f, 0.0f); //translate無のとき
-	stage1.pos = ci::Vec3f(-200.0f, 0.0f, 0.0f); //translate有りのとき
+	//stage1.pos = ci::Vec3f(150.0f, 250.0f, 0.0f); // nothing translate(test)
+	stage1.pos = ci::Vec3f(-200.0f, 0.0f, 0.0f);
 	stage1.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
 	stage1.resize = ci::Vec3f(10.0f, 10.0f, 10.0f);
 	stage1.resize_angle = ci::Vec3f(0.0f, 0.0f, 0.0f);
@@ -36,7 +36,7 @@ void Select::update() {
 
 	//setNextScene(SceneType::GameMain, FadeType::None);
 	//-------------------------------------------------------------
-	//上下微動
+	//move up and down
 	mry = std::cos(my_angle) * 10.0f;
     my_angle += 0.005f;
 	//-------------------------------------------------------------
@@ -52,7 +52,7 @@ void Select::update() {
 	//touch
 	if (dowa::Device::isTouchBegan())
 	{
-		std::cout << "タッチしました" << std::endl;
+		std::cout << "touched" << std::endl;
 		//SceneManager::create(SceneType::Select);
 	
 		mtouchPos = dowa::Device::getTouchPos();
@@ -69,7 +69,7 @@ void Select::update() {
 			SceneManager::create(SceneType::Result);
 		}*/
 	}
-	std::cout << "タッチした位置:" << mtouchPos << std::endl;
+	std::cout << "touchpos:" << mtouchPos << std::endl;
 }
 
 void Select::draw() {
