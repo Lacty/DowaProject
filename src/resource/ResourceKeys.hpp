@@ -24,7 +24,15 @@ namespace dowa {
 
 class AudioKey {
 public:
-  static const int Key = dowa::AudConst::ACCommon;
+  static const int Menu = dowa::AudConst::ACCommon;
+  static const int GameStartSE = dowa::AudConst::ACCommon + 1;
+  static const int StageSelectSE = dowa::AudConst::ACCommon + 2;
+};
+
+class CinderellaAudioKey{
+public:
+  static const int Town = dowa::AudConst::ACCinderella;
+  static const int Castle = dowa::AudConst::ACCinderella + 1;
 };
 
 class TextureKey {
