@@ -27,12 +27,18 @@ public:
   static const int Menu = dowa::AudConst::ACCommon;
   static const int GameStartSE = dowa::AudConst::ACCommon + 1;
   static const int StageSelectSE = dowa::AudConst::ACCommon + 2;
+  static const int HitSE = dowa::AudConst::ACCommon + 3;
+  static const int GameOverSE = dowa::AudConst::ACCommon + 4;
 };
 
 class CinderellaAudioKey{
 public:
   static const int Town = dowa::AudConst::ACCinderella;
   static const int Castle = dowa::AudConst::ACCinderella + 1;
+  static const int House = dowa::AudConst::ACCinderella + 2;
+  static const int HousePiano = dowa::AudConst::ACCinderella + 3;
+  static const int BookDrop = dowa::AudConst::ACCinderella + 4;
+  static const int BookHit = dowa::AudConst::ACCinderella + 5;
 };
 
 class TextureKey {
@@ -79,6 +85,35 @@ public:
   static const int Town2Houses = dowa::TexConst::TCCinderella + 7;
   static const int Bridge = dowa::TexConst::TCCinderella + 8;
   static const int Castle = dowa::TexConst::TCCinderella + 9;
+  static const int Apple = dowa::TexConst::TCCinderella + 10;
+  static const int Barrel = dowa::TexConst::TCCinderella + 11;
+  static const int BarrelSide = dowa::TexConst::TCCinderella + 12;
+  static const int BookBack = dowa::TexConst::TCCinderella + 13;
+  static const int BookDropped = dowa::TexConst::TCCinderella + 14;
+  static const int BookOpen = dowa::TexConst::TCCinderella + 15;
+  static const int BookShelf = dowa::TexConst::TCCinderella + 16;
+  static const int BookShelfEmpty = dowa::TexConst::TCCinderella + 17;
+  static const int BookSide = dowa::TexConst::TCCinderella + 18;
+  static const int CarriageAnim1 = dowa::TexConst::TCCinderella + 19;
+  static const int CarriageAnim2 = dowa::TexConst::TCCinderella + 20;
+  static const int CarriageAnim3 = dowa::TexConst::TCCinderella + 21;
+  static const int CarriageAnim4 = dowa::TexConst::TCCinderella + 22;
+  static const int CarriageAnim5 = dowa::TexConst::TCCinderella + 23;
+  static const int CarriageAnim6 = dowa::TexConst::TCCinderella + 24;
+  static const int ChoppingAxe = dowa::TexConst::TCCinderella + 25;
+  static const int FullPlate = dowa::TexConst::TCCinderella + 26;
+  static const int HungryBear = dowa::TexConst::TCCinderella + 27;
+  static const int Hydrant = dowa::TexConst::TCCinderella + 28;
+  static const int LampPost = dowa::TexConst::TCCinderella + 29;
+  static const int Mouse = dowa::TexConst::TCCinderella + 30;
+  static const int Piano = dowa::TexConst::TCCinderella + 31;
+  static const int PopupCastle = dowa::TexConst::TCCinderella + 32;
+  static const int PopupDrop = dowa::TexConst::TCCinderella + 33;
+  static const int PopupExclamation = dowa::TexConst::TCCinderella + 34;
+  static const int PopupNote = dowa::TexConst::TCCinderella + 35;
+  static const int Pumpkin = dowa::TexConst::TCCinderella + 36;
+  static const int PumpkinCarriage = dowa::TexConst::TCCinderella + 37;
+  static const int SatisfiedBear = dowa::TexConst::TCCinderella + 38;
 };
 
 class RedHoodTextureKey{

@@ -7,19 +7,18 @@ using namespace dowa;
 //Audio Resource
 
 hidden::AudioResource::AudioResource() {
-  //Tweak : Place the insert function where you will use the audio files
-  //It will work the same way
-  //inserting all the audio files here may cause the program to be slower
+  insert("sound/bgm/Menu.wav", AudioKey::Menu);
+  insert("sound/bgm/cinderella/Town.wav", CinderellaAudioKey::Town);
+  insert("sound/bgm/cinderella/Castle.wav", CinderellaAudioKey::Castle);
+  insert("sound/bgm/cinderella/House.wav", CinderellaAudioKey::House);
+  insert("sound/bgm/cinderella/HousePiano.wav", CinderellaAudioKey::HousePiano);
 
-  //Use it Right : When you insert some audio file, do a fail check with it
-  //the insert function returns a bool value when executed
-
-  insert("sound/bgm/menu.wav", AudioKey::Menu);
-  insert("sound/bgm/cinderella/town.wav", CinderellaAudioKey::Town);
-  insert("sound/bgm/cinderella/castle.wav", CinderellaAudioKey::Castle);
-
-  insert("sound/se/gamestart.wav", AudioKey::GameStartSE);
-  insert("sound/se/stageselected.wav", AudioKey::StageSelectSE);
+  insert("sound/se/GameStart.wav", AudioKey::GameStartSE);
+  insert("sound/se/StageSelected.wav", AudioKey::StageSelectSE);
+  insert("sound/se/Hit.wav", AudioKey::HitSE);
+  insert("sound/se/GameOver.wav", AudioKey::GameOverSE);
+  insert("sound/se/cinderella/BookDrop.wav", CinderellaAudioKey::BookDrop);
+  insert("sound/se/cinderella/BookHit.wav", CinderellaAudioKey::BookHit);
 }
 
 bool hidden::AudioResource::insert(std::string path, int key) {
@@ -51,23 +50,19 @@ hidden::Audio hidden::AudioResource::get(int key) {
   return mMappedResource.find(key)->second;
 }
 
+void hidden::AudioResource::check(bool insertResult){
+  if (!insertResult){
+  }
+}
+
 //Audio Resource
 
 //Texture Resource
 
 hidden::TextureResource::TextureResource() {
-  //Tweak : Place the insert function where you will use the textures
-  //It will work the same way
-  //inserting all the textures here may cause the program to be slower
-
-  //Use it Right : When you insert some texture, do a fail check with it
-  //the insert function returns a bool value when executed
-
   insert("object/DownVeil.png", TextureKey::DownVeil);
   insert("object/VeilSpace.png", TextureKey::VeilSpace);
 
-  //Tweak it: Change the CinderellaTextureKey to something more readable
-  //Make it shorter with typedef
   insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
   insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
   insert("character/cinderella/3.png", CinderellaTextureKey::CharacterRight);
@@ -78,6 +73,36 @@ hidden::TextureResource::TextureResource() {
   insert("background/gameMain/cinderella/5.png", CinderellaTextureKey::Town2Houses);
   insert("background/gameMain/cinderella/6.png", CinderellaTextureKey::Bridge);
   insert("background/gameMain/cinderella/7.jpg", CinderellaTextureKey::Castle);
+
+  insert("object/cinderella/Apple.png", CinderellaTextureKey::Apple);
+  insert("object/cinderella/Barrel.png", CinderellaTextureKey::Barrel);
+  insert("object/cinderella/BarrelSide.png", CinderellaTextureKey::BarrelSide);
+  insert("object/cinderella/BookBack.png", CinderellaTextureKey::BookBack);
+  insert("object/cinderella/BookDropped.png", CinderellaTextureKey::BookDropped);
+  insert("object/cinderella/BookOpen.png", CinderellaTextureKey::BookOpen);
+  insert("object/cinderella/BookShelf.png", CinderellaTextureKey::BookShelf);
+  insert("object/cinderella/BookShelfEmpty.png", CinderellaTextureKey::BookShelfEmpty);
+  insert("object/cinderella/BookSide.png", CinderellaTextureKey::BookSide);
+  insert("object/cinderella/CarriageAnim1.png", CinderellaTextureKey::CarriageAnim1);
+  insert("object/cinderella/CarriageAnim2.png", CinderellaTextureKey::CarriageAnim2);
+  insert("object/cinderella/CarriageAnim3.png", CinderellaTextureKey::CarriageAnim3);
+  insert("object/cinderella/CarriageAnim4.png", CinderellaTextureKey::CarriageAnim4);
+  insert("object/cinderella/CarriageAnim5.png", CinderellaTextureKey::CarriageAnim5);
+  insert("object/cinderella/CarriageAnim6.png", CinderellaTextureKey::CarriageAnim6);
+  insert("object/cinderella/ChoppingAxe.png", CinderellaTextureKey::ChoppingAxe);
+  insert("object/cinderella/FullPlate.png", CinderellaTextureKey::FullPlate);
+  insert("object/cinderella/HungryBear.png", CinderellaTextureKey::HungryBear);
+  insert("object/cinderella/Hydrant.png", CinderellaTextureKey::Hydrant);
+  insert("object/cinderella/LampPost.png", CinderellaTextureKey::LampPost);
+  insert("object/cinderella/Mouse.png", CinderellaTextureKey::Mouse);
+  insert("object/cinderella/Piano.png", CinderellaTextureKey::Piano);
+  insert("object/cinderella/PopupCastle.png", CinderellaTextureKey::PopupCastle);
+  insert("object/cinderella/PopupDrop.png", CinderellaTextureKey::PopupDrop);
+  insert("object/cinderella/PopupExclamation.png", CinderellaTextureKey::PopupExclamation);
+  insert("object/cinderella/PopupNote.png", CinderellaTextureKey::PopupNote);
+  insert("object/cinderella/Pumpkin.png", CinderellaTextureKey::Pumpkin);
+  insert("object/cinderella/PumpkinCarriage.png", CinderellaTextureKey::PumpkinCarriage);
+  insert("object/cinderella/SatisfiedBear.png", CinderellaTextureKey::SatisfiedBear);
 
   // result—p‚Ìresource
 
@@ -108,13 +133,27 @@ ci::gl::Texture hidden::TextureResource::get(int key) {
   return mMappedResource.find(key)->second;
 }
 
+void hidden::TextureResource::check(bool insertResult){
+  if (!insertResult){
+
+  }
+}
+
 //Texture Resource
 
 //Resource Manager
 
-void ResourceManager::enable(){
+void ResourceManager::enable(){//deprecated
   audio();
   texture();
+}
+
+void ResourceManager::enableTextures(){
+  texture();
+}
+
+void ResourceManager::enableAudio(){
+  audio();
 }
 
 //Resource Manager
