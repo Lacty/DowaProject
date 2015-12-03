@@ -6,12 +6,10 @@ Select::Select() {
 
 	my_angle = 0.0f;
 	mry = 0.0f;
-	//mtouchPos = dowa::Device::getTouchPos();//ci::Vec2f(0.0f, 0.0f);
 
 	mDeviceWindowHeight = dowa::getWindowHeight();
 	mDeviceWindowWidth = dowa::getWindowWidth();
 
-	//stage1.pos = ci::Vec3f(150.0f, 250.0f, 0.0f); // nothing translate(test)
 	stage1.pos = ci::Vec3f(120.0f, 200.0f, 0.0f);
 	stage1.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
 	stage1.resize = ci::Vec3f::zero()/*(10.0f, 10.0f, 10.0f)*/;
@@ -23,7 +21,7 @@ Select::Select() {
 	//	                 stage1.size.x, stage1.size.y);
 
 	stage2.pos = ci::Vec3f(320.0f, 75.0f, 0.0f),
-		stage2.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
+	stage2.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
 
 	stage3.pos = ci::Vec3f(520.0f, 200.0f, 0.0f);
 	stage3.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
@@ -32,6 +30,8 @@ Select::Select() {
 	isDecided = false;
 
 	mSelectedStage_id = mNone;
+
+		//ci::app::console() << "Select Scene" << std::endl;
 }
 
 void Select::update() {
@@ -54,7 +54,7 @@ void Select::update() {
 	//touch
 	if (dowa::Device::isTouchBegan())
 	{
-		std::cout << "touched" << std::endl;
+		//std::cout << "touched" << std::endl;
 		//SceneManager::create(SceneType::Select);
 	
 		mtouchPos = dowa::Device::getTouchPos();
@@ -84,11 +84,10 @@ void Select::update() {
 //------------------------------------------------------------------
 
 	}
-	std::cout << "touchpos:" << mtouchPos << std::endl;
+//	std::cout << "touchpos:" << mtouchPos << std::endl;
 }
 
 void Select::draw() {
-		
 	//background
 	ci::gl::pushModelView();
 	ci::gl::color(ci::Color(1, 1, 1));

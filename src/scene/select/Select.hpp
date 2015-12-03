@@ -39,13 +39,6 @@ private:
 
 	};
 	
-	/*
-	ci::Rectf mBackgroundapos;
-	ci::Rectf mStageinfpos;
-	ci::Rectf mStage1pos;
-	ci::Rectf mStage2pos;
-	ci::Rectf mStage3pos;
-	*/
 public:
 	
 	Stage stage1;
