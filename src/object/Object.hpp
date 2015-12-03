@@ -66,3 +66,5 @@ protected:
   ci::Vec3f  mRotate;
   ci::ColorA mColor;
 };
+
+typedef const std::shared_ptr<Object> pObject;
