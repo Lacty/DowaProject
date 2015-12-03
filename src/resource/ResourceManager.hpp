@@ -33,6 +33,8 @@ namespace dowa {
 
       bool insert(std::string path, int key);
       Audio get(int key);
+
+      void check(bool insertResult);//Not Implemented
     };
     typedef AudioResource AudioRes;
     typedef std::unordered_map<int, Audio>::const_iterator AudioIterator;
@@ -46,6 +48,8 @@ namespace dowa {
 
       bool insert(std::string path, int key);
       ci::gl::Texture get(int key);
+
+      void check(bool insertResult);//Not Implemented
     };
     typedef TextureResource TexRes;
     typedef std::unordered_map<int, ci::gl::Texture>::const_iterator TextureIterator;
@@ -70,7 +74,17 @@ namespace dowa {
       return tex;
     }
 
-    static void enable();
+    static void enable();//deprecated
+
+    static void enableTextures();
+
+    static void enableAudio();
   };
 
+  typedef ResourceManager Resource;
+
+  /*
+  #define DOWA_AUD Resource::audio()
+  #define DOWA_TEX Resource::texture()
+  */
 }
