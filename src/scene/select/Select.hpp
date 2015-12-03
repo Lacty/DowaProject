@@ -8,7 +8,7 @@
 #include "cinder/ImageIo.h"
 #include <math.h>
 #include "../../scene/SceneManager.hpp"
-
+#include "../../window/Window.hpp"
 
 class Select : public Scene {
 private:
