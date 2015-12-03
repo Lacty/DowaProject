@@ -81,4 +81,10 @@ namespace dowa {
     static void enableAudio();
   };
 
+  typedef ResourceManager Resource;
+
+  /*
+  #define DOWA_AUD Resource::audio()
+  #define DOWA_TEX Resource::texture()
+  */
 }
