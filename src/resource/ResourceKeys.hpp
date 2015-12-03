@@ -30,6 +30,7 @@ public:
   static const int HitSE = dowa::AudConst::ACCommon + 3;
   static const int GameOverSE = dowa::AudConst::ACCommon + 4;
 };
+typedef AudioKey AKey;
 
 class CinderellaAudioKey{
 public:
@@ -40,6 +41,7 @@ public:
   static const int BookDrop = dowa::AudConst::ACCinderella + 4;
   static const int BookHit = dowa::AudConst::ACCinderella + 5;
 };
+typedef CinderellaAudioKey CinderellaAKey;
 
 class TextureKey {
 public:
@@ -72,6 +74,7 @@ public:
 
 
 };
+typedef TextureKey TKey;
 
 class CinderellaTextureKey{
 public:
@@ -115,6 +118,7 @@ public:
   static const int PumpkinCarriage = dowa::TexConst::TCCinderella + 37;
   static const int SatisfiedBear = dowa::TexConst::TCCinderella + 38;
 };
+typedef CinderellaTextureKey CinderellaTKey;
 
 class RedHoodTextureKey{
 public:
