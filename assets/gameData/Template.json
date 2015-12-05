@@ -1,0 +1,23 @@
+{
+    "Stage": {
+        "Object": {
+            "Name": "Name",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ]
+        },
+        "Object2": {
+            "Name": "Name",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ]
+        }
+
+    }
+}

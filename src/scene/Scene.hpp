@@ -20,7 +20,8 @@ enum class SceneType {
   GameMain,
   Result,
   
-  Test
+  Test,
+  Loading
 };
 
 class Scene {

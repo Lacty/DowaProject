@@ -5,6 +5,7 @@
 
 class Loading : public Scene{
 private:
+  bool mAudioInitOnce;
 public:
   Loading();
 
