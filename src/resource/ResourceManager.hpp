@@ -28,13 +28,15 @@ namespace dowa {
     private:
       std::unordered_map <int, Audio> mMappedResource;
       bool mEnable;
-      short counter;
+      short mCounter;
 
     public:
       AudioResource();
 
       void enable();
       bool isEnabled();
+
+      short getCounter();//debug
 
       bool insert(std::string path, int key);
       Audio get(int key);
@@ -48,7 +50,7 @@ namespace dowa {
     private:
       std::unordered_map<int, ci::gl::Texture> mMappedResource;
       bool mEnable;
-      short counter;
+      short mCounter;
 
     public:
       TextureResource();

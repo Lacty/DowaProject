@@ -12,8 +12,6 @@
 #include "../../resource/ResourceManager.hpp"
 
 Test::Test() {
-  Task::add("Player", std::make_shared<Player>());
-  Task::add("Enemy", std::make_shared<Enemy>());
 
   cam = dowa::Camera(60.f, 0.5f, 300.f);
   cam.lookAt(ci::Vec3f(0, 0, 300), ci::Vec3f(0, 0, 0), ci::Vec3f::yAxis());
