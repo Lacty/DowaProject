@@ -55,6 +55,9 @@
     <Filter Include="Source Files\scene\loading">
       <UniqueIdentifier>{50b3215d-a930-491b-875c-ff51149c9a3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Data">
+      <UniqueIdentifier>{1c1d3148-fc98-46cd-a8c9-4eb388ee96d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -196,5 +199,10 @@
     <ResourceCompile Include="Resources.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\gameData\Template.json">
+      <Filter>Game Data</Filter>
+    </None>
   </ItemGroup>
 </Project>

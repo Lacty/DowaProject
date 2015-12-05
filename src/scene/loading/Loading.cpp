@@ -1,27 +1,33 @@
 #include "Loading.hpp"
+#include "../SceneManager.hpp"
 
-Loading::Loading(){
-  dowa::ResourceManager::enableTextures();
+Loading::Loading() {
+  dowa::Resource::createTextures();
+  mAudioInitOnce = false;
 }
 
-void Loading::update(){
-  //Apply the BG texture before enabling the Audio
-  static bool waitOneFrame = false;
-  static bool initOnce = false;
-
-  //Wait one frame to draw the background
-  if (!waitOneFrame){
-    waitOneFrame = true;
-    return;
+void Loading::update() {
+  if (!dowa::Resource::texture().isEnabled()) {
+    dowa::Resource::texture().enable();
+    ci::app::console() << dowa::Resource::texture().getCounter() << std::endl;
   }
 
-  //Load audio files after the drawing of the background
-  if (waitOneFrame && !initOnce){
-    initOnce = true;
-    dowa::ResourceManager::enableTextures();
+  if (dowa::Resource::texture().isEnabled()) {
+    if (!mAudioInitOnce) {
+      dowa::Resource::createAudio();
+      mAudioInitOnce = true;
+    }
+
+    if (!dowa::Resource::audio().isEnabled()) {
+      dowa::Resource::enable();
+    }
+
+    if (dowa::Resource::audio().isEnabled()) {
+      SceneManager::create(SceneType::Title);
+    }
   }
 }
 
-void Loading::draw(){
-  //Draw the background
+void Loading::draw() {
+  ci::gl::clear(ci::ColorA(1, 0, 0, 1));
 }

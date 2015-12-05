@@ -26,10 +26,10 @@ void Test::update() {
   cam.setMatrices();
   cam.forcus();
 
-  if (!dowa::ResourceManager::audio().get(AudioKey::Menu).bgm->isEnabled()){
+  /*if (!dowa::ResourceManager::audio().get(AudioKey::Menu).bgm->isEnabled()){
     dowa::ResourceManager::audio().get(AudioKey::Menu).bgm->enable();
     dowa::ResourceManager::audio().get(AudioKey::Menu).gain->setValue(1.0f);
-  }
+  }*/
 
   if (!dowa::Device::isTouchBegan()) return;
   Task::clear();
