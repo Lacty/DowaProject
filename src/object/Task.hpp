@@ -9,6 +9,7 @@ class Object;
 
 class Task {
 private:
+  std::list<std::shared_ptr<Object>> mList;
   std::unordered_map<std::string, std::shared_ptr<Object>> mMap;
   
   Task() = default;

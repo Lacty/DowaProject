@@ -1,17 +1,14 @@
+//
+//  Player.hpp
+//  DowaProject
+//
+//  Created by Yanai on 2015/12/03.
+//
+//
 
-#pragma once
-#include "../../object/Object.hpp"
+#ifndef Player_hpp
+#define Player_hpp
 
+#include <stdio.h>
 
-class Player : public Object {
-private:
-
-public:
-  Player();
-  
-  void setup();
-  void update();
-  void draw();
-  
-  void onCollisionUpdate(const std::shared_ptr<Object>& compare);
-};
+#endif /* Player_hpp */
