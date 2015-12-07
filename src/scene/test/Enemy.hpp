@@ -12,7 +12,5 @@ public:
   void update();
   void draw();
   
-  int getX() { return mPos.x; }
-  
   void onCollisionUpdate(const std::shared_ptr<Object>& compare);
 };

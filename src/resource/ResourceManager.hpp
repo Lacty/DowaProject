@@ -27,12 +27,21 @@ namespace dowa {
     class AudioResource {
     private:
       std::unordered_map <int, Audio> mMappedResource;
+      bool mEnable;
+      short mCounter;
 
     public:
       AudioResource();
 
+      void enable();
+      bool isEnabled();
+
+      short getCounter();//debug
+
       bool insert(std::string path, int key);
       Audio get(int key);
+
+      void check(bool insertResult);//Not Implemented
     };
     typedef AudioResource AudioRes;
     typedef std::unordered_map<int, Audio>::const_iterator AudioIterator;
@@ -40,12 +49,21 @@ namespace dowa {
     class TextureResource {
     private:
       std::unordered_map<int, ci::gl::Texture> mMappedResource;
+      bool mEnable;
+      short mCounter;
 
     public:
       TextureResource();
 
+      void enable();
+      bool isEnabled();
+
+      short getCounter();//debug
+
       bool insert(std::string path, int key);
       ci::gl::Texture get(int key);
+
+      void check(bool insertResult);//Not Implemented
     };
     typedef TextureResource TexRes;
     typedef std::unordered_map<int, ci::gl::Texture>::const_iterator TextureIterator;
@@ -70,7 +88,17 @@ namespace dowa {
       return tex;
     }
 
-    static void enable();
+    static void enable();//deprecated
+
+    static void createTextures();
+
+    static void createAudio();
   };
 
+  typedef ResourceManager Resource;
+
+  /*
+  #define DOWA_AUD Resource::audio()
+  #define DOWA_TEX Resource::texture()
+  */
 }

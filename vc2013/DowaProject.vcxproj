@@ -117,6 +117,7 @@
     <ClCompile Include="..\src\scene\fade\FadeIn.cpp" />
     <ClCompile Include="..\src\scene\fade\FadeOut.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
+    <ClCompile Include="..\src\scene\loading\Loading.cpp" />
     <ClCompile Include="..\src\scene\result\Result.cpp" />
     <ClCompile Include="..\src\scene\Scene.cpp" />
     <ClCompile Include="..\src\scene\SceneMaker.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="..\src\scene\fade\FadeIn.hpp" />
     <ClInclude Include="..\src\scene\fade\FadeOut.hpp" />
     <ClInclude Include="..\src\scene\gameMain\GameMain.hpp" />
+    <ClInclude Include="..\src\scene\loading\Loading.hpp" />
     <ClInclude Include="..\src\scene\result\Result.hpp" />
     <ClInclude Include="..\src\scene\Scene.hpp" />
     <ClInclude Include="..\src\scene\SceneMaker.hpp" />
@@ -149,6 +151,9 @@
     <ClInclude Include="..\src\scene\test\Player.hpp" />
     <ClInclude Include="..\src\scene\test\Test.hpp" />
     <ClInclude Include="..\src\scene\title\Title.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\gameData\Template.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

@@ -15,6 +15,7 @@ void Task::add(const std::string &key, const std::shared_ptr<Object>& obj) {
   obj->setName(key);
   obj->setState(Object::State::Awake);
   get().mMap[key] = obj;
+  get().mList.emplace_back(obj);
 }
 
 std::shared_ptr<Object> Task::find(const std::string& key) {
@@ -24,45 +25,50 @@ std::shared_ptr<Object> Task::find(const std::string& key) {
 
 void Task::clear() {
   get().mMap.clear();
+  get().mList.clear();
 }
 
 void Task::collisionUpdate(const std::shared_ptr<Object>& obj) {
   if (obj->isColliderTypeNone()) return;
   
-  for (auto& compare : get().mMap) {
-    if (compare.second->isColliderTypeNone()) continue;
-    else if (obj == compare.second) continue;
+  for (auto& compare : get().mList) {
+    if (compare->isColliderTypeNone()) continue;
+    else if (obj == compare) continue;
     
     else // Run if both are set ColliderType
     {
-      if (dowa::isCollisionRectToRect(obj, compare.second)) {
-        obj->onCollisionUpdate(compare.second);
-        compare.second->onCollisionUpdate(obj);
+      if (dowa::isCollisionRectToRect(obj, compare)) {
+        obj->onCollisionUpdate(compare);
+        compare->onCollisionUpdate(obj);
       }
     }
   }
 }
 
 void Task::update() {
-  for (auto& obj : get().mMap) {
-    switch (obj.second->getState()) {
+  auto list_itr = get().mList.begin();
+  while (list_itr != get().mList.end()) {
+    switch ((*list_itr)->getState()) {
       case Object::State::Awake :
       {
-        obj.second->setup();
-        obj.second->setState(Object::State::Active);
+        (*list_itr)->setup();
+        (*list_itr)->setState(Object::State::Active);
+        list_itr++;
         break;
       }
       
       case Object::State::Active :
       {
-        get().collisionUpdate(obj.second);
-        obj.second->update();
+        get().collisionUpdate((*list_itr));
+        (*list_itr)->update();
+        list_itr++;
         break;
       }
       
       case Object::State::Dead :
       {
-        get().mMap.erase(obj.second->getName());
+        get().mMap.erase((*list_itr)->getName());
+        list_itr = get().mList.erase(list_itr);
       }
     }
   }

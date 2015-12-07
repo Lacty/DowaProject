@@ -5,7 +5,6 @@
 
 class Player : public Object {
 private:
-
 public:
   Player();
   

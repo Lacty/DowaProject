@@ -52,6 +52,12 @@
     <Filter Include="Source Files\scene\test\camera">
       <UniqueIdentifier>{086722d8-22d7-4abc-806f-e2549d1c38a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\scene\loading">
+      <UniqueIdentifier>{50b3215d-a930-491b-875c-ff51149c9a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Data">
+      <UniqueIdentifier>{1c1d3148-fc98-46cd-a8c9-4eb388ee96d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -116,6 +122,9 @@
     </ClCompile>
     <ClCompile Include="..\src\scene\test\Player.cpp">
       <Filter>Source Files\scene\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\loading\Loading.cpp">
+      <Filter>Source Files\scene\loading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -182,10 +191,18 @@
     <ClInclude Include="..\src\scene\test\Player.hpp">
       <Filter>Source Files\scene\test</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\scene\loading\Loading.hpp">
+      <Filter>Source Files\scene\loading</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\gameData\Template.json">
+      <Filter>Game Data</Filter>
+    </None>
   </ItemGroup>
 </Project>
