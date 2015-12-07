@@ -11,6 +11,19 @@ Test::Test() {
 <<<<<<< HEAD
   Task::add("Player", std::make_shared<Player>());
   Task::add("Enemy", std::make_shared<Enemy>());
+  
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f(0,
+                                                       ci::app::getWindowHeight() / 3.1f, 0),
+                                                       ci::Vec3f(180, 200, 0)));
+  
+  
+  Task::add("Floor", std::make_shared<Floor>(ci::Vec3f(0,
+                                                       ci::app::getWindowHeight(), 0),
+                                                       ci::Vec3f(5000, 50, 3)));
+  
+  Task::add("Floor2", std::make_shared<Floor2>(ci::Vec3f(0,
+                                                         ci::app::getWindowHeight() / 2, 0),
+                                               ci::Vec3f(ci::app::getWindowWidth() / 2, 70, 3)));
 }
 
 void Test::update() {
