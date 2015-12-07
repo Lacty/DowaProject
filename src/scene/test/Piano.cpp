@@ -18,7 +18,6 @@ void Piano::draw() {
 	
 }
 
-
 void Piano::onCollisionUpdate(const std::shared_ptr<Object>& compare) {
 	
 	dowa::ResourceManager::audio().get(AudioKey::Menu).bgm->disable();
