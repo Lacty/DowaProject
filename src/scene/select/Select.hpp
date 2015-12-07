@@ -8,7 +8,7 @@
 #include "cinder/ImageIo.h"
 #include <math.h>
 #include "../../scene/SceneManager.hpp"
-
+#include "../../window/Window.hpp"
 
 class Select : public Scene {
 private:
@@ -39,13 +39,6 @@ private:
 
 	};
 	
-	/*
-	ci::Rectf mBackgroundapos;
-	ci::Rectf mStageinfpos;
-	ci::Rectf mStage1pos;
-	ci::Rectf mStage2pos;
-	ci::Rectf mStage3pos;
-	*/
 public:
 	
 	Stage stage1;
