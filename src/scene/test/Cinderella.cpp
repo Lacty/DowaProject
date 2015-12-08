@@ -12,7 +12,7 @@ Cinderella::Cinderella(ci::Vec3f mCinderellaPos, ci::Vec3f mCinderellaSize)
   mFloorStr = "Floor"; // 床名前判定
   
   mCount = 0; // アニメーション
-  mGravityPower += 0.2f; // 重力力
+  mGravityPower += 0.2f; // 重力パワー
   
   dowa::ResourceManager::texture().insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
   dowa::ResourceManager::texture().insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
@@ -22,6 +22,7 @@ Cinderella::Cinderella(ci::Vec3f mCinderellaPos, ci::Vec3f mCinderellaSize)
   mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);
   mCinderellaRight = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterRight);;
   
+  // コンストラクタでシンデレラの座標初期化
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
   
@@ -34,8 +35,8 @@ void Cinderella::update()
   mPos.x++;
   
   // 重力計算
-  mVy += mGravityPower;
-  mPos.y += mVy;
+  mAccelerationY += mGravityPower;
+  mPos.y += mAccelerationY;
 }
 
 void Cinderella::draw()
@@ -59,6 +60,7 @@ void Cinderella::draw()
     ci::gl::drawCube(mPos, mSize);
     mCinderellaRight.unbind();
   }
+  
   if(mCount == 150) { mCount = 0; }
   
   mCount++;
@@ -72,15 +74,14 @@ void Cinderella::draw()
 
 void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-//  std::cout << compare -> getName() << std::endl;
-  
+
   std::string name;
   name = compare -> getName();
-  name.resize(5);
+  name.resize(5); // 配列の要素リサイズ
   
   if(name == mFloorStr)
   {
-    mVy = 0.0f; // v_vy加速度
+    mAccelerationY = 0.0f;
     mPos.y = compare -> getPos().y - compare -> getSize().y / 2 - mSize.y / 2;
   }
 }
