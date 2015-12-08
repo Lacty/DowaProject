@@ -237,6 +237,7 @@ void hidden::TextureResource::enable(){
     insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
     insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
     insert("background/beta/3.png", CinderellaTextureKey::_betaBack3);
+    insert("background/beta/FullBack.png", CinderellaTextureKey::_betaFull);
     mCounter = 0;
     return;
   }

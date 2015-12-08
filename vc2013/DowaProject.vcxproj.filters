@@ -49,14 +49,23 @@
     <Filter Include="Source Files\scene\fade\fadeIn">
       <UniqueIdentifier>{289ac625-acff-4677-956e-40b885f469a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\scene\test\camera">
-      <UniqueIdentifier>{086722d8-22d7-4abc-806f-e2549d1c38a6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\scene\loading">
       <UniqueIdentifier>{50b3215d-a930-491b-875c-ff51149c9a3e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game Data">
       <UniqueIdentifier>{1c1d3148-fc98-46cd-a8c9-4eb388ee96d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object\test objects">
+      <UniqueIdentifier>{3e8f1ef2-8593-4e30-aa43-6ac887c8d47d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella">
+      <UniqueIdentifier>{08e904ed-a73f-4fea-8fa8-fb6665e191e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\camera">
+      <UniqueIdentifier>{9da80bc5-3c18-40f4-870e-b6f02d7ebf41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\select">
+      <UniqueIdentifier>{fb9a3498-b389-4ccd-913b-d6c1254b8c96}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -114,9 +123,6 @@
     <ClCompile Include="..\src\scene\fade\FadeOut.cpp">
       <Filter>Source Files\scene\fade\fadeOut</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\scene\test\camera\Camera.cpp">
-      <Filter>Source Files\scene\test\camera</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\scene\test\Enemy.cpp">
       <Filter>Source Files\scene\test</Filter>
     </ClCompile>
@@ -125,6 +131,24 @@
     </ClCompile>
     <ClCompile Include="..\src\scene\loading\Loading.cpp">
       <Filter>Source Files\scene\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\test\Cinderella.cpp">
+      <Filter>Source Files\object\test objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\test\Floor.cpp">
+      <Filter>Source Files\object\test objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\test\Piano.cpp">
+      <Filter>Source Files\object\test objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\camera\Camera.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\select\Select.cpp">
+      <Filter>Source Files\scene\select</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\CinderellaScene.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -182,9 +206,6 @@
     <ClInclude Include="..\src\scene\fade\FadeBase.hpp">
       <Filter>Source Files\scene\fade</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\scene\test\camera\Camera.hpp">
-      <Filter>Source Files\scene\test\camera</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\scene\test\Enemy.hpp">
       <Filter>Source Files\scene\test</Filter>
     </ClInclude>
@@ -193,6 +214,24 @@
     </ClInclude>
     <ClInclude Include="..\src\scene\loading\Loading.hpp">
       <Filter>Source Files\scene\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Cinderella.hpp">
+      <Filter>Source Files\object\test objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Floor.hpp">
+      <Filter>Source Files\object\test objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Piano.hpp">
+      <Filter>Source Files\object\test objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\camera\Camera.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\select\Select.hpp">
+      <Filter>Source Files\scene\select</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\CinderellaScene.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

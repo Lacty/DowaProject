@@ -129,6 +129,7 @@ public:
   static const int _betaBack1 = dowa::TexConst::TCCinderella + 1000 + 1;
   static const int _betaBack2 = dowa::TexConst::TCCinderella + 1000 + 2;
   static const int _betaBack3 = dowa::TexConst::TCCinderella + 1000 + 3;
+  static const int _betaFull = dowa::TexConst::TCCinderella + 1000 + 4;
 };
 typedef CinderellaTextureKey CinderellaTKey;
 

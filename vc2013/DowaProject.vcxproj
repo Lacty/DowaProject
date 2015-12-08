@@ -114,6 +114,8 @@
     <ClCompile Include="..\src\object\Task.cpp" />
     <ClCompile Include="..\src\resource\DataManager.cpp" />
     <ClCompile Include="..\src\resource\ResourceManager.cpp" />
+    <ClCompile Include="..\src\scene\cinderella\camera\Camera.cpp" />
+    <ClCompile Include="..\src\scene\cinderella\CinderellaScene.cpp" />
     <ClCompile Include="..\src\scene\fade\FadeIn.cpp" />
     <ClCompile Include="..\src\scene\fade\FadeOut.cpp" />
     <ClCompile Include="..\src\scene\gameMain\GameMain.cpp" />
@@ -122,8 +124,11 @@
     <ClCompile Include="..\src\scene\Scene.cpp" />
     <ClCompile Include="..\src\scene\SceneMaker.cpp" />
     <ClCompile Include="..\src\scene\SceneManager.cpp" />
-    <ClCompile Include="..\src\scene\test\camera\Camera.cpp" />
+    <ClCompile Include="..\src\scene\select\Select.cpp" />
+    <ClCompile Include="..\src\scene\test\Cinderella.cpp" />
     <ClCompile Include="..\src\scene\test\Enemy.cpp" />
+    <ClCompile Include="..\src\scene\test\Floor.cpp" />
+    <ClCompile Include="..\src\scene\test\Piano.cpp" />
     <ClCompile Include="..\src\scene\test\Player.cpp" />
     <ClCompile Include="..\src\scene\test\Test.cpp" />
     <ClCompile Include="..\src\scene\title\Title.cpp" />
@@ -137,6 +142,8 @@
     <ClInclude Include="..\src\resource\DataManager.hpp" />
     <ClInclude Include="..\src\resource\ResourceKeys.hpp" />
     <ClInclude Include="..\src\resource\ResourceManager.hpp" />
+    <ClInclude Include="..\src\scene\cinderella\camera\Camera.hpp" />
+    <ClInclude Include="..\src\scene\cinderella\CinderellaScene.hpp" />
     <ClInclude Include="..\src\scene\fade\FadeBase.hpp" />
     <ClInclude Include="..\src\scene\fade\FadeIn.hpp" />
     <ClInclude Include="..\src\scene\fade\FadeOut.hpp" />
@@ -146,8 +153,11 @@
     <ClInclude Include="..\src\scene\Scene.hpp" />
     <ClInclude Include="..\src\scene\SceneMaker.hpp" />
     <ClInclude Include="..\src\scene\SceneManager.hpp" />
-    <ClInclude Include="..\src\scene\test\camera\Camera.hpp" />
+    <ClInclude Include="..\src\scene\select\Select.hpp" />
+    <ClInclude Include="..\src\scene\test\Cinderella.hpp" />
     <ClInclude Include="..\src\scene\test\Enemy.hpp" />
+    <ClInclude Include="..\src\scene\test\Floor.hpp" />
+    <ClInclude Include="..\src\scene\test\Piano.hpp" />
     <ClInclude Include="..\src\scene\test\Player.hpp" />
     <ClInclude Include="..\src\scene\test\Test.hpp" />
     <ClInclude Include="..\src\scene\title\Title.hpp" />
