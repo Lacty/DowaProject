@@ -1,14 +1,16 @@
-//
-//  Enemy.hpp
-//  DowaProject
-//
-//  Created by Yanai on 2015/12/03.
-//
-//
 
-#ifndef Enemy_hpp
-#define Enemy_hpp
+#pragma once
+#include "../../object/Object.hpp"
 
-#include <stdio.h>
 
-#endif /* Enemy_hpp */
+class Enemy : public Object {
+private:
+public:
+  Enemy();
+  
+  void setup();
+  void update();
+  void draw();
+  
+  void onCollisionUpdate(const std::shared_ptr<Object>& compare);
+};

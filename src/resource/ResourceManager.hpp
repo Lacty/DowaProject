@@ -27,9 +27,16 @@ namespace dowa {
     class AudioResource {
     private:
       std::unordered_map <int, Audio> mMappedResource;
+      bool mEnable;
+      short mCounter;
 
     public:
       AudioResource();
+
+      void enable();
+      bool isEnabled();
+
+      short getCounter();//debug
 
       bool insert(std::string path, int key);
       Audio get(int key);
@@ -42,9 +49,16 @@ namespace dowa {
     class TextureResource {
     private:
       std::unordered_map<int, ci::gl::Texture> mMappedResource;
+      bool mEnable;
+      short mCounter;
 
     public:
       TextureResource();
+
+      void enable();
+      bool isEnabled();
+
+      short getCounter();//debug
 
       bool insert(std::string path, int key);
       ci::gl::Texture get(int key);
@@ -76,9 +90,9 @@ namespace dowa {
 
     static void enable();//deprecated
 
-    static void enableTextures();
+    static void createTextures();
 
-    static void enableAudio();
+    static void createAudio();
   };
 
   typedef ResourceManager Resource;

@@ -1,14 +1,16 @@
 
 #pragma once
+
 #include "../Scene.hpp"
 #include "../../resource/ResourceManager.hpp"
 
-class Loading : public Scene{
-private:
-  bool mAudioInitOnce;
-public:
-  Loading();
 
+class Cinderella : public Scene {
+private:
+
+public:
+  Cinderella();
+  
   void update();
   void draw();
 };
