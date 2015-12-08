@@ -38,16 +38,10 @@ void DowaProjectApp::setup() {
 
   Device::enable();
   //Comment Out here if Loading scene is implemented
-<<<<<<< HEAD
   //dowa::ResourceManager::enable();
-  dowa::Resource::enableTextures();
-  SceneManager::enable();
-  SceneManager::create(SceneType::Test);
-=======
   //dowa::ResourceManager::enableTextures();
   SceneManager::enable();
   SceneManager::create(SceneType::Loading);
->>>>>>> 3f70f1887b505bd29bad8c96f5c7a67eda78f0f3
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
