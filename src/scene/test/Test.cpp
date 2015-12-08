@@ -6,6 +6,10 @@
 #include "Player.hpp"
 #include "Enemy.hpp"
 
+#include "Cinderella.hpp"
+#include "Floor.hpp"
+#include "Floor2.hpp"
+
 
 Test::Test() {
 <<<<<<< HEAD
