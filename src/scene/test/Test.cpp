@@ -1,23 +1,20 @@
 
 #include "Test.hpp"
-#include "../../window/Window.hpp"
 #include "../../object/Task.hpp"
-
-#include "Player.hpp"
-#include "Enemy.hpp"
-
-#include "Cinderella.hpp"
-#include "Floor.hpp"
-
-#include "../SceneManager.hpp"
 #include "../../device/Device.hpp"
+#include "../SceneManager.hpp"
 
-Test::Test() {}
+#include "ball/Ball.hpp"
+
+
+Test::Test() {
+  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f::zero(), ci::Vec3f(50, 50, 5)));
+}
 
 void Test::update() {
   if (dowa::Device::isTouchBegan()) {
-    std::cout << "aa" << std::endl;
-    SceneManager::create(SceneType::Cinderella);
+    Task::clear();
+    SceneManager::create(SceneType::Test);
   }
 }
 
