@@ -4,19 +4,19 @@
 Loading::Loading() {
   dowa::Resource::createTextures();
   mAudioInitOnce = false;
-  ci::app::console() <<  "Loading Ctor" + dowa::Resource::texture().getCounter() << std::endl;
+  //ci::app::console() <<  "Loading Ctor" + dowa::Resource::texture().getCounter() << std::endl;
 }
 
 void Loading::update() {
   if (!dowa::Resource::texture().isEnabled()) {
     dowa::Resource::texture().enable();
-    //ci::app::console() << dowa::Resource::texture().getCounter() << std::endl;
+    ci::app::console() << dowa::Resource::texture().getCounter() << std::endl;
   }
 
   if (dowa::Resource::texture().isEnabled()) {
     if (!mAudioInitOnce) {
       dowa::Resource::createAudio();
-      //ci::app::console() << dowa::Resource::audio().getCounter() << std::endl;
+      ci::app::console() << "createAudio" << std::endl;
       mAudioInitOnce = true;
     }
 
