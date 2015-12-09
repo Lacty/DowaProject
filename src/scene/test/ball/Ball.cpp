@@ -27,6 +27,15 @@ void Ball::update() {
   if (dowa::Device::isDataAvailable()) {
     mAcc.x += mRot.y * speedRate;
     mAcc.y += mRot.x * speedRate;
+    
+    // ここの部分を変えれば座標系が変わっても動く
+    // たぶんカメラをつけたら座標系がずれるので
+    // yを逆にすれば動くとおもわれ
+    // もしx方向に傾けたのにy方向に動くとしたら
+    // mPos.x += mAcc.y;
+    // mPos.y += mAcc.x;
+    // そこからさらにxのプラス方向に傾けたのにマイナス方向に移動した場合は
+    // mPos.x -= としてあげれば動くとおもわれ
     mPos.x += mAcc.x;
     mPos.y += mAcc.y;
   }
