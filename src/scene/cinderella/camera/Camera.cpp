@@ -83,6 +83,7 @@ void Camera::setForcusObject(const std::shared_ptr<Object>& obj1,
 
 void Camera::setPos(const ci::Vec3f &pos) {
   mPos = pos;
+  mCamera.setEyePoint(mPos);
 }
 
 void Camera::setDistMinMax(float min, float max) {
