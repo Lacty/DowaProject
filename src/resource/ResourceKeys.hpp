@@ -5,9 +5,9 @@ namespace dowa {
   namespace hidden {
 
     enum TextureConst {
-      TCCommon = 1000,
-      TCCinderella = 2000,
-      TCRedHood = 3000
+      TCCommon = 10000,
+      TCCinderella = 20000,
+      TCRedHood = 30000
     };
 
     enum AudioConst {
@@ -72,6 +72,10 @@ public:
   static const int Fin = dowa::TexConst::TCCommon + 18;
   static const int Font = dowa::TexConst::TCCommon + 19;
 
+  static const int StageSelectBack = dowa::TexConst::TCCommon + 20;
+  static const int StageSelectBook = dowa::TexConst::TCCommon + 21;
+  static const int StageSelectCinderella = dowa::TexConst::TCCommon + 22;
+
 
 };
 typedef TextureKey TKey;
@@ -117,6 +121,15 @@ public:
   static const int Pumpkin = dowa::TexConst::TCCinderella + 36;
   static const int PumpkinCarriage = dowa::TexConst::TCCinderella + 37;
   static const int SatisfiedBear = dowa::TexConst::TCCinderella + 38;
+  static const int BookPile = dowa::TexConst::TCCinderella + 39;
+  static const int Chandelier = dowa::TexConst::TCCinderella + 40;
+  static const int PumpkinBad = dowa::TexConst::TCCinderella + 41;
+  static const int FlowerPot = dowa::TexConst::TCCinderella + 42;
+
+  static const int _betaBack1 = dowa::TexConst::TCCinderella + 1000 + 1;
+  static const int _betaBack2 = dowa::TexConst::TCCinderella + 1000 + 2;
+  static const int _betaBack3 = dowa::TexConst::TCCinderella + 1000 + 3;
+  static const int _betaFull = dowa::TexConst::TCCinderella + 1000 + 4;
 };
 typedef CinderellaTextureKey CinderellaTKey;
 

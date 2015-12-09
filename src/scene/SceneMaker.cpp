@@ -8,7 +8,7 @@
 #include "result/Result.hpp"
 #include "test/Test.hpp"
 #include "loading/Loading.hpp"
-#include "cinderella/Cinderella.hpp"
+#include "cinderella/CinderellaScene.hpp"
 
 #include <functional>
 #include <unordered_map>
@@ -24,7 +24,7 @@ std::unique_ptr<Scene> SceneMaker::create(const SceneType& type) const {
     
     { SceneType::Test,       []{ return make_unique<Test>();       } },
     { SceneType::Loading,    []{ return make_unique<Loading>();    } },
-    { SceneType::Cinderella, []{ return make_unique<Cinderella>(); } }
+    { SceneType::Cinderella, []{ return make_unique<CinderellaScene>(); } }
   };
   
   return std::move((list.find(type)->second)());
