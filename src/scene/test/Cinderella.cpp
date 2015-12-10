@@ -8,47 +8,47 @@
 
 Cinderella::Cinderella(ci::Vec3f mCinderellaPos, ci::Vec3f mCinderellaSize)
 {
-  
-  mFloorStr = "Floor"; // åºŠåå‰åˆ¤å®š
-  
-  mCount = 0; // ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³
-  mGravityPower += 0.2f; // é‡åŠ›ãƒ‘ãƒ¯ãƒ¼
-  
+
+  mFloorStr = "Floor"; // °–¼‘O”»’è
+
+  mCount = 0; // ƒAƒjƒ[ƒVƒ‡ƒ“
+  mGravityPower += 0.2f; // d—Íƒpƒ[
+
   dowa::ResourceManager::texture().insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
   dowa::ResourceManager::texture().insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
   dowa::ResourceManager::texture().insert("character/cinderella/3.png", CinderellaTextureKey::CharacterRight);
-  
+
   mCinderellaStatic = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterStatic);
   mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);
   mCinderellaRight = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterRight);;
-  
-  // ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã‚·ãƒ³ãƒ‡ãƒ¬ãƒ©ã®åº§æ¨™åˆæœŸåŒ–
+
+  // ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅƒVƒ“ƒfƒŒƒ‰‚ÌÀ•W‰Šú‰»
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
-  
-  setColliderType(Collider::Rect); // å½“ãŸã‚Šåˆ¤å®š
+
+  setColliderType(Collider::Rect); // “–‚½‚è”»’è
 }
 
 void Cinderella::setup() {}
 void Cinderella::update()
 {
   mPos.x++;
-  
-  // é‡åŠ›è¨ˆç®—
+
+  // d—ÍŒvZ
   mAccelerationY += mGravityPower;
   mPos.y += mAccelerationY;
 }
 
 void Cinderella::draw()
 {
-  
+
   ci::gl::pushModelView();
   cinder::gl::enableAlphaBlending();
-  
+
   ci::gl::enable(GL_CULL_FACE);
   ci::gl::enable(GL_TEXTURE_2D);
-  
-  if(mCount < 75)
+
+  if (mCount < 75)
   {
     mCinderellaLeft.bind();
     ci::gl::drawCube(mPos, mSize);
@@ -60,14 +60,14 @@ void Cinderella::draw()
     ci::gl::drawCube(mPos, mSize);
     mCinderellaRight.unbind();
   }
-  
-  if(mCount == 150) { mCount = 0; }
-  
+
+  if (mCount == 150) { mCount = 0; }
+
   mCount++;
-  
+
   ci::gl::disable(GL_TEXTURE_2D);
   ci::gl::disable(GL_CULL_FACE);
-  
+
   cinder::gl::disableAlphaBlending();
   ci::gl::popModelView();
 }
@@ -76,12 +76,12 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
 
   std::string name;
-  name = compare -> getName();
-  name.resize(5); // é…åˆ—ã®è¦ç´ ãƒªã‚µã‚¤ã‚º
-  
-  if(name == mFloorStr)
+  name = compare->getName();
+  name.resize(5); // ”z—ñ‚Ì—v‘fƒŠƒTƒCƒY
+
+  if (name == mFloorStr)
   {
     mAccelerationY = 0.0f;
-    mPos.y = compare -> getPos().y - compare -> getSize().y / 2 - mSize.y / 2;
+    mPos.y = compare->getPos().y - compare->getSize().y / 2 - mSize.y / 2;
   }
 }

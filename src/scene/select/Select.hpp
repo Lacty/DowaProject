@@ -9,6 +9,7 @@
 #include <math.h>
 #include "../../scene/SceneManager.hpp"
 #include "../../window/Window.hpp"
+#include "../../resource/ResourceManager.hpp"
 
 class Select : public Scene {
 private:
@@ -38,12 +39,22 @@ private:
 		ci::Vec3f resize_angle;
 
 	};
-	
+
+	ci::Rectf mStageSelectBack;
+
+	ci::Rectf mStageCinderellaBook; //use stage2
+	ci::Rectf mStageCinderella;  
+	ci::Rectf mStageCinderellaLogo;
+	//ci::Rectf m;
 public:
 	
 	Stage stage1;
-	Stage stage2;
+	Stage stage2;//Logo
 	Stage stage3;
+
+	Stage book1;
+	Stage book2;
+	Stage book3;
 	
 	Select();
 	void update();
