@@ -10,19 +10,19 @@ Loading::Loading() {
 void Loading::update() {
   if (!dowa::Resource::texture().isEnabled()) {
     dowa::Resource::texture().enable();
-    //ci::app::console() << dowa::Resource::texture().getCounter() << std::endl;
+    ci::app::console() << dowa::Resource::texture().getCounter() << std::endl;
   }
 
   if (dowa::Resource::texture().isEnabled()) {
     if (!mAudioInitOnce) {
       dowa::Resource::createAudio();
-      //ci::app::console() << dowa::Resource::audio().getCounter() << std::endl;
+      ci::app::console() << dowa::Resource::audio().getCounter() << std::endl;
       mAudioInitOnce = true;
     }
 
     if (!dowa::Resource::audio().isEnabled()) {
       dowa::Resource::audio().enable();
-      //ci::app::console() << dowa::Resource::audio().getCounter() << std::endl;
+      ci::app::console() << dowa::Resource::audio().getCounter() << std::endl;
     }
 
     if (dowa::Resource::audio().isEnabled()) {
