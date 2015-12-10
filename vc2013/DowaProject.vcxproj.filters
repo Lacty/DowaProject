@@ -67,6 +67,9 @@
     <Filter Include="Source Files\scene\select">
       <UniqueIdentifier>{fb9a3498-b389-4ccd-913b-d6c1254b8c96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\LightUp">
+      <UniqueIdentifier>{5c10ddd7-8941-40ec-bb3d-9b7f29e68669}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -150,6 +153,9 @@
     <ClCompile Include="..\src\scene\cinderella\CinderellaScene.cpp">
       <Filter>Source Files\scene\gameMain\cinderella</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\LightUp\LightUp.cpp">
+      <Filter>Source Files\LightUp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -232,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="..\src\scene\cinderella\CinderellaScene.hpp">
       <Filter>Source Files\scene\gameMain\cinderella</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LightUp\LightUp.hpp">
+      <Filter>Source Files\LightUp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -110,6 +110,7 @@
     <ClCompile Include="..\src\collision\Collision.cpp" />
     <ClCompile Include="..\src\device\Device.cpp" />
     <ClCompile Include="..\src\DowaProjectApp.cpp" />
+    <ClCompile Include="..\src\LightUp\LightUp.cpp" />
     <ClCompile Include="..\src\object\Object.cpp" />
     <ClCompile Include="..\src\object\Task.cpp" />
     <ClCompile Include="..\src\resource\DataManager.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="..\src\collision\Collision.hpp" />
     <ClInclude Include="..\src\device\Device.hpp" />
+    <ClInclude Include="..\src\LightUp\LightUp.hpp" />
     <ClInclude Include="..\src\object\Object.hpp" />
     <ClInclude Include="..\src\object\Task.hpp" />
     <ClInclude Include="..\src\resource\DataManager.hpp" />
