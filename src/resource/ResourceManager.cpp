@@ -157,6 +157,7 @@ void hidden::TextureResource::enable(){
     insert("object/cinderella/BookShelf.png", CinderellaTextureKey::BookShelf);
     insert("object/cinderella/BookShelfEmpty.png", CinderellaTextureKey::BookShelfEmpty);
     insert("object/cinderella/BookSide.png", CinderellaTextureKey::BookSide);
+    insert("object/cinderella/BookPile.png", CinderellaTextureKey::BookPile);
     mCounter--;
     return;
   }
@@ -216,7 +217,32 @@ void hidden::TextureResource::enable(){
     return;
   }
 
-  if (mCounter <= 49){
+  if (mCounter == 49){
+    insert("background/stageSelect/StageSelectBack.png", TextureKey::StageSelectBack);
+    insert("object/stageSelect/StageSelectBook.png", TextureKey::StageSelectBook);
+    insert("object/stageSelect/Cinderella.png", TextureKey::StageSelectCinderella);
+    mCounter--;
+    return;
+  }
+
+  if (mCounter == 48){
+    insert("object/cinderella/Chandelier.png", CinderellaTextureKey::Chandelier);
+    insert("object/cinderella/FlowerPot.png", CinderellaTextureKey::FlowerPot);
+    insert("object/cinderella/PumpkinBad.png", CinderellaTextureKey::PumpkinBad);
+    mCounter--;
+    return;
+  }
+  
+  if (mCounter == 47){
+    insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
+    insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
+    insert("background/beta/3.png", CinderellaTextureKey::_betaBack3);
+    insert("background/beta/FullBack.png", CinderellaTextureKey::_betaFull);
+    mCounter = 0;
+    return;
+  }
+
+  if (mCounter <= 0){
     mEnable = true;
   }
 }
