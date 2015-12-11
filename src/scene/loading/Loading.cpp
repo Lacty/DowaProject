@@ -4,7 +4,7 @@
 Loading::Loading() {
   dowa::Resource::createTextures();
   mAudioInitOnce = false;
-  //ci::app::console() <<  "Loading Ctor" + dowa::Resource::texture().getCounter() << std::endl;
+  mFont = ci::Font(ci::app::loadAsset("font/HoboStd.otf"), 100);
 }
 
 void Loading::update() {
@@ -32,5 +32,8 @@ void Loading::update() {
 }
 
 void Loading::draw() {
-  ci::gl::clear(ci::ColorA(1, 0, 0, 1));
+  ci::gl::enableAlphaBlending();
+  ci::gl::clear(ci::ColorA(0.5f,0.5f,0.5f));
+  ci::gl::drawStringCentered("Loading...", ci::Vec2f(ci::app::getWindowWidth()/2,ci::app::getWindowHeight()/2),ci::Color::white(),mFont);
+  ci::gl::disableAlphaBlending();
 }
