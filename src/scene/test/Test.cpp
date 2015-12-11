@@ -8,7 +8,13 @@
 
 
 Test::Test() {
+  cam = dowa::Camera();
   Task::add("Ball", std::make_shared<Ball>(ci::Vec3f::zero(), ci::Vec3f(50, 50, 5)));
+}
+
+Test::~Test() {
+  ci::gl::popMatrices();
+  std::cout << "a\n";
 }
 
 void Test::update() {

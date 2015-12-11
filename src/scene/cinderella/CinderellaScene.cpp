@@ -24,12 +24,12 @@ void CinderellaScene::update() {
 
 void CinderellaScene::draw() {
   ci::gl::enable(GL_TEXTURE_2D);
-
+  ci::gl::pushMatrices();
   camera.setMatrices();
-
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaFull), mBack1);
-  //ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack2);
-  //ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack3), mBack3);
-
+  
+  // 描画 カメラを仕様しているので画像が反転し
+  // 座標が　画面の中央が(0, 0)　１年のときに西山先生から配られたチャレンジベーシックの座標系になる
+  
+  ci::gl::popMatrices();
   ci::gl::disable(GL_TEXTURE_2D);
 }
