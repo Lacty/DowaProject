@@ -8,8 +8,12 @@
 
 
 Test::Test() {
+<<<<<<< HEAD
   cam = dowa::Camera();
   Task::add("Ball", std::make_shared<Ball>(ci::Vec3f::zero(), ci::Vec3f(50, 50, 5)));
+=======
+  //Task::add("Ball", std::make_shared<Ball>(ci::Vec3f::zero(), ci::Vec3f(50, 50, 5)));
+>>>>>>> 8579e526e589da71a57d9ccd33f8b61f290744b8
 }
 
 Test::~Test() {
