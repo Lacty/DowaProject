@@ -7,7 +7,7 @@
 #include "gameMain/GameMain.hpp"
 #include "result/Result.hpp"
 #include "test/Test.hpp"
-#include "loading/Loading.hpp"
+#include "loading/TitleLoad.hpp"
 #include "cinderella/CinderellaScene.hpp"
 
 #include <functional>
@@ -23,7 +23,7 @@ std::unique_ptr<Scene> SceneMaker::create(const SceneType& type) const {
     { SceneType::Result,     []{ return make_unique<Result>();     } },
     
     { SceneType::Test,       []{ return make_unique<Test>();       } },
-    { SceneType::Loading,    []{ return make_unique<Loading>();    } },
+    { SceneType::TitleLoad,  []{ return make_unique<TitleLoad>();    } },
     { SceneType::Cinderella, []{ return make_unique<CinderellaScene>(); } }
   };
   

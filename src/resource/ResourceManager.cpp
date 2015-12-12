@@ -131,13 +131,13 @@ void hidden::TextureResource::enable(){
   }
 
   if (mCounter == 58){
-    insert("background/gameMain/cinderella/1.jpg", CinderellaTextureKey::House);
-    insert("background/gameMain/cinderella/2.jpg", CinderellaTextureKey::Forest);
-    insert("background/gameMain/cinderella/3.jpg", CinderellaTextureKey::Town3Houses);
-    insert("background/gameMain/cinderella/4.jpg", CinderellaTextureKey::TownBridge);
+    insert("background/gameMain/cinderella/1.png", CinderellaTextureKey::House);
+    insert("background/gameMain/cinderella/2.png", CinderellaTextureKey::Forest);
+    insert("background/gameMain/cinderella/3.png", CinderellaTextureKey::Town3Houses);
+    insert("background/gameMain/cinderella/4.png", CinderellaTextureKey::TownBridge);
     insert("background/gameMain/cinderella/5.png", CinderellaTextureKey::Town2Houses);
     insert("background/gameMain/cinderella/6.png", CinderellaTextureKey::Bridge);
-    insert("background/gameMain/cinderella/7.jpg", CinderellaTextureKey::Castle);
+    insert("background/gameMain/cinderella/7.png", CinderellaTextureKey::Castle);
     mCounter--;
     return;
   }
@@ -237,7 +237,7 @@ void hidden::TextureResource::enable(){
     insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
     insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
     insert("background/beta/3.png", CinderellaTextureKey::_betaBack3);
-    insert("background/beta/FullBack.png", CinderellaTextureKey::_betaFull);
+    insert("background/beta/FullBack1.png", CinderellaTextureKey::_betaFull);
     mCounter = 0;
     return;
   }
