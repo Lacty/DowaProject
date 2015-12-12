@@ -2,22 +2,333 @@
     "Stage": {
         "Object": {
             "Name": "Name",
+            "Object Type": "Type",
             "Initial State": "State",
-            "ColliderType": "Type",
+            "Collider Type": "Type",
             "Position": [ "x,y" ],
             "Size": [ "x,y" ],
             "Rotation": [ "x,y" ],
-            "Color": [ "r,g,b,a" ]
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
         },
         "Object2": {
             "Name": "Name",
+            "Object Type": "Type",
             "Initial State": "State",
             "ColliderType": "Type",
             "Position": [ "x,y" ],
             "Size": [ "x,y" ],
             "Rotation": [ "x,y" ],
-            "Color": [ "r,g,b,a" ]
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object3": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object4": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object5": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object6": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object7": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object8": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object9": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object10": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object11": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object12": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object13": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object14": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object15": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object16": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object17": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object18": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object19": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object20": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object21": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object22": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object23": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object24": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object25": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object26": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object27": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object28": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object29": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
+        },
+        "Object30": {
+            "Name": "Name",
+            "Object Type": "Type",
+            "Initial State": "State",
+            "ColliderType": "Type",
+            "Position": [ "x,y" ],
+            "Size": [ "x,y" ],
+            "Rotation": [ "x,y" ],
+            "Color": [ "r,g,b,a" ],
+            "TextureKey" : "KeyVal"
         }
-
     }
 }

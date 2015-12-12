@@ -26,7 +26,7 @@ void Loading::update() {
     }
 
     if (dowa::Resource::audio().isEnabled()) {
-      SceneManager::create(SceneType::Cinderella);
+      SceneManager::create(SceneType::Title);
     }
   }
 }
