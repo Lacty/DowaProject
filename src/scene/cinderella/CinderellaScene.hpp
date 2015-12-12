@@ -6,22 +6,30 @@
 #include "camera/Camera.hpp"
 
 
-class CinderellaScene : public Scene {
+class CinderellaScene : public Scene
+{
+  
 private:
-  using Vec3f = ci::Vec3f;
-  ci::Rectf mBack1;//for debugging purposes only
-  //ci::Rectf mBack2;//for debugging purposes only
-  //ci::Rectf mBack3;//for debugging purposes only
+  
+  ci::Rectf mBack1; // 1枚
+  
+  ci::Rectf mBack21; // 4枚
+  ci::Rectf mBack22;
+  ci::Rectf mBack23;
+  ci::Rectf mBack24;
+  
+  ci::Rectf mBack3; // 1枚
 
-  int mWindowWidth;//for debugging purposes only
-  int mWindowHeight;//for debugging purposes only
-
-
-  Vec3f mCameraPos;//debug only
-  Vec3f mCameraTarget;//debug only
+  float mDeviceWindowHeight, mDeviceWindowWidth; // デバイスウィンドサイズ
+  
+  // やない
+  ci::Vec3f mcameraPos;
   dowa::Camera camera;
+  
 public:
+  
   CinderellaScene();
+  ~CinderellaScene();
   
   void update();
   void draw();
