@@ -9,7 +9,6 @@ BookShelf::BookShelf(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize)
   mSize = mBookSize;
   
   mBookShelf = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookShelf); // 本棚
-  mBookPile = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookPile); // 本４冊
   
   setColliderType(Collider::Rect);
 }
