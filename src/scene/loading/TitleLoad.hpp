@@ -10,8 +10,6 @@ private:
   bool isFin;
   void load();
   
-  float angle;
-  
 public:
   TitleLoad();
 

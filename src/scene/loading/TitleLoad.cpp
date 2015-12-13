@@ -5,10 +5,11 @@
 
 
 
-TitleLoad::TitleLoad() : mLoad(&TitleLoad::load, this), isFin(false), angle(0.0f) {}
+TitleLoad::TitleLoad() : mLoad(&TitleLoad::load, this), isFin(false) {}
 
 
 void TitleLoad::load() {
+  // Texture
   dowa::ResourceManager::texture().insert("background/title/TitleBack.png",         TextureKey::TitleBack);
   dowa::ResourceManager::texture().insert("background/title/FeatherBookResize.png", TextureKey::FeatherBook);
   dowa::ResourceManager::texture().insert("background/title/Logo.png",              TextureKey::Logo);
@@ -21,6 +22,11 @@ void TitleLoad::load() {
   dowa::ResourceManager::texture().insert("background/title/SphereBlue.png",        TextureKey::SphereBlue);
   dowa::ResourceManager::texture().insert("background/title/SphereGreen.png",       TextureKey::SphereGreen);
   dowa::ResourceManager::texture().insert("background/title/SphereRed.png",         TextureKey::SphereRed);
+  
+  // Sound
+  dowa::ResourceManager::audio().insert("sound/bgm/Menu.ogg", AudioKey::Menu);
+  dowa::ResourceManager::audio().insert("sound/se/GameStart.ogg", AudioKey::GameStartSE);
+  
   isFin = true;
 }
 
@@ -33,10 +39,4 @@ void TitleLoad::update() {
   }
 }
 
-void TitleLoad::draw() {
-  angle+=0.1f;
-  ci::gl::pushModelView();
-  ci::gl::translate(ci::Vec2f(sin(angle) * 200, 0));
-  ci::gl::drawCube(ci::Vec3f(0, 0, 0), ci::Vec3f(50, 50, 50));
-  ci::gl::popModelView();
-}
+void TitleLoad::draw() {}

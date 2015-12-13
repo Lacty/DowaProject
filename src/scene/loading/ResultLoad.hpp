@@ -1,14 +1,18 @@
-//
-//  ResultLoad.hpp
-//  DowaProject
-//
-//  Created by Yanai on 2015/12/13.
-//
-//
 
-#ifndef ResultLoad_hpp
-#define ResultLoad_hpp
+#pragma once
+#include "../Scene.hpp"
+#include <thread>
 
-#include <stdio.h>
 
-#endif /* ResultLoad_hpp */
+class ResultLoad : public Scene {
+private:
+  std::thread mLoad;
+  bool isFin;
+  void load();
+
+public:
+  ResultLoad();
+
+  void update();
+  void draw();
+};
