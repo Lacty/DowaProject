@@ -2,6 +2,9 @@
 // mDeviceWindowWidth = 568
 // mDeviceWindowHeight = 320
 
+// 林さん要望 ステージの端から端までの移動で
+// オブジェクトになにも干渉しなかった場合、約30秒にする
+
 // 画像１　サイズ 1024 577
 
 #include "CinderellaScene.hpp"
@@ -16,9 +19,14 @@
 #include "Ball.hpp"
 #include "BookShelf.hpp"
 #include "Book.hpp"
+#include "Piano.hpp"
 
 CinderellaScene::CinderellaScene()
 {
+  // BGM
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->enable();
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(1.0f);
+  
   // コンストラクタでプッシュ
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
@@ -28,61 +36,61 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
   // 背景 1
-  mBack1 = ci::Rectf(0, -mDeviceWindowHeight / 2, 1024, mDeviceWindowHeight / 2);
+  mBack1 = ci::Rectf(0, -mDeviceWindowHeight / 2, 512, mDeviceWindowHeight / 2);
   
   // 背景 2
-  mBack21 = ci::Rectf(1000, -mDeviceWindowHeight / 2, 1469, mDeviceWindowHeight / 2);
-  mBack22 = ci::Rectf(1469, -mDeviceWindowHeight / 2, 1938, mDeviceWindowHeight / 2);
-  mBack23 = ci::Rectf(1938, -mDeviceWindowHeight / 2, 2407, mDeviceWindowHeight / 2);
-  mBack24 = ci::Rectf(2407, -mDeviceWindowHeight / 2, 2876, mDeviceWindowHeight / 2);
+  mBack21 = ci::Rectf(497, -mDeviceWindowHeight / 2, 685, mDeviceWindowHeight / 2);
+  mBack22 = ci::Rectf(685, -mDeviceWindowHeight / 2, 873, mDeviceWindowHeight / 2);
+  mBack23 = ci::Rectf(873, -mDeviceWindowHeight / 2, 1061, mDeviceWindowHeight / 2);
+  mBack24 = ci::Rectf(1061, -mDeviceWindowHeight / 2, 1249, mDeviceWindowHeight / 2);
   
   // 背景３
-  mBack3 = ci::Rectf(2876, -mDeviceWindowHeight / 2, 3431, mDeviceWindowHeight / 2);
+  mBack3 = ci::Rectf(1249, -mDeviceWindowHeight / 2, 1761, mDeviceWindowHeight / 2);
   
   // シンデレラさん
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 50.f, 50.f, 0.f),
-                                                       ci::Vec3f( 50.f , 50.f, 0.f)));
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150.0f, 50.0f, 0.0f),
+                                                       ci::Vec3f( 50.0f, 50.0f, 0.0f)));
   
   // 地面
-  Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( 277.f,
+  Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( 139.f,
                                                         -10.f, 0.f),
-                                              ci::Vec3f( 548.f,
+                                              ci::Vec3f( 275.f,
                                                         5.f, 0.f)));
   
   // 地面
-  Task::add("Floor2", std::make_shared<Floor>(ci::Vec3f( 570.f,
+  Task::add("Floor2", std::make_shared<Floor>(ci::Vec3f( 285.f,
                                                         -32.5f, 0.f),
-                                              ci::Vec3f( 49.f,
+                                              ci::Vec3f( 25.f,
                                                         5.f, 0.f)));
   
   // 地面
-  Task::add("Floor3", std::make_shared<Floor>(ci::Vec3f( 612.f,
+  Task::add("Floor3", std::make_shared<Floor>(ci::Vec3f( 306.f,
                                                         -55.5f, 0.f),
-                                              ci::Vec3f( 49.f,
+                                              ci::Vec3f( 25.f,
                                                         5.f, 0.f)));
   
   // 地面
-  Task::add("Floor4", std::make_shared<Floor>(ci::Vec3f( 652.f,
+  Task::add("Floor4", std::make_shared<Floor>(ci::Vec3f( 326.f,
                                                         -78.5f, 0.f),
-                                              ci::Vec3f( 49.f,
+                                              ci::Vec3f( 25.f,
                                                         5.f, 0.f)));
   
   // 地面
-  Task::add("Floor5", std::make_shared<Floor>(ci::Vec3f( 695.f,
+  Task::add("Floor5", std::make_shared<Floor>(ci::Vec3f( 347.5f,
                                                         -101.5f, 0.f),
-                                              ci::Vec3f( 49.f,
+                                              ci::Vec3f( 25.f,
                                                         5.f, 0.f)));
   
   // 地面
-  Task::add("Floor6", std::make_shared<Floor>(ci::Vec3f( 735.f,
+  Task::add("Floor6", std::make_shared<Floor>(ci::Vec3f( 367.5f,
                                                         -123.5f, 0.f),
-                                              ci::Vec3f( 49.f,
+                                              ci::Vec3f( 25.f,
                                                         5.f, 0.f)));
   
   // 地面 一番下
   Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 0.f,
                                                         -136.f, 0.f),
-                                              ci::Vec3f( 10000.0f,
+                                                   ci::Vec3f( 10000.0f,
                                                          5.f, 0.f)));
   
   // ボール
@@ -90,13 +98,20 @@ CinderellaScene::CinderellaScene()
                                            ci::Vec3f( 40.f, 40.f, 0.f),
                                            0.2f));
   
+  
   // 本棚
-  Task::add("BookShelf", std::make_shared<BookShelf>(ci::Vec3f( 1200.f, 100.f, 0.f),
+  Task::add("BookShelf", std::make_shared<BookShelf>(ci::Vec3f( 1300.f, 0.f, 0.f),
                                                      ci::Vec3f( 100.f, 50.f, 0.f)));
   
-  // 本４冊
+  
+  // 本関係  デフォ 落下 オープン
   Task::add("BookPile", std::make_shared<Book>(ci::Vec3f( 1200.f, 147.f, 0.f),
-                                                   ci::Vec3f( 100.f, 50.f, 0.f)));
+                                               ci::Vec3f( 100.f, 50.f, 0.f), "aaa"));
+  
+  // ピアノ
+  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 1000.f, -70.f, 0.f),
+                                             ci::Vec3f( 150.f, 125.f, 0.f)));
+  
   
   // やないコード
   mcameraPos = ci::Vec3f( 100, 0, 300);
