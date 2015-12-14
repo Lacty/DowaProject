@@ -24,8 +24,8 @@
 CinderellaScene::CinderellaScene()
 {
   // BGM
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->enable();
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(1.0f);
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->enable();
   
   // コンストラクタでプッシュ
   ci::gl::pushMatrices();
@@ -101,15 +101,19 @@ CinderellaScene::CinderellaScene()
   
   // 本棚
   Task::add("BookShelf", std::make_shared<BookShelf>(ci::Vec3f( 1300.f, 0.f, 0.f),
-                                                     ci::Vec3f( 100.f, 50.f, 0.f)));
+                                                     ci::Vec3f( 130.f, 50.f, 0.f)));
   
   
   // 本関係  デフォ 落下 オープン
-  Task::add("BookPile", std::make_shared<Book>(ci::Vec3f( 1200.f, 147.f, 0.f),
-                                               ci::Vec3f( 100.f, 50.f, 0.f), "aaa"));
+  Task::add("BookPile", std::make_shared<Book>(ci::Vec3f( 1300.f, 147.f, 0.f),
+                                               ci::Vec3f( 100.f, 50.f, 0.f), "BookPile"));
+  
+  // 本オープン
+//  Task::add("BookOpen", std::make_shared<Book>(ci::Vec3f( 1300.f, 147.f, 0.f),
+//                                               ci::Vec3f( 100.f, 10.f, 0.f), "BookOpen"));
   
   // ピアノ
-  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 1000.f, -70.f, 0.f),
+  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -70.f, 0.f),
                                              ci::Vec3f( 150.f, 125.f, 0.f)));
   
   
