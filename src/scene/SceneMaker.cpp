@@ -8,9 +8,9 @@
 #include "result/Result.hpp"
 #include "test/Test.hpp"
 
-#include "loading/TitleLoad.hpp"
-#include "loading/SelectLoad.hpp"
-#include "loading/ResultLoad.hpp"
+#include "title/TitleLoad.hpp"
+#include "select/SelectLoad.hpp"
+#include "result/ResultLoad.hpp"
 
 #include "cinderella/CinderellaScene.hpp"
 
