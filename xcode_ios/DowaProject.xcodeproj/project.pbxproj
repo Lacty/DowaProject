@@ -26,18 +26,17 @@
 		AC5873F31C05ECCA00D40AE6 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873EE1C05ECCA00D40AE6 /* DataManager.cpp */; };
 		AC5873F41C05ECCA00D40AE6 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F11C05ECCA00D40AE6 /* ResourceManager.cpp */; };
 		AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F91C06A43B00D40AE6 /* Utility.cpp */; };
-		AC6CFE281C189CA700E6E84D /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC6CFE261C189CA700E6E84D /* Ball.cpp */; };
+		AC7B34C91C1D54990081AD27 /* SelectLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7B34C71C1D54990081AD27 /* SelectLoad.cpp */; };
+		AC7B34CC1C1D54B20081AD27 /* ResultLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7B34CA1C1D54B20081AD27 /* ResultLoad.cpp */; };
 		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
 		ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081DB1BF317CD005FB898 /* Test.cpp */; };
 		ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA20F251C087E2B0017DCA9 /* Window.cpp */; };
-		ACAE91D21C1671710008B83E /* Loading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE91D01C1671710008B83E /* Loading.cpp */; };
 		ACAE91DE1C1805400008B83E /* CinderellaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */; };
 		ACAE91E21C1806480008B83E /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE91E01C1806480008B83E /* Camera.cpp */; };
 		ACAE92071C186C6A0008B83E /* Select.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE92051C186C6A0008B83E /* Select.cpp */; };
+		ACD83CE21C1C001D0092ADA1 /* TitleLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD83CE01C1C001D0092ADA1 /* TitleLoad.cpp */; };
 		ACDB32F21BEF124F00046195 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F01BEF124F00046195 /* Object.cpp */; };
 		ACDB32FA1BF040F000046195 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F81BF040F000046195 /* Task.cpp */; };
-		ACE445D11C10182D0003EE2D /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE445CF1C10182D0003EE2D /* Player.cpp */; };
-		ACE445D41C101F2E0003EE2D /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE445D21C101F2E0003EE2D /* Enemy.cpp */; };
 		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
 		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
 		ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */; };
@@ -84,30 +83,28 @@
 		AC5873F21C05ECCA00D40AE6 /* ResourceManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceManager.hpp; sourceTree = "<group>"; };
 		AC5873F91C06A43B00D40AE6 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		AC5873FA1C06A43B00D40AE6 /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
-		AC6CFE261C189CA700E6E84D /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
-		AC6CFE271C189CA700E6E84D /* Ball.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ball.hpp; sourceTree = "<group>"; };
+		AC7B34C71C1D54990081AD27 /* SelectLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectLoad.cpp; sourceTree = "<group>"; };
+		AC7B34C81C1D54990081AD27 /* SelectLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SelectLoad.hpp; sourceTree = "<group>"; };
+		AC7B34CA1C1D54B20081AD27 /* ResultLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResultLoad.cpp; sourceTree = "<group>"; };
+		AC7B34CB1C1D54B20081AD27 /* ResultLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResultLoad.hpp; sourceTree = "<group>"; };
 		ACA081D71BF25720005FB898 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		ACA081D81BF25720005FB898 /* Collision.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 		ACA081DB1BF317CD005FB898 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		ACA081DC1BF317CD005FB898 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 		ACA20F251C087E2B0017DCA9 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		ACA20F261C087E2B0017DCA9 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
-		ACAE91D01C1671710008B83E /* Loading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Loading.cpp; sourceTree = "<group>"; };
-		ACAE91D11C1671710008B83E /* Loading.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Loading.hpp; sourceTree = "<group>"; };
 		ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaScene.cpp; sourceTree = "<group>"; };
 		ACAE91DD1C1805400008B83E /* CinderellaScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CinderellaScene.hpp; sourceTree = "<group>"; };
 		ACAE91E01C1806480008B83E /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		ACAE91E11C1806480008B83E /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		ACAE92051C186C6A0008B83E /* Select.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Select.cpp; sourceTree = "<group>"; };
 		ACAE92061C186C6A0008B83E /* Select.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Select.hpp; sourceTree = "<group>"; };
+		ACD83CE01C1C001D0092ADA1 /* TitleLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleLoad.cpp; sourceTree = "<group>"; };
+		ACD83CE11C1C001D0092ADA1 /* TitleLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TitleLoad.hpp; sourceTree = "<group>"; };
 		ACDB32F01BEF124F00046195 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 		ACDB32F11BEF124F00046195 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		ACDB32F81BF040F000046195 /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
 		ACDB32F91BF040F000046195 /* Task.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Task.hpp; sourceTree = "<group>"; };
-		ACE445CF1C10182D0003EE2D /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
-		ACE445D01C10182D0003EE2D /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
-		ACE445D21C101F2E0003EE2D /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
-		ACE445D31C101F2E0003EE2D /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Enemy.hpp; sourceTree = "<group>"; };
 		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		ACF91EDA1BE757CD00AF6824 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		ACF91EDE1BE75ABC00AF6824 /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
@@ -313,15 +310,6 @@
 			path = ../src/utility;
 			sourceTree = "<group>";
 		};
-		AC6CFE251C189C9900E6E84D /* ball */ = {
-			isa = PBXGroup;
-			children = (
-				AC6CFE261C189CA700E6E84D /* Ball.cpp */,
-				AC6CFE271C189CA700E6E84D /* Ball.hpp */,
-			);
-			path = ball;
-			sourceTree = "<group>";
-		};
 		ACA081D61BF2570E005FB898 /* collision */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,13 +323,8 @@
 		ACA081DA1BF317B1005FB898 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				AC6CFE251C189C9900E6E84D /* ball */,
 				ACA081DB1BF317CD005FB898 /* Test.cpp */,
 				ACA081DC1BF317CD005FB898 /* Test.hpp */,
-				ACE445CF1C10182D0003EE2D /* Player.cpp */,
-				ACE445D01C10182D0003EE2D /* Player.hpp */,
-				ACE445D21C101F2E0003EE2D /* Enemy.cpp */,
-				ACE445D31C101F2E0003EE2D /* Enemy.hpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -359,8 +342,12 @@
 		ACAE91CF1C1671710008B83E /* loading */ = {
 			isa = PBXGroup;
 			children = (
-				ACAE91D01C1671710008B83E /* Loading.cpp */,
-				ACAE91D11C1671710008B83E /* Loading.hpp */,
+				ACD83CE01C1C001D0092ADA1 /* TitleLoad.cpp */,
+				ACD83CE11C1C001D0092ADA1 /* TitleLoad.hpp */,
+				AC7B34C71C1D54990081AD27 /* SelectLoad.cpp */,
+				AC7B34C81C1D54990081AD27 /* SelectLoad.hpp */,
+				AC7B34CA1C1D54B20081AD27 /* ResultLoad.cpp */,
+				AC7B34CB1C1D54B20081AD27 /* ResultLoad.hpp */,
 			);
 			path = loading;
 			sourceTree = "<group>";
@@ -521,14 +508,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC6CFE281C189CA700E6E84D /* Ball.cpp in Sources */,
 				ACAE91E21C1806480008B83E /* Camera.cpp in Sources */,
 				AC5873F31C05ECCA00D40AE6 /* DataManager.cpp in Sources */,
 				ACA081D91BF25720005FB898 /* Collision.cpp in Sources */,
+				AC7B34C91C1D54990081AD27 /* SelectLoad.cpp in Sources */,
 				ACAE92071C186C6A0008B83E /* Select.cpp in Sources */,
-				ACAE91D21C1671710008B83E /* Loading.cpp in Sources */,
 				ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */,
 				ACAE91DE1C1805400008B83E /* CinderellaScene.cpp in Sources */,
+				ACD83CE21C1C001D0092ADA1 /* TitleLoad.cpp in Sources */,
 				ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */,
 				ACDB32F21BEF124F00046195 /* Object.cpp in Sources */,
 				ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */,
@@ -541,10 +528,9 @@
 				AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */,
 				AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
-				ACE445D41C101F2E0003EE2D /* Enemy.cpp in Sources */,
-				ACE445D11C10182D0003EE2D /* Player.cpp in Sources */,
 				AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */,
 				ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */,
+				AC7B34CC1C1D54B20081AD27 /* ResultLoad.cpp in Sources */,
 				AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */,
 				ACDB32FA1BF040F000046195 /* Task.cpp in Sources */,
 				AC5873F41C05ECCA00D40AE6 /* ResourceManager.cpp in Sources */,
