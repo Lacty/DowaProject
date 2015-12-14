@@ -1,8 +1,9 @@
 
+#pragma ones
+
 #include "../../../object/Object.hpp"
 
 #include "cinder/gl/Texture.h"
-#include "cinder/ImageIo.h"
 
 class Book : public Object
 {
@@ -21,6 +22,11 @@ private:
   std::string mBookOpenName;
   
   std::string mBookName; // 引数の本の名前
+  
+  void drawBookPile();
+  void drawBookBack();
+  void drawBookDropped();
+  void drawBookOpen();
   
 public:
   
