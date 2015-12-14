@@ -10,6 +10,7 @@ class Title : public Scene
 public:
   
   Title();
+  ~Title();
   
   void update();
   void draw();

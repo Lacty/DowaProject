@@ -4,7 +4,13 @@
 #include "../SceneManager.hpp"
 
 
-SelectLoad::SelectLoad() : mLoad(&SelectLoad::load, this), isFin(false) {}
+SelectLoad::SelectLoad() : mLoad(&SelectLoad::load, this), isFin(false) {
+  std::cout << "start select load" << std::endl;
+}
+
+SelectLoad::~SelectLoad() {
+  std::cout << "end select load" << std::endl;
+}
 
 
 void SelectLoad::load() {

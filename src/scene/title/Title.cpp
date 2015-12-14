@@ -9,7 +9,7 @@
 
 Title::Title()
 {
-  std::cout << "title" << std::endl;
+  std::cout << "start title" << std::endl;
 
   // デバイスのウィンドサイズを取得し、代入
   mDeviceWindowWidth = ci::app::getWindowWidth();
@@ -42,6 +42,10 @@ Title::Title()
   
   mTapToStartEngRect = ci::Rectf(mDeviceWindowWidth / 3.3f, mDeviceWindowHeight / 1.22f,
                                  mDeviceWindowWidth / 1.35f, mDeviceWindowHeight / 1.12f); // タッチしてスタート！
+}
+
+Title::~Title() {
+  std::cout << "end title" << std::endl;
 }
 
 void Title::update()

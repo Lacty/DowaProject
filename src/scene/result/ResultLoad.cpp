@@ -4,7 +4,13 @@
 #include "../SceneManager.hpp"
 
 
-ResultLoad::ResultLoad() : mLoad(&ResultLoad::load, this), isFin(false) {}
+ResultLoad::ResultLoad() : mLoad(&ResultLoad::load, this), isFin(false) {
+  std::cout << "start result load" << std::endl;
+}
+
+ResultLoad::~ResultLoad() {
+  std::cout << "end result load" << std::endl;
+}
 
 void ResultLoad::load() {
   // Texture

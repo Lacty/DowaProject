@@ -12,6 +12,7 @@ private:
 
 public:
   ResultLoad();
+  ~ResultLoad();
 
   void update();
   void draw();

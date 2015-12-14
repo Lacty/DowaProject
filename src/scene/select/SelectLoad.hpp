@@ -12,6 +12,7 @@ private:
 
 public:
   SelectLoad();
+  ~SelectLoad();
 
   void update();
   void draw();

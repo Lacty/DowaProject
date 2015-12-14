@@ -5,7 +5,13 @@
 
 
 
-TitleLoad::TitleLoad() : mLoad(&TitleLoad::load, this), isFin(false) {}
+TitleLoad::TitleLoad() : mLoad(&TitleLoad::load, this), isFin(false) {
+  std::cout << "start title load" << std::endl;
+}
+
+TitleLoad::~TitleLoad() {
+  std::cout << "end title load" << std::endl;
+}
 
 
 void TitleLoad::load() {

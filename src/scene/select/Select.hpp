@@ -57,6 +57,8 @@ public:
 	Stage book3;
 	
 	Select();
+  ~Select();
+  
 	void update();
 	void draw();
 };

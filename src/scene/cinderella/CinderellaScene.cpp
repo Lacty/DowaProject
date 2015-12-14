@@ -23,6 +23,8 @@
 
 CinderellaScene::CinderellaScene()
 {
+  std::cout << "start cinderella" << std::endl;
+  
   // BGM
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(1.0f);
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->enable();
@@ -127,6 +129,8 @@ CinderellaScene::CinderellaScene()
 
 CinderellaScene::~CinderellaScene()
 {
+  std::cout << "end cinderella" << std::endl;
+  
   // デストラクタでポップ
   ci::gl::popMatrices();
   ci::gl::popModelView();

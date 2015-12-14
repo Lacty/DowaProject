@@ -3,6 +3,7 @@
 
 
 Select::Select() {
+  std::cout << "start select" << std::endl;
 
 	my_angle = 0.0f;
 	mry = 0.0f;
@@ -36,6 +37,10 @@ Select::Select() {
 	mSelectedStage_id = mNone;
 
 		//ci::app::console() << "Select Scene" << std::endl;
+}
+
+Select::~Select() {
+  std::cout << "end select" << std::endl;
 }
 
 void Select::update() {
