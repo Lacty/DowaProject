@@ -13,10 +13,10 @@ Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::str
   mBookName = mBookNamef;
   
   // 本の名前初期化
-  mBookOpenName = "mBookOpen";
-  mBookPileName = "mBookPile";
-  mBookDroppedName = "mBookDropped";
-  mBookBackName = "mBookBack";
+  mBookOpenName = "BookOpen";
+  mBookPileName = "BookPile";
+  mBookDroppedName = "BookDropped";
+  mBookBackName = "BookBack";
   
   // Texture代入
   mBookPile = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookPile); // 本４冊
@@ -39,15 +39,50 @@ void Book::draw()
   ci::gl::enable(GL_CULL_FACE);
   ci::gl::enable(GL_TEXTURE_2D);
   
-  mBookPile.bind();
-  ci::gl::translate(mPos); // 移動させる
-  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
-  ci::gl::drawCube(ci::Vec3f(0, 0, 0), mSize); // 本４
-  mBookPile.unbind();
+  if(mBookName == mBookBackName) drawBookBack();
+  if(mBookName == mBookDroppedName) drawBookDropped();
+  if(mBookName == mBookPileName) drawBookPile();
+  if(mBookName == mBookOpenName) drawBookOpen();
   
   ci::gl::disable(GL_CULL_FACE);
   ci::gl::disable(GL_TEXTURE_2D);
   
   ci::gl::disableAlphaBlending();
   ci::gl::popModelView();
+}
+
+void Book::drawBookBack()
+{
+  mBookBack.bind();
+  ci::gl::translate(mPos); // 移動させる
+  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
+  ci::gl::drawCube(ci::Vec3f(0, 0, 0), mSize); // 本４
+  mBookBack.unbind();
+}
+
+void Book::drawBookDropped()
+{
+  mBookDropped.bind();
+  ci::gl::translate(mPos); // 移動させる
+  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
+  ci::gl::drawCube(ci::Vec3f(0, 0, 0), mSize); // 本４
+  mBookDropped.unbind();
+}
+
+void Book::drawBookPile()
+{
+  mBookPile.bind();
+  ci::gl::translate(mPos); // 移動させる
+  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
+  ci::gl::drawCube(ci::Vec3f(0, 0, 0), mSize); // 本４
+  mBookPile.unbind();
+}
+
+void Book::drawBookOpen()
+{
+  mBookOpen.bind();
+  ci::gl::translate(mPos); // 移動させる
+  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
+  ci::gl::drawCube(ci::Vec3f(0, 0, 0), mSize); // 本４
+  mBookOpen.unbind();
 }
