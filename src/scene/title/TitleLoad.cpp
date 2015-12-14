@@ -5,7 +5,9 @@
 
 
 
-TitleLoad::TitleLoad() : mLoad(&TitleLoad::load, this), isFin(false) {
+TitleLoad::TitleLoad() :
+//mLoad(&TitleLoad::load, this),
+isFin(false) {
   std::cout << "start title load" << std::endl;
 }
 
@@ -15,6 +17,10 @@ TitleLoad::~TitleLoad() {
 
 
 void TitleLoad::load() {
+  //std::lock_guard<std::mutex> lock(mtx);
+
+  std::cout << ci::app::getWindowHeight() << std::endl;
+  
   // Texture
   dowa::ResourceManager::texture().insert("background/title/TitleBack.png",         TextureKey::TitleBack);
   dowa::ResourceManager::texture().insert("background/title/FeatherBookResize.png", TextureKey::FeatherBook);
@@ -37,9 +43,10 @@ void TitleLoad::load() {
 }
 
 void TitleLoad::update() {
+  load();
   if (isFin) {
     std::cout << "finish load" << std::endl;
-    mLoad.join();
+    //mLoad.join();
     SceneManager::create(SceneType::Title);
     isFin = false;
   }

@@ -10,6 +10,7 @@
 Title::Title()
 {
   std::cout << "start title" << std::endl;
+  std::cout << ci::app::getWindowHeight() << std::endl;
 
   // デバイスのウィンドサイズを取得し、代入
   mDeviceWindowWidth = ci::app::getWindowWidth();

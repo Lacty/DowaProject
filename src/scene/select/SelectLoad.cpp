@@ -4,7 +4,9 @@
 #include "../SceneManager.hpp"
 
 
-SelectLoad::SelectLoad() : mLoad(&SelectLoad::load, this), isFin(false) {
+SelectLoad::SelectLoad() :
+//mLoad(&SelectLoad::load, this),
+isFin(false) {
   std::cout << "start select load" << std::endl;
 }
 
@@ -26,9 +28,10 @@ void SelectLoad::load() {
 }
 
 void SelectLoad::update() {
+  load();
   if (isFin) {
     std::cout << "finish load" << std::endl;
-    mLoad.join();
+    //mLoad.join();
     SceneManager::create(SceneType::Select);
     isFin = false;
   }

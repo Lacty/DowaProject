@@ -4,7 +4,9 @@
 #include "../SceneManager.hpp"
 
 
-ResultLoad::ResultLoad() : mLoad(&ResultLoad::load, this), isFin(false) {
+ResultLoad::ResultLoad() :
+//mLoad(&ResultLoad::load, this),
+isFin(false) {
   std::cout << "start result load" << std::endl;
 }
 
@@ -26,9 +28,10 @@ void ResultLoad::load() {
 }
 
 void ResultLoad::update() {
+  load();
   if (isFin) {
     std::cout << "finish load" << std::endl;
-    mLoad.join();
+    //mLoad.join();
     SceneManager::create(SceneType::Result);
     isFin = false;
   }
