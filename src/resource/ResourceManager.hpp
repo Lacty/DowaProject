@@ -35,6 +35,8 @@ namespace dowa {
 
       bool insert(std::string path, int key);
       Audio get(int key);
+
+      void clear();
     };
     typedef AudioResource AudioRes;
 
@@ -47,6 +49,8 @@ namespace dowa {
 
       bool insert(std::string path, int key);
       ci::gl::Texture get(int key);
+
+      void clear();
     };
     typedef TextureResource TexRes;
     

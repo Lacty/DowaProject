@@ -33,6 +33,10 @@ hidden::Audio hidden::AudioResource::get(int key) {
   return *mMap[key];
 }
 
+void hidden::AudioResource::clear() {
+  mMap.clear();
+}
+
 //Audio Resource
 
 //Texture Resource
@@ -51,6 +55,10 @@ bool hidden::TextureResource::insert(std::string path, int key) {
 
 ci::gl::Texture hidden::TextureResource::get(int key) {
   return *mMap[key];
+}
+
+void hidden::TextureResource::clear() {
+  mMap.clear();
 }
 
 //Texture Resource
