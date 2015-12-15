@@ -13,5 +13,5 @@ public:
   ~CinderellaLoad();
 
   void update();
-  void drwa();
+  void draw();
 };
