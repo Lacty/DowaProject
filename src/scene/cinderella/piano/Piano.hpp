@@ -9,8 +9,6 @@ class Piano: public Object
 {
   ci::gl::Texture mPiano;
   
-  std::string mBallStr;
-  
 public:
   
   Piano(const ci::Vec3f&, const ci::Vec3f&);
