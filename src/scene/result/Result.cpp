@@ -23,6 +23,8 @@ Result::Result()
 
 Result::~Result() {
   std::cout << "end result" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();
 }
 
 void Result::update() 

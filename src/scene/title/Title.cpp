@@ -16,21 +16,6 @@ Title::Title()
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
-  // 画像読み込み
-  /*dowa::ResourceManager::texture().insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
-  dowa::ResourceManager::texture().insert("background/title/FeatherBookResize.png", TextureKey::FeatherBook);
-  dowa::ResourceManager::texture().insert("background/title/Logo.png", TextureKey::Logo);
-  dowa::ResourceManager::texture().insert("background/title/TapToStartEng.png", TextureKey::TapToStartEng);
-  dowa::ResourceManager::texture().insert("background/title/Trace.png", TextureKey::Trace);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterTa.png", TextureKey::LetterTa);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterMa.png", TextureKey::LetterMa);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterKo.png", TextureKey::LetterKo);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterRo.png", TextureKey::LetterRo);
-  dowa::ResourceManager::texture().insert("background/title/SphereBlue.png", TextureKey::SphereBlue);
-  dowa::ResourceManager::texture().insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
-  dowa::ResourceManager::texture().insert("background/title/SphereRed.png", TextureKey::SphereRed);*/
-  
-  
   // 画像座標設定
   mFeatherBookRect = ci::Rectf(mDeviceWindowWidth / 5.0f,  mDeviceWindowHeight / 20.0f,
                                mDeviceWindowWidth / 1.2f, mDeviceWindowHeight / 1.28f); // 本とペン
@@ -47,6 +32,8 @@ Title::Title()
 
 Title::~Title() {
   std::cout << "end title" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();  
 }
 
 void Title::update()

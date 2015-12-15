@@ -21,6 +21,8 @@ Select::Select() {
 
 Select::~Select() {
   std::cout << "end select" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();
 }
 
 void Select::update() {
