@@ -36,8 +36,8 @@ void TitleLoad::load() {
   dowa::ResourceManager::texture().insert("background/title/SphereRed.png",         TextureKey::SphereRed);
   
   // Sound
-  dowa::ResourceManager::audio().insert("sound/bgm/Menu.ogg", AudioKey::Menu);
-  dowa::ResourceManager::audio().insert("sound/se/GameStart.ogg", AudioKey::GameStartSE);
+  dowa::ResourceManager::audio().insert("sound/bgm/Menu.m4a", AudioKey::Menu);
+  dowa::ResourceManager::audio().insert("sound/se/GameStart.m4a", AudioKey::GameStartSE);
   
   isFin = true;
 }

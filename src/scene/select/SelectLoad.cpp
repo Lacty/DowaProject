@@ -22,7 +22,7 @@ void SelectLoad::load() {
   dowa::ResourceManager::texture().insert("object/stageSelect/Cinderella.png", TextureKey::StageSelectCinderella);
 
   // Sound
-  dowa::ResourceManager::audio().insert("sound/se/StageSelected.ogg", AudioKey::StageSelectSE);
+  dowa::ResourceManager::audio().insert("sound/se/StageSelected.m4a", AudioKey::StageSelectSE);
 
   isFin = true;
 }

@@ -43,6 +43,7 @@
 		ACF594D21C1EE83500806B39 /* TitleLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D01C1EE83500806B39 /* TitleLoad.cpp */; };
 		ACF594D51C1EE8C000806B39 /* ResultLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D31C1EE8C000806B39 /* ResultLoad.cpp */; };
 		ACF594D81C1EE8D200806B39 /* SelectLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D61C1EE8D200806B39 /* SelectLoad.cpp */; };
+		ACF594DE1C207E6200806B39 /* CinderellaLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */; };
 		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
 		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
 		ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */; };
@@ -123,6 +124,8 @@
 		ACF594D41C1EE8C000806B39 /* ResultLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResultLoad.hpp; sourceTree = "<group>"; };
 		ACF594D61C1EE8D200806B39 /* SelectLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectLoad.cpp; sourceTree = "<group>"; };
 		ACF594D71C1EE8D200806B39 /* SelectLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SelectLoad.hpp; sourceTree = "<group>"; };
+		ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaLoad.cpp; sourceTree = "<group>"; };
+		ACF594DD1C207E6200806B39 /* CinderellaLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CinderellaLoad.hpp; sourceTree = "<group>"; };
 		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		ACF91EDA1BE757CD00AF6824 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		ACF91EDE1BE75ABC00AF6824 /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
@@ -437,6 +440,8 @@
 				14B485B61C1AE1AB00824001 /* floor */,
 				14B485B91C1AE1AB00824001 /* piano */,
 				14B485A31C1AE18C00824001 /* camera */,
+				ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */,
+				ACF594DD1C207E6200806B39 /* CinderellaLoad.hpp */,
 			);
 			path = cinderella;
 			sourceTree = "<group>";
@@ -583,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF594DE1C207E6200806B39 /* CinderellaLoad.cpp in Sources */,
 				ACF594D21C1EE83500806B39 /* TitleLoad.cpp in Sources */,
 				14B485AB1C1AE18C00824001 /* BookShelf.cpp in Sources */,
 				AC5873F31C05ECCA00D40AE6 /* DataManager.cpp in Sources */,

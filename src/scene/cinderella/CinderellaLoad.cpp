@@ -35,14 +35,14 @@ void CinderellaLoad::load() {
   dowa::ResourceManager::texture().insert("background/beta/3.png", CinderellaTextureKey::_betaBack3);
 
   // Sound
-  dowa::ResourceManager::audio().insert("sound/se/Hit.ogg", AudioKey::HitSE);
-  dowa::ResourceManager::audio().insert("sound/se/GameOver.ogg", AudioKey::GameOverSE);
-  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/Town.ogg", CinderellaAudioKey::Town);
-  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/Castle.ogg", CinderellaAudioKey::Castle);
-  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/House.ogg", CinderellaAudioKey::House);
-  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/HousePiano.ogg", CinderellaAudioKey::HousePiano);
-  dowa::ResourceManager::audio().insert("sound/se/cinderella/BookDrop.ogg", CinderellaAudioKey::BookDrop);
-  dowa::ResourceManager::audio().insert("sound/se/cinderella/BookHit.ogg", CinderellaAudioKey::BookHit);
+  dowa::ResourceManager::audio().insert("sound/se/Hit.m4a", AudioKey::HitSE);
+  dowa::ResourceManager::audio().insert("sound/se/GameOver.m4a", AudioKey::GameOverSE);
+  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/Town.m4a", CinderellaAudioKey::Town);
+  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/Castle.m4a", CinderellaAudioKey::Castle);
+  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/House.m4a", CinderellaAudioKey::House);
+  dowa::ResourceManager::audio().insert("sound/bgm/cinderella/HousePiano.m4a", CinderellaAudioKey::HousePiano);
+  dowa::ResourceManager::audio().insert("sound/se/cinderella/BookDrop.m4a", CinderellaAudioKey::BookDrop);
+  dowa::ResourceManager::audio().insert("sound/se/cinderella/BookHit.m4a", CinderellaAudioKey::BookHit);
 
   isFin = true;
 }
