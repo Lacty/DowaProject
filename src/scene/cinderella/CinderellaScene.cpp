@@ -5,8 +5,6 @@
 // 林さん要望 ステージの端から端までの移動で
 // オブジェクトになにも干渉しなかった場合、約30秒にする
 
-// 画像１　サイズ 1024 577
-
 #include "CinderellaScene.hpp"
 
 #include "Floor.hpp"
@@ -20,11 +18,9 @@
 
 CinderellaScene::CinderellaScene()
 {
-  // コンストラクタでプッシュ
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
   
-  // デバイスの座標を代入
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
@@ -41,9 +37,9 @@ CinderellaScene::CinderellaScene()
   mBack3 = ci::Rectf(1249, -mDeviceWindowHeight / 2, 1761, mDeviceWindowHeight / 2);
   
   
-  // シンデレラさん
+  // デレキャラ
   Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( 150, 50, 0),
-                                                       ci::Vec3i( 50, 50, 0)));
+                                                       ci::Vec3i( 75, 75, 0)));
   
   // 地面
   Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( 139.f,
@@ -103,7 +99,7 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 100.f, 50.f, 0.f), "BookPile"));
   
   
-  // 本 横
+  // 本 横向き
   Task::add("BookSide", std::make_shared<Book>(ci::Vec3f( 1218.f, 75.f, 0.f),
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
   
@@ -127,7 +123,6 @@ CinderellaScene::CinderellaScene()
 
 CinderellaScene::~CinderellaScene()
 {
-  // デストラクタでポップ
   ci::gl::popMatrices();
   ci::gl::popModelView();
 }
@@ -142,19 +137,20 @@ void CinderellaScene::update()
                 ci::Vec3f(mcameraPos.x, mcameraPos.y, 0),
                 ci::Vec3f::yAxis());
   
-  // BGM
+  // BGM 音量 Set
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(1.0f);
 }
 
 void CinderellaScene::draw()
 {
   ci::gl::enable(GL_TEXTURE_2D);
+  
   camera.setMatrices(); // カメラセット
+  
   ci::gl::pushModelView();
   
-//  ci::gl::translate(ci::Vec3f(0, 180, 0)); // 位置を変えるならここ
+  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   
-  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 反転
   ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack1), mBack1);
   
   ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack21);
@@ -163,7 +159,8 @@ void CinderellaScene::draw()
   ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack24);
   
   ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack3), mBack3);
-
+  
   ci::gl::popModelView();
+  
   ci::gl::disable(GL_TEXTURE_2D);
 }
