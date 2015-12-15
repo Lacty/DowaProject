@@ -32,7 +32,7 @@ std::unique_ptr<Scene> SceneMaker::create(const SceneType& type) const {
     { SceneType::TitleLoad,       []{ return make_unique<TitleLoad>();       } },
     { SceneType::SelectLoad,      []{ return make_unique<SelectLoad>();      } },
     { SceneType::ResultLoad,      []{ return make_unique<ResultLoad>();      } },
-    { SceneType::CinderellaLoad,  []{ return make_unique<CindelellaLoad>();  } },
+    { SceneType::CinderellaLoad,  []{ return make_unique<CinderellaLoad>();  } },
     
     { SceneType::Cinderella,      []{ return make_unique<CinderellaScene>(); } }
   };
