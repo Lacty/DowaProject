@@ -3,6 +3,7 @@
 
 #include "../../../object/Task.hpp"
 #include "../../../resource/ResourceManager.hpp"
+#include "../../../scene/SceneManager.hpp"
 
 Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::string& mBookNamef)
 {
@@ -39,18 +40,15 @@ void Book::update()
   
   if(mCinderellaPos.x > 1068 || mFallFlag)
   {
-    if(mRotate.z < 90)
-    {
+    if(mRotate.z < 90) {
       mAcceleration += mGravityPower;
       mRotate.z += mAcceleration;
     }
-    else if (mBookName == mBookSideName) // onCo(ryで名前を変えると止まる
-    {
+    else if (mBookName == mBookSideName) {
       mAcceleration += mGravityPower2;
       mPos.y -= mAcceleration;
     }
   }
-  
 }
 
 void Book::draw()
@@ -101,13 +99,10 @@ void Book::drawBookSide()
 
 void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-  if(compare -> getName() == "Ball")
-  {
-    mFallFlag = true;
-  }
+  if(compare -> getName() == "Ball") mFallFlag = true;
   
-  if(compare -> getName() == "Floor_Floor")
-  {
-    mBookName = "BookOpen"; // 上のif文と組み合わせ注意
-  }
+  if(compare -> getName() == "Floor_Floor") mBookName = "BookOpen";
+  
+  if(compare -> getName() == "Cinderella" && mBookName == "BookSide")
+    SceneManager::create(SceneType::Test);
 }
