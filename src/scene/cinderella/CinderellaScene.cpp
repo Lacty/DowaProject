@@ -9,11 +9,6 @@
 
 #include "CinderellaScene.hpp"
 
-#include "../../device/Device.hpp"
-#include "../../scene/SceneManager.hpp"
-#include "../../object/Task.hpp"
-#include "../../collision/Collision.hpp"
-
 #include "Floor.hpp"
 #include "Cinderella.hpp"
 #include "Ball.hpp"
@@ -21,14 +16,10 @@
 #include "Book.hpp"
 #include "Piano.hpp"
 
+#include "../../object/Task.hpp"
+
 CinderellaScene::CinderellaScene()
 {
-  std::cout << "start cinderella" << std::endl;
-  
-  // BGM
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(1.0f);
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->enable();
-  
   // コンストラクタでプッシュ
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
@@ -49,9 +40,10 @@ CinderellaScene::CinderellaScene()
   // 背景３
   mBack3 = ci::Rectf(1249, -mDeviceWindowHeight / 2, 1761, mDeviceWindowHeight / 2);
   
+  
   // シンデレラさん
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150.0f, 50.0f, 0.0f),
-                                                       ci::Vec3f( 50.0f, 50.0f, 0.0f)));
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( 150, 50, 0),
+                                                       ci::Vec3i( 50, 50, 0)));
   
   // 地面
   Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( 139.f,
@@ -106,13 +98,15 @@ CinderellaScene::CinderellaScene()
                                                      ci::Vec3f( 130.f, 50.f, 0.f)));
   
   
-  // 本関係  デフォ 落下 オープン
-  Task::add("BookPile", std::make_shared<Book>(ci::Vec3f( 1300.f, 147.f, 0.f),
+  // 本４冊
+  Task::add("BookPile", std::make_shared<Book>(ci::Vec3f( 1260.f, 48.f, 0.f),
                                                ci::Vec3f( 100.f, 50.f, 0.f), "BookPile"));
   
-  // 本オープン
-//  Task::add("BookOpen", std::make_shared<Book>(ci::Vec3f( 1300.f, 147.f, 0.f),
-//                                               ci::Vec3f( 100.f, 10.f, 0.f), "BookOpen"));
+  
+  // 本 横
+  Task::add("BookSide", std::make_shared<Book>(ci::Vec3f( 1218.f, 75.f, 0.f),
+                                               ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
+  
   
   // ピアノ
   Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -70.f, 0.f),
@@ -125,12 +119,14 @@ CinderellaScene::CinderellaScene()
   camera.lookAt(mcameraPos,
                 ci::Vec3f(0, 0, 0),
                 ci::Vec3f::yAxis());
+  
+  // BGM
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(0.f);
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->enable();
 }
 
 CinderellaScene::~CinderellaScene()
 {
-  std::cout << "end cinderella" << std::endl;
-  
   // デストラクタでポップ
   ci::gl::popMatrices();
   ci::gl::popModelView();
@@ -145,6 +141,9 @@ void CinderellaScene::update()
   camera.lookAt(mcameraPos,
                 ci::Vec3f(mcameraPos.x, mcameraPos.y, 0),
                 ci::Vec3f::yAxis());
+  
+  // BGM
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->setValue(1.0f);
 }
 
 void CinderellaScene::draw()
