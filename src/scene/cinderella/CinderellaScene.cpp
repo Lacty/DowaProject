@@ -131,6 +131,8 @@ CinderellaScene::~CinderellaScene()
   std::cout << "end cinderella" << std::endl;
   dowa::ResourceManager::texture().clear();
   dowa::ResourceManager::audio().clear();
+  
+//  Task::clear();
 }
 
 
