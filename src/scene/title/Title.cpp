@@ -54,7 +54,7 @@ void Title::update()
   
   if(dowa::Device::isTouchBegan())
   {
-    SceneManager::create(SceneType::Test);
+    SceneManager::create(SceneType::SelectLoad);
   }
 
   mSphereMotion++;

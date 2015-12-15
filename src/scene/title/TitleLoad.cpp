@@ -17,7 +17,7 @@ TitleLoad::~TitleLoad() {
 
 
 void TitleLoad::load() {
-  //std::lock_guard<std::mutex> lock(mtx);
+  std::lock_guard<std::mutex> lock(mtx);
 
   std::cout << ci::app::getWindowHeight() << std::endl;
   
