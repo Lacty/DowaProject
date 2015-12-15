@@ -27,7 +27,7 @@ Select::~Select() {
 
 void Select::update() {
   if (!dowa::Device::isTouchBegan()) return;
-  SceneManager::create(SceneType::Cinderella);
+  SceneManager::create(SceneType::CinderellaLoad);
 }
 
 void Select::draw() {

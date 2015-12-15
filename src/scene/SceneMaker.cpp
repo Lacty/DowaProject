@@ -11,6 +11,7 @@
 #include "title/TitleLoad.hpp"
 #include "select/SelectLoad.hpp"
 #include "result/ResultLoad.hpp"
+#include "cinderella/CinderellaLoad.hpp"
 
 #include "cinderella/CinderellaScene.hpp"
 
@@ -31,6 +32,7 @@ std::unique_ptr<Scene> SceneMaker::create(const SceneType& type) const {
     { SceneType::TitleLoad,       []{ return make_unique<TitleLoad>();       } },
     { SceneType::SelectLoad,      []{ return make_unique<SelectLoad>();      } },
     { SceneType::ResultLoad,      []{ return make_unique<ResultLoad>();      } },
+    { SceneType::CinderellaLoad,  []{ return make_unique<CindelellaLoad>();  } },
     
     { SceneType::Cinderella,      []{ return make_unique<CinderellaScene>(); } }
   };
