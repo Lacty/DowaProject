@@ -19,14 +19,20 @@ void CinderellaLoad::load() {
   dowa::ResourceManager::texture().insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
   dowa::ResourceManager::texture().insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
   dowa::ResourceManager::texture().insert("character/cinderella/3.png", CinderellaTextureKey::CharacterRight);
+  
   dowa::ResourceManager::texture().insert("object/cinderella/Apple.png", CinderellaTextureKey::Apple);
-  dowa::ResourceManager::texture().insert("object/cinderella/BarrelSide.png", CinderellaTextureKey::BarrelSide);
+  dowa::ResourceManager::texture().insert("object/cinderella/BookSide.png", CinderellaTextureKey::BookSide);
   dowa::ResourceManager::texture().insert("object/cinderella/BookOpen.png", CinderellaTextureKey::BookOpen);
   dowa::ResourceManager::texture().insert("object/cinderella/BookShelf.png", CinderellaTextureKey::BookShelf);
   dowa::ResourceManager::texture().insert("object/cinderella/BookPile.png", CinderellaTextureKey::BookPile);
   dowa::ResourceManager::texture().insert("object/cinderella/HungryBear.png", CinderellaTextureKey::HungryBear);
   dowa::ResourceManager::texture().insert("object/cinderella/SatisfiedBear.png", CinderellaTextureKey::SatisfiedBear);
   dowa::ResourceManager::texture().insert("object/cinderella/Piano.png", CinderellaTextureKey::Piano);
+  
+  // β版
+  dowa::ResourceManager::texture().insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
+  dowa::ResourceManager::texture().insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
+  dowa::ResourceManager::texture().insert("background/beta/3.png", CinderellaTextureKey::_betaBack3);
 
   // Sound
   dowa::ResourceManager::audio().insert("sound/se/Hit.ogg", AudioKey::HitSE);
