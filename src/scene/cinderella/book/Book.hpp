@@ -7,26 +7,29 @@
 
 class Book : public Object
 {
-private:
+  std::string mBookName; // 引数String
   
-  ci::gl::Texture mBookPile; // 積み重なった
+  ci::gl::Texture mBookPile;
   std::string mBookPileName;
   
-  ci::gl::Texture mBookBack; // 本縦
-  std::string mBookBackName;
+  ci::gl::Texture mBookSide;
+  std::string mBookSideName;
   
-  ci::gl::Texture mBookDropped; // 落下
-  std::string mBookDroppedName;
-  
-  ci::gl::Texture mBookOpen; // 開いた状態
+  ci::gl::Texture mBookOpen;
   std::string mBookOpenName;
   
-  std::string mBookName; // 引数の本の名前
+  float mAcceleration;
+  float mGravityPower, mGravityPower2;
+  
+  bool mFallFlag;
+  
+  ci::Vec3f mCinderellaPos;
+  
+  std::string mCinderellaStr, mFloor_FloorStr, mBallStr; // Name Decision
   
   void drawBookPile();
-  void drawBookBack();
-  void drawBookDropped();
   void drawBookOpen();
+  void drawBookSide();
   
 public:
   
@@ -36,4 +39,5 @@ public:
   void update();
   void draw();
   
+  void onCollisionUpdate(const std::shared_ptr<Object>& compare);
 };
