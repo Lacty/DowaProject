@@ -29,6 +29,10 @@ void CinderellaLoad::load() {
   dowa::ResourceManager::texture().insert("object/cinderella/SatisfiedBear.png", CinderellaTextureKey::SatisfiedBear);
   dowa::ResourceManager::texture().insert("object/cinderella/Piano.png", CinderellaTextureKey::Piano);
   
+  dowa::ResourceManager::texture().insert("background/title/SphereBlue.png", TextureKey::SphereBlue);
+  dowa::ResourceManager::texture().insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
+  dowa::ResourceManager::texture().insert("background/title/SphereRed.png", TextureKey::SphereRed);
+  
   // β版
   dowa::ResourceManager::texture().insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
   dowa::ResourceManager::texture().insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
