@@ -31,6 +31,8 @@ void Select::update() {
 }
 
 void Select::draw() {
+  ci::gl::enableAlphaBlending();
+
   // 背景
   ci::gl::draw(mBackGround, mPlaneBG);
   
@@ -46,5 +48,7 @@ void Select::draw() {
   ci::gl::translate(dowa::getWindowCenter() + offset);
   ci::gl::draw(mTitle, mPlaneTitle);
   ci::gl::popModelView();
+  
+  ci::gl::disableAlphaBlending();
 }
 
