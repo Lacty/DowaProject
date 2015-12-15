@@ -18,6 +18,8 @@
 
 CinderellaScene::CinderellaScene()
 {
+  std::cout << "start cinderella" << std::endl;
+  
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
   
@@ -125,6 +127,10 @@ CinderellaScene::~CinderellaScene()
 {
   ci::gl::popMatrices();
   ci::gl::popModelView();
+  
+  std::cout << "end cinderella" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();
 }
 
 
