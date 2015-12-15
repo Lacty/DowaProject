@@ -10,12 +10,15 @@ isFin(false)
   std::cout << "start cinderella load" << std::endl;
 }
 
-CinderellaLoad::~CindelellaLoad() {
+CinderellaLoad::~CinderellaLoad() {
   std::cout << "end cinderella load" << std::endl;
 }
 
 void CinderellaLoad::load() {
   // Texture
+  dowa::ResourceManager::texture().insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
+  dowa::ResourceManager::texture().insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
+  dowa::ResourceManager::texture().insert("character/cinderella/3.png", CinderellaTextureKey::CharacterRight);
   dowa::ResourceManager::texture().insert("object/cinderella/Apple.png", CinderellaTextureKey::Apple);
   dowa::ResourceManager::texture().insert("object/cinderella/BarrelSide.png", CinderellaTextureKey::BarrelSide);
   dowa::ResourceManager::texture().insert("object/cinderella/BookOpen.png", CinderellaTextureKey::BookOpen);
