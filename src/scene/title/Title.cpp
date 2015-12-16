@@ -1,9 +1,8 @@
 
 #include "Title.hpp"
+
 #include "cinder/app/AppNative.h"
-#include "cinder/gl/gl.h"
-#include "cinder/gl/Texture.h"
-#include "cinder/ImageIo.h"
+
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
 
@@ -30,7 +29,8 @@ Title::Title()
                                  mDeviceWindowWidth / 1.35f, mDeviceWindowHeight / 1.12f); // タッチしてスタート！
 }
 
-Title::~Title() {
+Title::~Title()
+{
   std::cout << "end title" << std::endl;
   dowa::ResourceManager::texture().clear();
   dowa::ResourceManager::audio().clear();  
@@ -91,7 +91,7 @@ void Title::draw()
 
   ci::gl::clear();
   
-  cinder::gl::enableAlphaBlending(true); // αチャンネル有効
+  cinder::gl::enableAlphaBlending();
 
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TitleBack), ci::app::getWindowBounds()); // 背景
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::FeatherBook), mFeatherBookRect); // 本とペン
@@ -109,7 +109,7 @@ void Title::draw()
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Logo), mLogoRect); // TAMACORO
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TapToStartEng), mTapToStartEngRect); // タッチしてスタート！
   
-  cinder::gl::enableAlphaBlending(false); // αチャンネル無効
+  cinder::gl::disableAlphaBlending();
   
   ci::gl::popModelView();
   
