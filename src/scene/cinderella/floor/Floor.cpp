@@ -1,7 +1,6 @@
 
 #include "Floor.hpp"
-#include "../../../object/Object.hpp"
-#include "cinder/app/AppNative.h"
+
 #include "../../../resource/ResourceManager.hpp"
 
 Floor::Floor(const  ci::Vec3f& mFloorPos, const ci::Vec3f& mFloorSize)
@@ -22,6 +21,8 @@ void Floor::draw()
   glEnable(GL_BLEND);
   glBlendFunc(GL_ZERO, GL_ONE);
   ci::gl::drawCube(mPos, mSize);
+  glDisable(GL_ZERO);
+  glDisable(GL_ONE);
   glDisable(GL_BLEND);
   
   ci::gl::popModelView();
