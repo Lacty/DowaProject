@@ -27,63 +27,71 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
   // 背景 1
-  mBack1 = ci::Rectf(0, -mDeviceWindowHeight / 2, 512, mDeviceWindowHeight / 2);
+  mBack1 = ci::Rectf( 0.f, -mDeviceWindowHeight * 0.5f,
+                      mDeviceWindowWidth * 0.901409f, mDeviceWindowHeight * 0.5f);
   
   // 背景 2
-  mBack21 = ci::Rectf(497, -mDeviceWindowHeight / 2, 685, mDeviceWindowHeight / 2);
-  mBack22 = ci::Rectf(685, -mDeviceWindowHeight / 2, 873, mDeviceWindowHeight / 2);
-  mBack23 = ci::Rectf(873, -mDeviceWindowHeight / 2, 1061, mDeviceWindowHeight / 2);
-  mBack24 = ci::Rectf(1061, -mDeviceWindowHeight / 2, 1249, mDeviceWindowHeight / 2);
+  mBack21 = ci::Rectf( mDeviceWindowWidth * 0.875f, -mDeviceWindowHeight * 0.5f,
+                       mDeviceWindowWidth * 1.20598592f, mDeviceWindowHeight * 0.5f);
+  
+  mBack22 = ci::Rectf( mDeviceWindowWidth * 1.20598592f, -mDeviceWindowHeight * 0.5f,
+                       mDeviceWindowWidth * 1.53697183f, mDeviceWindowHeight * 0.5f);
+  
+  mBack23 = ci::Rectf( mDeviceWindowWidth * 1.53697183f, -mDeviceWindowHeight * 0.5f,
+                       mDeviceWindowWidth * 1.86795775f, mDeviceWindowHeight * 0.5f);
+  
+  mBack24 = ci::Rectf( mDeviceWindowWidth * 1.86795775f, -mDeviceWindowHeight * 0.5f,
+                       mDeviceWindowWidth * 2.19894366f, mDeviceWindowHeight * 0.5f);
   
   // 背景３
-  mBack3 = ci::Rectf(1249, -mDeviceWindowHeight / 2, 1761, mDeviceWindowHeight / 2);
-  
+  mBack3 = ci::Rectf( mDeviceWindowWidth * 2.19894366f, -mDeviceWindowHeight * 0.5f,
+                      mDeviceWindowWidth * 3.10035211f, mDeviceWindowHeight * 0.5f);
   
   // デレキャラ
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( 150, 50, 0),
-                                                       ci::Vec3i( 75, 75, 0)));
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150.f, 50.f, 0),
+                                                       ci::Vec3f( 75.f, 75.f, 0)));
   
   // 地面
-  Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( 139.f,
-                                                        -10.f, 0.f),
-                                              ci::Vec3f( 275.f,
-                                                        5.f, 0.f)));
+  Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.24471831f,
+                                                        -mDeviceWindowHeight * 0.03125f, 0.f),
+                                              ci::Vec3f( mDeviceWindowWidth * 0.48415493f,
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // 地面
-  Task::add("Floor2", std::make_shared<Floor>(ci::Vec3f( 285.f,
-                                                        -32.5f, 0.f),
-                                              ci::Vec3f( 25.f,
-                                                        5.f, 0.f)));
+  Task::add("Floor2", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.50176056f,
+                                                        -mDeviceWindowHeight * 0.1015625f, 0.f),
+                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // 地面
-  Task::add("Floor3", std::make_shared<Floor>(ci::Vec3f( 306.f,
-                                                        -55.5f, 0.f),
-                                              ci::Vec3f( 25.f,
-                                                        5.f, 0.f)));
+  Task::add("Floor3", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.53873239f,
+                                                        -mDeviceWindowHeight * 0.171875f, 0.f),
+                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // 地面
-  Task::add("Floor4", std::make_shared<Floor>(ci::Vec3f( 326.f,
-                                                        -78.5f, 0.f),
-                                              ci::Vec3f( 25.f,
-                                                        5.f, 0.f)));
+  Task::add("Floor4", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.57394366f,
+                                                        -mDeviceWindowHeight * 0.2453125f, 0.f),
+                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // 地面
-  Task::add("Floor5", std::make_shared<Floor>(ci::Vec3f( 347.5f,
-                                                        -101.5f, 0.f),
-                                              ci::Vec3f( 25.f,
-                                                        5.f, 0.f)));
+  Task::add("Floor5", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.61179577f,
+                                                        -mDeviceWindowHeight * 0.3171875f, 0.f),
+                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // 地面
-  Task::add("Floor6", std::make_shared<Floor>(ci::Vec3f( 367.5f,
-                                                        -123.5f, 0.f),
-                                              ci::Vec3f( 25.f,
-                                                        5.f, 0.f)));
+  Task::add("Floor6", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.64700704f,
+                                                        -mDeviceWindowHeight * 0.3859375f, 0.f),
+                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // 地面 一番下
   Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 0.f,
-                                                        -136.f, 0.f),
+                                                        -155.f, 0.f),
                                                    ci::Vec3f( 10000.0f,
-                                                         5.f, 0.f)));
+                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // ボール
   Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
@@ -107,7 +115,7 @@ CinderellaScene::CinderellaScene()
   
   
   // ピアノ
-  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -70.f, 0.f),
+  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
                                              ci::Vec3f( 150.f, 125.f, 0.f)));
   
   
@@ -132,11 +140,7 @@ CinderellaScene::~CinderellaScene()
   dowa::ResourceManager::texture().clear();
   dowa::ResourceManager::audio().clear();
   
-<<<<<<< HEAD
-  Task::clear();
-=======
 //  Task::clear();
->>>>>>> e47f39f58316b3fe51b456a7cd5e31e05a077a17
 }
 
 
