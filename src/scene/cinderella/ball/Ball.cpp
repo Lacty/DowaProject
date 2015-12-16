@@ -1,8 +1,10 @@
 
 #include "Ball.hpp"
+
+#include "cinder/Quaternion.h"
+
 #include "../../../device/Device.hpp"
 #include "../../../utility/Utility.hpp"
-#include "cinder/Quaternion.h"
 #include "../../../resource/ResourceManager.hpp"
 
 Ball::Ball(const ci::Vec3f& pos, const ci::Vec3f& size, float speedRate) :
@@ -12,13 +14,12 @@ speedRate(speedRate)
 {
   mPos = pos;
   mSize = size;
-  mColor = ci::Color(1, 1, 1);
+  mColor = ci::Color(1.f, 1.f, 1.f);
   
-//  mSphereBlue = dowa::ResourceManager::texture().get(TextureKey::SphereBlue);
+  mSphereBlue = dowa::ResourceManager::texture().get(TextureKey::SphereBlue);
   
   setColliderType(Collider::Rect);
 }
-
 
 void Ball::setup() {}
 
@@ -53,19 +54,17 @@ void Ball::draw()
   ci::gl::pushModelView();
   cinder::gl::enableAlphaBlending();
   
-  ci::gl::enable(GL_CULL_FACE);
   ci::gl::enable(GL_TEXTURE_2D);
   
   ci::gl::pushModelView();
-//  mSphereBlue.bind();
-  ci::gl::translate(mPos); // 移動させる
-  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
+  mSphereBlue.bind();
+  ci::gl::translate(mPos);
+  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f::zero(), mSize);
-//  mSphereBlue.unbind();
+  mSphereBlue.unbind();
   ci::gl::popModelView();
   
   ci::gl::disable(GL_TEXTURE_2D);
-  ci::gl::disable(GL_CULL_FACE);
   
   cinder::gl::disableAlphaBlending();
   ci::gl::popModelView();

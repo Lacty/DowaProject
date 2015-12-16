@@ -132,7 +132,11 @@ CinderellaScene::~CinderellaScene()
   dowa::ResourceManager::texture().clear();
   dowa::ResourceManager::audio().clear();
   
+<<<<<<< HEAD
   Task::clear();
+=======
+//  Task::clear();
+>>>>>>> e47f39f58316b3fe51b456a7cd5e31e05a077a17
 }
 
 

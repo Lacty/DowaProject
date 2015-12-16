@@ -1,22 +1,14 @@
 
 #include "Cinderella.hpp"
-#include "../../../object/Object.hpp"
-#include "cinder/app/AppNative.h"
-#include "../../../resource/ResourceManager.hpp"
-#include "../../../device/Device.hpp"
-#include "../../../object/Task.hpp"
 
-// 読み取り専用
+#include "../../../resource/ResourceManager.hpp"
+
 Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinderellaSize)
 {
   mFloorStr = "Floor"; // 床名前判定
   
   mCount = 0; // アニメーション
   mGravityPower -= 0.2f; // 重力パワー
-  
-  dowa::ResourceManager::texture().insert("character/cinderella/1.png", CinderellaTextureKey::CharacterStatic);
-  dowa::ResourceManager::texture().insert("character/cinderella/2.png", CinderellaTextureKey::CharacterLeft);
-  dowa::ResourceManager::texture().insert("character/cinderella/3.png", CinderellaTextureKey::CharacterRight);
   
   mCinderellaStatic = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterStatic);
   mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);
@@ -26,13 +18,13 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
   
-  setColliderType(Collider::Rect); // 当たり判定
+  setColliderType(Collider::Rect);
 }
 
 void Cinderella::setup() {}
 void Cinderella::update()
 {
-  mPos.x += 1.8f; // 速度 0.8秒で32秒
+  mPos.x++; // 速度 0.8秒で32秒
   
   // 重力計算
   mAccelerationY += mGravityPower;
@@ -41,19 +33,19 @@ void Cinderella::update()
 
 void Cinderella::draw()
 {
-  ci::gl::pushModelView();
-  cinder::gl::enableAlphaBlending();
-  
-  ci::gl::enable(GL_TEXTURE_2D);
   ci::gl::enable(GL_CULL_FACE);
+  
+  ci::gl::pushModelView();
+  ci::gl::enable(GL_TEXTURE_2D);
+  cinder::gl::enableAlphaBlending();
   
   if(mCount < 75)
   {
     ci::gl::pushModelView();
     mCinderellaLeft.bind();
-    ci::gl::translate(mPos); // 移動させる
-    ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f)); // 回転
-    ci::gl::drawCube(ci::Vec3f(0.f, 0.f, 0.f), mSize);
+    ci::gl::translate(mPos);
+    ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
+    ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
     mCinderellaLeft.unbind();
     ci::gl::popModelView();
   }
@@ -61,9 +53,9 @@ void Cinderella::draw()
   {
     ci::gl::pushModelView();
     mCinderellaRight.bind();
-    ci::gl::translate(mPos); // 移動させる
-    ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f)); // 回転
-    ci::gl::drawCube(ci::Vec3f(0.f, 0.f, 0.f), mSize);
+    ci::gl::translate(mPos);
+    ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
+    ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
     mCinderellaRight.unbind();
     ci::gl::popModelView();
   }
@@ -72,11 +64,11 @@ void Cinderella::draw()
   
   mCount++;
   
-  ci::gl::disable(GL_CULL_FACE);
-  ci::gl::disable(GL_TEXTURE_2D);
-  
   cinder::gl::disableAlphaBlending();
+  ci::gl::disable(GL_TEXTURE_2D);
   ci::gl::popModelView();
+  
+  ci::gl::disable(GL_CULL_FACE);
 }
 
 void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)

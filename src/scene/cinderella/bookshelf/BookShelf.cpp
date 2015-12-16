@@ -20,20 +20,16 @@ void BookShelf::update() {}
 void BookShelf::draw()
 {
   ci::gl::pushModelView();
+  ci::gl::enable(GL_TEXTURE_2D);
   ci::gl::enableAlphaBlending();
   
-  ci::gl::enable(GL_CULL_FACE);
-  ci::gl::enable(GL_TEXTURE_2D);
-  
   mBookShelf.bind();
-  ci::gl::translate(mPos); // 移動させる
-  ci::gl::rotate(ci::Vec3f(180, 0, 0)); // 回転
-  ci::gl::drawCube(ci::Vec3f(0, 0, 0), mSize); // 本棚
+  ci::gl::translate(mPos);
+  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
+  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   mBookShelf.unbind();
   
-  ci::gl::disable(GL_CULL_FACE);
-  ci::gl::disable(GL_TEXTURE_2D);
-  
   ci::gl::disableAlphaBlending();
+  ci::gl::disable(GL_TEXTURE_2D);
   ci::gl::popModelView();
 }
