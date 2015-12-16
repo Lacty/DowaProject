@@ -10,7 +10,7 @@ Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
   
   mPiano = dowa::ResourceManager::texture().get(CinderellaTextureKey::Piano);
   
-　setColliderType(Collider::Rect);
+  setColliderType(Collider::Rect);
 }
 
 void Piano::setup(){}
@@ -20,10 +20,8 @@ void Piano::update() {}
 void Piano::draw()
 {
   ci::gl::pushModelView();
-  ci::gl::enableAlphaBlending();
-  
-  ci::gl::enable(GL_CULL_FACE);
   ci::gl::enable(GL_TEXTURE_2D);
+  ci::gl::enableAlphaBlending();
   
   mPiano.bind();
   ci::gl::translate(mPos);
@@ -31,10 +29,8 @@ void Piano::draw()
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   mPiano.unbind();
   
-  ci::gl::disable(GL_CULL_FACE);
-  ci::gl::disable(GL_TEXTURE_2D);
-  
   ci::gl::disableAlphaBlending();
+  ci::gl::disable(GL_TEXTURE_2D);
   ci::gl::popModelView();
 }
 
