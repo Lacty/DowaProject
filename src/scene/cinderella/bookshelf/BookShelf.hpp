@@ -1,5 +1,5 @@
 
-#pragma ones
+#pragma once
 
 #include "../../../object/Object.hpp"
 
