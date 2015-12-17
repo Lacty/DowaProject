@@ -1,27 +1,29 @@
 
 #include "Test.hpp"
-#include "../../object/Task.hpp"
-#include "../../device/Device.hpp"
-#include "../SceneManager.hpp"
-
-#include "ball/Ball.hpp"
+#include "../../resource/ResourceManager.hpp"
 
 
 Test::Test() {
-  cam = dowa::Camera();
-  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f::zero(), ci::Vec3f(50, 50, 5)));
+  std::cout << "start test" << std::endl;
+  
+  ci::gl::enable(GL_TEXTURE_2D);
+  ci::gl::enable(GL_CULL_FACE);
+  ci::gl::enableDepthRead();
+  ci::gl::enableDepthWrite();
+  ci::gl::enableAlphaBlending(true);
+  
+  image = dowa::ResourceManager::texture().get(TextureKey::TitleBack);
 }
 
 Test::~Test() {
-  ci::gl::popMatrices();
-  std::cout << "a\n";
+  std::cout << "end test" << std::endl;
 }
 
-void Test::update() {
-  if (dowa::Device::isTouchBegan()) {
-    Task::clear();
-    SceneManager::create(SceneType::Test);
-  }
-}
+void Test::update() {}
 
-void Test::draw() {}
+void Test::draw() {
+  ci::gl::pushModelView();
+  ci::gl::rotate(ci::Vec3f(0, 0, 0));
+  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TitleBack), ci::Rectf(0, 0, 100, 100));
+  ci::gl::popModelView();
+}

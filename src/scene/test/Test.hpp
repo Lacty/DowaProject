@@ -1,16 +1,16 @@
 
 #pragma once
 #include "../Scene.hpp"
-#include "../cinderella/camera/Camera.hpp"
+#include "cinder/ImageIo.h"
+#include "cinder/gl/Texture.h"
 
 
 class Test : public Scene {
 private:
-  dowa::Camera cam;
+  ci::gl::Texture image;
   
 public:
   Test();
-  
   ~Test();
   
   void update();

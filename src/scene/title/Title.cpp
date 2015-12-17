@@ -1,34 +1,19 @@
 
 #include "Title.hpp"
+
 #include "cinder/app/AppNative.h"
-#include "cinder/gl/gl.h"
-#include "cinder/gl/Texture.h"
-#include "cinder/ImageIo.h"
+
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
 
 Title::Title()
 {
-  std::cout << "title" << std::endl;
+  std::cout << "start title" << std::endl;
+  std::cout << ci::app::getWindowHeight() << std::endl;
 
   // デバイスのウィンドサイズを取得し、代入
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
-  
-  // 画像読み込み
-  /*dowa::ResourceManager::texture().insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
-  dowa::ResourceManager::texture().insert("background/title/FeatherBookResize.png", TextureKey::FeatherBook);
-  dowa::ResourceManager::texture().insert("background/title/Logo.png", TextureKey::Logo);
-  dowa::ResourceManager::texture().insert("background/title/TapToStartEng.png", TextureKey::TapToStartEng);
-  dowa::ResourceManager::texture().insert("background/title/Trace.png", TextureKey::Trace);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterTa.png", TextureKey::LetterTa);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterMa.png", TextureKey::LetterMa);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterKo.png", TextureKey::LetterKo);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterRo.png", TextureKey::LetterRo);
-  dowa::ResourceManager::texture().insert("background/title/SphereBlue.png", TextureKey::SphereBlue);
-  dowa::ResourceManager::texture().insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
-  dowa::ResourceManager::texture().insert("background/title/SphereRed.png", TextureKey::SphereRed);*/
-  
   
   // 画像座標設定
   mFeatherBookRect = ci::Rectf(mDeviceWindowWidth / 5.0f,  mDeviceWindowHeight / 20.0f,
@@ -44,12 +29,19 @@ Title::Title()
                                  mDeviceWindowWidth / 1.35f, mDeviceWindowHeight / 1.12f); // タッチしてスタート！
 }
 
+Title::~Title()
+{
+  std::cout << "end title" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();  
+}
+
 void Title::update()
 {
   
   if(dowa::Device::isTouchBegan())
   {
-    SceneManager::create(SceneType::Test);
+    SceneManager::create(SceneType::SelectLoad);
   }
 
   mSphereMotion++;
@@ -99,7 +91,7 @@ void Title::draw()
 
   ci::gl::clear();
   
-  cinder::gl::enableAlphaBlending(true); // αチャンネル有効
+  cinder::gl::enableAlphaBlending();
 
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TitleBack), ci::app::getWindowBounds()); // 背景
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::FeatherBook), mFeatherBookRect); // 本とペン
@@ -117,7 +109,7 @@ void Title::draw()
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Logo), mLogoRect); // TAMACORO
   ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TapToStartEng), mTapToStartEngRect); // タッチしてスタート！
   
-  cinder::gl::enableAlphaBlending(false); // αチャンネル無効
+  cinder::gl::disableAlphaBlending();
   
   ci::gl::popModelView();
   

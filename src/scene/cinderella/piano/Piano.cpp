@@ -1,33 +1,45 @@
 
 #include "Piano.hpp"
-#include <iostream>
 
-Piano::Piano() {
-	mPos = ci::Vec3f(350, 0, 0);
-	mSize = ci::Vec3f(50, 50, 2);
-	
-	//mPiano = ci::Rectf(mPos.x, mPos.y, mSize.x,mSize.y);
-	setColliderType(Collider::Rect);
+#include "../../../resource/ResourceManager.hpp"
+
+Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
+{
+  mPos = mPianoPos;
+  mSize = mPianoSize;
+  
+  mPiano = dowa::ResourceManager::texture().get(CinderellaTextureKey::Piano);
+  
+  setColliderType(Collider::Rect);
 }
 
 void Piano::setup(){}
 
-void Piano::update() {
+void Piano::update() {}
 
+void Piano::draw()
+{
+  ci::gl::pushModelView();
+  ci::gl::enable(GL_TEXTURE_2D);
+  ci::gl::enableAlphaBlending();
+  
+  mPiano.bind();
+  ci::gl::translate(mPos);
+  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
+  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
+  mPiano.unbind();
+  
+  ci::gl::disableAlphaBlending();
+  ci::gl::disable(GL_TEXTURE_2D);
+  ci::gl::popModelView();
 }
 
-void Piano::draw() {
-	/*
-	ci::gl::pushModelView();
-	ci::gl::color(1.0f, 1.0f, 1.0f);
-	ci::gl::draw(dowa::ResourceManager::texture().get(CinderellaTextureKey::Piano));
-	ci::gl::popModelView();
-	*/
-}
-
-void Piano::onCollisionUpdate(const std::shared_ptr<Object>& compare) {
-	
-	dowa::ResourceManager::audio().get(AudioKey::Menu).bgm->disable();
-	dowa::ResourceManager::audio().get(AudioKey::StageSelectSE).bgm->enable();
-	dowa::ResourceManager::audio().get(AudioKey::StageSelectSE).gain->setValue(1.0f);
+void Piano::onCollisionUpdate(const std::shared_ptr<Object>& compare)
+{
+  if(compare -> getName() == "Ball")
+  {
+    dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->disable();
+    dowa::ResourceManager::audio().get(CinderellaAudioKey::HousePiano).gain->setValue(1.0f);
+    dowa::ResourceManager::audio().get(CinderellaAudioKey::HousePiano).bgm->enable();
+  }
 }

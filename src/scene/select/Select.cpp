@@ -1,166 +1,54 @@
 
 #include "Select.hpp"
+#include "../../resource/ResourceManager.hpp"
+#include "../../window/Window.hpp"
+#include "../../device/Device.hpp"
+#include "../SceneManager.hpp"
 
 
 Select::Select() {
+  std::cout << "start select" << std::endl;
+  mBackGround = dowa::ResourceManager::texture().get(TextureKey::StageSelectBack);
+  mBook       = dowa::ResourceManager::texture().get(TextureKey::StageSelectBook);
+  mTitle      = dowa::ResourceManager::texture().get(TextureKey::StageSelectCinderella);
 
-	my_angle = 0.0f;
-	mry = 0.0f;
+  mPlaneBG    = ci::Rectf(0, 0, dowa::getWindowWidth(), dowa::getWindowHeight());
+  mPlaneBook  = ci::Rectf(-mBook.getWidth(), -mBook.getHeight(),
+                           mBook.getWidth(),  mBook.getHeight()) * 0.3f;
+  mPlaneTitle = ci::Rectf(-mTitle.getWidth(), -mTitle.getHeight(),
+                           mTitle.getWidth(),  mTitle.getHeight()) * 0.2f;
+}
 
-	mDeviceWindowHeight = dowa::getWindowHeight();
-	mDeviceWindowWidth = dowa::getWindowWidth();
-	
-	//background
-	mStageSelectBack = ci::Rectf(0.0f, 0.0f, mDeviceWindowWidth * 1.332f, mDeviceWindowHeight* 0.75f);
-	//stage1.pos = ci::Vec3f(120.0f, 200.0f, 0.0f);
-	//stage1.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
-	//stage1.resize = ci::Vec3f::zero()/*(10.0f, 10.0f, 10.0f)*/;
-	//stage1.resize_angle = ci::Vec3f(0.0f, 0.0f, 0.0f);
-	
-	//Cinderella
-	book2.pos = ci::Vec3f(mDeviceWindowWidth / 2 -50.0f, mDeviceWindowHeight / 2 -25.0f, 0.0f);
-	book2.size = ci::Vec3f(book2.pos.x + 250.0f, book2.pos.y + 75.0f, 0.0f);
-
-		stage2.pos = ci::Vec3f(book2.pos.x, book2.pos.y + 50.0f, 0.0f);
-	stage2.size = ci::Vec3f(stage2.pos.x + 250.0f, stage2.pos.y + 75.0f, 0.0f);
-
-	mStageCinderellaBook = ci::Rectf(book2.pos.x, book2.pos.y, book2.size.x, book2.size.y);
-	mStageCinderellaLogo = ci::Rectf(stage2.pos.x, stage2.pos.y, stage2.size.x, stage2.size.y);
-	
-	/*stage3.pos = ci::Vec3f(520.0f, 200.0f, 0.0f);
-	stage3.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
-*/
-	isSelected = false;
-	isDecided = false;
-
-	mSelectedStage_id = mNone;
-
-		//ci::app::console() << "Select Scene" << std::endl;
+Select::~Select() {
+  std::cout << "end select" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();
 }
 
 void Select::update() {
-
-	//setNextScene(SceneType::GameMain, FadeType::None);
-	//-------------------------------------------------------------
-	//move up and down
-	mry = std::cos(my_angle) * 10.0f;
-	my_angle += 0.0f;//005f;
-	//-------------------------------------------------------------
-	//scale up or down
-	stage1.resize.x = std::sin(stage1.resize_angle.x) * 10.0f;
-	stage1.resize.y = std::sin(stage1.resize_angle.y) * 10.0f;
-	if (!isSelected)
-	{
-		stage1.resize_angle.x += 0.005f;
-		stage1.resize_angle.y += 0.005f;
-	}
-	//-------------------------------------------------------------
-	//touch
-	if (dowa::Device::isTouchBegan())
-	{
-			mtouchPos = dowa::Device::getTouchPos();
-	
-		if (mtouchPos.x >= stage1.pos.x -100.0f&& mtouchPos.x <=stage1.pos.x + stage1.size.x - 100.0f
-			&& mtouchPos.y >= stage1.pos.y - 25.0f && mtouchPos.y <=  stage1.pos.y + stage1.size.y-25.0f)
-		{
-			//SceneManager::create(SceneType::Result);
-		}
-
-		if (mtouchPos.x >= stage2.pos.x&& mtouchPos.x <= stage2.size.x
-			&& mtouchPos.y >= stage2.pos.y&& mtouchPos.y <= stage2.size.y)
-		{
-			if (!dowa::ResourceManager::audio().get(AudioKey::StageSelectSE).bgm->isEnabled()){
-				dowa::ResourceManager::audio().get(AudioKey::StageSelectSE).bgm->enable();
-				dowa::ResourceManager::audio().get(AudioKey::StageSelectSE).gain->setValue(1.0f);
-			}
-			SceneManager::create(SceneType::Cinderella);
-
-		}
-		if (mtouchPos.x >= stage3.pos.x-100.0f && mtouchPos.x <= stage3.pos.x + stage3.size.x -100.0f
-			&& mtouchPos.y >= stage3.pos.y - 25.0f && mtouchPos.y <= stage3.pos.y + stage3.size.y - 25.0f)
-		{
-			//SceneManager::create(SceneType::Result);
-		}
-//------------------------------------------------------------------
-
-	}
+  if (!dowa::Device::isTouchBegan()) return;
+  SceneManager::create(SceneType::CinderellaLoad);
 }
 
 void Select::draw() {
-	//background
-	ci::gl::pushModelView();
-	ci::gl::color(1.0f, 1.0f, 1.0f);
-	ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::StageSelectBack), mStageSelectBack);
-	ci::gl::popModelView();
+  ci::gl::enableAlphaBlending();
 
-	/*
-	ci::gl::pushModelView();
-	ci::gl::color(ci::Color(1, 1, 1));
-	ci::gl::drawCube(ci::Vec3f(mDeviceWindowWidth / 2, mDeviceWindowHeight / 2-90, 0.0f), ci::Vec3f(800, 500, 0));
-	ci::gl::popModelView();
-	*/
-	/*
-	switch (mSelectedStage_id){
-		//selected stage
-	case mNone:
-		ci::gl::pushModelView();
-		ci::gl::color(ci::Color(0, 0, 1));
-		ci::gl::drawCube(ci::Vec3f(0, 375.0f , 0), ci::Vec3f(1280, 210, 0));
-		ci::gl::popModelView();
-		break;
+  // 背景
+  ci::gl::draw(mBackGround, mPlaneBG);
+  
+  // 本
+  ci::gl::pushModelView();
+  ci::gl::translate(dowa::getWindowCenter());
+  ci::gl::draw(mBook, mPlaneBook);
+  ci::gl::popModelView();
 
-	case mStage1:
-		ci::gl::pushModelView();
-		ci::gl::color(ci::Color(0.3f, 0, 1));
-		ci::gl::drawCube(ci::Vec3f(0, 375.0f, 0), ci::Vec3f(1280, 210, 0));
-		ci::gl::popModelView();
-		break;
-
-	case mStage2:
-		ci::gl::pushModelView();
-		ci::gl::color(ci::Color(0, 0.3f, 1));
-		ci::gl::drawCube(ci::Vec3f(0, 375.0f, 0), ci::Vec3f(1280, 210, 0)); 
-		ci::gl::popModelView();
-		break;
-
-	case mStage3:
-		ci::gl::pushModelView();
-		ci::gl::color(ci::Color(0, 0, 0.3f));
-		ci::gl::drawCube(ci::Vec3f(0, 375.0f, 0), ci::Vec3f(1280, 210, 0));
-		ci::gl::popModelView();
-		break;
-	}
-	*/
-	//stage1
-	//ci::gl::pushModelView();
-	//ci::gl::color(ci::Color(1, 1, 0));
-	//ci::gl::drawCube(ci::Vec3f(stage1.pos.x, stage1.pos.y + mry, stage1.pos.z),
-	//	ci::Vec3f(stage1.size.x /*+ stage1.resize.x*/, stage1.size.y/* + stage1.resize.y*/, stage1.size.z));
-	//ci::gl::popModelView();
-
-	//stage2
-	/*ci::gl::pushModelView();
-	ci::gl::color(ci::Color(1, 0, 0));
-	ci::gl::drawCube(ci::Vec3f(stage2.pos.x, stage2.pos.y + mry, stage2.pos.z),
-		ci::Vec3f(stage2.size.x, stage2.size.y, stage2.size.z));
-	ci::gl::popModelView();
-*/
-	ci::gl::pushModelView();
-	ci::gl::color(1.0f, 1.0f, 1.0f);
-	ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::StageSelectBook),mStageCinderellaBook);
-	ci::gl::popModelView();
-	
-	ci::gl::pushModelView();
-	ci::gl::color(1.0f, 1.0f, 1.0f);
-	ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::StageSelectCinderella), mStageCinderellaLogo);
-	ci::gl::popModelView();
-
-	//stage3
-	/*ci::gl::pushModelView();
-	ci::gl::color(ci::Color(1, 1, 0));
-	ci::gl::drawCube(ci::Vec3f(stage3.pos.x, stage3.pos.y + mry, stage3.pos.z),
-		ci::Vec3f(stage3.size.x, stage3.size.y, stage3.size.z));
-	ci::gl::popModelView();*/
+  // title
+  ci::Vec2f offset(0, 70);
+  ci::gl::pushModelView();
+  ci::gl::translate(dowa::getWindowCenter() + offset);
+  ci::gl::draw(mTitle, mPlaneTitle);
+  ci::gl::popModelView();
+  
+  ci::gl::disableAlphaBlending();
 }
-
 

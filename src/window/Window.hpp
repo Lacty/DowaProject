@@ -5,8 +5,8 @@
 
 namespace dowa {
 
-inline int getWindowWidth() { return ci::app::getWindowHeight(); }
-inline int getWindowHeight() { return ci::app::getWindowWidth(); }
+inline int getWindowWidth() { return std::max(ci::app::getWindowWidth(), ci::app::getWindowHeight()); }
+inline int getWindowHeight() { return std::min(ci::app::getWindowWidth(), ci::app::getWindowHeight()); }
 
 inline ci::Vec2i getWindowSize() { return ci::Vec2i(getWindowWidth(), getWindowHeight()); }
 inline ci::Vec2f getWindowCenter() { return getWindowSize() * 0.5; }

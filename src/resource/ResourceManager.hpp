@@ -15,6 +15,8 @@
 #include <string>
 #include <unordered_map>
 
+#include <memory>
+
 namespace dowa {
 
   namespace hidden {
@@ -26,48 +28,32 @@ namespace dowa {
 
     class AudioResource {
     private:
-      std::unordered_map <int, Audio> mMappedResource;
-      bool mEnable;
-      short mCounter;
+      std::unordered_map <int, std::shared_ptr<Audio>> mMap;
 
     public:
       AudioResource();
 
-      void enable();
-      bool isEnabled();
-
-      short getCounter();//debug
-
       bool insert(std::string path, int key);
       Audio get(int key);
 
-      void check(bool insertResult);//Not Implemented
+      void clear();
     };
     typedef AudioResource AudioRes;
-    typedef std::unordered_map<int, Audio>::const_iterator AudioIterator;
 
     class TextureResource {
     private:
-      std::unordered_map<int, ci::gl::Texture> mMappedResource;
-      bool mEnable;
-      short mCounter;
+      std::unordered_map<int, std::shared_ptr<ci::gl::Texture>> mMap;
 
     public:
       TextureResource();
 
-      void enable();
-      bool isEnabled();
-
-      short getCounter();//debug
-
       bool insert(std::string path, int key);
       ci::gl::Texture get(int key);
 
-      void check(bool insertResult);//Not Implemented
+      void clear();
     };
     typedef TextureResource TexRes;
-    typedef std::unordered_map<int, ci::gl::Texture>::const_iterator TextureIterator;
-
+    
   }
 
   class ResourceManager {
