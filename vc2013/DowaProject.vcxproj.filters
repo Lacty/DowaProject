@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Game Data">
+      <UniqueIdentifier>{1c1d3148-fc98-46cd-a8c9-4eb388ee96d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\collision">
+      <UniqueIdentifier>{333d42a7-5da2-4117-9df9-e67fb65abb74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\device">
+      <UniqueIdentifier>{0219216c-6275-49a9-b4da-766d9ab259b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lightup">
+      <UniqueIdentifier>{285d1914-701b-43e8-9cd6-a85240c3578b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object">
+      <UniqueIdentifier>{aaeff767-6ad9-4d34-94a0-68e3f93fce32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\resource">
+      <UniqueIdentifier>{28cae48d-d588-4a05-a119-597f90ef887e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene">
+      <UniqueIdentifier>{5ea2df2d-0f34-4f5c-97d2-95e23d74299f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{33eba969-a269-40c7-bd8f-e3c31cea3635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\window">
+      <UniqueIdentifier>{b5c8f325-ac86-4999-9d49-58e3976639d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella">
+      <UniqueIdentifier>{59e2df66-1706-415c-9857-705ecea65c92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\fade">
+      <UniqueIdentifier>{5af2fd18-3c39-4c12-9a13-f5607e5ea81c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gamemain">
+      <UniqueIdentifier>{90f31c35-591f-4ebe-b903-7f7d7c7c8ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\result">
+      <UniqueIdentifier>{6a1be4d0-f9ed-4ee9-be80-ea63dee4c8ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\select">
+      <UniqueIdentifier>{c6f45c74-5429-4d8d-922f-c1860de6f514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\test">
+      <UniqueIdentifier>{4d9dbe07-6107-4e92-9fd1-151e830aaf77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\title">
+      <UniqueIdentifier>{9480bcc1-5ec5-40a9-9adc-5fa32fff0f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\ball">
+      <UniqueIdentifier>{ecd0f044-c6f1-41f7-8cc4-a8b4647ea635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\book">
+      <UniqueIdentifier>{b0875b16-5ee7-4ba5-a96a-8323532c5e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\bookshelf">
+      <UniqueIdentifier>{7f483412-1f03-4951-b5a3-62c58a4af4b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\camera">
+      <UniqueIdentifier>{985bbd76-754d-4ee5-9bbe-1f48eeb2252a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\cinderella">
+      <UniqueIdentifier>{fda6878d-f567-4129-bb3d-0453f9883f3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\floor">
+      <UniqueIdentifier>{d8915c12-e58c-4a76-8f26-a4d1a66dfdbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\piano">
+      <UniqueIdentifier>{8e428be1-9a6d-4f6c-bd9c-2ef8ee25cdf6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\DowaProjectApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DowaProjectApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="..\src\collision\Collision.cpp">
+      <Filter>Source Files\collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\device\Device.cpp">
+      <Filter>Source Files\device</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LightUp\LightUp.cpp">
+      <Filter>Source Files\lightup</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\DataManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\ResourceManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\object\Object.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\object\Task.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utility\Utility.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\window\Window.cpp">
+      <Filter>Source Files\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\Scene.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneMaker.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\SceneManager.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\title\Title.cpp">
+      <Filter>Source Files\scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\title\TitleLoad.cpp">
+      <Filter>Source Files\scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\test\Test.cpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\select\Select.cpp">
+      <Filter>Source Files\scene\select</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\select\SelectLoad.cpp">
+      <Filter>Source Files\scene\select</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\result\Result.cpp">
+      <Filter>Source Files\scene\result</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\result\ResultLoad.cpp">
+      <Filter>Source Files\scene\result</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\gameMain\GameMain.cpp">
+      <Filter>Source Files\scene\gamemain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\fade\FadeIn.cpp">
+      <Filter>Source Files\scene\fade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\fade\FadeOut.cpp">
+      <Filter>Source Files\scene\fade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\CinderellaLoad.cpp">
+      <Filter>Source Files\scene\cinderella</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\CinderellaScene.cpp">
+      <Filter>Source Files\scene\cinderella</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\ball\Ball.cpp">
+      <Filter>Source Files\scene\cinderella\ball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\book\Book.cpp">
+      <Filter>Source Files\scene\cinderella\book</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\bookshelf\BookShelf.cpp">
+      <Filter>Source Files\scene\cinderella\bookshelf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\camera\Camera.cpp">
+      <Filter>Source Files\scene\cinderella\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\cinderella\Cinderella.cpp">
+      <Filter>Source Files\scene\cinderella\cinderella</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\floor\Floor.cpp">
+      <Filter>Source Files\scene\cinderella\floor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\piano\Piano.cpp">
+      <Filter>Source Files\scene\cinderella\piano</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\collision\Collision.hpp">
+      <Filter>Source Files\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\device\Device.hpp">
+      <Filter>Source Files\device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LightUp\LightUp.hpp">
+      <Filter>Source Files\lightup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\DataManager.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceManager.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\object\Object.hpp">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\object\Task.hpp">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utility\Utility.hpp">
+      <Filter>Source Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\window\Window.hpp">
+      <Filter>Source Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\Scene.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneMaker.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\SceneManager.hpp">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\title\Title.hpp">
+      <Filter>Source Files\scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\title\TitleLoad.hpp">
+      <Filter>Source Files\scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\test\Test.hpp">
+      <Filter>Source Files\scene\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\select\Select.hpp">
+      <Filter>Source Files\scene\select</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\select\SelectLoad.hpp">
+      <Filter>Source Files\scene\select</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\result\Result.hpp">
+      <Filter>Source Files\scene\result</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\result\ResultLoad.hpp">
+      <Filter>Source Files\scene\result</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\gameMain\GameMain.hpp">
+      <Filter>Source Files\scene\gamemain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeBase.hpp">
+      <Filter>Source Files\scene\fade</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeIn.hpp">
+      <Filter>Source Files\scene\fade</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\fade\FadeOut.hpp">
+      <Filter>Source Files\scene\fade</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\CinderellaLoad.hpp">
+      <Filter>Source Files\scene\cinderella</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\CinderellaScene.hpp">
+      <Filter>Source Files\scene\cinderella</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\ball\Ball.hpp">
+      <Filter>Source Files\scene\cinderella\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\book\Book.hpp">
+      <Filter>Source Files\scene\cinderella\book</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\bookshelf\BookShelf.hpp">
+      <Filter>Source Files\scene\cinderella\bookshelf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\camera\Camera.hpp">
+      <Filter>Source Files\scene\cinderella\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\cinderella\Cinderella.hpp">
+      <Filter>Source Files\scene\cinderella\cinderella</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\floor\Floor.hpp">
+      <Filter>Source Files\scene\cinderella\floor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\piano\Piano.hpp">
+      <Filter>Source Files\scene\cinderella\piano</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\gameData\Template.json">
+      <Filter>Game Data</Filter>
+    </None>
+  </ItemGroup>
+</Project>
