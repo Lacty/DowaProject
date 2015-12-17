@@ -21,7 +21,11 @@ enum class SceneType {
   Result,
   
   Test,
-  Loading,
+  TitleLoad,
+  SelectLoad,
+  ResultLoad,
+  CinderellaLoad,
+  
   Cinderella
 };
 

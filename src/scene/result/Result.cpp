@@ -7,6 +7,8 @@
 
 Result::Result()
 {
+  std::cout << "start result" << std::endl;
+
 	mChange = mScreen1;  
 
 	mCount = 0.0f;
@@ -17,6 +19,12 @@ Result::Result()
 	mRetrypos = ci::Rectf(-250, 0, -50, 100);
 	mFinpos = ci::Rectf(150,150,250,200);
 	mFontpos = ci::Rectf(-150, -100, 150, 0);
+}
+
+Result::~Result() {
+  std::cout << "end result" << std::endl;
+  dowa::ResourceManager::texture().clear();
+  dowa::ResourceManager::audio().clear();
 }
 
 void Result::update() 

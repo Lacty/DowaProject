@@ -23,6 +23,7 @@ private:
 	};
 public:
   Result();
+  ~Result();
   
   void update();
   void draw();

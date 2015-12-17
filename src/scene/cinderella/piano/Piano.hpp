@@ -1,17 +1,17 @@
 
-#pragma once
+# pragma once
+
 #include "../../../object/Object.hpp"
-#include "../../../device/Device.hpp"
-#include "cinder/app/AppNative.h"
-#include "../../../resource/ResourceManager.hpp"
 
+#include "cinder/gl/Texture.h"
 
-class Piano: public Object {
-private:
-
-	ci::Rectf mPiano;
+class Piano: public Object
+{
+  ci::gl::Texture mPiano;
+  
 public:
-	Piano();
+  
+  Piano(const ci::Vec3f&, const ci::Vec3f&);
 
 	void setup();
 	void update();
