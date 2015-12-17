@@ -76,8 +76,8 @@ void Task::update() {
 
 
 void Task::draw() {
-  for (auto& obj : get().mMap) {
-    if (obj.second->isAwake()) continue;
-    obj.second->draw();
+  for (auto& obj : get().mList) {
+    if (obj->isAwake()) continue;
+    obj->draw();
   }
 }
