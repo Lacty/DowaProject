@@ -64,7 +64,7 @@ public:
   static const int SphereGreen = dowa::TexConst::TCCommon + 13;
   static const int SphereRed = dowa::TexConst::TCCommon + 14;
 
-  // resultópÇÃresource
+  // result√≥p√á√Éresource
 
   static const int Back = dowa::TexConst::TCCommon + 15;
   static const int Retry = dowa::TexConst::TCCommon + 16;
@@ -130,6 +130,9 @@ public:
   static const int _betaBack2 = dowa::TexConst::TCCinderella + 1000 + 2;
   static const int _betaBack3 = dowa::TexConst::TCCinderella + 1000 + 3;
   static const int _betaFull = dowa::TexConst::TCCinderella + 1000 + 4;
+  
+  // hiramasa
+  static const int HandRail = dowa::TexConst::TCCinderella + 1000 + 5;
 };
 typedef CinderellaTextureKey CinderellaTKey;
 
