@@ -53,7 +53,7 @@ public:
   void lookAt(const ci::Vec3f& eye, const ci::Vec3f& target, const ci::Vec3f& up);
   
   void setMatrices();
-  void forcus();
+  void focus();
   
   void bound();
 };

@@ -121,12 +121,16 @@ CinderellaScene::CinderellaScene()
                                              ci::Vec3f( 150.f, 125.f, 0.f)));
   
   // やないコード
-  mcameraPos = ci::Vec3f( 100.f, 0.f, 300.f);
+  mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
   
-  camera.lookAt(mcameraPos,
-                ci::Vec3f(0.f, 0.f, 0.f),
+  camera.lookAt(mCameraPos,
+                ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
+  
+  camera.setFarClip(ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0),
+                    ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0));
+  
   // BGM
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm -> enable();
@@ -148,11 +152,11 @@ CinderellaScene::~CinderellaScene()
 void CinderellaScene::update()
 {
   // やないコード
-  mcameraPos.x = Task::find("Cinderella") -> getPos().x;
+  mCameraPos.x = Task::find("Cinderella")->getPos().x;
+  camera.setPos(mCameraPos);
   
-  camera.lookAt(mcameraPos,
-                ci::Vec3f(mcameraPos.x, mcameraPos.y, 0.f),
-                ci::Vec3f::yAxis());
+  // 画面外を映さないようにする
+  camera.bound();
   
   // BGM 音量 Set
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);

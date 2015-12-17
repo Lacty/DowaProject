@@ -32,8 +32,8 @@ void ResultLoad::update() {
   if (isFin) {
     std::cout << "finish load" << std::endl;
     //mLoad.join();
-    SceneManager::create(SceneType::Result);
     isFin = false;
+    SceneManager::create(SceneType::Result);
   }
 }
 
