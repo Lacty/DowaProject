@@ -23,7 +23,7 @@ private:
   float mDeviceWindowHeight, mDeviceWindowWidth; // デバイスウィンドサイズ
   
   // やない
-  ci::Vec3f mcameraPos;
+  ci::Vec3f mCameraPos;
   dowa::Camera camera;
   
 public:
