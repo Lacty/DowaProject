@@ -2,15 +2,16 @@
 #pragma once
 
 #include <string>
+#include <memory>
+
+#include "../object/Object.hpp"
+
+#include "cinder/Json.h"
 
 namespace dowa{
-  void loadWalls(std::string filepath);
-  void loadGimmicks(std::string filepath);
-  void loadItems(std::string filepath);
-  
+  //pObject loadObjects(std::string filepath);
+
   namespace hidden{
-    void saveWalls(std::string filepath, std::string filename);
-    void saveGimmicks(std::string filepath, std::string filename);
-    void saveItems(std::string filepath, std::string filename);
+    void saveObjects(std::string filepath, std::string filename);
   }
 }
