@@ -49,14 +49,8 @@
     <Filter Include="Source Files\scene\fade\fadeIn">
       <UniqueIdentifier>{289ac625-acff-4677-956e-40b885f469a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\scene\loading">
-      <UniqueIdentifier>{50b3215d-a930-491b-875c-ff51149c9a3e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game Data">
       <UniqueIdentifier>{1c1d3148-fc98-46cd-a8c9-4eb388ee96d8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\object\test objects">
-      <UniqueIdentifier>{3e8f1ef2-8593-4e30-aa43-6ac887c8d47d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\scene\gameMain\cinderella">
       <UniqueIdentifier>{08e904ed-a73f-4fea-8fa8-fb6665e191e6}</UniqueIdentifier>
@@ -69,6 +63,45 @@
     </Filter>
     <Filter Include="Source Files\LightUp">
       <UniqueIdentifier>{5c10ddd7-8941-40ec-bb3d-9b7f29e68669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects">
+      <UniqueIdentifier>{f992a355-569a-4211-a8a2-51e3a31474be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects\ball">
+      <UniqueIdentifier>{29cd41e8-840f-48d5-aaa4-1bd5ca765e1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects\book">
+      <UniqueIdentifier>{711d7e9a-ee43-4729-8df3-6d5326ffa6b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects\bookshelf">
+      <UniqueIdentifier>{e28c2fe4-b39d-4a0e-951a-0e1287388d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects\cinderella %28Character%29">
+      <UniqueIdentifier>{e49f175c-85da-4106-9384-bee489aac94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects\floor">
+      <UniqueIdentifier>{8f12e3fd-4d4d-4732-9017-e180836d0ab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\objects\piano">
+      <UniqueIdentifier>{6be6501d-2c36-4d59-a338-e334a4f3fef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{47865401-7248-40a7-b456-39da4218242a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\window">
+      <UniqueIdentifier>{1fba7a48-e689-4b12-a5cc-dcbeed52323f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\result\loading">
+      <UniqueIdentifier>{884824f4-6bc0-4cc0-ae26-4b520a2a22d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\select\loading">
+      <UniqueIdentifier>{ba77f80e-8e7c-4df4-a2b1-293afde763ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\title\loading">
+      <UniqueIdentifier>{65d8b90f-82f9-47f1-b1b9-60c75e728816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\gameMain\cinderella\loading">
+      <UniqueIdentifier>{8bfacdde-9763-4838-b8ed-fffde9c00d77}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -126,24 +159,6 @@
     <ClCompile Include="..\src\scene\fade\FadeOut.cpp">
       <Filter>Source Files\scene\fade\fadeOut</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\scene\test\Enemy.cpp">
-      <Filter>Source Files\scene\test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\test\Player.cpp">
-      <Filter>Source Files\scene\test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\loading\Loading.cpp">
-      <Filter>Source Files\scene\loading</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\test\Cinderella.cpp">
-      <Filter>Source Files\object\test objects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\test\Floor.cpp">
-      <Filter>Source Files\object\test objects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\scene\test\Piano.cpp">
-      <Filter>Source Files\object\test objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\scene\cinderella\camera\Camera.cpp">
       <Filter>Source Files\scene\gameMain\cinderella\camera</Filter>
     </ClCompile>
@@ -155,6 +170,42 @@
     </ClCompile>
     <ClCompile Include="..\src\LightUp\LightUp.cpp">
       <Filter>Source Files\LightUp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\ball\Ball.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\ball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\book\Book.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\book</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\bookshelf\BookShelf.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\bookshelf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\cinderella\Cinderella.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\cinderella %28Character%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\floor\Floor.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\floor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\piano\Piano.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\piano</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utility\Utility.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\window\Window.cpp">
+      <Filter>Source Files\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\result\ResultLoad.cpp">
+      <Filter>Source Files\scene\result\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\select\SelectLoad.cpp">
+      <Filter>Source Files\scene\select\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\title\TitleLoad.cpp">
+      <Filter>Source Files\scene\title\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\CinderellaLoad.cpp">
+      <Filter>Source Files\scene\gameMain\cinderella\loading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,24 +263,6 @@
     <ClInclude Include="..\src\scene\fade\FadeBase.hpp">
       <Filter>Source Files\scene\fade</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\scene\test\Enemy.hpp">
-      <Filter>Source Files\scene\test</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\test\Player.hpp">
-      <Filter>Source Files\scene\test</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\loading\Loading.hpp">
-      <Filter>Source Files\scene\loading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\test\Cinderella.hpp">
-      <Filter>Source Files\object\test objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\test\Floor.hpp">
-      <Filter>Source Files\object\test objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\scene\test\Piano.hpp">
-      <Filter>Source Files\object\test objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\scene\cinderella\camera\Camera.hpp">
       <Filter>Source Files\scene\gameMain\cinderella\camera</Filter>
     </ClInclude>
@@ -241,6 +274,42 @@
     </ClInclude>
     <ClInclude Include="..\src\LightUp\LightUp.hpp">
       <Filter>Source Files\LightUp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\ball\Ball.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\book\Book.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\book</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\bookshelf\BookShelf.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\bookshelf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\cinderella\Cinderella.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\cinderella %28Character%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\floor\Floor.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\floor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\piano\Piano.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\objects\piano</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utility\Utility.hpp">
+      <Filter>Source Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\window\Window.hpp">
+      <Filter>Source Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\result\ResultLoad.hpp">
+      <Filter>Source Files\scene\result\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\select\SelectLoad.hpp">
+      <Filter>Source Files\scene\select\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\title\TitleLoad.hpp">
+      <Filter>Source Files\scene\title\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\CinderellaLoad.hpp">
+      <Filter>Source Files\scene\gameMain\cinderella\loading</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -7,12 +7,12 @@
 
 #include "CinderellaScene.hpp"
 
-#include "Floor.hpp"
-#include "Cinderella.hpp"
-#include "Ball.hpp"
-#include "BookShelf.hpp"
-#include "Book.hpp"
-#include "Piano.hpp"
+#include "floor/Floor.hpp"
+#include "cinderella/Cinderella.hpp"
+#include "ball/Ball.hpp"
+#include "bookshelf/BookShelf.hpp"
+#include "book/Book.hpp"
+#include "piano/Piano.hpp"
 
 #include "../../object/Task.hpp"
 

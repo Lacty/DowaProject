@@ -9,7 +9,7 @@
 #include "cinder/Json.h"
 
 namespace dowa{
-  pObject loadObjects(std::string filepath);
+  //pObject loadObjects(std::string filepath);
 
   namespace hidden{
     void saveObjects(std::string filepath, std::string filename);

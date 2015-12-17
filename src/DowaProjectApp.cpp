@@ -37,12 +37,6 @@ void DowaProjectApp::setup() {
 #endif
 
   Device::enable();
-<<<<<<< HEAD
-=======
-  //Comment Out here if Loading scene is implemented
-  //dowa::ResourceManager::enable();
-  //dowa::ResourceManager::createTextures();
->>>>>>> de4e924c54b30e0309c13fa7e501325da9142152
   SceneManager::enable();
   SceneManager::create(SceneType::TitleLoad);
 }
