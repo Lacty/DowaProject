@@ -9,12 +9,14 @@
 
 Title::Title()
 {
+  std::cout << "title" << std::endl;
+
   // デバイスのウィンドサイズを取得し、代入
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
   // 画像読み込み
-  dowa::ResourceManager::texture().insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
+  /*dowa::ResourceManager::texture().insert("background/title/TitleBack.jpg", TextureKey::TitleBack);
   dowa::ResourceManager::texture().insert("background/title/FeatherBookResize.png", TextureKey::FeatherBook);
   dowa::ResourceManager::texture().insert("background/title/Logo.png", TextureKey::Logo);
   dowa::ResourceManager::texture().insert("background/title/TapToStartEng.png", TextureKey::TapToStartEng);
@@ -25,7 +27,7 @@ Title::Title()
   dowa::ResourceManager::texture().insert("background/title/KanaLetterRo.png", TextureKey::LetterRo);
   dowa::ResourceManager::texture().insert("background/title/SphereBlue.png", TextureKey::SphereBlue);
   dowa::ResourceManager::texture().insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
-  dowa::ResourceManager::texture().insert("background/title/SphereRed.png", TextureKey::SphereRed);
+  dowa::ResourceManager::texture().insert("background/title/SphereRed.png", TextureKey::SphereRed);*/
   
   
   // 画像座標設定

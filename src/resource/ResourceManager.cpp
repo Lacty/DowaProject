@@ -13,47 +13,47 @@ hidden::AudioResource::AudioResource() {
 
 void hidden::AudioResource::enable(){
   if (mCounter == 60){
-    insert("sound/bgm/Menu.wav", AudioKey::Menu);
+    insert("sound/bgm/Menu.ogg", AudioKey::Menu);
     mCounter--;
     return;
   }
 
   if (mCounter == 59){
-    insert("sound/bgm/cinderella/Town.wav", CinderellaAudioKey::Town);
+    insert("sound/bgm/cinderella/Town.ogg", CinderellaAudioKey::Town);
     mCounter--;
     return;
   }
 
   if (mCounter == 58){
-    insert("sound/bgm/cinderella/Castle.wav", CinderellaAudioKey::Castle);
+    insert("sound/bgm/cinderella/Castle.ogg", CinderellaAudioKey::Castle);
     mCounter--;
     return;
   }
 
   if (mCounter == 57){
-    insert("sound/bgm/cinderella/House.wav", CinderellaAudioKey::House);
+    insert("sound/bgm/cinderella/House.ogg", CinderellaAudioKey::House);
     mCounter--;
     return;
   }
 
   if (mCounter == 56){
-    insert("sound/bgm/cinderella/HousePiano.wav", CinderellaAudioKey::HousePiano);
+    insert("sound/bgm/cinderella/HousePiano.ogg", CinderellaAudioKey::HousePiano);
     mCounter = 30;
     return;
   }
 
   if (mCounter == 30){
-    insert("sound/se/GameStart.wav", AudioKey::GameStartSE);
-    insert("sound/se/StageSelected.wav", AudioKey::StageSelectSE);
-    insert("sound/se/Hit.wav", AudioKey::HitSE);
+    insert("sound/se/GameStart.ogg", AudioKey::GameStartSE);
+    insert("sound/se/StageSelected.ogg", AudioKey::StageSelectSE);
+    insert("sound/se/Hit.ogg", AudioKey::HitSE);
     mCounter--;
     return;
   }
 
   if (mCounter == 29){
-    insert("sound/se/GameOver.wav", AudioKey::GameOverSE);
-    insert("sound/se/cinderella/BookDrop.wav", CinderellaAudioKey::BookDrop);
-    insert("sound/se/cinderella/BookHit.wav", CinderellaAudioKey::BookHit);
+    insert("sound/se/GameOver.ogg", AudioKey::GameOverSE);
+    insert("sound/se/cinderella/BookDrop.ogg", CinderellaAudioKey::BookDrop);
+    insert("sound/se/cinderella/BookHit.ogg", CinderellaAudioKey::BookHit);
     mCounter--;
     return;
   }
@@ -131,13 +131,13 @@ void hidden::TextureResource::enable(){
   }
 
   if (mCounter == 58){
-    insert("background/gameMain/cinderella/1.jpg", CinderellaTextureKey::House);
-    insert("background/gameMain/cinderella/2.jpg", CinderellaTextureKey::Forest);
-    insert("background/gameMain/cinderella/3.jpg", CinderellaTextureKey::Town3Houses);
-    insert("background/gameMain/cinderella/4.jpg", CinderellaTextureKey::TownBridge);
+    insert("background/gameMain/cinderella/1.png", CinderellaTextureKey::House);
+    insert("background/gameMain/cinderella/2.png", CinderellaTextureKey::Forest);
+    insert("background/gameMain/cinderella/3.png", CinderellaTextureKey::Town3Houses);
+    insert("background/gameMain/cinderella/4.png", CinderellaTextureKey::TownBridge);
     insert("background/gameMain/cinderella/5.png", CinderellaTextureKey::Town2Houses);
     insert("background/gameMain/cinderella/6.png", CinderellaTextureKey::Bridge);
-    insert("background/gameMain/cinderella/7.jpg", CinderellaTextureKey::Castle);
+    insert("background/gameMain/cinderella/7.png", CinderellaTextureKey::Castle);
     mCounter--;
     return;
   }
@@ -237,7 +237,7 @@ void hidden::TextureResource::enable(){
     insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
     insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
     insert("background/beta/3.png", CinderellaTextureKey::_betaBack3);
-    insert("background/beta/FullBack.png", CinderellaTextureKey::_betaFull);
+    insert("background/beta/FullBack1.png", CinderellaTextureKey::_betaFull);
     mCounter = 0;
     return;
   }
