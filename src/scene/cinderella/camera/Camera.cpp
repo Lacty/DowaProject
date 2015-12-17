@@ -113,7 +113,7 @@ void Camera::setMatrices() {
   ci::gl::setMatrices(mCamera);
 }
 
-void Camera::forcus() {
+void Camera::focus() {
   mPos.x += getDistFromGazeToCamera().x * 0.04f;
   mPos.y += getDistFromGazeToCamera().y * 0.04f;
   
@@ -128,10 +128,10 @@ void Camera::bound() {
   ci::Vec3f bottomLeft;
   ci::Vec3f bottomRight;
   mCamera.getFarClipCoordinates(&topLeft, &topRight, &bottomLeft, &bottomRight);
-  std::cout << "top Left  = " << topLeft << std::endl;
-  std::cout << "top Right = " << topRight << std::endl;
-  std::cout << "bot Left  = " << bottomLeft << std::endl;
-  std::cout << "bot Right = " << bottomRight << std::endl;
+  //std::cout << "top Left  = " << topLeft << std::endl;
+  //std::cout << "top Right = " << topRight << std::endl;
+  //std::cout << "bot Left  = " << bottomLeft << std::endl;
+  //std::cout << "bot Right = " << bottomRight << std::endl;
   
   if (topLeft.x < TopLeft.x) {
     float offset = TopLeft.x - topLeft.x;

@@ -58,8 +58,8 @@ void CinderellaLoad::update() {
   load();
   if (isFin) {
     std::cout << "finish load" << std::endl;
-    SceneManager::create(SceneType::Cinderella);
     isFin = false;
+    SceneManager::create(SceneType::Cinderella);
   }
 }
 

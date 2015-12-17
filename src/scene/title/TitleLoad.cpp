@@ -46,9 +46,8 @@ void TitleLoad::update() {
   load();
   if (isFin) {
     std::cout << "finish load" << std::endl;
-    //mLoad.join();
-    SceneManager::create(SceneType::Title);
     isFin = false;
+    SceneManager::create(SceneType::Title);
   }
 }
 

@@ -32,8 +32,8 @@ void SelectLoad::update() {
   if (isFin) {
     std::cout << "finish load" << std::endl;
     //mLoad.join();
-    SceneManager::create(SceneType::Select);
     isFin = false;
+    SceneManager::create(SceneType::Select);
   }
 };
 
