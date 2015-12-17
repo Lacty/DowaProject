@@ -33,6 +33,9 @@ void CinderellaLoad::load() {
   dowa::ResourceManager::texture().insert("background/title/SphereGreen.png", TextureKey::SphereGreen);
   dowa::ResourceManager::texture().insert("background/title/SphereRed.png", TextureKey::SphereRed);
   
+  // hiramasa
+  dowa::ResourceManager::texture().insert("background/beta/HandRail.png", CinderellaTextureKey::HandRail);
+  
   // β版
   dowa::ResourceManager::texture().insert("background/beta/1.png", CinderellaTextureKey::_betaBack1);
   dowa::ResourceManager::texture().insert("background/beta/2.png", CinderellaTextureKey::_betaBack2);
