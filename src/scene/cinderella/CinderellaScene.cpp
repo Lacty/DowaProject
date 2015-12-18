@@ -7,15 +7,19 @@
 
 #include "CinderellaScene.hpp"
 
-#include "floor/Floor.hpp"
 #include "cinderella/Cinderella.hpp"
+#include "floor/Floor.hpp"
 #include "ball/Ball.hpp"
 #include "bookshelf/BookShelf.hpp"
 #include "book/Book.hpp"
 #include "piano/Piano.hpp"
 #include "handrail/HandRail.hpp"
+#include "apple/Apple.hpp"
+#include "bear/Bear.hpp"
 
 #include "../../object/Task.hpp"
+#include "../../device/Device.hpp"
+#include "../../scene/SceneManager.hpp"
 
 CinderellaScene::CinderellaScene()
 {
@@ -47,24 +51,16 @@ CinderellaScene::CinderellaScene()
   // 背景３
   mBack3 = ci::Rectf( mDeviceWindowWidth * 2.19894366f, -mDeviceWindowHeight * 0.5f,
                       mDeviceWindowWidth * 3.10035211f, mDeviceWindowHeight * 0.5f);
-
+  
+  // 背景４
+  mBack4 = ci::Rectf( mDeviceWindowWidth * 3.10035211f, -mDeviceWindowHeight * 0.5f,
+                      mDeviceWindowWidth * 0, mDeviceWindowHeight * 0.5f); // x2 値後で変える
   
   // 地面
   Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.24471831f,
                                                         -mDeviceWindowHeight * 0.03125f, 0.f),
                                               ci::Vec3f( mDeviceWindowWidth * 0.48415493f,
                                                          mDeviceWindowHeight * 0.015625f, 0.f)));
-  
-  // シンデレラ
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( mDeviceWindowWidth * 0.264084507042254f,
-                                                                  mDeviceWindowHeight * 0.15625f, 0.f), // 150, 50, 0
-                                                       ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
-                                                                  mDeviceWindowHeight * 0.234375f, 0.f))); // 75, 75, 0
-  
-  // 手すり
-  Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
-                                                   ci::Vec3f( 145.f, 208.f, 0.f)));
-
   
   // 地面
   Task::add("Floor2", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.50176056f,
@@ -104,6 +100,11 @@ CinderellaScene::CinderellaScene()
   Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
                                            ci::Vec3f( 40.f, 40.f, 0.f),
                                            0.2f));
+  
+  // ピアノ
+  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
+                                             ci::Vec3f( 150.f, 125.f, 0.f)));
+  
   // 本棚
   Task::add("BookShelf", std::make_shared<BookShelf>(ci::Vec3f( 1300.f, 0.f, 0.f),
                                                      ci::Vec3f( 130.f, 50.f, 0.f)));
@@ -115,12 +116,27 @@ CinderellaScene::CinderellaScene()
   // 本 横向き
   Task::add("BookSide", std::make_shared<Book>(ci::Vec3f( 1218.f, 75.f, 0.f),
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
+
+  // 熊
+  Task::add("Bear", std::make_shared<Bear>(ci::Vec3f( 1600.f, -110, 0.f),
+                                           ci::Vec3f( 50.f, 80.f, 0.f)));
   
-  // ピアノ
-  Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
-                                             ci::Vec3f( 150.f, 125.f, 0.f)));
+  // りんご
+  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 0, 0, 0),
+                                             ci::Vec3f( 0, 0, 0)));
   
-  // やないコード
+  
+  // シンデレラ
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( mDeviceWindowWidth * 0.264084507042254f,
+                                                                 mDeviceWindowHeight * 0.15625f, 0.f),
+                                                       ci::Vec3i( mDeviceWindowWidth * 0.13204225352113f,
+                                                                 mDeviceWindowHeight * 0.234375f, 0.f)));
+  
+  // 手すり
+  Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
+                                                   ci::Vec3f( 145.f, 208.f, 0.f)));
+  
+  // camera set yanai
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
   
@@ -128,12 +144,12 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setFarClip(ci::Vec3f::zero(), ci::Vec3f(3000, 0, 0),
-                    ci::Vec3f::zero(), ci::Vec3f(3000, 0, 0));
+  camera.setFarClip(ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0),
+                    ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0));
   
   // BGM
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm -> enable();
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
 }
 
 CinderellaScene::~CinderellaScene()
@@ -145,13 +161,13 @@ CinderellaScene::~CinderellaScene()
   dowa::ResourceManager::texture().clear();
   dowa::ResourceManager::audio().clear();
   
-  //Task::clear();
+  Task::clear();
 }
 
 
 void CinderellaScene::update()
 {
-  // やないコード
+  // yanai
   mCameraPos.x = Task::find("Cinderella")->getPos().x;
   camera.setPos(mCameraPos);
   
@@ -160,6 +176,11 @@ void CinderellaScene::update()
   
   // BGM 音量 Set
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
+  
+  if(dowa::Device::isTouchBegan())
+  {
+    SceneManager::create(SceneType::SelectLoad);
+  }
 }
 
 void CinderellaScene::draw()
@@ -167,7 +188,7 @@ void CinderellaScene::draw()
   ci::gl::enable(GL_TEXTURE_2D);
   cinder::gl::enableAlphaBlending();
   
-  camera.setMatrices(); // カメラセット
+  camera.setMatrices(); // camera set
   
   ci::gl::pushModelView();
   
