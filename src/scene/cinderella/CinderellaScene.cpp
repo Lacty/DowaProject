@@ -128,8 +128,8 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setFarClip(ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0),
-                    ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0));
+  camera.setFarClip(ci::Vec3f::zero(), ci::Vec3f(3000, 0, 0),
+                    ci::Vec3f::zero(), ci::Vec3f(3000, 0, 0));
   
   // BGM
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
@@ -145,7 +145,7 @@ CinderellaScene::~CinderellaScene()
   dowa::ResourceManager::texture().clear();
   dowa::ResourceManager::audio().clear();
   
-//  Task::clear();
+  //Task::clear();
 }
 
 

@@ -1,5 +1,6 @@
 
 #include "TitleLoad.hpp"
+#include "../../object/Task.hpp"
 #include "../../resource/ResourceManager.hpp"
 #include "../SceneManager.hpp"
 

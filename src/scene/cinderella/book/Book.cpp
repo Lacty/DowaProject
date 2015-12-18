@@ -103,6 +103,8 @@ void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   
   if(compare -> getName() == "Floor_Floor") mBookName = "BookOpen";
   
-//  if(compare -> getName() == "Cinderella" && mBookName == "BookSide")
-//    SceneManager::create(SceneType::TitleLoad);
+  if(compare -> getName() == "Cinderella" && mBookName == "BookSide") {
+    mBookName = "aa";
+    //SceneManager::create(SceneType::TitleLoad);
+  }
 }

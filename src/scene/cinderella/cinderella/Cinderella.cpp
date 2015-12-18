@@ -8,7 +8,8 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mFloorStr = "Floor"; // 床名前判定
   
   mCount = 0; // アニメーション
-  mGravityPower -= 0.2f; // 重力パワー
+  mGravityPower = -0.2f; // 重力パワー
+  mAccelerationY = 0;
   
   mCinderellaStatic = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterStatic);
   mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);

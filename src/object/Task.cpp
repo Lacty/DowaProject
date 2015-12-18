@@ -60,6 +60,7 @@ void Task::update() {
       case Object::State::Active :
       {
         get().collisionUpdate((*list_itr));
+        if (*list_itr == nullptr) break;
         (*list_itr)->update();
         list_itr++;
         break;
