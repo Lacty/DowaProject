@@ -7,7 +7,7 @@
 
 class Book : public Object
 {
-  std::string mBookName; // 引数String
+  std::string mBookName;
   
   ci::gl::Texture mBookPile;
   std::string mBookPileName;
@@ -25,11 +25,7 @@ class Book : public Object
   
   ci::Vec3f mCinderellaPos;
   
-  std::string mCinderellaStr, mFloor_FloorStr, mBallStr; // Name Decision
-  
-  void drawBookPile();
-  void drawBookOpen();
-  void drawBookSide();
+  void drawBook(const ci::gl::Texture&, const ci::Vec3f&);
   
 public:
   
