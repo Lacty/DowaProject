@@ -1,13 +1,12 @@
 
 #pragma once
 #include "../Scene.hpp"
-#include "cinder/ImageIo.h"
-#include "cinder/gl/Texture.h"
+#include "../../resource/ResourceManager.hpp"
 
 
 class Test : public Scene {
 private:
-  ci::gl::Texture image;
+  dowa::hidden::Audio se;
   
 public:
   Test();

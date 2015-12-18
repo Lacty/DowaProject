@@ -1,29 +1,33 @@
 
 #include "Test.hpp"
-#include "../../resource/ResourceManager.hpp"
+#include "../../device/Device.hpp"
 
 
 Test::Test() {
   std::cout << "start test" << std::endl;
   
-  ci::gl::enable(GL_TEXTURE_2D);
-  ci::gl::enable(GL_CULL_FACE);
-  ci::gl::enableDepthRead();
-  ci::gl::enableDepthWrite();
-  ci::gl::enableAlphaBlending(true);
+  // リソースマネージャーに音をロードさせる
+  dowa::ResourceManager::audio().insert("sound/se/Hit.m4a", AudioKey::HitSE);
   
-  image = dowa::ResourceManager::texture().get(TextureKey::TitleBack);
+  // リソースマネージャーから音を取得
+  se = dowa::ResourceManager::audio().get(AudioKey::HitSE);
+  
+  // 音量をmaxに設定
+  se.gain->setValue(1.0f);
 }
 
 Test::~Test() {
   std::cout << "end test" << std::endl;
 }
 
-void Test::update() {}
+void Test::update() {
+  // タッチしたら
+  if (dowa::Device::isTouchBegan()) {
+    // 音を鳴らす
+    se.bgm->start();
+  }
+}
 
 void Test::draw() {
-  ci::gl::pushModelView();
-  ci::gl::rotate(ci::Vec3f(0, 0, 0));
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TitleBack), ci::Rectf(0, 0, 100, 100));
-  ci::gl::popModelView();
+
 }
