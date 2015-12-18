@@ -9,11 +9,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   
   mCount = 0; // アニメーション
   mGravityPower = -0.2f; // 重力パワー
-<<<<<<< HEAD
-  mAccelerationY = 0;
-=======
-  mAccelerationY = 0.f;
->>>>>>> 2cf650d94e7ddbb94411de60077a1941cca0deb4
+  mAcceleration = 0.f;
   
   mCinderellaStatic = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterStatic);
   mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);
@@ -32,8 +28,8 @@ void Cinderella::update()
   mPos.x += 0.8f; // 速度 0.8秒で32秒
   
   // 重力計算
-  mAccelerationY += mGravityPower;
-  mPos.y += mAccelerationY;
+  mAcceleration += mGravityPower;
+  mPos.y += mAcceleration;
 }
 
 void Cinderella::draw()
@@ -85,7 +81,7 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   
   if(name == mFloorStr)
   {
-    mAccelerationY = 0.0f;
+    mAcceleration = 0.0f;
     mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
   }
 }
