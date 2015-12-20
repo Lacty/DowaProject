@@ -77,11 +77,17 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   
   std::string name;
   name = compare -> getName();
-  name.resize(5); // 配列の要素リサイズ
+  name.resize(5);
   
   if(name == mFloorStr)
   {
     mAcceleration = 0.0f;
     mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
+  }
+  
+  if(compare -> getName() == "Stairs")
+  {
+    mAcceleration = 0.f;
+    mPos.y -= 0.5f;
   }
 }
