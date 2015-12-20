@@ -5,7 +5,6 @@
 
 class CinderellaLoad : public Scene {
 private:
-  bool isFin;
   void load();
 
 public:
