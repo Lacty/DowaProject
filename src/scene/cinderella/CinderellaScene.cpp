@@ -14,8 +14,8 @@
 #include "book/Book.hpp"
 #include "piano/Piano.hpp"
 #include "handrail/HandRail.hpp"
-#include "apple/Apple.hpp"
-#include "bear/Bear.hpp"
+//#include "apple/Apple.hpp"
+//#include "bear/Bear.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -53,8 +53,8 @@ CinderellaScene::CinderellaScene()
                       mDeviceWindowWidth * 3.10035211f, mDeviceWindowHeight * 0.5f);
   
   // 背景４
-  mBack4 = ci::Rectf( mDeviceWindowWidth * 3.10035211f, -mDeviceWindowHeight * 0.5f,
-                      mDeviceWindowWidth * 0, mDeviceWindowHeight * 0.5f); // x2 値後で変える
+  //mBack4 = ci::Rectf( mDeviceWindowWidth * 3.10035211f, -mDeviceWindowHeight * 0.5f,
+  //                    mDeviceWindowWidth * 0, mDeviceWindowHeight * 0.5f); // x2 値後で変える
   
   // 地面
   Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.24471831f,
@@ -118,12 +118,12 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
 
   // 熊
-  Task::add("Bear", std::make_shared<Bear>(ci::Vec3f( 1600.f, -110, 0.f),
-                                           ci::Vec3f( 50.f, 80.f, 0.f)));
+  //Task::add("Bear", std::make_shared<Bear>(ci::Vec3f( 1600.f, -110, 0.f),
+  //                                         ci::Vec3f( 50.f, 80.f, 0.f)));
   
   // りんご
-  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 0, 0, 0),
-                                             ci::Vec3f( 0, 0, 0)));
+  //Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 0, 0, 0),
+  //                                           ci::Vec3f( 0, 0, 0)));
   
   
   // シンデレラ
@@ -144,8 +144,11 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setFarClip(ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0),
-                    ci::Vec3f::zero(), ci::Vec3f(2000, 0, 0));
+  camera.setStageSize(0.0f, 3000.0f);
+  camera.setForcusObj(Task::find("Cinderella"));
+  
+  // シンデレラの右側にカメラの焦点をあてる
+  camera.setOffset(100.0f);
   
   // BGM
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm -> enable();
@@ -168,11 +171,7 @@ CinderellaScene::~CinderellaScene()
 void CinderellaScene::update()
 {
   // yanai
-  mCameraPos.x = Task::find("Cinderella")->getPos().x;
-  camera.setPos(mCameraPos);
-  
-  // 画面外を映さないようにする
-  camera.bound();
+  camera.update();
   
   // BGM 音量 Set
   dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
