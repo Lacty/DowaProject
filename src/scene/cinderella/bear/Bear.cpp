@@ -1,17 +1,16 @@
 
 #include "Bear.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Bear::Bear(const ci::Vec3f& mBearPos, const ci::Vec3f& mBearSize)
 {
   mPos = mBearPos;
   mSize = mBearSize;
   
-  mHungryBear = dowa::ResourceManager::texture().get(CinderellaTextureKey::HungryBear);
-  mSatisfiedBear = dowa::ResourceManager::texture().get(CinderellaTextureKey::SatisfiedBear);
-  
-  setColliderType(Collider::Rect);
+  mHungryBear = TextureManager::find(ResKey::CHungryBear);
+  mSatisfiedBear = TextureManager::find(ResKey::CStatisfiedBrear);
 }
 
 void Bear::setup() {}
@@ -38,5 +37,3 @@ void Bear::draw()
   
   ci::gl::disable(GL_CULL_FACE);
 }
-
-void Bear::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
