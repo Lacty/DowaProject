@@ -1,14 +1,15 @@
 
 #include "Apple.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Apple::Apple(const ci::Vec3f& mApplePos, const ci::Vec3f& mAppleSize)
 {
   mPos = mApplePos;
   mSize = mAppleSize;
   
-  mApple = dowa::ResourceManager::texture().get(CinderellaTextureKey::Apple);
+  mApple = TextureManager::find(ResKey::CApple);
   
   setColliderType(Collider::Rect);
 }
