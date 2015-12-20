@@ -23,14 +23,11 @@ std::unique_ptr<Scene> SceneMaker::create(const SceneType& type) const {
   using namespace std;
   unordered_map<SceneType, function<unique_ptr<Scene>()>> list = {
     { SceneType::Title,           []{ return make_unique<Title>();           } },
-	  { SceneType::Select,          []{ return make_unique<Select>();          } },
-    { SceneType::GameMain,        []{ return make_unique<GameMain>();        } },
     { SceneType::Result,          []{ return make_unique<Result>();          } },
-    
+
     { SceneType::Test,            []{ return make_unique<Test>();            } },
     
     { SceneType::TitleLoad,       []{ return make_unique<TitleLoad>();       } },
-    { SceneType::SelectLoad,      []{ return make_unique<SelectLoad>();      } },
     { SceneType::ResultLoad,      []{ return make_unique<ResultLoad>();      } },
     { SceneType::CinderellaLoad,  []{ return make_unique<CinderellaLoad>();  } },
     
