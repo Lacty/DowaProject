@@ -32,6 +32,11 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowWidth = (float)ci::app::getWindowWidth();
   mDeviceWindowHeight = (float)ci::app::getWindowHeight();
   
+  // 画像追加
+  mBack1Texutre = TextureManager::find(ResKey::CBetaBack1);
+  mBack2Texutre = TextureManager::find(ResKey::CBetaBack2);
+  mBack3Texutre = TextureManager::find(ResKey::CBetaBack3);
+  
   // 背景 1
   mBack1 = ci::Rectf( 0.f, -mDeviceWindowHeight * 0.5f,
                       mDeviceWindowWidth * 0.901409f, mDeviceWindowHeight * 0.5f);
@@ -123,10 +128,6 @@ CinderellaScene::CinderellaScene()
   
   // シンデレラの右側にカメラの焦点をあてる
   camera.setOffset(100.0f);
-  
-  // BGM
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm -> enable();
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
 }
 
 CinderellaScene::~CinderellaScene()
@@ -135,8 +136,6 @@ CinderellaScene::~CinderellaScene()
   ci::gl::popModelView();
   
   std::cout << "end cinderella" << std::endl;
-  dowa::ResourceManager::texture().clear();
-  dowa::ResourceManager::audio().clear();
   
   Task::clear();
 }
@@ -145,13 +144,6 @@ CinderellaScene::~CinderellaScene()
 void CinderellaScene::update()
 {
   camera.update();
-  
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
-  
-  if(dowa::Device::isTouchBegan())
-  {
-    SceneManager::create(SceneType::SelectLoad);
-  }
 }
 
 void CinderellaScene::draw()
@@ -165,14 +157,14 @@ void CinderellaScene::draw()
   
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack1), mBack1);
+  ci::gl::draw(mBack1Texutre, mBack1);
   
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack21);
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack22);
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack23);
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack2), mBack24);
+  ci::gl::draw(mBack2Texutre, mBack21);
+  ci::gl::draw(mBack2Texutre, mBack22);
+  ci::gl::draw(mBack2Texutre, mBack23);
+  ci::gl::draw(mBack2Texutre, mBack24);
   
-  ci::gl::draw(dowa::Resource::texture().get(CinderellaTKey::_betaBack3), mBack3);
+  ci::gl::draw(mBack3Texutre, mBack3);
   
   ci::gl::popModelView();
   
