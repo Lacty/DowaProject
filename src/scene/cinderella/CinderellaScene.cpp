@@ -151,8 +151,8 @@ CinderellaScene::CinderellaScene()
   camera.setOffset(100.0f);
   
   // BGM
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm -> enable();
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->start();
+  //dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(2.0f);
 }
 
 CinderellaScene::~CinderellaScene()
@@ -174,7 +174,8 @@ void CinderellaScene::update()
   camera.update();
   
   // BGM 音量 Set
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
+  //dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
+  std::cout << dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->getValue() << std::endl;
   
   if(dowa::Device::isTouchBegan())
   {

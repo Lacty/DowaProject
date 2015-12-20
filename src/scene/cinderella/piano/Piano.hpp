@@ -8,6 +8,9 @@
 class Piano: public Object
 {
   ci::gl::Texture mPiano;
+  bool mIsPlay;
+  float mVolume;
+  float mFadeSpeed;
   
 public:
   
