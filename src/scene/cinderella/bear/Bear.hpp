@@ -5,10 +5,9 @@
 
 #include "cinder/gl/Texture.h"
 
+
 class Bear : public Object
 {
-private:
-  
   ci::gl::Texture mHungryBear;
   ci::gl::Texture mSatisfiedBear;
   
@@ -20,5 +19,4 @@ public:
   void update();
   void draw();
   
-  void onCollisionUpdate(const std::shared_ptr<Object>& compare);
 };
