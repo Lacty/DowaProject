@@ -14,8 +14,9 @@
 #include "book/Book.hpp"
 #include "piano/Piano.hpp"
 #include "handrail/HandRail.hpp"
-//#include "apple/Apple.hpp"
-//#include "bear/Bear.hpp"
+#include "apple/Apple.hpp"
+#include "bear/Bear.hpp"
+#include "stairs/Stairs.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -61,36 +62,10 @@ CinderellaScene::CinderellaScene()
                                                         -mDeviceWindowHeight * 0.03125f, 0.f),
                                               ci::Vec3f( mDeviceWindowWidth * 0.48415493f,
                                                          mDeviceWindowHeight * 0.015625f, 0.f)));
+  // 階段
+  Task::add("Stairs", std::make_shared<Stairs>(ci::Vec3f( 353.f, -40.f, 0.f),
+                                               ci::Vec3f( 145.f, 208.f, 0.f)));
   
-  // 地面
-  Task::add("Floor2", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.50176056f,
-                                                        -mDeviceWindowHeight * 0.1015625f, 0.f),
-                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
-  
-  // 地面
-  Task::add("Floor3", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.53873239f,
-                                                        -mDeviceWindowHeight * 0.171875f, 0.f),
-                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
-  
-  // 地面
-  Task::add("Floor4", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.57394366f,
-                                                        -mDeviceWindowHeight * 0.2453125f, 0.f),
-                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
-  
-  // 地面
-  Task::add("Floor5", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.61179577f,
-                                                        -mDeviceWindowHeight * 0.3171875f, 0.f),
-                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
-  
-  // 地面
-  Task::add("Floor6", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.64700704f,
-                                                        -mDeviceWindowHeight * 0.3859375f, 0.f),
-                                              ci::Vec3f( mDeviceWindowWidth * 0.04401408f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
   // 地面 一番下
   Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 0.f,
                                                         -155.f, 0.f),
@@ -118,25 +93,24 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
 
   // 熊
-  //Task::add("Bear", std::make_shared<Bear>(ci::Vec3f( 1600.f, -110, 0.f),
-  //                                         ci::Vec3f( 50.f, 80.f, 0.f)));
+  Task::add("Bear", std::make_shared<Bear>(ci::Vec3f( 1600.f, -110, 0.f),
+                                           ci::Vec3f( 50.f, 80.f, 0.f)));
   
   // りんご
-  //Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 0, 0, 0),
-  //                                           ci::Vec3f( 0, 0, 0)));
+  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 0, 0, 0),
+                                             ci::Vec3f( 0, 0, 0)));
   
   
   // シンデレラ
   Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( mDeviceWindowWidth * 0.264084507042254f,
-                                                                 mDeviceWindowHeight * 0.15625f, 0.f),
+                                                                  mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3i( mDeviceWindowWidth * 0.13204225352113f,
-                                                                 mDeviceWindowHeight * 0.234375f, 0.f)));
+                                                                  mDeviceWindowHeight * 0.234375f, 0.f)));
   
   // 手すり
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
                                                    ci::Vec3f( 145.f, 208.f, 0.f)));
   
-  // camera set yanai
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
   
@@ -151,8 +125,8 @@ CinderellaScene::CinderellaScene()
   camera.setOffset(100.0f);
   
   // BGM
-  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->start();
-  //dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(2.0f);
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm -> enable();
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(0.f);
 }
 
 CinderellaScene::~CinderellaScene()
@@ -170,12 +144,9 @@ CinderellaScene::~CinderellaScene()
 
 void CinderellaScene::update()
 {
-  // yanai
   camera.update();
   
-  // BGM 音量 Set
-  //dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
-  std::cout << dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain->getValue() << std::endl;
+  dowa::ResourceManager::audio().get(CinderellaAudioKey::House).gain -> setValue(1.0f);
   
   if(dowa::Device::isTouchBegan())
   {
@@ -188,7 +159,7 @@ void CinderellaScene::draw()
   ci::gl::enable(GL_TEXTURE_2D);
   cinder::gl::enableAlphaBlending();
   
-  camera.setMatrices(); // camera set
+  camera.setMatrices();
   
   ci::gl::pushModelView();
   
