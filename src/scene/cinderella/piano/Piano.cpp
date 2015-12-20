@@ -1,7 +1,8 @@
 
 #include "Piano.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
 {
@@ -11,6 +12,8 @@ Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
   
   mPos = mPianoPos;
   mSize = mPianoSize;
+  
+  mPiano = TextureManager::find(ResKey::CPiano);
   
   setColliderType(Collider::Rect);
 }
