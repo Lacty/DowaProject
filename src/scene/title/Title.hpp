@@ -2,7 +2,6 @@
 #pragma once
 
 #include "../Scene.hpp"
-#include "../../resource/ResourceManager.hpp"
 
 class Title : public Scene
 {

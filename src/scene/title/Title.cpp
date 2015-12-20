@@ -5,6 +5,8 @@
 
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
+#include "../../resource/Resource.hpp"
+
 
 Title::Title()
 {
@@ -32,8 +34,7 @@ Title::Title()
 Title::~Title()
 {
   std::cout << "end title" << std::endl;
-  dowa::ResourceManager::texture().clear();
-  dowa::ResourceManager::audio().clear();  
+  TextureManager::clear();
 }
 
 void Title::update()
@@ -93,21 +94,21 @@ void Title::draw()
   
   cinder::gl::enableAlphaBlending();
 
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TitleBack), ci::app::getWindowBounds()); // 背景
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::FeatherBook), mFeatherBookRect); // 本とペン
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Trace), mTraceRect); // 羽
+  ci::gl::draw(TextureManager::find(ResKey::TBack), ci::app::getWindowBounds()); // 背景
+  ci::gl::draw(TextureManager::find(ResKey::TFeatherBook), mFeatherBookRect); // 本とペン
+  ci::gl::draw(TextureManager::find(ResKey::TTrance), mTraceRect); // 羽
 
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterTa), mKanaLetterTaRect); // た
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterMa), mKanaLetterMaRect); // ま
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterKo), mKanaLetterKoRect); // こ
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::LetterRo), mKanaLetterRoRect); // ろ
+  ci::gl::draw(TextureManager::find(ResKey::TTa), mKanaLetterTaRect); // た
+  ci::gl::draw(TextureManager::find(ResKey::TMa), mKanaLetterMaRect); // ま
+  ci::gl::draw(TextureManager::find(ResKey::TKo), mKanaLetterKoRect); // こ
+  ci::gl::draw(TextureManager::find(ResKey::TRo), mKanaLetterRoRect); // ろ
 
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::SphereBlue), mSphereBlueRect); // 青
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::SphereGreen), mSphereGreenRect); // 緑
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::SphereRed), mSphereRedRect); // 赤
+  ci::gl::draw(TextureManager::find(ResKey::TSphereBlue), mSphereBlueRect); // 青
+  ci::gl::draw(TextureManager::find(ResKey::TSphereGreen), mSphereGreenRect); // 緑
+  ci::gl::draw(TextureManager::find(ResKey::TSphereRed), mSphereRedRect); // 赤
 
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::Logo), mLogoRect); // TAMACORO
-  ci::gl::draw(dowa::ResourceManager::texture().get(TextureKey::TapToStartEng), mTapToStartEngRect); // タッチしてスタート！
+  ci::gl::draw(TextureManager::find(ResKey::TLogo), mLogoRect); // TAMACORO
+  ci::gl::draw(TextureManager::find(ResKey::TTapToStartEng), mTapToStartEngRect); // タッチしてスタート！
   
   cinder::gl::disableAlphaBlending();
   
