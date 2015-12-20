@@ -70,4 +70,8 @@ void Ball::draw()
   ci::gl::popModelView();
 }
 
-void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
+void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
+{
+  mPos.x += mAcc.y * 10;
+  mPos.y += mAcc.x * 10;
+}
