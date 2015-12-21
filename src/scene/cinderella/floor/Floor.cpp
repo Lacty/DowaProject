@@ -1,7 +1,8 @@
 
 #include "Floor.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Floor::Floor(const  ci::Vec3f& mFloorPos, const ci::Vec3f& mFloorSize)
 {
