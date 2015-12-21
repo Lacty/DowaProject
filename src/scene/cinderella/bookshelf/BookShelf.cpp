@@ -1,14 +1,15 @@
 
 #include "BookShelf.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 BookShelf::BookShelf(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize)
 {
   mPos = mBookPos;
   mSize = mBookSize;
   
-  mBookShelf = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookShelf); // 本棚
+  mBookShelf = TextureManager::find(ResKey::CBookShelf);
   
   setColliderType(Collider::Rect);
 }
