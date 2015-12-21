@@ -1,21 +1,21 @@
 
 #include "Cinderella.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinderellaSize)
 {
-  mFloorStr = "Floor"; // 床名前判定
+  mFloorStr = "Floor";
   
-  mCount = 0; // アニメーション
-  mGravityPower = -0.2f; // 重力パワー
+  mCount = 0;
+  mGravityPower = -0.2f;
   mAcceleration = 0.f;
   
-  mCinderellaStatic = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterStatic);
-  mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);
-  mCinderellaRight = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterRight);;
+  mCinderellaStatic = TextureManager::find(ResKey::CCharacterStatic);
+  mCinderellaLeft = TextureManager::find(ResKey::CCharacterLeft);
+  mCinderellaRight = TextureManager::find(ResKey::CCharacterRight);
   
-  // コンストラクタでシンデレラの座標初期化
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
   
@@ -27,7 +27,6 @@ void Cinderella::update()
 {
   mPos.x += 0.8f; // 速度 0.8秒で32秒
   
-  // 重力計算
   mAcceleration += mGravityPower;
   mPos.y += mAcceleration;
 }
