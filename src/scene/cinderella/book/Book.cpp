@@ -2,8 +2,9 @@
 #include "Book.hpp"
 
 #include "../../../object/Task.hpp"
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
 #include "../../../scene/SceneManager.hpp"
+
 
 Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::string& mBookNamef)
 {
@@ -24,9 +25,9 @@ Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::str
   
   mCinderellaPos = ci::Vec3f(ci::Vec3f::zero());
   
-  mBookPile = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookPile);
-  mBookOpen = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookOpen);
-  mBookSide = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookSide);
+  mBookPile = TextureManager::find(ResKey::CBookPile);
+  mBookOpen = TextureManager::find(ResKey::CBookOpen);
+  mBookSide = TextureManager::find(ResKey::CBookSide);
   
   setColliderType(Collider::Rect);
 }
