@@ -1,9 +1,11 @@
 
 #pragma once
 
-#include "../Scene.hpp"
-#include "../../resource/ResourceManager.hpp"
 #include "camera/Camera.hpp"
+#include "cinder/gl/Texture.h"
+
+#include "../Scene.hpp"
+#include "../../resource/Resource.hpp"
 
 
 class CinderellaScene : public Scene
@@ -19,6 +21,10 @@ private:
   ci::Rectf mBack24;
   
   ci::Rectf mBack3; // 1枚
+  
+  ci::gl::Texture mBack1Texutre;
+  ci::gl::Texture mBack2Texutre;
+  ci::gl::Texture mBack3Texutre;
 
   float mDeviceWindowHeight, mDeviceWindowWidth; // デバイスウィンドサイズ
   
