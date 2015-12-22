@@ -38,6 +38,10 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CCinderellaHouse1);
   TextureManager::add(ResKey::CCinderellaHouse2);
   TextureManager::add(ResKey::CCinderellaHouse3);
+  TextureManager::add(ResKey::CCinderellaForest1);
+  TextureManager::add(ResKey::CCinderellaForest2);
+  TextureManager::add(ResKey::CCinderellaForest3);
+  TextureManager::add(ResKey::CCinderellaForest4);
 
   // Sound
   AudioManager::add(ResKey::CHitSE);

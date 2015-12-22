@@ -13,18 +13,18 @@ class CinderellaScene : public Scene
   
 private:
   
-  ci::Rectf mBack1; // 1枚
+  ci::Rectf mCinderellaHouseRect1; // 1枚
   
-  ci::Rectf mBack21; // 4枚
-  ci::Rectf mBack22;
-  ci::Rectf mBack23;
-  ci::Rectf mBack24;
+  ci::Rectf mCinderellaHouseRect2_1; // 4枚
+  ci::Rectf mCinderellaHouseRect2_2;
+  ci::Rectf mCinderellaHouseRect2_3;
+  ci::Rectf mCinderellaHouseRect2_4;
   
-  ci::Rectf mBack3; // 1枚
+  ci::Rectf mCinderellaHouseRect3; // 1枚
   
-  ci::gl::Texture mBack1Texutre;
-  ci::gl::Texture mBack2Texutre;
-  ci::gl::Texture mBack3Texutre;
+  ci::gl::Texture mCinderellaHouse1;
+  ci::gl::Texture mCinderellaHouse2;
+  ci::gl::Texture mCinderellaHouse3;
 
   float mDeviceWindowHeight, mDeviceWindowWidth; // デバイスウィンドサイズ
   

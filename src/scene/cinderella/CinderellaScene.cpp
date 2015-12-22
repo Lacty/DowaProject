@@ -33,29 +33,29 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowHeight = (float)ci::app::getWindowHeight();
   
   // 画像追加
-  mBack1Texutre = TextureManager::find(ResKey::CCinderellaHouse1);
-  mBack2Texutre = TextureManager::find(ResKey::CCinderellaHouse2);
-  mBack3Texutre = TextureManager::find(ResKey::CCinderellaHouse3);
+  mCinderellaHouse1 = TextureManager::find(ResKey::CCinderellaHouse1);
+  mCinderellaHouse2 = TextureManager::find(ResKey::CCinderellaHouse2);
+  mCinderellaHouse3 = TextureManager::find(ResKey::CCinderellaHouse3);
   
   // 背景 1
-  mBack1 = ci::Rectf( 0.f, -mDeviceWindowHeight * 0.5f,
+  mCinderellaHouseRect1 = ci::Rectf( 0.f, -mDeviceWindowHeight * 0.5f,
                       mDeviceWindowWidth * 0.901409f, mDeviceWindowHeight * 0.5f);
   
   // 背景 2
-  mBack21 = ci::Rectf( mDeviceWindowWidth * 0.875f, -mDeviceWindowHeight * 0.5f,
+  mCinderellaHouseRect2_1 = ci::Rectf( mDeviceWindowWidth * 0.875f, -mDeviceWindowHeight * 0.5f,
                        mDeviceWindowWidth * 1.20598592f, mDeviceWindowHeight * 0.5f);
   
-  mBack22 = ci::Rectf( mDeviceWindowWidth * 1.20598592f, -mDeviceWindowHeight * 0.5f,
+  mCinderellaHouseRect2_2 = ci::Rectf( mDeviceWindowWidth * 1.20598592f, -mDeviceWindowHeight * 0.5f,
                        mDeviceWindowWidth * 1.53697183f, mDeviceWindowHeight * 0.5f);
   
-  mBack23 = ci::Rectf( mDeviceWindowWidth * 1.53697183f, -mDeviceWindowHeight * 0.5f,
+  mCinderellaHouseRect2_3 = ci::Rectf( mDeviceWindowWidth * 1.53697183f, -mDeviceWindowHeight * 0.5f,
                        mDeviceWindowWidth * 1.86795775f, mDeviceWindowHeight * 0.5f);
   
-  mBack24 = ci::Rectf( mDeviceWindowWidth * 1.86795775f, -mDeviceWindowHeight * 0.5f,
+  mCinderellaHouseRect2_4 = ci::Rectf( mDeviceWindowWidth * 1.86795775f, -mDeviceWindowHeight * 0.5f,
                        mDeviceWindowWidth * 2.19894366f, mDeviceWindowHeight * 0.5f);
   
   // 背景３
-  mBack3 = ci::Rectf( mDeviceWindowWidth * 2.19894366f, -mDeviceWindowHeight * 0.5f,
+  mCinderellaHouseRect3 = ci::Rectf( mDeviceWindowWidth * 2.19894366f, -mDeviceWindowHeight * 0.5f,
                       mDeviceWindowWidth * 3.10035211f, mDeviceWindowHeight * 0.5f);
   
   // 背景４
@@ -157,14 +157,14 @@ void CinderellaScene::draw()
   
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   
-  ci::gl::draw(mBack1Texutre, mBack1);
+  ci::gl::draw(mCinderellaHouse1, mCinderellaHouseRect1);
   
-  ci::gl::draw(mBack2Texutre, mBack21);
-  ci::gl::draw(mBack2Texutre, mBack22);
-  ci::gl::draw(mBack2Texutre, mBack23);
-  ci::gl::draw(mBack2Texutre, mBack24);
+  ci::gl::draw(mCinderellaHouse2, mCinderellaHouseRect2_1);
+  ci::gl::draw(mCinderellaHouse2, mCinderellaHouseRect2_2);
+  ci::gl::draw(mCinderellaHouse2, mCinderellaHouseRect2_3);
+  ci::gl::draw(mCinderellaHouse2, mCinderellaHouseRect2_4);
   
-  ci::gl::draw(mBack3Texutre, mBack3);
+  ci::gl::draw(mCinderellaHouse3, mCinderellaHouseRect3);
   
   ci::gl::popModelView();
   

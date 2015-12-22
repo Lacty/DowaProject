@@ -39,6 +39,10 @@ enum {
   CCinderellaHouse1,
   CCinderellaHouse2,
   CCinderellaHouse3,
+  CCinderellaForest1,
+  CCinderellaForest2,
+  CCinderellaForest3,
+  CCinderellaForest4,
   
   //          _______          //
   // -------- |Audio| -------- //
@@ -83,21 +87,25 @@ static std::string getPath(int key) {
     { CCharacterLeft,    "character/cinderella/2" + tex_ext },
     { CCharacterRight,   "character/cinderella/3" + tex_ext },
 
-    { CApple,            "object/cinderella/Apple" + tex_ext },
-    { CBookSide,         "object/cinderella/BookSide" + tex_ext },
-    { CBookOpen,         "object/cinderella/BookOpen" + tex_ext },
-    { CBookShelf,        "object/cinderella/BookShelf" + tex_ext },
-    { CBookPile,         "object/cinderella/BookPile" + tex_ext },
-    { CHungryBear,       "object/cinderella/HungryBear" + tex_ext },
-    { CStatisfiedBrear,  "object/cinderella/SatisfiedBear" + tex_ext },
-    { CPiano,            "object/cinderella/Piano" + tex_ext },
-    { CSphereBlue,       "background/title/SphereBlue" + tex_ext },
-    { CSphereGreen,      "background/title/SphereGreen" + tex_ext },
-    { CSphereRed,        "background/title/SphereRed" + tex_ext },
-    { CHandRail,         "background/cinderellahouse/HandRail" + tex_ext },
+    { CApple,                   "object/cinderella/Apple" + tex_ext },
+    { CBookSide,                "object/cinderella/BookSide" + tex_ext },
+    { CBookOpen,                "object/cinderella/BookOpen" + tex_ext },
+    { CBookShelf,               "object/cinderella/BookShelf" + tex_ext },
+    { CBookPile,                "object/cinderella/BookPile" + tex_ext },
+    { CHungryBear,              "object/cinderella/HungryBear" + tex_ext },
+    { CStatisfiedBrear,         "object/cinderella/SatisfiedBear" + tex_ext },
+    { CPiano,                   "object/cinderella/Piano" + tex_ext },
+    { CSphereBlue,              "background/title/SphereBlue" + tex_ext },
+    { CSphereGreen,             "background/title/SphereGreen" + tex_ext },
+    { CSphereRed,               "background/title/SphereRed" + tex_ext },
+    { CHandRail,                "background/cinderellahouse/HandRail" + tex_ext },
     { CCinderellaHouse1,        "background/cinderellahouse/1" + tex_ext },
     { CCinderellaHouse2,        "background/cinderellahouse/2" + tex_ext },
     { CCinderellaHouse3,        "background/cinderellahouse/3" + tex_ext },
+    { CCinderellaForest1,       "background/forest/1" + tex_ext },
+    { CCinderellaForest2,       "background/forest/2" + tex_ext },
+    { CCinderellaForest3,       "background/forest/3" + tex_ext },
+    { CCinderellaForest4,       "background/forest/4" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //
