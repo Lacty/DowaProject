@@ -30,26 +30,27 @@
 		AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC0DB5D81BEDA14E00E9EFC0 /* Device.cpp */; };
 		AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A261BFB359500345AA5 /* FadeIn.cpp */; };
 		AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A281BFB359500345AA5 /* FadeOut.cpp */; };
-		AC5873F31C05ECCA00D40AE6 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873EE1C05ECCA00D40AE6 /* DataManager.cpp */; };
-		AC5873F41C05ECCA00D40AE6 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F11C05ECCA00D40AE6 /* ResourceManager.cpp */; };
 		AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F91C06A43B00D40AE6 /* Utility.cpp */; };
+		AC9D8AA11C271422001A7217 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8A991C271422001A7217 /* Audio.cpp */; };
+		AC9D8AA21C271422001A7217 /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8A9B1C271422001A7217 /* AudioManager.cpp */; };
+		AC9D8AA31C271422001A7217 /* ResKey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8A9D1C271422001A7217 /* ResKey.cpp */; };
+		AC9D8AA41C271422001A7217 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8A9F1C271422001A7217 /* TextureManager.cpp */; };
+		AC9D8AA71C2728FA001A7217 /* Resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AA51C2728FA001A7217 /* Resource.cpp */; };
 		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
 		ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081DB1BF317CD005FB898 /* Test.cpp */; };
 		ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA20F251C087E2B0017DCA9 /* Window.cpp */; };
 		ACAE91DE1C1805400008B83E /* CinderellaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */; };
-		ACAE92071C186C6A0008B83E /* Select.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE92051C186C6A0008B83E /* Select.cpp */; };
 		ACDB32F21BEF124F00046195 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F01BEF124F00046195 /* Object.cpp */; };
 		ACDB32FA1BF040F000046195 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F81BF040F000046195 /* Task.cpp */; };
 		ACF594D21C1EE83500806B39 /* TitleLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D01C1EE83500806B39 /* TitleLoad.cpp */; };
 		ACF594D51C1EE8C000806B39 /* ResultLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D31C1EE8C000806B39 /* ResultLoad.cpp */; };
-		ACF594D81C1EE8D200806B39 /* SelectLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D61C1EE8D200806B39 /* SelectLoad.cpp */; };
 		ACF594DE1C207E6200806B39 /* CinderellaLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */; };
 		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
 		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
 		ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */; };
 		ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE41BE764F000AF6824 /* SceneManager.cpp */; };
-		ACF91EEB1BE76AD000AF6824 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE91BE76AD000AF6824 /* GameMain.cpp */; };
 		ACF91EEF1BE8069000AF6824 /* Result.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EED1BE8069000AF6824 /* Result.cpp */; };
+		ACFD00C21C227E700098F2C7 /* HandRail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD00C01C227E700098F2C7 /* HandRail.cpp */; };
 		BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24EAB30525624A3FA99EA6CD /* MotionManager.cpp */; };
 		C725DFFE121DAC7F00FA186B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C727C02B121B400300192073 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C725E001121DAC8F00FA186B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C725E000121DAC8F00FA186B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -97,13 +98,18 @@
 		AC5873D91C0129DA00D40AE6 /* FadeBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FadeBase.hpp; sourceTree = "<group>"; };
 		AC5873DA1C0129DA00D40AE6 /* FadeIn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FadeIn.hpp; sourceTree = "<group>"; };
 		AC5873DB1C0129DA00D40AE6 /* FadeOut.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FadeOut.hpp; sourceTree = "<group>"; };
-		AC5873EE1C05ECCA00D40AE6 /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManager.cpp; sourceTree = "<group>"; };
-		AC5873EF1C05ECCA00D40AE6 /* DataManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataManager.hpp; sourceTree = "<group>"; };
-		AC5873F01C05ECCA00D40AE6 /* ResourceKeys.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceKeys.hpp; sourceTree = "<group>"; };
-		AC5873F11C05ECCA00D40AE6 /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
-		AC5873F21C05ECCA00D40AE6 /* ResourceManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceManager.hpp; sourceTree = "<group>"; };
 		AC5873F91C06A43B00D40AE6 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		AC5873FA1C06A43B00D40AE6 /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
+		AC9D8A991C271422001A7217 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio.cpp; sourceTree = "<group>"; };
+		AC9D8A9A1C271422001A7217 /* Audio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Audio.hpp; sourceTree = "<group>"; };
+		AC9D8A9B1C271422001A7217 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioManager.cpp; sourceTree = "<group>"; };
+		AC9D8A9C1C271422001A7217 /* AudioManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioManager.hpp; sourceTree = "<group>"; };
+		AC9D8A9D1C271422001A7217 /* ResKey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResKey.cpp; sourceTree = "<group>"; };
+		AC9D8A9E1C271422001A7217 /* ResKey.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResKey.hpp; sourceTree = "<group>"; };
+		AC9D8A9F1C271422001A7217 /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
+		AC9D8AA01C271422001A7217 /* TextureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
+		AC9D8AA51C2728FA001A7217 /* Resource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resource.cpp; sourceTree = "<group>"; };
+		AC9D8AA61C2728FA001A7217 /* Resource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Resource.hpp; sourceTree = "<group>"; };
 		ACA081D71BF25720005FB898 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		ACA081D81BF25720005FB898 /* Collision.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 		ACA081DB1BF317CD005FB898 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
@@ -112,8 +118,6 @@
 		ACA20F261C087E2B0017DCA9 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaScene.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		ACAE91DD1C1805400008B83E /* CinderellaScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = CinderellaScene.hpp; sourceTree = "<group>"; tabWidth = 2; };
-		ACAE92051C186C6A0008B83E /* Select.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Select.cpp; sourceTree = "<group>"; };
-		ACAE92061C186C6A0008B83E /* Select.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Select.hpp; sourceTree = "<group>"; };
 		ACDB32F01BEF124F00046195 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 		ACDB32F11BEF124F00046195 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		ACDB32F81BF040F000046195 /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
@@ -122,8 +126,6 @@
 		ACF594D11C1EE83500806B39 /* TitleLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TitleLoad.hpp; sourceTree = "<group>"; };
 		ACF594D31C1EE8C000806B39 /* ResultLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResultLoad.cpp; sourceTree = "<group>"; };
 		ACF594D41C1EE8C000806B39 /* ResultLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResultLoad.hpp; sourceTree = "<group>"; };
-		ACF594D61C1EE8D200806B39 /* SelectLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectLoad.cpp; sourceTree = "<group>"; };
-		ACF594D71C1EE8D200806B39 /* SelectLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SelectLoad.hpp; sourceTree = "<group>"; };
 		ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaLoad.cpp; sourceTree = "<group>"; };
 		ACF594DD1C207E6200806B39 /* CinderellaLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CinderellaLoad.hpp; sourceTree = "<group>"; };
 		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
@@ -134,10 +136,10 @@
 		ACF91EE21BE75BC600AF6824 /* SceneMaker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneMaker.hpp; sourceTree = "<group>"; };
 		ACF91EE41BE764F000AF6824 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		ACF91EE51BE764F000AF6824 /* SceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneManager.hpp; sourceTree = "<group>"; };
-		ACF91EE91BE76AD000AF6824 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
-		ACF91EEA1BE76AD000AF6824 /* GameMain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMain.hpp; sourceTree = "<group>"; };
 		ACF91EED1BE8069000AF6824 /* Result.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = Result.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		ACF91EEE1BE8069000AF6824 /* Result.hpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = Result.hpp; sourceTree = "<group>"; tabWidth = 2; };
+		ACFD00C01C227E700098F2C7 /* HandRail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HandRail.cpp; sourceTree = "<group>"; };
+		ACFD00C11C227E700098F2C7 /* HandRail.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HandRail.hpp; sourceTree = "<group>"; };
 		B112C46395B542438FB8D300 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BBEC120E8DF24E54B3418175 /* MotionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionManager.h; path = ../blocks/MotionManager/src/cinder/MotionManager.h; sourceTree = "<group>"; };
 		C0EC8E147D564C46829F7611 /* CinderApp_ios.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = CinderApp_ios.png; path = ../resources/CinderApp_ios.png; sourceTree = "<group>"; };
@@ -379,11 +381,16 @@
 		AC5873ED1C05ECCA00D40AE6 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				AC5873EE1C05ECCA00D40AE6 /* DataManager.cpp */,
-				AC5873EF1C05ECCA00D40AE6 /* DataManager.hpp */,
-				AC5873F01C05ECCA00D40AE6 /* ResourceKeys.hpp */,
-				AC5873F11C05ECCA00D40AE6 /* ResourceManager.cpp */,
-				AC5873F21C05ECCA00D40AE6 /* ResourceManager.hpp */,
+				AC9D8A991C271422001A7217 /* Audio.cpp */,
+				AC9D8A9A1C271422001A7217 /* Audio.hpp */,
+				AC9D8A9B1C271422001A7217 /* AudioManager.cpp */,
+				AC9D8A9C1C271422001A7217 /* AudioManager.hpp */,
+				AC9D8A9D1C271422001A7217 /* ResKey.cpp */,
+				AC9D8A9E1C271422001A7217 /* ResKey.hpp */,
+				AC9D8A9F1C271422001A7217 /* TextureManager.cpp */,
+				AC9D8AA01C271422001A7217 /* TextureManager.hpp */,
+				AC9D8AA51C2728FA001A7217 /* Resource.cpp */,
+				AC9D8AA61C2728FA001A7217 /* Resource.hpp */,
 			);
 			name = resource;
 			path = ../src/resource;
@@ -433,6 +440,7 @@
 			children = (
 				ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */,
 				ACAE91DD1C1805400008B83E /* CinderellaScene.hpp */,
+				ACFD00BF1C227E700098F2C7 /* handrail */,
 				146ED39B1C1EB80D00C9E8ED /* book */,
 				14B485A01C1AE18C00824001 /* bookshelf */,
 				14B485A61C1AE18C00824001 /* cinderella */,
@@ -444,17 +452,6 @@
 				ACF594DD1C207E6200806B39 /* CinderellaLoad.hpp */,
 			);
 			path = cinderella;
-			sourceTree = "<group>";
-		};
-		ACAE92041C186C6A0008B83E /* select */ = {
-			isa = PBXGroup;
-			children = (
-				ACF594D61C1EE8D200806B39 /* SelectLoad.cpp */,
-				ACF594D71C1EE8D200806B39 /* SelectLoad.hpp */,
-				ACAE92051C186C6A0008B83E /* Select.cpp */,
-				ACAE92061C186C6A0008B83E /* Select.hpp */,
-			);
-			path = select;
 			sourceTree = "<group>";
 		};
 		ACDB32EF1BEF120900046195 /* object */ = {
@@ -472,12 +469,10 @@
 		ACF91ECE1BE7554E00AF6824 /* scene */ = {
 			isa = PBXGroup;
 			children = (
-				ACAE92041C186C6A0008B83E /* select */,
 				ACAE91D41C16E4C70008B83E /* cinderella */,
 				AC2D3A241BFB359500345AA5 /* fade */,
 				ACA081DA1BF317B1005FB898 /* test */,
 				ACF91EEC1BE8067C00AF6824 /* result */,
-				ACF91EE81BE76AC200AF6824 /* gameMain */,
 				ACF91EDD1BE75AAF00AF6824 /* title */,
 				ACF91ED91BE757CD00AF6824 /* Scene.cpp */,
 				ACF91EDA1BE757CD00AF6824 /* Scene.hpp */,
@@ -501,15 +496,6 @@
 			path = title;
 			sourceTree = "<group>";
 		};
-		ACF91EE81BE76AC200AF6824 /* gameMain */ = {
-			isa = PBXGroup;
-			children = (
-				ACF91EE91BE76AD000AF6824 /* GameMain.cpp */,
-				ACF91EEA1BE76AD000AF6824 /* GameMain.hpp */,
-			);
-			path = gameMain;
-			sourceTree = "<group>";
-		};
 		ACF91EEC1BE8067C00AF6824 /* result */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +505,15 @@
 				ACF91EEE1BE8069000AF6824 /* Result.hpp */,
 			);
 			path = result;
+			sourceTree = "<group>";
+		};
+		ACFD00BF1C227E700098F2C7 /* handrail */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD00C01C227E700098F2C7 /* HandRail.cpp */,
+				ACFD00C11C227E700098F2C7 /* HandRail.hpp */,
+			);
+			path = handrail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,11 +584,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF594DE1C207E6200806B39 /* CinderellaLoad.cpp in Sources */,
+				AC9D8AA71C2728FA001A7217 /* Resource.cpp in Sources */,
 				ACF594D21C1EE83500806B39 /* TitleLoad.cpp in Sources */,
+				AC9D8AA11C271422001A7217 /* Audio.cpp in Sources */,
 				14B485AB1C1AE18C00824001 /* BookShelf.cpp in Sources */,
-				AC5873F31C05ECCA00D40AE6 /* DataManager.cpp in Sources */,
 				ACA081D91BF25720005FB898 /* Collision.cpp in Sources */,
-				ACAE92071C186C6A0008B83E /* Select.cpp in Sources */,
 				146ED39E1C1EB80D00C9E8ED /* Book.cpp in Sources */,
 				ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */,
 				ACAE91DE1C1805400008B83E /* CinderellaScene.cpp in Sources */,
@@ -601,14 +596,16 @@
 				ACDB32F21BEF124F00046195 /* Object.cpp in Sources */,
 				ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */,
 				53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */,
-				ACF91EEB1BE76AD000AF6824 /* GameMain.cpp in Sources */,
+				ACFD00C21C227E700098F2C7 /* HandRail.cpp in Sources */,
 				ACF91EEF1BE8069000AF6824 /* Result.cpp in Sources */,
+				AC9D8AA21C271422001A7217 /* AudioManager.cpp in Sources */,
 				14B485A91C1AE18C00824001 /* Ball.cpp in Sources */,
 				ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */,
 				BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */,
 				ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */,
 				14B485AD1C1AE18C00824001 /* Cinderella.cpp in Sources */,
 				AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */,
+				AC9D8AA41C271422001A7217 /* TextureManager.cpp in Sources */,
 				AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
 				AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */,
@@ -618,9 +615,8 @@
 				AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */,
 				14B485BD1C1AE1AB00824001 /* Piano.cpp in Sources */,
 				ACDB32FA1BF040F000046195 /* Task.cpp in Sources */,
-				AC5873F41C05ECCA00D40AE6 /* ResourceManager.cpp in Sources */,
+				AC9D8AA31C271422001A7217 /* ResKey.cpp in Sources */,
 				ACF594D51C1EE8C000806B39 /* ResultLoad.cpp in Sources */,
-				ACF594D81C1EE8D200806B39 /* SelectLoad.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
