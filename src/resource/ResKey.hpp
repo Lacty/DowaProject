@@ -43,6 +43,9 @@ enum {
   CCinderellaForest2,
   CCinderellaForest3,
   CCinderellaForest4,
+  CCinderellaTown1,
+  CCinderellaTown2,
+  CCinderellaTown3,
   
   //          _______          //
   // -------- |Audio| -------- //
@@ -106,6 +109,9 @@ static std::string getPath(int key) {
     { CCinderellaForest2,       "background/forest/2" + tex_ext },
     { CCinderellaForest3,       "background/forest/3" + tex_ext },
     { CCinderellaForest4,       "background/forest/4" + tex_ext },
+    { CCinderellaTown1,         "background/town/1" + tex_ext },
+    { CCinderellaTown2,         "background/town/2" + tex_ext },
+    { CCinderellaTown3,         "background/town/3" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //

@@ -42,6 +42,9 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CCinderellaForest2);
   TextureManager::add(ResKey::CCinderellaForest3);
   TextureManager::add(ResKey::CCinderellaForest4);
+  TextureManager::add(ResKey::CCinderellaTown1);
+  TextureManager::add(ResKey::CCinderellaTown2);
+  TextureManager::add(ResKey::CCinderellaTown3);
 
   // Sound
   AudioManager::add(ResKey::CHitSE);
