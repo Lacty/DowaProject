@@ -47,6 +47,21 @@ enum {
   CCinderellaTown2,
   CCinderellaTown3,
   
+  // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+  CBridgeRiver,
+  CHydrant,
+  CLampPost,
+  CPlate,
+  CPlateFall,
+  CPumpkin1,
+  CPumpkin2,
+  CShop,
+  CWindow1,
+  CWindow2,
+  CWindow3,
+  CWindowOpen,
+  CWoodenBox,
+  
   //          _______          //
   // -------- |Audio| -------- //
   //          ¯¯¯¯¯¯¯          //
@@ -112,6 +127,21 @@ static std::string getPath(int key) {
     { CCinderellaTown1,         "background/town/1" + tex_ext },
     { CCinderellaTown2,         "background/town/2" + tex_ext },
     { CCinderellaTown3,         "background/town/3" + tex_ext },
+    
+    // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+    { CBridgeRiver,             "object/cinderella/BridgeRiver" + tex_ext },
+    { CHydrant,                 "object/cinderella/Hydrant" + tex_ext },
+    { CLampPost,                "object/cinderella/LampPost" + tex_ext },
+    { CPlate,                   "object/cinderella/Plate" + tex_ext },
+    { CPlateFall,               "object/cinderella/PlateFall" + tex_ext },
+    { CPumpkin1,                "object/cinderella/Pumpkin1" + tex_ext },
+    { CPumpkin2,                "object/cinderella/Pumpkin2" + tex_ext },
+    { CShop,                    "object/cinderella/Shop" + tex_ext },
+    { CWindow1,                 "object/cinderella/Window1" + tex_ext },
+    { CWindow2,                 "object/cinderella/Window2" + tex_ext },
+    { CWindow3,                 "object/cinderella/Window3" + tex_ext },
+    { CWindowOpen,              "object/cinderella/WindowOpen" + tex_ext },
+    { CWoodenBox,               "object/cinderella/WoodenBox" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //

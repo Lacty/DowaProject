@@ -45,6 +45,21 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CCinderellaTown1);
   TextureManager::add(ResKey::CCinderellaTown2);
   TextureManager::add(ResKey::CCinderellaTown3);
+  
+  // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+  TextureManager::add(ResKey::CBridgeRiver);
+  TextureManager::add(ResKey::CHydrant);
+  TextureManager::add(ResKey::CLampPost);
+  TextureManager::add(ResKey::CPlate);
+  TextureManager::add(ResKey::CPlateFall);
+  TextureManager::add(ResKey::CPumpkin1);
+  TextureManager::add(ResKey::CPumpkin2);
+  TextureManager::add(ResKey::CShop);
+  TextureManager::add(ResKey::CWindow1);
+  TextureManager::add(ResKey::CWindow2);
+  TextureManager::add(ResKey::CWindow3);
+  TextureManager::add(ResKey::CWindowOpen);
+  TextureManager::add(ResKey::CWoodenBox);
 
   // Sound
   AudioManager::add(ResKey::CHitSE);

@@ -30,8 +30,8 @@ CinderellaScene::CinderellaScene()
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
   
-  mDeviceWindowWidth = (float)ci::app::getWindowWidth();
-  mDeviceWindowHeight = (float)ci::app::getWindowHeight();
+  mDeviceWindowWidth = ci::app::getWindowWidth();
+  mDeviceWindowHeight = ci::app::getWindowHeight();
   
   // 画像追加
   mCinderellaHouse1 = TextureManager::find(ResKey::CCinderellaHouse1);
