@@ -34,7 +34,7 @@ void CinderellaLoad::load() {
   // hiramasa
   TextureManager::add(ResKey::CHandRail);
   
-  // β版
+  // background
   TextureManager::add(ResKey::CCinderellaHouse1);
   TextureManager::add(ResKey::CCinderellaHouse2);
   TextureManager::add(ResKey::CCinderellaHouse3);
