@@ -35,9 +35,9 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CHandRail);
   
   // β版
-  TextureManager::add(ResKey::CBetaBack1);
-  TextureManager::add(ResKey::CBetaBack2);
-  TextureManager::add(ResKey::CBetaBack3);
+  TextureManager::add(ResKey::CCinderellaHouse1);
+  TextureManager::add(ResKey::CCinderellaHouse2);
+  TextureManager::add(ResKey::CCinderellaHouse3);
 
   // Sound
   AudioManager::add(ResKey::CHitSE);

@@ -33,9 +33,9 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowHeight = (float)ci::app::getWindowHeight();
   
   // 画像追加
-  mBack1Texutre = TextureManager::find(ResKey::CBetaBack1);
-  mBack2Texutre = TextureManager::find(ResKey::CBetaBack2);
-  mBack3Texutre = TextureManager::find(ResKey::CBetaBack3);
+  mBack1Texutre = TextureManager::find(ResKey::CCinderellaHouse1);
+  mBack2Texutre = TextureManager::find(ResKey::CCinderellaHouse2);
+  mBack3Texutre = TextureManager::find(ResKey::CCinderellaHouse3);
   
   // 背景 1
   mBack1 = ci::Rectf( 0.f, -mDeviceWindowHeight * 0.5f,

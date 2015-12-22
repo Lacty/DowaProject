@@ -36,9 +36,9 @@ enum {
   CSphereGreen,
   CSphereRed,
   CHandRail,
-  CBetaBack1,
-  CBetaBack2,
-  CBetaBack3,
+  CCinderellaHouse1,
+  CCinderellaHouse2,
+  CCinderellaHouse3,
   
   //          _______          //
   // -------- |Audio| -------- //
@@ -94,10 +94,10 @@ static std::string getPath(int key) {
     { CSphereBlue,       "background/title/SphereBlue" + tex_ext },
     { CSphereGreen,      "background/title/SphereGreen" + tex_ext },
     { CSphereRed,        "background/title/SphereRed" + tex_ext },
-    { CHandRail,         "background/beta/HandRail" + tex_ext },
-    { CBetaBack1,        "background/beta/1" + tex_ext },
-    { CBetaBack2,        "background/beta/2" + tex_ext },
-    { CBetaBack3,        "background/beta/3" + tex_ext },
+    { CHandRail,         "background/cinderellahouse/HandRail" + tex_ext },
+    { CCinderellaHouse1,        "background/cinderellahouse/1" + tex_ext },
+    { CCinderellaHouse2,        "background/cinderellahouse/2" + tex_ext },
+    { CCinderellaHouse3,        "background/cinderellahouse/3" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //
