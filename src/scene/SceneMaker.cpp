@@ -3,13 +3,10 @@
 #include "Scene.hpp"
 
 #include "title/Title.hpp"
-#include "select/Select.hpp"
-#include "gameMain/GameMain.hpp"
 #include "result/Result.hpp"
 #include "test/Test.hpp"
 
 #include "title/TitleLoad.hpp"
-#include "select/SelectLoad.hpp"
 #include "result/ResultLoad.hpp"
 #include "cinderella/CinderellaLoad.hpp"
 

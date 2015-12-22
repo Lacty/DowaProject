@@ -5,7 +5,8 @@
 
 #include "../../../device/Device.hpp"
 #include "../../../utility/Utility.hpp"
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Ball::Ball(const ci::Vec3f& pos, const ci::Vec3f& size, float speedRate) :
 mAcc(ci::Vec3f::zero()),
@@ -16,7 +17,7 @@ speedRate(speedRate)
   mSize = size;
   mColor = ci::Color(1.f, 1.f, 1.f);
   
-  mSphereBlue = dowa::ResourceManager::texture().get(TextureKey::SphereBlue);
+  mSphereBlue = TextureManager::find(ResKey::CSphereBlue);
   
   setColliderType(Collider::Rect);
 }
