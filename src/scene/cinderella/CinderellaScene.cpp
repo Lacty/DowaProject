@@ -198,6 +198,30 @@ CinderellaScene::CinderellaScene()
                                                             ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
   
   
+  Task::add("TownWindowLeft_5", std::make_shared<Townwindow>(ci::Vec3f( 3695, -7, 0), // 3695, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowRight_5", std::make_shared<Townwindow>(ci::Vec3f( 3800, -7, 0), // 3800, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_5", std::make_shared<Townwindow>(ci::Vec3f( 3743, 68, 0), // 3743, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+  
+  
+  Task::add("TownWindowLeft_6", std::make_shared<Townwindow>(ci::Vec3f( 4041, -7, 0), // 4041, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowRight_6", std::make_shared<Townwindow>(ci::Vec3f( 4144, -7, 0), // 4144, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_6", std::make_shared<Townwindow>(ci::Vec3f( 4088, 68, 0), // 4088, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+
+  
   Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
                                                  ci::Vec3f( 40, 70, 0)));
   
@@ -206,7 +230,7 @@ CinderellaScene::CinderellaScene()
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3475, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
