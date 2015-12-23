@@ -162,16 +162,16 @@ CinderellaScene::CinderellaScene()
                                              ci::Vec3f( 50, 50, 0)));
   
   
-  Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -2, 0), // 2664, -2
-                                                              ci::Vec3f( 70, 90, 0), "TownWindowRight")); // 70, 90
+  Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -7, 0), // 2664, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
-  Task::add("TownWindowLeft_1", std::make_shared<Townwindow>(ci::Vec3f( 2559, -2, 0), // 2559, -2
-                                                             ci::Vec3f( 70, 90, 0), "TownWindowLeft")); // 70, 90
+  Task::add("TownWindowLeft_1", std::make_shared<Townwindow>(ci::Vec3f( 2559, -7, 0), // 2559, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
   
   
-  Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2608, 65, 0), // 2608, 65
-                                                            ci::Vec3f( 68, 90, 0), "TownWindowTop")); // 68, 90
+  Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2607, 68, 0), // 2607, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
   
   // 赤いの
   Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
