@@ -19,6 +19,7 @@
 #include "stairs/Stairs.hpp"
 #include "townwindow/Townwindow.hpp"
 #include "hydrant/Hydrant.hpp"
+#include "lamppost/LampPost.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -222,15 +223,27 @@ CinderellaScene::CinderellaScene()
                                                             ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
 
   
-  Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
-                                                 ci::Vec3f( 40, 70, 0)));
+  Task::add("Hydrant1", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0), // 2825, -110
+                                                  ci::Vec3f( 40, 70, 0))); // 40, 70
+  
+  
+  Task::add("Hydrant2", std::make_shared<Hydrant>(ci::Vec3f( 3045, -110, 0), // 3045, -110
+                                                  ci::Vec3f( 40, 70, 0))); // 40, 70
+  
+  
+  Task::add("LampPost1", std::make_shared<LampPost>(ci::Vec3f( 2740, -50, 0), // 2740, -50
+                                                    ci::Vec3f( 80, 190, 0))); // 80, 190
+  
+  
+  Task::add("LampPost2", std::make_shared<LampPost>(ci::Vec3f( 3960, -50, 0), // 2740, -50
+                                                    ci::Vec3f( 80, 190, 0))); // 80, 190
   
   
   Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3740, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
