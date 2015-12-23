@@ -235,7 +235,7 @@ CinderellaScene::CinderellaScene()
                                                     ci::Vec3f( 80, 190, 0))); // 80, 190
   
   
-  Task::add("LampPost2", std::make_shared<LampPost>(ci::Vec3f( 3960, -50, 0), // 2740, -50
+  Task::add("LampPost2", std::make_shared<LampPost>(ci::Vec3f( 3960, -50, 0), // 3960, -50
                                                     ci::Vec3f( 80, 190, 0))); // 80, 190
   
   
