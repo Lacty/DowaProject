@@ -158,16 +158,18 @@ CinderellaScene::CinderellaScene()
   Task::add("HungryBear", std::make_shared<Bear>(ci::Vec3f( 2200.f, 0, 0.f),
                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
   
-  // りんご
   Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 2000, 0, 0),
                                              ci::Vec3f( 50, 50, 0)));
   
-  // 窓２ LeftTexture
+  
+  Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -2, 0), // 2664, -2
+                                                              ci::Vec3f( 70, 90, 0), "TownWindowRight")); // 70, 90
+  
+  
   Task::add("TownWindowLeft_1", std::make_shared<Townwindow>(ci::Vec3f( 2559, -2, 0), // 2559, -2
                                                              ci::Vec3f( 70, 90, 0), "TownWindowLeft")); // 70, 90
   
   
-  // 窓１ TopTexture
   Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2608, 65, 0), // 2608, 65
                                                             ci::Vec3f( 68, 90, 0), "TownWindowTop")); // 68, 90
   
