@@ -182,6 +182,22 @@ CinderellaScene::CinderellaScene()
                                                               ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 110, 90
   
   
+  Task::add("TownWindowLeft_3", std::make_shared<Townwindow>(ci::Vec3f( 3127, -7, 0), // 3127, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_3", std::make_shared<Townwindow>(ci::Vec3f( 3175, 68, 0), // 3175, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+  
+  
+  Task::add("TownWindowLeft_4", std::make_shared<Townwindow>(ci::Vec3f( 3473, -7, 0), // 3473, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_4", std::make_shared<Townwindow>(ci::Vec3f( 3520, 68, 0), // 3520, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+  
+  
   Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
                                                  ci::Vec3f( 40, 70, 0)));
   
@@ -190,7 +206,7 @@ CinderellaScene::CinderellaScene()
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3475, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
