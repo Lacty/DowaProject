@@ -17,6 +17,8 @@
 #include "apple/Apple.hpp"
 #include "bear/Bear.hpp"
 #include "stairs/Stairs.hpp"
+#include "townwindow/Townwindow.hpp"
+#include "hydrant/Hydrant.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -160,9 +162,22 @@ CinderellaScene::CinderellaScene()
   Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 2000, 0, 0),
                                              ci::Vec3f( 50, 50, 0)));
   
+  // 窓２ LeftTexture
+  Task::add("TownWindowLeft_1", std::make_shared<Townwindow>(ci::Vec3f( 2559, -2, 0), // 2559, -2
+                                                             ci::Vec3f( 70, 90, 0), "TownWindowLeft")); // 70, 90
+  
+  
+  // 窓１ TopTexture
+  Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2608, 65, 0), // 2608, 65
+                                                            ci::Vec3f( 68, 90, 0), "TownWindowTop")); // 68, 90
+  
+  // 赤いの
+  Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
+                                                 ci::Vec3f( 40, 70, 0)));
+  
   
   // シンデレラ
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( 1475.f, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( 2600, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3i( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));

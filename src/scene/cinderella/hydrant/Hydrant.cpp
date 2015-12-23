@@ -1,34 +1,34 @@
 
-#include "Apple.hpp"
+#include "Hydrant.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Apple::Apple(const ci::Vec3f& mApplePos, const ci::Vec3f& mAppleSize)
+Hydrant::Hydrant(const ci::Vec3f& mHydrantPos, const ci::Vec3f& mHydrantSize)
 {
-  mPos = mApplePos;
-  mSize = mAppleSize;
+  mPos = mHydrantPos;
+  mSize = mHydrantSize;
   
-  mApple = TextureManager::find(ResKey::CApple);
+  mHydrant = TextureManager::find(ResKey::CHydrant);
   
 }
 
-void Apple::setup() {}
+void Hydrant::setup() {}
 
-void Apple::update() {}
+void Hydrant::update() {}
 
-void Apple::draw()
+void Hydrant::draw()
 {
   ci::gl::enable(GL_TEXTURE_2D);
   ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
   
-  mApple.bind();
+  mHydrant.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mApple.unbind();
+  mHydrant.unbind();
   
   ci::gl::popModelView();
   
