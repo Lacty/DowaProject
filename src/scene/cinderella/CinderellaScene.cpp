@@ -178,26 +178,27 @@ CinderellaScene::CinderellaScene()
                                                               ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
-  Task::add("TownWindowOpen_2", std::make_shared<Townwindow>(ci::Vec3f( 2953, 74, 0), // 3000, -7
-                                                              ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 77, 105
+  Task::add("TownWindowOpen_2", std::make_shared<Townwindow>(ci::Vec3f( 2953, 74, 0), // 2953, 74
+                                                              ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 110, 90
   
-  // 赤いの
+  
   Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
                                                  ci::Vec3f( 40, 70, 0)));
   
-  // ボール
+  
   Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
-  // シンデレラ
+  
   Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
   
-  // 手すり
+  
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
                                                    ci::Vec3f( 145.f, 208.f, 0.f)));
+  
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
