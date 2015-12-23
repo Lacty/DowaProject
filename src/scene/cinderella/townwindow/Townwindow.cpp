@@ -16,6 +16,8 @@ Townwindow::Townwindow(const ci::Vec3f& mTownwindowPos, const ci::Vec3f& mTownwi
   mTownWindowRight = TextureManager::find(ResKey::CWindow3);
   mTownWindowOpen = TextureManager::find(ResKey::CWindowOpen);
   
+  setColliderType(Collider::Rect);
+  
 }
 
 void Townwindow::setup() {}
@@ -51,4 +53,14 @@ void Townwindow::drawTownwindow(const ci::gl::Texture& mTownwindowTexture)
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   mTownwindowTexture.unbind();
+}
+
+void Townwindow::onCollisionUpdate(const std::shared_ptr<Object> &compare)
+{
+  if(compare -> getName() == "Ball" && mTownwindowName == "TownWindowOpen")
+  {
+    std::cout << compare -> getName() << std::endl;
+    
+    mTownwindowName = "TownWindowTop";
+  }
 }

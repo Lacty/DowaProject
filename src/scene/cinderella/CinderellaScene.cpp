@@ -128,11 +128,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 0.f,
                                                         -155.f, 0.f),
                                                    ci::Vec3f( 10000.0f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
-  // ボール
-  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
-                                           ci::Vec3f( 40.f, 40.f, 0.f),
-                                           0.2f));
+                                                   mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // ピアノ
   Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
@@ -173,15 +169,30 @@ CinderellaScene::CinderellaScene()
   Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2607, 68, 0), // 2607, 68
                                                             ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
   
+  
+  Task::add("TownWindowLeft_2", std::make_shared<Townwindow>(ci::Vec3f( 2905, -7, 0), // 2905, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowRight_2", std::make_shared<Townwindow>(ci::Vec3f( 3009, -7, 0), // 3009, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
+  
+  
+  Task::add("TownWindowOpen_2", std::make_shared<Townwindow>(ci::Vec3f( 2953, 74, 0), // 3000, -7
+                                                              ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 77, 105
+  
   // 赤いの
   Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
                                                  ci::Vec3f( 40, 70, 0)));
   
+  // ボール
+  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
+                                           ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   // シンデレラ
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( 2600, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
-                                                       ci::Vec3i( mDeviceWindowWidth * 0.13204225352113f,
+                                                       ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
   
   // 手すり
