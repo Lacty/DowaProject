@@ -20,6 +20,11 @@
 #include "townwindow/Townwindow.hpp"
 #include "hydrant/Hydrant.hpp"
 #include "lamppost/LampPost.hpp"
+#include "bridge/Bridge.hpp"
+#include "plate/Plate.hpp"
+#include "shop/Shop.hpp"
+#include "pumpkin/Pumpkin.hpp"
+#include "woodenbox/WoodenBox.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -239,11 +244,35 @@ CinderellaScene::CinderellaScene()
                                                     ci::Vec3f( 80, 190, 0))); // 80, 190
   
   
-  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
+  Task::add("Bridge", std::make_shared<Bridge>(ci::Vec3f( 3350, -125, 0), // 3350, -125
+                                               ci::Vec3f( 200, 69, 0))); // 200, 69
+  
+  
+  Task::add("Plate", std::make_shared<Plate>(ci::Vec3f( 3247, -73, 0), // 3247, -73
+                                             ci::Vec3f( 50, 147, 0))); // 50, 147
+  
+  
+  Task::add("Shop", std::make_shared<Shop>(ci::Vec3f( 3723, -70, 0), // 3723, -70
+                                           ci::Vec3f( 210, 155, 0))); // 210, 155
+  
+  
+  Task::add("WoodenBox", std::make_shared<WoodenBox>(ci::Vec3f( 3858, -110, 0), // 3858, -110
+                                                     ci::Vec3f( 75, 80, 0))); // 75, 80
+  
+  
+  Task::add("Pumpkin2", std::make_shared<Pumpkin>(ci::Vec3f( 3858, -50, 0), // 3858, -50
+                                                  ci::Vec3f( 80, 50, 0), "Pumpkin2")); // 80, 50
+  
+  
+  Task::add("Pumpkin1", std::make_shared<Pumpkin>(ci::Vec3f( 3858, -18, 0), // 3858, -18
+                                                  ci::Vec3f( 40, 50, 0), "Pumpkin1")); // 40, 50
+  
+  
+  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 950.f, 50.f, 0.f), // 50
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3740, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 1000, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));

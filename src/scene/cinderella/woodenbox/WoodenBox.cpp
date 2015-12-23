@@ -1,23 +1,23 @@
 
-#include "Bridge.hpp"
+#include "WoodenBox.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
+WoodenBox::WoodenBox(const ci::Vec3f& WoodenBoxPos, const ci::Vec3f& WoodenBoxSize)
 {
-  mPos = BridgePos;
-  mSize = BridgeSize;
+  mPos = WoodenBoxPos;
+  mSize = WoodenBoxSize;
   
-  mBridge = TextureManager::find(ResKey::CBridgeRiver);
+  mWoodenBox = TextureManager::find(ResKey::CWoodenBox);
   
 }
 
-void Bridge::setup() {}
+void WoodenBox::setup() {}
 
-void Bridge::update() {}
+void WoodenBox::update() {}
 
-void Bridge::draw()
+void WoodenBox::draw()
 {
   ci::gl::enable(GL_CULL_FACE);
   
@@ -26,11 +26,11 @@ void Bridge::draw()
   
   ci::gl::pushModelView();
   
-  mBridge.bind();
+  mWoodenBox.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBridge.unbind();
+  mWoodenBox.unbind();
   
   ci::gl::popModelView();
   

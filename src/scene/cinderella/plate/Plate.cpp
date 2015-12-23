@@ -20,6 +20,8 @@ void Plate::update() {}
 
 void Plate::draw()
 {
+  ci::gl::enable(GL_CULL_FACE);
+  
   ci::gl::enable(GL_TEXTURE_2D);
   ci::gl::enableAlphaBlending();
   
@@ -35,5 +37,7 @@ void Plate::draw()
   
   ci::gl::disableAlphaBlending();
   ci::gl::disable(GL_TEXTURE_2D);
+  
+  ci::gl::disable(GL_CULL_FACE);
   
 }
