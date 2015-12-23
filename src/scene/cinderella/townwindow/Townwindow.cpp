@@ -61,6 +61,8 @@ void Townwindow::onCollisionUpdate(const std::shared_ptr<Object> &compare)
   {
     std::cout << compare -> getName() << std::endl;
     
+    mSize = ci::Vec3f( 75, 90, 0);
+    mPos.y -= 5.f;
     mTownwindowName = "TownWindowTop";
   }
 }
