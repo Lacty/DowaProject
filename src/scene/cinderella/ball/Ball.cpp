@@ -73,6 +73,11 @@ void Ball::draw()
 
 void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-  mPos.x += mAcc.y * 10;
-  mPos.y += mAcc.x * 10;
+  if(compare -> getName() != "Cinderella")
+  {
+    mPos.x += mAcc.y * 10;
+    mPos.y += mAcc.x * 10;
+    
+    std::cout << compare -> getName() << std::endl;
+  }
 }

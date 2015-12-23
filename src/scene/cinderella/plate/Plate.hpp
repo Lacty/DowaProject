@@ -10,6 +10,8 @@ class Plate : public Object
   ci::gl::Texture mPlate;
   ci::gl::Texture mPlateFall;
   
+  bool mFallFlag;
+  
 public:
   
   Plate(const ci::Vec3f&, const ci::Vec3f&);
@@ -18,4 +20,5 @@ public:
   void update();
   void draw();
   
+  void onCollisionUpdate(const std::shared_ptr<Object>&);
 };

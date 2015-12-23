@@ -268,11 +268,11 @@ CinderellaScene::CinderellaScene()
                                                   ci::Vec3f( 40, 50, 0), "Pumpkin1")); // 40, 50
   
   
-  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f), // 50
+  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 2850.f, 50.f, 0.f), // 50
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 2900, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
