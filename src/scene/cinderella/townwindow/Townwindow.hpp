@@ -1,14 +1,29 @@
-//
-//  Townwindow.hpp
-//  DowaProject
-//
-//  Created by nanashi on 2015/12/22.
-//
-//
 
-#ifndef Townwindow_hpp
-#define Townwindow_hpp
+#pragma once
 
-#include <stdio.h>
+#include "../../../object/Object.hpp"
 
-#endif /* Townwindow_hpp */
+#include "cinder/gl/Texture.h"
+
+class Townwindow : public Object
+{
+  ci::gl::Texture mTownWindowTop; // Top
+  ci::gl::Texture mTownWindowLeft; // Left
+  ci::gl::Texture mTownWindowRight; // Right
+  ci::gl::Texture mTownWindowOpen; // Boy
+  
+  std::string mTownwindowName;
+  
+  void drawTownwindow(const ci::gl::Texture&);
+  
+public:
+  
+  Townwindow(const ci::Vec3f&, const ci::Vec3f&, const std::string&);
+  
+  void setup();
+  void update();
+  void draw();
+  
+  void onCollisionUpdate(const std::shared_ptr<Object>&);
+  
+};

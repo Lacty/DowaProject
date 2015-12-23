@@ -17,10 +17,13 @@
 #include "apple/Apple.hpp"
 #include "bear/Bear.hpp"
 #include "stairs/Stairs.hpp"
+#include "townwindow/Townwindow.hpp"
+#include "hydrant/Hydrant.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
+
 
 CinderellaScene::CinderellaScene()
 {
@@ -29,38 +32,88 @@ CinderellaScene::CinderellaScene()
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
   
-  mDeviceWindowWidth = (float)ci::app::getWindowWidth();
-  mDeviceWindowHeight = (float)ci::app::getWindowHeight();
+  mDeviceWindowWidth = ci::app::getWindowWidth();
+  mDeviceWindowHeight = ci::app::getWindowHeight();
   
   // 画像追加
-  mBack1Texutre = TextureManager::find(ResKey::CBetaBack1);
-  mBack2Texutre = TextureManager::find(ResKey::CBetaBack2);
-  mBack3Texutre = TextureManager::find(ResKey::CBetaBack3);
+  mCinderellaHouse1 = TextureManager::find(ResKey::CCinderellaHouse1);
+  mCinderellaHouse2 = TextureManager::find(ResKey::CCinderellaHouse2);
+  mCinderellaHouse3 = TextureManager::find(ResKey::CCinderellaHouse3);
   
-  // 背景 1
-  mBack1 = ci::Rectf( 0.f, -mDeviceWindowHeight * 0.5f,
-                      mDeviceWindowWidth * 0.901409f, mDeviceWindowHeight * 0.5f);
+  mCinderellaForest1 = TextureManager::find(ResKey::CCinderellaForest1);
+  mCinderellaForest2 = TextureManager::find(ResKey::CCinderellaForest2);
+  mCinderellaForest3 = TextureManager::find(ResKey::CCinderellaForest3);
+  mCinderellaForest4 = TextureManager::find(ResKey::CCinderellaForest4);
   
-  // 背景 2
-  mBack21 = ci::Rectf( mDeviceWindowWidth * 0.875f, -mDeviceWindowHeight * 0.5f,
-                       mDeviceWindowWidth * 1.20598592f, mDeviceWindowHeight * 0.5f);
+  mCinderellaTown1 = TextureManager::find(ResKey::CCinderellaTown1);
+  mCinderellaTown2 = TextureManager::find(ResKey::CCinderellaTown2);
+  mCinderellaTown3 = TextureManager::find(ResKey::CCinderellaTown3);
   
-  mBack22 = ci::Rectf( mDeviceWindowWidth * 1.20598592f, -mDeviceWindowHeight * 0.5f,
-                       mDeviceWindowWidth * 1.53697183f, mDeviceWindowHeight * 0.5f);
   
-  mBack23 = ci::Rectf( mDeviceWindowWidth * 1.53697183f, -mDeviceWindowHeight * 0.5f,
-                       mDeviceWindowWidth * 1.86795775f, mDeviceWindowHeight * 0.5f);
+  mCinderellaHouseRect1 = ci::Rectf( 0.f,
+                                    -mDeviceWindowHeight * 0.5f,
+                                     mDeviceWindowWidth * 0.901409f,
+                                     mDeviceWindowHeight * 0.5f);
   
-  mBack24 = ci::Rectf( mDeviceWindowWidth * 1.86795775f, -mDeviceWindowHeight * 0.5f,
-                       mDeviceWindowWidth * 2.19894366f, mDeviceWindowHeight * 0.5f);
+  mCinderellaHouseRect2_1 = ci::Rectf( mDeviceWindowWidth * 0.875f,
+                                      -mDeviceWindowHeight * 0.5f,
+                                       mDeviceWindowWidth * 1.20598592f,
+                                       mDeviceWindowHeight * 0.5f);
   
-  // 背景３
-  mBack3 = ci::Rectf( mDeviceWindowWidth * 2.19894366f, -mDeviceWindowHeight * 0.5f,
-                      mDeviceWindowWidth * 3.10035211f, mDeviceWindowHeight * 0.5f);
+  mCinderellaHouseRect2_2 = ci::Rectf( mDeviceWindowWidth * 1.20598592f,
+                                      -mDeviceWindowHeight * 0.5f,
+                                       mDeviceWindowWidth * 1.53697183f,
+                                       mDeviceWindowHeight * 0.5f);
   
-  // 背景４
-  //mBack4 = ci::Rectf( mDeviceWindowWidth * 3.10035211f, -mDeviceWindowHeight * 0.5f,
-  //                    mDeviceWindowWidth * 0, mDeviceWindowHeight * 0.5f); // x2 値後で変える
+  mCinderellaHouseRect2_3 = ci::Rectf( mDeviceWindowWidth * 1.53697183f,
+                                      -mDeviceWindowHeight * 0.5f,
+                                       mDeviceWindowWidth * 1.86795775f,
+                                       mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaHouseRect2_4 = ci::Rectf( mDeviceWindowWidth * 1.86795775f,
+                                      -mDeviceWindowHeight * 0.5f,
+                                       mDeviceWindowWidth * 2.19894366f,
+                                       mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaHouseRect3 = ci::Rectf( mDeviceWindowWidth * 2.19894366f,
+                                    -mDeviceWindowHeight * 0.5f,
+                                     mDeviceWindowWidth * 3.10035211f, // 1761
+                                     mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaForestRect1 = ci::Rectf( 1474, // 1474
+                                     -mDeviceWindowHeight * 0.5f,
+                                      1730, // 1730
+                                      mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaForestRect2 = ci::Rectf( 1730, // 1730
+                                     -mDeviceWindowHeight * 0.5f,
+                                      1986, // 1986
+                                      mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaForestRect3 = ci::Rectf( 1986, // 1986
+                                     -mDeviceWindowHeight * 0.5f,
+                                      2242, // 2242
+                                      mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaForestRect4 = ci::Rectf( 2242, // 2242
+                                     -mDeviceWindowHeight * 0.5f,
+                                      2495, // 2495
+                                      mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaTownRect1 = ci::Rectf( 2495, // 2495
+                                   -mDeviceWindowHeight * 0.5f,
+                                    3063, // 3063
+                                    mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaTownRect2 = ci::Rectf( 3063, // 3063
+                                   -mDeviceWindowHeight * 0.5f,
+                                    3631, // 3631
+                                    mDeviceWindowHeight * 0.5f);
+  
+  mCinderellaTownRect3 = ci::Rectf( 3631, // 3631
+                                   -mDeviceWindowHeight * 0.5f,
+                                    4199, // 4199
+                                    mDeviceWindowHeight * 0.5f);
   
   // 地面
   Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.24471831f,
@@ -75,11 +128,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 0.f,
                                                         -155.f, 0.f),
                                                    ci::Vec3f( 10000.0f,
-                                                         mDeviceWindowHeight * 0.015625f, 0.f)));
-  // ボール
-  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
-                                           ci::Vec3f( 40.f, 40.f, 0.f),
-                                           0.2f));
+                                                   mDeviceWindowHeight * 0.015625f, 0.f)));
   
   // ピアノ
   Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
@@ -98,23 +147,74 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
 
   // 熊
-  Task::add("Bear", std::make_shared<Bear>(ci::Vec3f( 1600.f, -110, 0.f),
-                                           ci::Vec3f( 50.f, 80.f, 0.f)));
-  
-  // りんご
-  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 0, 0, 0),
-                                             ci::Vec3f( 0, 0, 0)));
+  Task::add("SatisfiedBear", std::make_shared<Bear>(ci::Vec3f( 1800.f, 0, 0.f),
+                                                    ci::Vec3f( 80.f, 130.f, 0.f), "SatisfiedBear"));
   
   
-  // シンデレラ
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3i( mDeviceWindowWidth * 0.264084507042254f,
+  Task::add("HungryBear", std::make_shared<Bear>(ci::Vec3f( 2200.f, 0, 0.f),
+                                                 ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
+  
+  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 2000, 0, 0),
+                                             ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -7, 0), // 2664, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
+  
+  
+  Task::add("TownWindowLeft_1", std::make_shared<Townwindow>(ci::Vec3f( 2559, -7, 0), // 2559, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2607, 68, 0), // 2607, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+  
+  
+  Task::add("TownWindowLeft_2", std::make_shared<Townwindow>(ci::Vec3f( 2905, -7, 0), // 2905, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowRight_2", std::make_shared<Townwindow>(ci::Vec3f( 3009, -7, 0), // 3009, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
+  
+  
+  Task::add("TownWindowOpen_2", std::make_shared<Townwindow>(ci::Vec3f( 2953, 74, 0), // 2953, 74
+                                                              ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 110, 90
+  
+  
+  Task::add("TownWindowLeft_3", std::make_shared<Townwindow>(ci::Vec3f( 3127, -7, 0), // 3127, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_3", std::make_shared<Townwindow>(ci::Vec3f( 3175, 68, 0), // 3175, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+  
+  
+  Task::add("TownWindowLeft_4", std::make_shared<Townwindow>(ci::Vec3f( 3473, -7, 0), // 3473, -7
+                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowTop_4", std::make_shared<Townwindow>(ci::Vec3f( 3520, 68, 0), // 3520, 68
+                                                            ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
+  
+  
+  Task::add("Hydrant", std::make_shared<Hydrant>(ci::Vec3f( 2825, -110, 0),
+                                                 ci::Vec3f( 40, 70, 0)));
+  
+  
+  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50.f, 50.f, 0.f),
+                                           ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
+  
+  
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3475, // 150
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
-                                                       ci::Vec3i( mDeviceWindowWidth * 0.13204225352113f,
+                                                       ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
   
-  // 手すり
+  
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
                                                    ci::Vec3f( 145.f, 208.f, 0.f)));
+  
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
@@ -123,7 +223,7 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setStageSize(0.0f, 3000.0f);
+  camera.setStageSize(0.0f, 5000.0f);
   camera.setForcusObj(Task::find("Cinderella"));
   
   // シンデレラの右側にカメラの焦点をあてる
@@ -157,14 +257,26 @@ void CinderellaScene::draw()
   
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   
-  ci::gl::draw(mBack1Texutre, mBack1);
+  ci::gl::draw( mCinderellaHouse1, mCinderellaHouseRect1);
   
-  ci::gl::draw(mBack2Texutre, mBack21);
-  ci::gl::draw(mBack2Texutre, mBack22);
-  ci::gl::draw(mBack2Texutre, mBack23);
-  ci::gl::draw(mBack2Texutre, mBack24);
+  ci::gl::draw( mCinderellaHouse2, mCinderellaHouseRect2_1);
+  ci::gl::draw( mCinderellaHouse2, mCinderellaHouseRect2_2);
+  ci::gl::draw( mCinderellaHouse2, mCinderellaHouseRect2_3);
+  ci::gl::draw( mCinderellaHouse2, mCinderellaHouseRect2_4);
   
-  ci::gl::draw(mBack3Texutre, mBack3);
+  ci::gl::draw( mCinderellaHouse3, mCinderellaHouseRect3);
+  
+  ci::gl::draw( mCinderellaForest1, mCinderellaForestRect1);
+  ci::gl::draw( mCinderellaForest2, mCinderellaForestRect2);
+  ci::gl::draw( mCinderellaForest3, mCinderellaForestRect3);
+  ci::gl::draw( mCinderellaForest4, mCinderellaForestRect4);
+  
+  ci::gl::draw( mCinderellaTown1, mCinderellaTownRect1);
+  
+  ci::gl::draw( mCinderellaTown3, mCinderellaTownRect2);
+  ci::gl::draw( mCinderellaTown2, mCinderellaTownRect2);
+  
+  ci::gl::draw( mCinderellaTown1, mCinderellaTownRect3);
   
   ci::gl::popModelView();
   
