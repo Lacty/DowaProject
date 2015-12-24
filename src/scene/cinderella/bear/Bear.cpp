@@ -20,7 +20,7 @@ void Bear::setup() {}
 
 void Bear::update()
 {
-//  mRotate.z += 30;
+  mRotate.z += 30;
 }
 
 void Bear::draw()

@@ -41,7 +41,7 @@ void DowaProjectApp::setup() {
   //dowa::ResourceManager::enable();
   //dowa::ResourceManager::createTextures();
   SceneManager::enable();
-  SceneManager::create(SceneType::TitleLoad);
+  SceneManager::create(SceneType::CinderellaLoad);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {

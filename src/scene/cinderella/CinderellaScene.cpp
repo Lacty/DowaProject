@@ -2,9 +2,6 @@
 // mDeviceWindowWidth = 568
 // mDeviceWindowHeight = 320
 
-// 林さん要望 ステージの端から端までの移動で
-// オブジェクトになにも干渉しなかった場合、約30秒にする
-
 #include "CinderellaScene.hpp"
 
 #include "cinderella/Cinderella.hpp"
