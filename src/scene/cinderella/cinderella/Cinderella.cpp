@@ -29,6 +29,9 @@ void Cinderella::update()
   
   mAcceleration += mGravityPower;
   mPos.y += mAcceleration;
+  
+  // test
+  std::cout << mPos << std::endl;
 }
 
 void Cinderella::draw()

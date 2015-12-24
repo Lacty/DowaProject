@@ -46,7 +46,7 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CCinderellaTown2);
   TextureManager::add(ResKey::CCinderellaTown3);
   
-  // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+  // hiramasa
   TextureManager::add(ResKey::CBridgeRiver);
   TextureManager::add(ResKey::CHydrant);
   TextureManager::add(ResKey::CLampPost);
@@ -60,10 +60,9 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CWindow3);
   TextureManager::add(ResKey::CWindowOpen);
   TextureManager::add(ResKey::CWoodenBox);
-
-  // 魔女追加
   TextureManager::add(ResKey::CWitch1);
   TextureManager::add(ResKey::CWitch2);
+  TextureManager::add(ResKey::CGrayCube);
   
   // Sound
   AudioManager::add(ResKey::CHitSE);

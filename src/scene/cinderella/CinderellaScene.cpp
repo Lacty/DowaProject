@@ -26,6 +26,8 @@
 #include "pumpkin/Pumpkin.hpp"
 #include "woodenbox/WoodenBox.hpp"
 
+#include "graycube/GrayCube.hpp"
+
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
 #include "../../scene/SceneManager.hpp"
@@ -126,15 +128,17 @@ CinderellaScene::CinderellaScene()
                                                         -mDeviceWindowHeight * 0.03125f, 0.f),
                                               ci::Vec3f( mDeviceWindowWidth * 0.48415493f,
                                                          mDeviceWindowHeight * 0.015625f, 0.f)));
+  
   // 階段
   Task::add("Stairs", std::make_shared<Stairs>(ci::Vec3f( 353.f, -40.f, 0.f),
                                                ci::Vec3f( 145.f, 208.f, 0.f)));
   
+  
   // 地面 一番下
-  Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 0.f,
-                                                        -155.f, 0.f),
-                                                   ci::Vec3f( 10000.0f,
-                                                   mDeviceWindowHeight * 0.015625f, 0.f)));
+  Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 1646,
+                                                        -157.f, 0.f),
+                                                   ci::Vec3f( 3291,
+                                                   5, 0.f))); // 5
   
   // ピアノ
   Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
@@ -272,10 +276,15 @@ CinderellaScene::CinderellaScene()
                                            ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150, 3300
                                                                   mDeviceWindowHeight * 0.15625f, 0.f),
                                                        ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
                                                                   mDeviceWindowHeight * 0.234375f, 0.f)));
+  
+  
+  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 500, -170, 0.f),
+                                                   ci::Vec3f( 350, 15, 0.f)));
+  
   
   
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
@@ -289,7 +298,7 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setStageSize(0.0f, 5000.0f);
+  camera.setStageSize(-100.0f, 5000.0f);
   camera.setForcusObj(Task::find("Cinderella"));
   
   // シンデレラの右側にカメラの焦点をあてる
