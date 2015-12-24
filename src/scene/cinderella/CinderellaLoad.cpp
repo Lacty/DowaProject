@@ -34,10 +34,32 @@ void CinderellaLoad::load() {
   // hiramasa
   TextureManager::add(ResKey::CHandRail);
   
-  // β版
-  TextureManager::add(ResKey::CBetaBack1);
-  TextureManager::add(ResKey::CBetaBack2);
-  TextureManager::add(ResKey::CBetaBack3);
+  // background
+  TextureManager::add(ResKey::CCinderellaHouse1);
+  TextureManager::add(ResKey::CCinderellaHouse2);
+  TextureManager::add(ResKey::CCinderellaHouse3);
+  TextureManager::add(ResKey::CCinderellaForest1);
+  TextureManager::add(ResKey::CCinderellaForest2);
+  TextureManager::add(ResKey::CCinderellaForest3);
+  TextureManager::add(ResKey::CCinderellaForest4);
+  TextureManager::add(ResKey::CCinderellaTown1);
+  TextureManager::add(ResKey::CCinderellaTown2);
+  TextureManager::add(ResKey::CCinderellaTown3);
+  
+  // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+  TextureManager::add(ResKey::CBridgeRiver);
+  TextureManager::add(ResKey::CHydrant);
+  TextureManager::add(ResKey::CLampPost);
+  TextureManager::add(ResKey::CPlate);
+  TextureManager::add(ResKey::CPlateFall);
+  TextureManager::add(ResKey::CPumpkin1);
+  TextureManager::add(ResKey::CPumpkin2);
+  TextureManager::add(ResKey::CShop);
+  TextureManager::add(ResKey::CWindow1);
+  TextureManager::add(ResKey::CWindow2);
+  TextureManager::add(ResKey::CWindow3);
+  TextureManager::add(ResKey::CWindowOpen);
+  TextureManager::add(ResKey::CWoodenBox);
 
   // Sound
   AudioManager::add(ResKey::CHitSE);

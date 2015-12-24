@@ -5,13 +5,13 @@
 
 #include "cinder/gl/Texture.h"
 
-class Apple : public Object
+class Hydrant : public Object
 {
-  ci::gl::Texture mApple;
+  ci::gl::Texture mHydrant;
   
 public:
   
-  Apple(const ci::Vec3f&, const ci::Vec3f&);
+  Hydrant(const ci::Vec3f&, const ci::Vec3f&);
   
   void setup();
   void update();
