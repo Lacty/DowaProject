@@ -72,6 +72,7 @@ void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mPos.x += mAcc.y * 10;
     mPos.y += mAcc.x * 10;
     
+    // Debug
     std::cout << compare -> getName() << std::endl;
   }
 }

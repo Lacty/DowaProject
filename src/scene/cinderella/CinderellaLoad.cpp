@@ -32,21 +32,6 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CSphereRed);
   
   // hiramasa
-  TextureManager::add(ResKey::CHandRail);
-  
-  // background
-  TextureManager::add(ResKey::CCinderellaHouse1);
-  TextureManager::add(ResKey::CCinderellaHouse2);
-  TextureManager::add(ResKey::CCinderellaHouse3);
-  TextureManager::add(ResKey::CCinderellaForest1);
-  TextureManager::add(ResKey::CCinderellaForest2);
-  TextureManager::add(ResKey::CCinderellaForest3);
-  TextureManager::add(ResKey::CCinderellaForest4);
-  TextureManager::add(ResKey::CCinderellaTown1);
-  TextureManager::add(ResKey::CCinderellaTown2);
-  TextureManager::add(ResKey::CCinderellaTown3);
-  
-  // hiramasa
   TextureManager::add(ResKey::CBridgeRiver);
   TextureManager::add(ResKey::CHydrant);
   TextureManager::add(ResKey::CLampPost);
@@ -63,6 +48,27 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CWitch1);
   TextureManager::add(ResKey::CWitch2);
   TextureManager::add(ResKey::CGrayCube);
+  TextureManager::add(ResKey::CHandRail);
+  
+  // background
+  TextureManager::add(ResKey::CHouse1);
+  TextureManager::add(ResKey::CHouse2);
+  TextureManager::add(ResKey::CHouse3);
+  TextureManager::add(ResKey::CForest1);
+  TextureManager::add(ResKey::CForest2);
+  TextureManager::add(ResKey::CForest3);
+  TextureManager::add(ResKey::CForest4);
+  TextureManager::add(ResKey::CTown1);
+  TextureManager::add(ResKey::CTown2);
+  TextureManager::add(ResKey::CTown3);
+  TextureManager::add(ResKey::CForestGarden1);
+  TextureManager::add(ResKey::CForestGarden2);
+  TextureManager::add(ResKey::CForestGarden3);
+  TextureManager::add(ResKey::CForestGarden4);
+  TextureManager::add(ResKey::CDance1);
+  TextureManager::add(ResKey::CDance2);
+  TextureManager::add(ResKey::CDance3);
+  TextureManager::add(ResKey::CDance4);
   
   // Sound
   AudioManager::add(ResKey::CHitSE);
