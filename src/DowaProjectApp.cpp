@@ -3,10 +3,8 @@
 #include "cinder/gl/gl.h"
 
 #include "device/Device.hpp"
-
 #include "scene/Scene.hpp"
 #include "scene/SceneManager.hpp"
-
 #include "resource/Resource.hpp"
 
 using namespace ci;
@@ -37,11 +35,10 @@ void DowaProjectApp::setup() {
 #endif
 
   Device::enable();
-  //Comment Out here if Loading scene is implemented
-  //dowa::ResourceManager::enable();
-  //dowa::ResourceManager::createTextures();
+  AudioManager::enable();
+  TextureManager::enable();
   SceneManager::enable();
-  SceneManager::create(SceneType::CinderellaLoad);
+  SceneManager::create(SceneType::Test);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
