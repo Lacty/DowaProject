@@ -5,13 +5,13 @@
 
 #include "cinder/gl/Texture.h"
 
-class Bridge : public Object
+class LampPost : public Object
 {
-  ci::gl::Texture mBridge;
+  ci::gl::Texture mLampPost;
   
 public:
   
-  Bridge(const ci::Vec3f&, const ci::Vec3f&);
+  LampPost(const ci::Vec3f&, const ci::Vec3f&);
   
   void setup();
   void update();

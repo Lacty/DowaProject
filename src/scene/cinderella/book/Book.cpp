@@ -13,7 +13,7 @@ Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::str
   mRotate = ci::Vec3f(ci::Vec3f::zero());
   mBookName = mBookNamef;
   
-  mGravityPower = 0.01f;
+  mGravityPower = 0.06f;
   mGravityPower2 = 0.08f;
   mAcceleration = 0.f;
   

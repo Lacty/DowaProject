@@ -5,13 +5,13 @@
 
 #include "cinder/gl/Texture.h"
 
-class Bridge : public Object
+class Shop : public Object
 {
-  ci::gl::Texture mBridge;
+  ci::gl::Texture mShop;
   
 public:
   
-  Bridge(const ci::Vec3f&, const ci::Vec3f&);
+  Shop(const ci::Vec3f&, const ci::Vec3f&);
   
   void setup();
   void update();

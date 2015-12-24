@@ -10,7 +10,7 @@ private:
 public:
   TitleLoad();
   ~TitleLoad();
-
+  
   void update();
   void draw();
 };

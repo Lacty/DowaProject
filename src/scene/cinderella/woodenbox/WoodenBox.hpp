@@ -5,13 +5,13 @@
 
 #include "cinder/gl/Texture.h"
 
-class Bridge : public Object
+class WoodenBox : public Object
 {
-  ci::gl::Texture mBridge;
+  ci::gl::Texture mWoodenBox;
   
 public:
   
-  Bridge(const ci::Vec3f&, const ci::Vec3f&);
+  WoodenBox(const ci::Vec3f&, const ci::Vec3f&);
   
   void setup();
   void update();
