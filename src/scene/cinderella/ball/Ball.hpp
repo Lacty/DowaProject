@@ -6,13 +6,15 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
 
-class Ball : public Object
-{
+
+class Ball : public Object {
 private:
   ci::Vec3f mAcc;
   ci::Vec3f mRot;
   ci::Quatf mQua;
-  float speedRate;
+  float mSpeedRate;
+  
+  float mStageLeft;
   
   ci::gl::Texture mSphereBlue;
   
@@ -27,4 +29,7 @@ public:
   void draw();
   
   void onCollisionUpdate(const std::shared_ptr<Object>& compare);
+  
+  void setStageLeft(float left);
+  bool isOutOfStage();
 };

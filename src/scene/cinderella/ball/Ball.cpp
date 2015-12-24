@@ -11,7 +11,7 @@
 Ball::Ball(const ci::Vec3f& pos, const ci::Vec3f& size, float speedRate) :
 mAcc(ci::Vec3f::zero()),
 mRot(ci::Vec3f::zero()),
-speedRate(speedRate)
+mSpeedRate(speedRate)
 {
   mPos = pos;
   mSize = size;
@@ -33,8 +33,8 @@ void Ball::update()
   
   if (dowa::Device::isDataAvailable())
   {
-    mAcc.x += mRot.y * speedRate;
-    mAcc.y += mRot.x * speedRate;
+    mAcc.x += mRot.y * mSpeedRate;
+    mAcc.y += mRot.x * mSpeedRate;
     
     // ここの部分を変えれば座標系が変わっても動く
     // たぶんカメラをつけたら座標系がずれるので
@@ -80,4 +80,12 @@ void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     
     std::cout << compare -> getName() << std::endl;
   }
+}
+
+void Ball::setStageLeft(float left) {
+  mStageLeft = left;
+}
+
+bool Ball::isOutOfStage() {
+  return mPos.x < mStageLeft;
 }

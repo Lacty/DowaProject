@@ -61,6 +61,9 @@ void Camera::bound() {
   ci::Vec3f bottomRight;
   mCamera.getFarClipCoordinates(&topLeft, &topRight, &bottomLeft, &bottomRight);
   
+  // 画面の左はじの座標を取得
+  mViewLeft = topLeft.x;
+  
   // 描画範囲がステージ外に出ないようにする
   if (topLeft.x < TopLeft.x) {
     float offset = TopLeft.x - topLeft.x;
@@ -77,6 +80,10 @@ void Camera::bound() {
     mCamera.setEyePoint(mPos);
     return;
   }
+}
+
+float Camera::getLeftPosOfView() {
+  return mViewLeft;
 }
 
 void Camera::update() {
