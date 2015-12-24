@@ -62,6 +62,10 @@ enum {
   CWindowOpen,
   CWoodenBox,
   
+  // 追加
+  CWitch1,
+  CWitch2,
+  
   //          _______          //
   // -------- |Audio| -------- //
   //          ¯¯¯¯¯¯¯          //
@@ -142,6 +146,10 @@ static std::string getPath(int key) {
     { CWindow3,                 "object/cinderella/Window3" + tex_ext },
     { CWindowOpen,              "object/cinderella/WindowOpen" + tex_ext },
     { CWoodenBox,               "object/cinderella/WoodenBox" + tex_ext },
+    
+    // 魔女追加
+    { CWitch1,                  "character/witch/1" + tex_ext },
+    { CWitch2,                  "character/witch/2" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //

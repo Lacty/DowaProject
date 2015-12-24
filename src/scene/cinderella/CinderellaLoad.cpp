@@ -61,6 +61,10 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CWindowOpen);
   TextureManager::add(ResKey::CWoodenBox);
 
+  // 魔女追加
+  TextureManager::add(ResKey::CWitch1);
+  TextureManager::add(ResKey::CWitch2);
+  
   // Sound
   AudioManager::add(ResKey::CHitSE);
   AudioManager::add(ResKey::CGameOverSE);
