@@ -17,6 +17,9 @@ private:
   ci::Vec3f TopRight;
   
   float mViewLeft;
+  float mViewRight;
+  float mViewTop;
+  float mViewBottom;
 
   std::shared_ptr<Object> mForcusObj;
   
@@ -38,7 +41,10 @@ public:
   
   void update();
   
-  float getLeftPosOfView();
+  float getViewLeft();
+  float getViewRight();
+  float getViewTop();
+  float getViewBottom();
 };
 
 }

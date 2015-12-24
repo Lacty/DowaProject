@@ -14,7 +14,12 @@ private:
   ci::Quatf mQua;
   float mSpeedRate;
   
-  float mStageLeft;
+  float mViewLeft;
+  float mViewRight;
+  float mViewTop;
+  float mViewBottom;
+  
+  void bound();
   
   ci::gl::Texture mSphereBlue;
   
@@ -30,6 +35,6 @@ public:
   
   void onCollisionUpdate(const std::shared_ptr<Object>& compare);
   
-  void setStageLeft(float left);
+  void setViewSize(float left, float right, float top, float bottom);
   bool isOutOfStage();
 };

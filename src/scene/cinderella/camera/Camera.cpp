@@ -63,6 +63,9 @@ void Camera::bound() {
   
   // 画面の左はじの座標を取得
   mViewLeft = topLeft.x;
+  mViewRight = topRight.x;
+  mViewTop = topLeft.y;
+  mViewBottom = bottomLeft.y;
   
   // 描画範囲がステージ外に出ないようにする
   if (topLeft.x < TopLeft.x) {
@@ -82,8 +85,20 @@ void Camera::bound() {
   }
 }
 
-float Camera::getLeftPosOfView() {
+float Camera::getViewLeft() {
   return mViewLeft;
+}
+
+float Camera::getViewRight() {
+  return mViewRight;
+}
+
+float Camera::getViewTop() {
+  return mViewTop;
+}
+
+float Camera::getViewBottom() {
+  return mViewBottom;
 }
 
 void Camera::update() {

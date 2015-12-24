@@ -36,17 +36,11 @@ void Ball::update()
     mAcc.x += mRot.y * mSpeedRate;
     mAcc.y += mRot.x * mSpeedRate;
     
-    // ここの部分を変えれば座標系が変わっても動く
-    // たぶんカメラをつけたら座標系がずれるので
-    // yを逆にすれば動くとおもわれ
-    // もしx方向に傾けたのにy方向に動くとしたら
-     mPos.x -= mAcc.y;
-     mPos.y -= mAcc.x;
-    // そこからさらにxのプラス方向に傾けたのにマイナス方向に移動した場合は
-    // mPos.x -= としてあげれば動くとおもわれ
-//    mPos.x += mAcc.x;
-//    mPos.y += mAcc.y;
+    mPos.x -= mAcc.y;
+    mPos.y -= mAcc.x;
   }
+  
+  bound();
 }
 
 void Ball::draw()
@@ -82,10 +76,28 @@ void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   }
 }
 
-void Ball::setStageLeft(float left) {
-  mStageLeft = left;
+
+void Ball::bound() {
+  // y軸判定
+  if (mPos.y + mSize.y * 0.5f > mViewTop) {
+    mPos.y = mViewTop - mSize.y * 0.5f;
+  }
+  if (mPos.y - mSize.y * 0.5f < mViewBottom) {
+    mPos.y = mViewBottom + mSize.y * 0.5f;
+  }
+  // x軸判定
+  if (mPos.x + mSize.x * 0.5f > mViewRight) {
+    mPos.x = mViewRight - mSize.x * 0.5f;
+  }
+}
+
+void Ball::setViewSize(float left, float right, float top, float bottom) {
+  mViewLeft = left;
+  mViewRight = right;
+  mViewTop = top;
+  mViewBottom = bottom;
 }
 
 bool Ball::isOutOfStage() {
-  return mPos.x < mStageLeft;
+  return mPos.x < mViewLeft;
 }
