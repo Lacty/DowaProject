@@ -46,8 +46,8 @@ enum {
   CCinderellaTown1,
   CCinderellaTown2,
   CCinderellaTown3,
-  
-  // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+
+  // hiramasa
   CBridgeRiver,
   CHydrant,
   CLampPost,
@@ -61,8 +61,6 @@ enum {
   CWindow3,
   CWindowOpen,
   CWoodenBox,
-  
-  // 追加
   CWitch1,
   CWitch2,
   CGrayCube,
