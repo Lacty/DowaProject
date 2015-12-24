@@ -25,10 +25,11 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
 void Cinderella::setup() {}
 void Cinderella::update()
 {
-//  mPos.x += 0.8f; // 速度 0.8秒で32秒
+  mPos.x += 0.8f; // 速度 0.8秒で32秒
   
   mAcceleration += mGravityPower;
   mPos.y += mAcceleration;
+
 }
 
 void Cinderella::draw()

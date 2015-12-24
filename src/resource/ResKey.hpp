@@ -46,8 +46,8 @@ enum {
   CCinderellaTown1,
   CCinderellaTown2,
   CCinderellaTown3,
-  
-  // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+
+  // hiramasa
   CBridgeRiver,
   CHydrant,
   CLampPost,
@@ -61,6 +61,9 @@ enum {
   CWindow3,
   CWindowOpen,
   CWoodenBox,
+  CWitch1,
+  CWitch2,
+  CGrayCube,
   
   //          _______          //
   // -------- |Audio| -------- //
@@ -116,10 +119,10 @@ static std::string getPath(int key) {
     { CSphereBlue,              "background/title/SphereBlue" + tex_ext },
     { CSphereGreen,             "background/title/SphereGreen" + tex_ext },
     { CSphereRed,               "background/title/SphereRed" + tex_ext },
-    { CHandRail,                "background/cinderellahouse/HandRail" + tex_ext },
-    { CCinderellaHouse1,        "background/cinderellahouse/1" + tex_ext },
-    { CCinderellaHouse2,        "background/cinderellahouse/2" + tex_ext },
-    { CCinderellaHouse3,        "background/cinderellahouse/3" + tex_ext },
+    { CHandRail,                "background/house/HandRail" + tex_ext },
+    { CCinderellaHouse1,        "background/house/1" + tex_ext },
+    { CCinderellaHouse2,        "background/house/2" + tex_ext },
+    { CCinderellaHouse3,        "background/house/3" + tex_ext },
     { CCinderellaForest1,       "background/forest/1" + tex_ext },
     { CCinderellaForest2,       "background/forest/2" + tex_ext },
     { CCinderellaForest3,       "background/forest/3" + tex_ext },
@@ -128,7 +131,7 @@ static std::string getPath(int key) {
     { CCinderellaTown2,         "background/town/2" + tex_ext },
     { CCinderellaTown3,         "background/town/3" + tex_ext },
     
-    // 使わない画像読み込むかもしれないので、後々しっかり整理すること
+    // hiramasa
     { CBridgeRiver,             "object/cinderella/BridgeRiver" + tex_ext },
     { CHydrant,                 "object/cinderella/Hydrant" + tex_ext },
     { CLampPost,                "object/cinderella/LampPost" + tex_ext },
@@ -142,6 +145,9 @@ static std::string getPath(int key) {
     { CWindow3,                 "object/cinderella/Window3" + tex_ext },
     { CWindowOpen,              "object/cinderella/WindowOpen" + tex_ext },
     { CWoodenBox,               "object/cinderella/WoodenBox" + tex_ext },
+    { CWitch1,                  "character/witch/1" + tex_ext },
+    { CWitch2,                  "character/witch/2" + tex_ext },
+    { CGrayCube,                "background/GrayCube" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //

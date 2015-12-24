@@ -1,42 +1,38 @@
 
-#include "Bridge.hpp"
+#include "Witch.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
+Witch::Witch(const ci::Vec3f& WitchPos, const ci::Vec3f& WitchSize)
 {
-  mPos = BridgePos;
-  mSize = BridgeSize;
+  mPos = WitchPos;
+  mSize = WitchSize;
   
-  mBridge = TextureManager::find(ResKey::CBridgeRiver);
+  mWitch = TextureManager::find(ResKey::CApple);
   
 }
 
-void Bridge::setup() {}
+void Witch::setup() {}
 
-void Bridge::update() {}
+void Witch::update() {}
 
-void Bridge::draw()
+void Witch::draw()
 {
-  ci::gl::enable(GL_CULL_FACE);
-  
   ci::gl::enable(GL_TEXTURE_2D);
   ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
   
-  mBridge.bind();
+  mWitch.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBridge.unbind();
+  mWitch.unbind();
   
   ci::gl::popModelView();
   
   ci::gl::disableAlphaBlending();
   ci::gl::disable(GL_TEXTURE_2D);
-  
-  ci::gl::disable(GL_CULL_FACE);
   
 }

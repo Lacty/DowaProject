@@ -1,23 +1,23 @@
 
-#include "Bridge.hpp"
+#include "GrayCube.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
+GrayCube::GrayCube(const ci::Vec3f& GrayCubePos, const ci::Vec3f& GrayCubeSize)
 {
-  mPos = BridgePos;
-  mSize = BridgeSize;
+  mPos = GrayCubePos;
+  mSize = GrayCubeSize;
   
-  mBridge = TextureManager::find(ResKey::CBridgeRiver);
+  mGrayCube = TextureManager::find(ResKey::CGrayCube);
   
 }
 
-void Bridge::setup() {}
+void GrayCube::setup() {}
 
-void Bridge::update() {}
+void GrayCube::update() {}
 
-void Bridge::draw()
+void GrayCube::draw()
 {
   ci::gl::enable(GL_CULL_FACE);
   
@@ -26,11 +26,11 @@ void Bridge::draw()
   
   ci::gl::pushModelView();
   
-  mBridge.bind();
+  mGrayCube.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBridge.unbind();
+  mGrayCube.unbind();
   
   ci::gl::popModelView();
   

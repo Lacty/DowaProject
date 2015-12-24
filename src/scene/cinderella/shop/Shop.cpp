@@ -1,23 +1,23 @@
 
-#include "Bridge.hpp"
+#include "Shop.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
+Shop::Shop(const ci::Vec3f& ShopPos, const ci::Vec3f& ShopSize)
 {
-  mPos = BridgePos;
-  mSize = BridgeSize;
+  mPos = ShopPos;
+  mSize = ShopSize;
   
-  mBridge = TextureManager::find(ResKey::CBridgeRiver);
+  mShop = TextureManager::find(ResKey::CShop);
   
 }
 
-void Bridge::setup() {}
+void Shop::setup() {}
 
-void Bridge::update() {}
+void Shop::update() {}
 
-void Bridge::draw()
+void Shop::draw()
 {
   ci::gl::enable(GL_CULL_FACE);
   
@@ -26,11 +26,11 @@ void Bridge::draw()
   
   ci::gl::pushModelView();
   
-  mBridge.bind();
+  mShop.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBridge.unbind();
+  mShop.unbind();
   
   ci::gl::popModelView();
   
