@@ -1,13 +1,12 @@
 
 #include "TitleLoad.hpp"
-#include "../../resource/ResourceManager.hpp"
+#include "../../object/Task.hpp"
+#include "../../resource/Resource.hpp"
 #include "../SceneManager.hpp"
 
 
 
-TitleLoad::TitleLoad() :
-//mLoad(&TitleLoad::load, this),
-isFin(false) {
+TitleLoad::TitleLoad() {
   std::cout << "start title load" << std::endl;
 }
 
@@ -17,38 +16,30 @@ TitleLoad::~TitleLoad() {
 
 
 void TitleLoad::load() {
-  std::lock_guard<std::mutex> lock(mtx);
-
-  std::cout << ci::app::getWindowHeight() << std::endl;
-  
   // Texture
-  dowa::ResourceManager::texture().insert("background/title/TitleBack.png",         TextureKey::TitleBack);
-  dowa::ResourceManager::texture().insert("background/title/FeatherBookResize.png", TextureKey::FeatherBook);
-  dowa::ResourceManager::texture().insert("background/title/Logo.png",              TextureKey::Logo);
-  dowa::ResourceManager::texture().insert("background/title/TapToStartEng.png",     TextureKey::TapToStartEng);
-  dowa::ResourceManager::texture().insert("background/title/Trace.png",             TextureKey::Trace);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterTa.png",      TextureKey::LetterTa);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterMa.png",      TextureKey::LetterMa);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterKo.png",      TextureKey::LetterKo);
-  dowa::ResourceManager::texture().insert("background/title/KanaLetterRo.png",      TextureKey::LetterRo);
-  dowa::ResourceManager::texture().insert("background/title/SphereBlue.png",        TextureKey::SphereBlue);
-  dowa::ResourceManager::texture().insert("background/title/SphereGreen.png",       TextureKey::SphereGreen);
-  dowa::ResourceManager::texture().insert("background/title/SphereRed.png",         TextureKey::SphereRed);
+  TextureManager::add(ResKey::TBack);
+  TextureManager::add(ResKey::TFeatherBook);
+  TextureManager::add(ResKey::TLogo);
+  TextureManager::add(ResKey::TTapToStartEng);
+  TextureManager::add(ResKey::TTrance);
+  TextureManager::add(ResKey::TTa);
+  TextureManager::add(ResKey::TMa);
+  TextureManager::add(ResKey::TKo);
+  TextureManager::add(ResKey::TRo);
+  TextureManager::add(ResKey::TSphereBlue);
+  TextureManager::add(ResKey::TSphereGreen);
+  TextureManager::add(ResKey::TSphereRed);
   
   // Sound
-  dowa::ResourceManager::audio().insert("sound/bgm/Menu.m4a", AudioKey::Menu);
-  dowa::ResourceManager::audio().insert("sound/se/GameStart.m4a", AudioKey::GameStartSE);
+  AudioManager::add(ResKey::TMenu);
+  AudioManager::add(ResKey::TGameStartSE);
   
-  isFin = true;
+  std::cout << "finish load" << std::endl;
 }
 
 void TitleLoad::update() {
   load();
-  if (isFin) {
-    std::cout << "finish load" << std::endl;
-    isFin = false;
-    SceneManager::create(SceneType::Title);
-  }
+  SceneManager::create(SceneType::Title);
 }
 
 void TitleLoad::draw() {}

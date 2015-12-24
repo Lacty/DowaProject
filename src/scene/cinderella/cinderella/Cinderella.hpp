@@ -11,7 +11,7 @@ private:
   
   int mCount; // アニメーション
   float mGravityPower; // 重力パワー
-  float mAccelerationY; // Yの加速度
+  float mAcceleration; // 加速度
   
   std::string mFloorStr;
 

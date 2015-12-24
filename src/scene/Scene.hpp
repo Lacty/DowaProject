@@ -16,8 +16,6 @@ enum class FadeType {
 
 enum class SceneType {
   Title,
-  Select,
-  GameMain,
   Result,
   
   Test,

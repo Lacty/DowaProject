@@ -1,14 +1,19 @@
 
 #include "Piano.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
 {
+  mIsPlay = false;
+  mVolume = 0.0f;
+  mFadeSpeed = 0.05f;
+  
   mPos = mPianoPos;
   mSize = mPianoSize;
   
-  mPiano = dowa::ResourceManager::texture().get(CinderellaTextureKey::Piano);
+  mPiano = TextureManager::find(ResKey::CPiano);
   
   setColliderType(Collider::Rect);
 }
@@ -38,8 +43,6 @@ void Piano::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
   if(compare -> getName() == "Ball")
   {
-    dowa::ResourceManager::audio().get(CinderellaAudioKey::House).bgm->disable();
-    dowa::ResourceManager::audio().get(CinderellaAudioKey::HousePiano).gain->setValue(1.0f);
-    dowa::ResourceManager::audio().get(CinderellaAudioKey::HousePiano).bgm->enable();
+    mIsPlay = true;
   }
 }

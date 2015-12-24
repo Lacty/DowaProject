@@ -1,14 +1,15 @@
 
 #include "HandRail.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 HandRail::HandRail(const ci::Vec3f& mHandRailPos, const ci::Vec3f& mHandRailSize)
 {
   mPos = mHandRailPos;
   mSize = mHandRailSize;
   
-  mHandRail = dowa::ResourceManager::texture().get(CinderellaTextureKey::HandRail);
+  mHandRail = TextureManager::find(ResKey::CHandRail);
   
   setColliderType(Collider::Rect);
 }
@@ -35,5 +36,3 @@ void HandRail::draw()
   ci::gl::popModelView();
   ci::gl::disable(GL_CULL_FACE);
 }
-
-void HandRail::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}

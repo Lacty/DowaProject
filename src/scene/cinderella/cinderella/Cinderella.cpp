@@ -1,20 +1,21 @@
 
 #include "Cinderella.hpp"
 
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
+
 
 Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinderellaSize)
 {
-  mFloorStr = "Floor"; // 床名前判定
+  mFloorStr = "Floor";
   
-  mCount = 0; // アニメーション
-  mGravityPower -= 0.2f; // 重力パワー
+  mCount = 0;
+  mGravityPower = -0.2f;
+  mAcceleration = 0.f;
   
-  mCinderellaStatic = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterStatic);
-  mCinderellaLeft = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterLeft);
-  mCinderellaRight = dowa::ResourceManager::texture().get(CinderellaTextureKey::CharacterRight);;
+  mCinderellaStatic = TextureManager::find(ResKey::CCharacterStatic);
+  mCinderellaLeft = TextureManager::find(ResKey::CCharacterLeft);
+  mCinderellaRight = TextureManager::find(ResKey::CCharacterRight);
   
-  // コンストラクタでシンデレラの座標初期化
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
   
@@ -24,11 +25,10 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
 void Cinderella::setup() {}
 void Cinderella::update()
 {
-  mPos.x++; // 速度 0.8秒で32秒
+//  mPos.x += 0.8f; // 速度 0.8秒で32秒
   
-  // 重力計算
-  mAccelerationY += mGravityPower;
-  mPos.y += mAccelerationY;
+  mAcceleration += mGravityPower;
+  mPos.y += mAcceleration;
 }
 
 void Cinderella::draw()
@@ -76,11 +76,17 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   
   std::string name;
   name = compare -> getName();
-  name.resize(5); // 配列の要素リサイズ
+  name.resize(5);
   
   if(name == mFloorStr)
   {
-    mAccelerationY = 0.0f;
+    mAcceleration = 0.0f;
     mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
+  }
+  
+  if(compare -> getName() == "Stairs")
+  {
+    mAcceleration = 0.f;
+    mPos.y -= 0.5f;
   }
 }

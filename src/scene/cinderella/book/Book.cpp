@@ -2,8 +2,9 @@
 #include "Book.hpp"
 
 #include "../../../object/Task.hpp"
-#include "../../../resource/ResourceManager.hpp"
+#include "../../../resource/Resource.hpp"
 #include "../../../scene/SceneManager.hpp"
+
 
 Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::string& mBookNamef)
 {
@@ -24,9 +25,9 @@ Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::str
   
   mCinderellaPos = ci::Vec3f(ci::Vec3f::zero());
   
-  mBookPile = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookPile);
-  mBookOpen = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookOpen);
-  mBookSide = dowa::ResourceManager::texture().get(CinderellaTextureKey::BookSide);
+  mBookPile = TextureManager::find(ResKey::CBookPile);
+  mBookOpen = TextureManager::find(ResKey::CBookOpen);
+  mBookSide = TextureManager::find(ResKey::CBookSide);
   
   setColliderType(Collider::Rect);
 }
@@ -36,7 +37,7 @@ void Book::setup() {}
 void Book::update()
 {
   
-  mCinderellaPos = Task::find("Cinderella")->getPos();
+  mCinderellaPos = Task::find("Cinderella") -> getPos();
   
   if(mCinderellaPos.x > 1068 || mFallFlag)
   {
@@ -59,9 +60,9 @@ void Book::draw()
   ci::gl::enable(GL_CULL_FACE);
   ci::gl::enable(GL_TEXTURE_2D);
   
-  if(mBookName == mBookPileName) drawBookPile();
-  if(mBookName == mBookSideName) drawBookSide();
-  if(mBookName == mBookOpenName) drawBookOpen();
+  if(mBookName == mBookPileName) drawBook(mBookPile, ci::Vec3f(180.f, 0.f, 0.f));
+  if(mBookName == mBookSideName) drawBook(mBookSide, ci::Vec3f(ci::Vec3f(mRotate)));
+  if(mBookName == mBookOpenName) drawBook(mBookOpen, ci::Vec3f(180.f, 0.f, 0.f));
   
   ci::gl::disable(GL_CULL_FACE);
   ci::gl::disable(GL_TEXTURE_2D);
@@ -70,31 +71,13 @@ void Book::draw()
   ci::gl::popModelView();
 }
 
-void Book::drawBookPile()
+void Book::drawBook(const ci::gl::Texture& mTexturef, const ci::Vec3f& mRotatef)
 {
-  mBookPile.bind();
+  mTexturef.bind();
   ci::gl::translate(mPos);
-  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
+  ci::gl::rotate(mRotatef);
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBookPile.unbind();
-}
-
-void Book::drawBookOpen()
-{
-  mBookOpen.bind();
-  ci::gl::translate(mPos);
-  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
-  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBookOpen.unbind();
-}
-
-void Book::drawBookSide()
-{
-  mBookSide.bind();
-  ci::gl::translate(mPos);
-  ci::gl::rotate(mRotate);
-  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBookSide.unbind();
+  mTexturef.unbind();
 }
 
 void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)
@@ -103,6 +86,8 @@ void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   
   if(compare -> getName() == "Floor_Floor") mBookName = "BookOpen";
   
-//  if(compare -> getName() == "Cinderella" && mBookName == "BookSide")
-//    SceneManager::create(SceneType::TitleLoad);
+  if(compare -> getName() == "Cinderella" && mBookName == "BookSide")
+  {
+    std::cout << "シンデレラと当たりました" << std::endl;
+  }
 }
