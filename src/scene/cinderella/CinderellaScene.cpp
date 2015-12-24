@@ -40,19 +40,18 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
-  // 画像追加
-  mCinderellaHouse1 = TextureManager::find(ResKey::CCinderellaHouse1);
-  mCinderellaHouse2 = TextureManager::find(ResKey::CCinderellaHouse2);
-  mCinderellaHouse3 = TextureManager::find(ResKey::CCinderellaHouse3);
+  mCinderellaHouse1 = TextureManager::find(ResKey::CHouse1);
+  mCinderellaHouse2 = TextureManager::find(ResKey::CHouse2);
+  mCinderellaHouse3 = TextureManager::find(ResKey::CHouse3);
   
-  mCinderellaForest1 = TextureManager::find(ResKey::CCinderellaForest1);
-  mCinderellaForest2 = TextureManager::find(ResKey::CCinderellaForest2);
-  mCinderellaForest3 = TextureManager::find(ResKey::CCinderellaForest3);
-  mCinderellaForest4 = TextureManager::find(ResKey::CCinderellaForest4);
+  mCinderellaForest1 = TextureManager::find(ResKey::CForest1);
+  mCinderellaForest2 = TextureManager::find(ResKey::CForest2);
+  mCinderellaForest3 = TextureManager::find(ResKey::CForest3);
+  mCinderellaForest4 = TextureManager::find(ResKey::CForest4);
   
-  mCinderellaTown1 = TextureManager::find(ResKey::CCinderellaTown1);
-  mCinderellaTown2 = TextureManager::find(ResKey::CCinderellaTown2);
-  mCinderellaTown3 = TextureManager::find(ResKey::CCinderellaTown3);
+  mCinderellaTown1 = TextureManager::find(ResKey::CTown1);
+  mCinderellaTown2 = TextureManager::find(ResKey::CTown2);
+  mCinderellaTown3 = TextureManager::find(ResKey::CTown3);
   
   
   mCinderellaHouseRect1 = ci::Rectf( 0.f,
