@@ -21,7 +21,16 @@ Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::str
   mBookPileName = "BookPile";
   mBookSideName = "BookSide";
   
+  // findは処理が重いので変数にサウンドを保存
+  mBookDrop = AudioManager::find(ResKey::CBookDrop);
+  mBookHit = AudioManager::find(ResKey::CBookHit);
+  
+  // サウンドの音量を変更
+  mBookDrop.setVolume(1.0f);
+  mBookHit.setVolume(1.0f);
+  
   mFallFlag = false;
+  mDoropAudioFlag = false;
   
   mCinderellaPos = ci::Vec3f(ci::Vec3f::zero());
   
@@ -48,7 +57,15 @@ void Book::update()
     else if (mBookName == mBookSideName) {
       mAcceleration += mGravityPower2;
       mPos.y -= mAcceleration;
+      
+      mDoropAudioFlag = true;
     }
+  }
+  
+  if((int)mPos.y == -156 && mDoropAudioFlag == true)
+  {
+    mBookDrop.play();
+    mDoropAudioFlag = false;
   }
 }
 
@@ -78,11 +95,17 @@ void Book::drawBook(const ci::gl::Texture& mTexturef, const ci::Vec3f& mRotatef)
   ci::gl::rotate(mRotatef);
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   mTexturef.unbind();
+  
+//  std::cout << "BookPos = " <<  mPos << std::endl;
 }
 
 void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-  if(compare -> getName() == "Ball") mFallFlag = true;
+  if(compare -> getName() == "Ball")
+  {
+    mFallFlag = true;
+    mBookHit.play();
+  }
   
   if(compare -> getName() == "Floor_Floor") mBookName = "BookOpen";
   

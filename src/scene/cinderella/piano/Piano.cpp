@@ -1,7 +1,7 @@
 
 #include "Piano.hpp"
 
-#include "../../../resource/Resource.hpp"
+#include "../CinderellaScene.hpp"
 
 
 Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
@@ -13,6 +13,12 @@ Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
   mPos = mPianoPos;
   mSize = mPianoSize;
   
+  // findは処理が重いので変数にサウンドを保存
+  mHosePiano = AudioManager::find(ResKey::CHousePiano);
+  
+  // サウンドの音量を変更
+  mHosePiano.setVolume(1.0f);
+  
   mPiano = TextureManager::find(ResKey::CPiano);
   
   setColliderType(Collider::Rect);
@@ -20,7 +26,13 @@ Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
 
 void Piano::setup(){}
 
-void Piano::update() {}
+void Piano::update()
+{
+  if(mIsPlay == true)
+  {
+    
+  }
+}
 
 void Piano::draw()
 {

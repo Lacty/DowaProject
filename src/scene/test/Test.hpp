@@ -6,7 +6,7 @@
 
 class Test : public Scene {
 private:
-  Audio mHitSE;
+//  Audio mHitSE;
   
 public:
   Test();

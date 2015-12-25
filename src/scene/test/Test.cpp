@@ -18,10 +18,10 @@ Test::Test() {
   AudioManager::add(ResKey::CHitSE);
   
   // findは処理が重いので変数にサウンドを保存
-  mHitSE = AudioManager::find(ResKey::CHitSE);
+//  mHitSE = AudioManager::find(ResKey::CHitSE);
   
   // サウンドの音量を変更
-  mHitSE.setVolume(1.0f);
+//  mHitSE.setVolume(1.0f);
 }
 
 Test::~Test() {
@@ -34,7 +34,7 @@ Test::~Test() {
 void Test::update() {
   // 画面をタップしたら音を鳴らす
   if (dowa::Device::isTouchBegan()) {
-    mHitSE.play();
+//    mHitSE.play();
   }
 }
 

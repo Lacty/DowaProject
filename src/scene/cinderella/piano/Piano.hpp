@@ -2,6 +2,7 @@
 # pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 
@@ -11,6 +12,8 @@ class Piano: public Object
   bool mIsPlay;
   float mVolume;
   float mFadeSpeed;
+  
+  Audio mHosePiano;
   
 public:
   

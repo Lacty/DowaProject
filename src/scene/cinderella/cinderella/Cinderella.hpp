@@ -1,14 +1,12 @@
 
 # pragma once
 
-#include "../../../object/Object.hpp"
-
 #include "cinder/gl/Texture.h"
+
+#include "../../../object/Object.hpp"
 
 class Cinderella : public Object
 {
-private:
-  
   int mCount; // アニメーション
   float mGravityPower; // 重力パワー
   float mAcceleration; // 加速度
@@ -28,4 +26,5 @@ public:
   void draw();
   
   void onCollisionUpdate(const std::shared_ptr<Object>& compare);
+  
 };

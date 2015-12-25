@@ -29,7 +29,6 @@ void Cinderella::update()
   
   mAcceleration += mGravityPower;
   mPos.y += mAcceleration;
-
 }
 
 void Cinderella::draw()

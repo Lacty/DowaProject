@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
@@ -22,6 +23,8 @@ private:
   void bound();
   
   ci::gl::Texture mSphereBlue;
+  
+  Audio mHitSE;
   
 public:
   
