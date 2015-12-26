@@ -4,6 +4,8 @@
 
 
 class T : public Object {
+private:
+
 public:
   T();
   

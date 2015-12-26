@@ -50,8 +50,9 @@ void SceneManager::update() {
 }
 
 void SceneManager::draw() {
+Task::draw();
   get().mScene->draw();
-  Task::draw();
+  
   get().mFadeIn.draw();
   get().mFadeOut.draw();
 }

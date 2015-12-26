@@ -179,7 +179,7 @@ static std::string getPath(int key) {
     { CDance4,        "background/dance/4" + tex_ext },
     
     // Camera
-    { CamHole,        "camera/hole.png" + tex_ext },
+    { CamHole,        "camera/hole" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //
