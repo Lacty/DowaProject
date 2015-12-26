@@ -38,11 +38,7 @@ void DowaProjectApp::setup() {
   AudioManager::enable();
   TextureManager::enable();
   SceneManager::enable();
-<<<<<<< HEAD
-  SceneManager::create(SceneType::Test);
-=======
   SceneManager::create(SceneType::TitleLoad);
->>>>>>> c0ec9fdf4b5c44157d73d230188fe8471f4f7a91
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
