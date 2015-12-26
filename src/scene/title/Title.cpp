@@ -13,6 +13,18 @@ Title::Title()
   std::cout << "start title" << std::endl;
   std::cout << ci::app::getWindowHeight() << std::endl;
   
+  // findは処理が重いので変数にサウンドを保存
+  mMenu = AudioManager::find(ResKey::TMenu);
+  mGameStart = AudioManager::find(ResKey::TGameStartSE);
+  
+  // サウンドの音量を変更
+  mMenu.setVolume(1.0f);
+  mGameStart.setVolume(1.0f);
+  
+  // 再生
+  mMenu.enableLoop();
+  mMenu.play();
+  
   // デバイスのウィンドサイズを取得し、代入
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
@@ -42,7 +54,11 @@ void Title::update()
   
   if(dowa::Device::isTouchBegan())
   {
+    mGameStart.play();
+    
     SceneManager::create(SceneType::CinderellaLoad);
+    
+    mMenu.stop();
   }
   
   mSphereMotion++;

@@ -3,6 +3,9 @@
 
 #include "camera/Camera.hpp"
 #include "cinder/gl/Texture.h"
+#include <memory>
+
+#include "ball/Ball.hpp"
 
 #include "../Scene.hpp"
 #include "../../resource/Resource.hpp"
@@ -10,6 +13,9 @@
 
 class CinderellaScene : public Scene
 {
+  
+  std::shared_ptr<Ball> mBall;
+  
   ci::Rectf mCinderellaHouseRect1; // 1
   
   ci::Rectf mCinderellaHouseRect2_1; // 4
@@ -46,7 +52,12 @@ class CinderellaScene : public Scene
   ci::Vec3f mCameraPos;
   dowa::Camera camera;
   
+  Audio mTown;
+  Audio mCastle;
+  
 public:
+  
+  Audio mHouse;
   
   CinderellaScene();
   ~CinderellaScene();
