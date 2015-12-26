@@ -5,7 +5,6 @@
 
 #include "../../../device/Device.hpp"
 #include "../../../utility/Utility.hpp"
-#include "../../../resource/Resource.hpp"
 
 
 Ball::Ball(const ci::Vec3f& pos, const ci::Vec3f& size, float speedRate) :
@@ -18,6 +17,12 @@ mSpeedRate(speedRate)
   mColor = ci::Color(1.f, 1.f, 1.f);
   
   mSphereBlue = TextureManager::find(ResKey::CSphereBlue);
+    
+  // findは処理が重いので変数にサウンドを保存
+  mHitSE = AudioManager::find(ResKey::CHitSE);
+  
+  // サウンドの音量を変更
+  mHitSE.setVolume(1.0f);
   
   setColliderType(Collider::Rect);
 }
@@ -45,35 +50,33 @@ void Ball::update()
 
 void Ball::draw()
 {
-  
-  ci::gl::pushModelView();
+  ci::gl::enable(GL_TEXTURE_2D);
   cinder::gl::enableAlphaBlending();
   
-  ci::gl::enable(GL_TEXTURE_2D);
-  
   ci::gl::pushModelView();
+  
   mSphereBlue.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f::zero(), mSize);
   mSphereBlue.unbind();
-  ci::gl::popModelView();
   
-  ci::gl::disable(GL_TEXTURE_2D);
+  ci::gl::popModelView();
   
   cinder::gl::disableAlphaBlending();
-  ci::gl::popModelView();
+  ci::gl::disable(GL_TEXTURE_2D);
+  
 }
 
 void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
   if(compare -> getName() != "Cinderella")
   {
+    mHitSE.play();
+    
     mPos.x += mAcc.y * 10;
     mPos.y += mAcc.x * 10;
     
-    // Debug
-    std::cout << compare -> getName() << std::endl;
   }
 }
 

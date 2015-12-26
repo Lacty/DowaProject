@@ -3,6 +3,8 @@
 
 #include "../Scene.hpp"
 
+#include "../../resource/Resource.hpp"
+
 class Title : public Scene
 {
   
@@ -13,6 +15,9 @@ public:
   
   void update();
   void draw();
+  
+  Audio mMenu;
+  Audio mGameStart;
   
 private:
   

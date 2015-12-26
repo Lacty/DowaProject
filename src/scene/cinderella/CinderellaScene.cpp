@@ -40,6 +40,16 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
+  // findは処理が重いので変数にサウンドを保存
+  mHouse = AudioManager::find(ResKey::CHouse);
+  mTown = AudioManager::find(ResKey::CTown);
+  mCastle = AudioManager::find(ResKey::CCastle);
+  
+  // サウンドの音量を変更
+  mHouse.setVolume(0.5f);
+  
+  mHouse.play();
+  
   mCinderellaHouse1 = TextureManager::find(ResKey::CHouse1);
   mCinderellaHouse2 = TextureManager::find(ResKey::CHouse2);
   mCinderellaHouse3 = TextureManager::find(ResKey::CHouse3);
@@ -268,8 +278,10 @@ CinderellaScene::CinderellaScene()
                                                   ci::Vec3f( 40, 50, 0), "Pumpkin1")); // 40, 50
   
   
-  Task::add("Ball", std::make_shared<Ball>(ci::Vec3f( 50, 50.f, 0.f), // 50
-                                           ci::Vec3f( 40.f, 40.f, 0.f), 0.2f));
+  
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50.f, 0.f), // 50
+                                 ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
+  Task::add("Ball", mBall);
   
   
   Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150, 3300
@@ -315,6 +327,12 @@ CinderellaScene::~CinderellaScene()
 void CinderellaScene::update()
 {
   camera.update();
+  
+  mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
+                       camera.getViewTop(), camera.getViewBottom());
+  
+  // ballが左画面外にでたらtrueを返す
+  mBall -> isOutOfStage();
 }
 
 void CinderellaScene::draw()

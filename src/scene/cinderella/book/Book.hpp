@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 
@@ -22,6 +23,10 @@ class Book : public Object
   float mGravityPower, mGravityPower2;
   
   bool mFallFlag;
+  bool mDoropAudioFlag;
+  
+  Audio mBookDrop;
+  Audio mBookHit;
   
   ci::Vec3f mCinderellaPos;
   
