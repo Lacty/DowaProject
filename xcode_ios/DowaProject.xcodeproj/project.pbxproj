@@ -48,8 +48,8 @@
 		AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A261BFB359500345AA5 /* FadeIn.cpp */; };
 		AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A281BFB359500345AA5 /* FadeOut.cpp */; };
 		AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F91C06A43B00D40AE6 /* Utility.cpp */; };
-		AC9D8AAA1C2BFCD5001A7217 /* Rotater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AA81C2BFCD5001A7217 /* Rotater.cpp */; };
 		AC9D8AB21C2C2630001A7217 /* GrayCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AB01C2C2630001A7217 /* GrayCube.cpp */; };
+		AC9D8AB51C2C4927001A7217 /* T.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AB31C2C4927001A7217 /* T.cpp */; };
 		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
 		ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081DB1BF317CD005FB898 /* Test.cpp */; };
 		ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA20F251C087E2B0017DCA9 /* Window.cpp */; };
@@ -147,10 +147,10 @@
 		AC5873DB1C0129DA00D40AE6 /* FadeOut.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FadeOut.hpp; sourceTree = "<group>"; };
 		AC5873F91C06A43B00D40AE6 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		AC5873FA1C06A43B00D40AE6 /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
-		AC9D8AA81C2BFCD5001A7217 /* Rotater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rotater.cpp; sourceTree = "<group>"; };
-		AC9D8AA91C2BFCD5001A7217 /* Rotater.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rotater.hpp; sourceTree = "<group>"; };
 		AC9D8AB01C2C2630001A7217 /* GrayCube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GrayCube.cpp; sourceTree = "<group>"; };
 		AC9D8AB11C2C2630001A7217 /* GrayCube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GrayCube.hpp; sourceTree = "<group>"; };
+		AC9D8AB31C2C4927001A7217 /* T.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = T.cpp; sourceTree = "<group>"; };
+		AC9D8AB41C2C4927001A7217 /* T.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = T.hpp; sourceTree = "<group>"; };
 		ACA081D71BF25720005FB898 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		ACA081D81BF25720005FB898 /* Collision.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 		ACA081DB1BF317CD005FB898 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
@@ -572,8 +572,8 @@
 			children = (
 				ACA081DB1BF317CD005FB898 /* Test.cpp */,
 				ACA081DC1BF317CD005FB898 /* Test.hpp */,
-				AC9D8AA81C2BFCD5001A7217 /* Rotater.cpp */,
-				AC9D8AA91C2BFCD5001A7217 /* Rotater.hpp */,
+				AC9D8AB31C2C4927001A7217 /* T.cpp */,
+				AC9D8AB41C2C4927001A7217 /* T.hpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -760,8 +760,8 @@
 				ACF91EEF1BE8069000AF6824 /* Result.cpp in Sources */,
 				14A06D741C2AD21D005CF8B8 /* Plate.cpp in Sources */,
 				142C54C21C2A71D600D80B94 /* Townwindow.cpp in Sources */,
+				AC9D8AB51C2C4927001A7217 /* T.cpp in Sources */,
 				142C54BA1C2A71D600D80B94 /* HandRail.cpp in Sources */,
-				AC9D8AAA1C2BFCD5001A7217 /* Rotater.cpp in Sources */,
 				1476D40E1C2911ED00F5CC31 /* ResKey.cpp in Sources */,
 				142C54BD1C2A71D600D80B94 /* Piano.cpp in Sources */,
 				ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */,

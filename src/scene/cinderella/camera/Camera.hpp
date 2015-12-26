@@ -45,6 +45,8 @@ public:
   float getViewRight();
   float getViewTop();
   float getViewBottom();
+  
+  void setGameOver();
 };
 
 }
