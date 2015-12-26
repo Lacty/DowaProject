@@ -110,12 +110,13 @@ void Camera::setGameOver() {
   mIsGameOver = true;
   mScale = 18.0f;
   mAngle = 0.0f;
+  float time = 2.0f;
   ci::app::timeline().apply(&mScale,
                             3.0f,
-                            3.0f, ci::easeOutSine);
+                            time, ci::easeOutSine);
   ci::app::timeline().apply(&mAngle,
                             mOffset,
-                            3.0f, ci::easeOutSine);
+                            time, ci::easeOutSine);
 }
 
 void Camera::update() {

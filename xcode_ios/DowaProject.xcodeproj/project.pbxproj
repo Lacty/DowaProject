@@ -50,6 +50,8 @@
 		AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F91C06A43B00D40AE6 /* Utility.cpp */; };
 		AC9D8AB21C2C2630001A7217 /* GrayCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AB01C2C2630001A7217 /* GrayCube.cpp */; };
 		AC9D8AB51C2C4927001A7217 /* T.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AB31C2C4927001A7217 /* T.cpp */; };
+		AC9D8AB91C2E8485001A7217 /* BackGround.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8AB71C2E8485001A7217 /* BackGround.cpp */; };
+		AC9D8ABC1C2E9E9B001A7217 /* CrossFade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8ABA1C2E9E9B001A7217 /* CrossFade.cpp */; };
 		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
 		ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081DB1BF317CD005FB898 /* Test.cpp */; };
 		ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA20F251C087E2B0017DCA9 /* Window.cpp */; };
@@ -151,6 +153,10 @@
 		AC9D8AB11C2C2630001A7217 /* GrayCube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GrayCube.hpp; sourceTree = "<group>"; };
 		AC9D8AB31C2C4927001A7217 /* T.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = T.cpp; sourceTree = "<group>"; };
 		AC9D8AB41C2C4927001A7217 /* T.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = T.hpp; sourceTree = "<group>"; };
+		AC9D8AB71C2E8485001A7217 /* BackGround.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackGround.cpp; sourceTree = "<group>"; };
+		AC9D8AB81C2E8485001A7217 /* BackGround.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BackGround.hpp; sourceTree = "<group>"; };
+		AC9D8ABA1C2E9E9B001A7217 /* CrossFade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrossFade.cpp; sourceTree = "<group>"; };
+		AC9D8ABB1C2E9E9B001A7217 /* CrossFade.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CrossFade.hpp; sourceTree = "<group>"; };
 		ACA081D71BF25720005FB898 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		ACA081D81BF25720005FB898 /* Collision.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 		ACA081DB1BF317CD005FB898 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
@@ -467,6 +473,8 @@
 				1476D4091C2911ED00F5CC31 /* Resource.hpp */,
 				1476D40A1C2911ED00F5CC31 /* TextureManager.cpp */,
 				1476D40B1C2911ED00F5CC31 /* TextureManager.hpp */,
+				AC9D8ABA1C2E9E9B001A7217 /* CrossFade.cpp */,
+				AC9D8ABB1C2E9E9B001A7217 /* CrossFade.hpp */,
 			);
 			name = resource;
 			path = ../src/resource;
@@ -557,6 +565,15 @@
 			path = graycube;
 			sourceTree = "<group>";
 		};
+		AC9D8AB61C2E8469001A7217 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8AB71C2E8485001A7217 /* BackGround.cpp */,
+				AC9D8AB81C2E8485001A7217 /* BackGround.hpp */,
+			);
+			path = background;
+			sourceTree = "<group>";
+		};
 		ACA081D61BF2570E005FB898 /* collision */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +608,7 @@
 		ACAE91D41C16E4C70008B83E /* cinderella */ = {
 			isa = PBXGroup;
 			children = (
+				AC9D8AB61C2E8469001A7217 /* background */,
 				AC9D8AAF1C2C2630001A7217 /* graycube */,
 				ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */,
 				ACAE91DD1C1805400008B83E /* CinderellaScene.hpp */,
@@ -761,6 +779,7 @@
 				14A06D741C2AD21D005CF8B8 /* Plate.cpp in Sources */,
 				142C54C21C2A71D600D80B94 /* Townwindow.cpp in Sources */,
 				AC9D8AB51C2C4927001A7217 /* T.cpp in Sources */,
+				AC9D8ABC1C2E9E9B001A7217 /* CrossFade.cpp in Sources */,
 				142C54BA1C2A71D600D80B94 /* HandRail.cpp in Sources */,
 				1476D40E1C2911ED00F5CC31 /* ResKey.cpp in Sources */,
 				142C54BD1C2A71D600D80B94 /* Piano.cpp in Sources */,
@@ -770,6 +789,7 @@
 				ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */,
 				148FF1221C2ADEFA00DCBDC9 /* WoodenBox.cpp in Sources */,
 				148FF11F1C2ADACE00DCBDC9 /* Shop.cpp in Sources */,
+				AC9D8AB91C2E8485001A7217 /* BackGround.cpp in Sources */,
 				142C54B81C2A71D600D80B94 /* Cinderella.cpp in Sources */,
 				AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */,
 				142C54B31C2A71D600D80B94 /* Bear.cpp in Sources */,

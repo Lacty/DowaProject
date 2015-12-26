@@ -13,7 +13,7 @@ class Piano: public Object
   float mVolume;
   float mFadeSpeed;
   
-  Audio mHosePiano;
+  Audio mHousePiano;
   
 public:
   
