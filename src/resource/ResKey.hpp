@@ -75,6 +75,9 @@ enum {
   CDance3,
   CDance4,
   
+  // Camera
+  CamHole,
+  
   //          _______          //
   // -------- |Audio| -------- //
   //          ¯¯¯¯¯¯¯          //
@@ -174,6 +177,9 @@ static std::string getPath(int key) {
     { CDance2,        "background/dance/2" + tex_ext },
     { CDance3,        "background/dance/3" + tex_ext },
     { CDance4,        "background/dance/4" + tex_ext },
+    
+    // Camera
+    { CamHole,        "camera/hole.png" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //
