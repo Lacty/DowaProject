@@ -34,7 +34,8 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CSphereRed);
   
   // hiramasa
-  TextureManager::add(ResKey::CBridgeRiver);
+  TextureManager::add(ResKey::CBridge);
+  TextureManager::add(ResKey::CRiver);
   TextureManager::add(ResKey::CHydrant);
   TextureManager::add(ResKey::CLampPost);
   TextureManager::add(ResKey::CPlate);

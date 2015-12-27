@@ -38,7 +38,7 @@ void DowaProjectApp::setup() {
   AudioManager::enable();
   TextureManager::enable();
   SceneManager::enable();
-  SceneManager::create(SceneType::TitleLoad);
+  SceneManager::create(SceneType::CinderellaLoad);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {

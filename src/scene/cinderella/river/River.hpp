@@ -1,14 +1,20 @@
-//
-//  River.hpp
-//  DowaProject
-//
-//  Created by nanashi on 2015/12/27.
-//
-//
 
-#ifndef River_hpp
-#define River_hpp
+#pragma once
 
-#include <stdio.h>
+#include "../../../object/Object.hpp"
 
-#endif /* River_hpp */
+#include "cinder/gl/Texture.h"
+
+class River : public Object
+{
+  ci::gl::Texture mRiver;
+  
+public:
+  
+  River(const ci::Vec3f&, const ci::Vec3f&);
+  
+  void setup();
+  void update();
+  void draw();
+  
+};

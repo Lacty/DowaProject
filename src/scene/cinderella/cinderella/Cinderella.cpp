@@ -15,6 +15,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   
   mBookHitFlag = false;
   mSetFlag = true;
+  mRiverHitFlag = false;
   
   mOffSet = ci::Vec3f( 0, 0, 0);
   
@@ -23,6 +24,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mCinderellaRight = TextureManager::find(ResKey::CCharacterRight);
   
   mCinderellaBookHit = TextureManager::find(ResKey::CCharacterBookHit);
+  mCinderellaSubmerge = TextureManager::find(ResKey::CcharacterSubmerge);
   
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
@@ -34,7 +36,9 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
 void Cinderella::setup() {}
 void Cinderella::update()
 {
-  if(!mBookHitFlag) mPos.x += 0.7f; // 速度 0.7fで30秒
+  if(mBookHitFlag == true) {}
+  else if(mRiverHitFlag == true) {}
+  else mPos.x += 0.7f; // 速度 0.7fで30秒
   
   if(!mBookHitFlag) mAcceleration += mGravityPower;
   if(!mBookHitFlag) mPos.y += mAcceleration;
@@ -49,7 +53,7 @@ void Cinderella::update()
     mRotate = mRotate = ci::Vec3f( 180.f, 0.f, -45.f);
     mOffSet = ci::Vec3f(0.f, -25.f, 0.f);
     mAcceleration = 0.f;
-    mGravityPower = 0.05f;
+    mGravityPower = 0.03f;
     mSetFlag = false;
   }
   
@@ -76,6 +80,7 @@ void Cinderella::draw()
   if(mCount <= 75 && !mBookHitFlag) drawCinderella(mCinderellaLeft, mOffSet);
   if(mCount >= 75 && mCount <= 150 && !mBookHitFlag) drawCinderella(mCinderellaRight, mOffSet);
   if(mBookHitFlag) drawCinderella(mCinderellaBookHit, mOffSet);
+  if(mRiverHitFlag) drawCinderella(mCinderellaSubmerge, mOffSet);
   if(mCount == 150) mCount = 0;
   
   if(!mBookHitFlag) mCount++;
@@ -130,4 +135,12 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   {
     mBookHitFlag = true;
   }
+  
+  if(compare -> getName() == "GameOver")
+  {
+    mRiverHitFlag = true;
+    mAcceleration = 0.f;
+    mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
+  }
+  
 }

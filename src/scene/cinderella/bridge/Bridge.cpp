@@ -9,7 +9,7 @@ Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
   mPos = BridgePos;
   mSize = BridgeSize;
   
-  mBridge = TextureManager::find(ResKey::CBridgeRiver);
+  mBridge = TextureManager::find(ResKey::CBridge);
   
 }
 

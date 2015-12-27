@@ -39,7 +39,8 @@ enum {
   CSphereRed,
 
   // hiramasa
-  CBridgeRiver,
+  CBridge,
+  CRiver,
   CHydrant,
   CLampPost,
   CPlate,
@@ -144,7 +145,8 @@ static std::string getPath(int key) {
     { CStatisfiedBrear,  "object/forest/SatisfiedBear" + tex_ext },
     
     // Town
-    { CBridgeRiver,   "object/town/BridgeRiver" + tex_ext },
+    { CBridge,        "object/town/Bridge" + tex_ext },
+    { CRiver,         "object/town/River" + tex_ext },
     { CHydrant,       "object/town/Hydrant" + tex_ext },
     { CLampPost,      "object/town/LampPost" + tex_ext },
     { CPlate,         "object/town/Plate" + tex_ext },

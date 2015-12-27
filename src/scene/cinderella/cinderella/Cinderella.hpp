@@ -13,6 +13,7 @@ class Cinderella : public Object
   
   bool mBookHitFlag;
   bool mSetFlag;
+  bool mRiverHitFlag;
   
   ci::Vec3f mOffSet;
   
@@ -22,6 +23,7 @@ class Cinderella : public Object
   ci::gl::Texture mCinderellaLeft;
   ci::gl::Texture mCinderellaRight;
   ci::gl::Texture mCinderellaBookHit;
+  ci::gl::Texture mCinderellaSubmerge;
   
   void drawCinderella(const ci::gl::Texture&, const ci::Vec3f&);
   

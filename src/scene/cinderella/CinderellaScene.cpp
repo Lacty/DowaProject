@@ -26,6 +26,7 @@
 #include "shop/Shop.hpp"
 #include "pumpkin/Pumpkin.hpp"
 #include "woodenbox/WoodenBox.hpp"
+#include "river/River.hpp"
 
 #include "graycube/GrayCube.hpp"
 
@@ -51,7 +52,7 @@ CinderellaScene::CinderellaScene()
   
   // サウンドの音量を変更
   mHouse.setVolume(0.5f);
-  mTown.setVolume(1.0f);
+  mTown.setVolume(0.5f);
   
   mHouse.play();
   
@@ -212,10 +213,6 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 200, 69, 0))); // 200, 69
   
   
-  Task::add("Plate", std::make_shared<Plate>(ci::Vec3f( 3247, -125, 0), // 3247, -123
-                                             ci::Vec3f( 50, 147, 0))); // 50, 147
-  
-  
   Task::add("Shop", std::make_shared<Shop>(ci::Vec3f( 3723, -70, 0), // 3723, -70
                                            ci::Vec3f( 210, 155, 0))); // 210, 155
   
@@ -233,26 +230,36 @@ CinderellaScene::CinderellaScene()
   
   
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50.f, 0.f), // 50
-                                 ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
+  mBall = std::make_shared<Ball>(ci::Vec3f( 3000, 50.f, 0.f), // 50, 50
+                                 ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 40, 40
   
   Task::add("Ball", mBall);
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3000, // 150
                                                                   50, 0), // 50
                                                        ci::Vec3f( 75, // 75
                                                                   75, 0))); // 75
   
   
-  
-  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 500, -170, 0.f),
-                                                   ci::Vec3f( 350, 15, 0.f)));
-  
-  
-  
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
                                                    ci::Vec3f( 145.f, 208.f, 0.f)));
+  
+  
+  Task::add("River", std::make_shared<River>(ci::Vec3f( 3350, -152, 0),
+                                             ci::Vec3f( 113, 20, 0)));
+  
+  
+  Task::add("Plate", std::make_shared<Plate>(ci::Vec3f( 3247, -125, 0), // 3247, -123
+                                             ci::Vec3f( 50, 147, 0))); // 50, 147
+  
+  
+  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 3350, -165, 0.f),
+                                                   ci::Vec3f( 113, 20, 0.f)));
+  
+  
+  Task::add("GameOver", std::make_shared<Floor>(ci::Vec3f( 3350, -187, 0.f),
+                                               ci::Vec3f( 113, 20, 0.f)));
   
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
@@ -290,10 +297,10 @@ void CinderellaScene::update()
   // ballが左画面外にでたらtrueを返す
   mBall -> isOutOfStage();
   
-//  if (dowa::Device::isTouchBegan()) {
+  if (dowa::Device::isTouchBegan()) {
     camera.setGameOver();
-//  }
-  
+  }
+
 //  mCinderellaPos = Task::find("Cinderella") -> getPos();
   
 //  if(mCinderellaPos.x > 2500)
