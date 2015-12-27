@@ -36,8 +36,8 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
 void Cinderella::setup() {}
 void Cinderella::update()
 {
-  if(mBookHitFlag == true) {}
-  else if(mRiverHitFlag == true) {}
+  if(mBookHitFlag) {}
+  else if(mRiverHitFlag) {}
   else mPos.x += 0.7f; // 速度 0.7fで30秒
   
   if(!mBookHitFlag) mAcceleration += mGravityPower;
