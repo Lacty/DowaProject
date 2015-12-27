@@ -17,6 +17,8 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CCharacterStatic);
   TextureManager::add(ResKey::CCharacterLeft);
   TextureManager::add(ResKey::CCharacterRight);
+  TextureManager::add(ResKey::CCharacterBookHit);
+  TextureManager::add(ResKey::CcharacterSubmerge);
   
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);

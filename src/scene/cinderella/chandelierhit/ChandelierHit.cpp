@@ -9,7 +9,7 @@ ChandelierHit::ChandelierHit(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mPos = Pos;
   mSize = Size;
   
-  mChandelierHit = TextureManager::find(ResKey::CHydrant);
+  mChandelierHit = TextureManager::find(ResKey::CChandelierHit);
   
   setColliderType(Collider::Rect);
   

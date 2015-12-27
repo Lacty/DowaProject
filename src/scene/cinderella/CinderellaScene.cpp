@@ -9,6 +9,8 @@
 #include "floor/Floor.hpp"
 #include "ball/Ball.hpp"
 #include "bookshelf/BookShelf.hpp"
+#include "chandelier/Chandelier.hpp"
+#include "chandelierhit/ChandelierHit.hpp"
 #include "book/Book.hpp"
 #include "piano/Piano.hpp"
 #include "handrail/HandRail.hpp"
@@ -49,6 +51,7 @@ CinderellaScene::CinderellaScene()
   
   // サウンドの音量を変更
   mHouse.setVolume(0.5f);
+  mTown.setVolume(1.0f);
   
   mHouse.play();
   
@@ -69,9 +72,32 @@ CinderellaScene::CinderellaScene()
   
   // 地面 一番下
   Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 1646,
-                                                        -157.f, 0.f),
+                                                  -157.f, 0.f),
                                                    ci::Vec3f( 3291,
                                                    5, 0.f))); // 5
+  
+  Task::add("Chandelier1", std::make_shared<Chandelier>(ci::Vec3f( 400, 113, 0),
+                                                        ci::Vec3f( 100, 100, 0)));
+  
+  
+  Task::add("Chandelier2", std::make_shared<Chandelier>(ci::Vec3f( 580, 113, 0),
+                                                        ci::Vec3f( 100, 100, 0)));
+  
+  
+  Task::add("ChandelierHit1", std::make_shared<ChandelierHit>(ci::Vec3f( 760, 113, 0),
+                                                              ci::Vec3f( 100, 100, 0)));
+  
+  
+  Task::add("ChandelierHit2", std::make_shared<ChandelierHit>(ci::Vec3f( 940, 113, 0),
+                                                              ci::Vec3f( 100, 100, 0)));
+  
+  
+  Task::add("Chandelier3", std::make_shared<Chandelier>(ci::Vec3f( 1120, 113, 0),
+                                                        ci::Vec3f( 100, 100, 0)));
+  
+  
+  Task::add("ChandelierHit3", std::make_shared<ChandelierHit>(ci::Vec3f( 1300, 113, 0),
+                                                              ci::Vec3f( 100, 100, 0)));
   
   // ピアノ
   Task::add("Piano", std::make_shared<Piano>(ci::Vec3f( 800.f, -90.f, 0.f),
@@ -186,7 +212,7 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 200, 69, 0))); // 200, 69
   
   
-  Task::add("Plate", std::make_shared<Plate>(ci::Vec3f( 3247, -73, 0), // 3247, -73
+  Task::add("Plate", std::make_shared<Plate>(ci::Vec3f( 3247, -125, 0), // 3247, -123
                                              ci::Vec3f( 50, 147, 0))); // 50, 147
   
   
@@ -213,10 +239,11 @@ CinderellaScene::CinderellaScene()
   Task::add("Ball", mBall);
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150, 3300
-                                                                  mDeviceWindowHeight * 0.15625f, 0.f),
-                                                       ci::Vec3f( mDeviceWindowWidth * 0.13204225352113f,
-                                                                  mDeviceWindowHeight * 0.234375f, 0.f)));
+  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 150, // 150
+                                                                  50, 0), // 50
+                                                       ci::Vec3f( 75, // 75
+                                                                  75, 0))); // 75
+  
   
   
   Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 500, -170, 0.f),
@@ -263,9 +290,17 @@ void CinderellaScene::update()
   // ballが左画面外にでたらtrueを返す
   mBall -> isOutOfStage();
   
-  if (dowa::Device::isTouchBegan()) {
+//  if (dowa::Device::isTouchBegan()) {
     camera.setGameOver();
-  }
+//  }
+  
+//  mCinderellaPos = Task::find("Cinderella") -> getPos();
+  
+//  if(mCinderellaPos.x > 2500)
+//  {
+//    AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
+//    AudioManager::addCrossFade(ResKey::CHousePiano, ResKey::CTown);
+//  }
 }
 
 void CinderellaScene::draw()

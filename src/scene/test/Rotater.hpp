@@ -3,11 +3,10 @@
 #include "../../object/Object.hpp"
 
 
-class T : public Object {
+class Rotater : public Object {
 private:
-
 public:
-  T();
+  Rotater();
   
   void setup();
   void update();

@@ -21,6 +21,8 @@ class CinderellaScene : public Scene
   ci::Vec3f mCameraPos;
   dowa::Camera camera;
   
+  ci::Vec3f mCinderellaPos;
+  
   Audio mTown;
   Audio mCastle;
   

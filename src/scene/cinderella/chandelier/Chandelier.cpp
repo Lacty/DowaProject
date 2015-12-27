@@ -9,7 +9,7 @@ Chandelier::Chandelier(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mPos = Pos;
   mSize = Size;
   
-  mChandelier = TextureManager::find(ResKey::CHydrant);
+  mChandelier = TextureManager::find(ResKey::CChandelier);
   
 }
 
