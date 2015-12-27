@@ -1,10 +1,13 @@
 
 #pragma once
 #include "../Scene.hpp"
-#include "../../object/Object.hpp"
+#include "../../resource/Resource.hpp"
+
 
 class Test : public Scene {
 private:
+  Audio mHitSE;
+  
 public:
   Test();
   ~Test();

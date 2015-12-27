@@ -1,23 +1,23 @@
 
-#include "Bridge.hpp"
+#include "River.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
+River::River(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
-  mPos = BridgePos;
-  mSize = BridgeSize;
+  mPos = Pos;
+  mSize = Size;
   
-  mBridge = TextureManager::find(ResKey::CBridge);
+  mRiver = TextureManager::find(ResKey::CRiver);
   
 }
 
-void Bridge::setup() {}
+void River::setup() {}
 
-void Bridge::update() {}
+void River::update() {}
 
-void Bridge::draw()
+void River::draw()
 {
   ci::gl::enable(GL_CULL_FACE);
   
@@ -26,11 +26,11 @@ void Bridge::draw()
   
   ci::gl::pushModelView();
   
-  mBridge.bind();
+  mRiver.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBridge.unbind();
+  mRiver.unbind();
   
   ci::gl::popModelView();
   

@@ -20,7 +20,7 @@ void Floor::draw()
   ci::gl::pushModelView();
   
   glEnable(GL_BLEND);
-  glBlendFunc(GL_ZERO, GL_ONE);
+//  glBlendFunc(GL_ZERO, GL_ONE);
   ci::gl::drawCube(mPos, mSize);
   glDisable(GL_ZERO);
   glDisable(GL_ONE);

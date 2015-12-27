@@ -23,6 +23,8 @@ enum {
   CCharacterStatic,
   CCharacterLeft,
   CCharacterRight,
+  CCharacterBookHit,
+  CcharacterSubmerge,
   
   CApple,
   CBookSide,
@@ -37,7 +39,8 @@ enum {
   CSphereRed,
 
   // hiramasa
-  CBridgeRiver,
+  CBridge,
+  CRiver,
   CHydrant,
   CLampPost,
   CPlate,
@@ -54,6 +57,8 @@ enum {
   CWitch2,
   CGrayCube,
   CHandRail,
+  CChandelier,
+  CChandelierHit,
   
   // background
   CHouse1,
@@ -68,12 +73,7 @@ enum {
   CTown3,
   CForestGarden1,
   CForestGarden2,
-  CForestGarden3,
-  CForestGarden4,
-  CDance1,
-  CDance2,
-  CDance3,
-  CDance4,
+  CDance,
   
   // Camera
   CamHole,
@@ -118,9 +118,11 @@ static std::string getPath(int key) {
     { TSphereRed,      "background/title/SphereRed" + tex_ext },
     
     // Cinderella
-    { CCharacterStatic,  "character/cinderella/1" + tex_ext },
-    { CCharacterLeft,    "character/cinderella/2" + tex_ext },
-    { CCharacterRight,   "character/cinderella/3" + tex_ext },
+    { CCharacterStatic,   "character/cinderella/1" + tex_ext },
+    { CCharacterLeft,     "character/cinderella/2" + tex_ext },
+    { CCharacterRight,    "character/cinderella/3" + tex_ext },
+    { CCharacterBookHit,  "character/cinderella/BookHit" + tex_ext },
+    { CcharacterSubmerge, "character/cinderella/Submerge" + tex_ext },
     
     // Sphere
     { CSphereBlue,       "background/title/SphereBlue" + tex_ext },
@@ -128,12 +130,14 @@ static std::string getPath(int key) {
     { CSphereRed,        "background/title/SphereRed" + tex_ext },
 
     // House
-    { CBookSide,         "object/house/BookSide" + tex_ext },
     { CBookOpen,         "object/house/BookOpen" + tex_ext },
-    { CBookShelf,        "object/house/BookShelf" + tex_ext },
     { CBookPile,         "object/house/BookPile" + tex_ext },
-    { CPiano,            "object/house/Piano" + tex_ext },
+    { CBookShelf,        "object/house/BookShelf" + tex_ext },
+    { CBookSide,         "object/house/BookSide" + tex_ext },
+    { CChandelier,       "object/house/Chandelier" + tex_ext },
+    { CChandelierHit,    "object/house/ChandelierHit" + tex_ext },
     { CHandRail,         "object/house/HandRail" + tex_ext },
+    { CPiano,            "object/house/Piano" + tex_ext },
     
     // Forest
     { CApple,            "object/forest/Apple" + tex_ext },
@@ -141,7 +145,8 @@ static std::string getPath(int key) {
     { CStatisfiedBrear,  "object/forest/SatisfiedBear" + tex_ext },
     
     // Town
-    { CBridgeRiver,   "object/town/BridgeRiver" + tex_ext },
+    { CBridge,        "object/town/Bridge" + tex_ext },
+    { CRiver,         "object/town/River" + tex_ext },
     { CHydrant,       "object/town/Hydrant" + tex_ext },
     { CLampPost,      "object/town/LampPost" + tex_ext },
     { CPlate,         "object/town/Plate" + tex_ext },
@@ -171,12 +176,7 @@ static std::string getPath(int key) {
     { CTown3,         "background/town/3" + tex_ext },
     { CForestGarden1, "background/forestgarden/1" + tex_ext },
     { CForestGarden2, "background/forestgarden/2" + tex_ext },
-    { CForestGarden3, "background/forestgarden/3" + tex_ext },
-    { CForestGarden4, "background/forestgarden/4" + tex_ext },
-    { CDance1,        "background/dance/1" + tex_ext },
-    { CDance2,        "background/dance/2" + tex_ext },
-    { CDance3,        "background/dance/3" + tex_ext },
-    { CDance4,        "background/dance/4" + tex_ext },
+    { CDance,         "background/dance/1" + tex_ext },
     
     // Camera
     { CamHole,        "camera/hole" + tex_ext },

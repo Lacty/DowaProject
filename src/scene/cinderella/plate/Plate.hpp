@@ -12,6 +12,11 @@ class Plate : public Object
   
   bool mFallFlag;
   
+  bool mTextureChangeFlag;
+  
+  void drawPlate();
+  void drawPlateFall();
+  
 public:
   
   Plate(const ci::Vec3f&, const ci::Vec3f&);

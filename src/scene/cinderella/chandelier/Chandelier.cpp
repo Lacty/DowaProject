@@ -1,42 +1,38 @@
 
-#include "Bridge.hpp"
+#include "Chandelier.hpp"
 
 #include "../../../resource/Resource.hpp"
 
 
-Bridge::Bridge(const ci::Vec3f& BridgePos, const ci::Vec3f& BridgeSize)
+Chandelier::Chandelier(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
-  mPos = BridgePos;
-  mSize = BridgeSize;
+  mPos = Pos;
+  mSize = Size;
   
-  mBridge = TextureManager::find(ResKey::CBridge);
+  mChandelier = TextureManager::find(ResKey::CChandelier);
   
 }
 
-void Bridge::setup() {}
+void Chandelier::setup() {}
 
-void Bridge::update() {}
+void Chandelier::update() {}
 
-void Bridge::draw()
+void Chandelier::draw()
 {
-  ci::gl::enable(GL_CULL_FACE);
-  
   ci::gl::enable(GL_TEXTURE_2D);
   ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
   
-  mBridge.bind();
+  mChandelier.bind();
   ci::gl::translate(mPos);
   ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mBridge.unbind();
+  mChandelier.unbind();
   
   ci::gl::popModelView();
   
   ci::gl::disableAlphaBlending();
   ci::gl::disable(GL_TEXTURE_2D);
-  
-  ci::gl::disable(GL_CULL_FACE);
   
 }

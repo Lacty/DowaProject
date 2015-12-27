@@ -48,13 +48,15 @@ void Book::update()
   
   mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-  if(mCinderellaPos.x > 1068 || mFallFlag)
+  if(mCinderellaPos.x > 1155 || mFallFlag)
   {
-    if(mRotate.z < 90) {
+    if(mRotate.z < 90)
+    {
       mAcceleration += mGravityPower;
       mRotate.z += mAcceleration;
     }
-    else if (mBookName == mBookSideName) {
+    else if (mBookName == mBookSideName)
+    {
       mAcceleration += mGravityPower2;
       mPos.y -= mAcceleration;
       
@@ -67,6 +69,9 @@ void Book::update()
     mBookDrop.play();
     mDoropAudioFlag = false;
   }
+  
+//  std::cout << "BookPos = " << mPos << std::endl;
+  
 }
 
 void Book::draw()
@@ -109,8 +114,4 @@ void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   
   if(compare -> getName() == "Floor_Floor") mBookName = "BookOpen";
   
-  if(compare -> getName() == "Cinderella" && mBookName == "BookSide")
-  {
-    std::cout << "シンデレラと当たりました" << std::endl;
-  }
 }

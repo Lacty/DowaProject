@@ -49,3 +49,8 @@ void Bear::drawBear(ci::gl::Texture& mBearTexture)
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   mBearTexture.unbind();
 }
+
+void Bear::onCollisionUpdate(const std::shared_ptr<Object> &compare)
+{
+  
+}
