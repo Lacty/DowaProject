@@ -77,10 +77,15 @@ void Cinderella::draw()
   ci::gl::enable(GL_TEXTURE_2D);
   cinder::gl::enableAlphaBlending();
   
-  if(mCount <= 75 && !mBookHitFlag) drawCinderella(mCinderellaLeft, mOffSet);
-  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag) drawCinderella(mCinderellaRight, mOffSet);
+  if(mCount <= 75 && !mBookHitFlag && !mBookHitFlag && !mRiverHitFlag)
+    drawCinderella(mCinderellaLeft, mOffSet);
+  
+  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag)
+    drawCinderella(mCinderellaRight, mOffSet);
+  
   if(mBookHitFlag) drawCinderella(mCinderellaBookHit, mOffSet);
   if(mRiverHitFlag) drawCinderella(mCinderellaSubmerge, mOffSet);
+  
   if(mCount == 150) mCount = 0;
   
   if(!mBookHitFlag) mCount++;
