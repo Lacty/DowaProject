@@ -5,7 +5,7 @@
 
 #include "cinder/gl/Texture.h"
 
-class Townwindow : public Object
+class TownwindowHit : public Object
 {
   ci::gl::Texture mTownWindowTop; // Top
   ci::gl::Texture mTownWindowLeft; // Left
@@ -18,10 +18,12 @@ class Townwindow : public Object
   
 public:
   
-  Townwindow(const ci::Vec3f&, const ci::Vec3f&, const std::string&);
+  TownwindowHit(const ci::Vec3f&, const ci::Vec3f&, const std::string&);
   
   void setup();
   void update();
   void draw();
-
+  
+  void onCollisionUpdate(const std::shared_ptr<Object>&);
+  
 };

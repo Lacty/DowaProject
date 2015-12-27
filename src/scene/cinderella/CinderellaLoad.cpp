@@ -49,6 +49,8 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CWitch2);
   TextureManager::add(ResKey::CGrayCube);
   TextureManager::add(ResKey::CHandRail);
+  TextureManager::add(ResKey::CChandelier);
+  TextureManager::add(ResKey::CChandelierHit);
   
   // background
   TextureManager::add(ResKey::CHouse1);
@@ -63,12 +65,7 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CTown3);
   TextureManager::add(ResKey::CForestGarden1);
   TextureManager::add(ResKey::CForestGarden2);
-  TextureManager::add(ResKey::CForestGarden3);
-  TextureManager::add(ResKey::CForestGarden4);
-  TextureManager::add(ResKey::CDance1);
-  TextureManager::add(ResKey::CDance2);
-  TextureManager::add(ResKey::CDance3);
-  TextureManager::add(ResKey::CDance4);
+  TextureManager::add(ResKey::CDance);
   
   // Camera
   TextureManager::add(ResKey::CamHole);

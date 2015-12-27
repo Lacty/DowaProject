@@ -5,18 +5,13 @@
 
 #include "cinder/gl/Texture.h"
 
-class Apple : public Object
+class ChandelierHit : public Object
 {
-  ci::gl::Texture mApple;
-  
-  bool mFallFlag, mFloorHitFlag;
-  
-  float mGravityPower;
-  float mAcceleration;
+  ci::gl::Texture mChandelierHit;
   
 public:
   
-  Apple(const ci::Vec3f&, const ci::Vec3f&);
+  ChandelierHit(const ci::Vec3f&, const ci::Vec3f&);
   
   void setup();
   void update();

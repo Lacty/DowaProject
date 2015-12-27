@@ -16,6 +16,7 @@
 #include "bear/Bear.hpp"
 #include "stairs/Stairs.hpp"
 #include "townwindow/Townwindow.hpp"
+#include "townwindowhit/TownwindowHit.hpp"
 #include "hydrant/Hydrant.hpp"
 #include "lamppost/LampPost.hpp"
 #include "bridge/Bridge.hpp"
@@ -53,6 +54,7 @@ CinderellaScene::CinderellaScene()
   
   // 背景
   Task::add("BackGround", std::make_shared<BackGround>());
+  
   
   // 地面
   Task::add("Floor1", std::make_shared<Floor>(ci::Vec3f( mDeviceWindowWidth * 0.24471831f,
@@ -95,6 +97,7 @@ CinderellaScene::CinderellaScene()
   Task::add("HungryBear", std::make_shared<Bear>(ci::Vec3f( 2200.f, 0, 0.f),
                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
   
+  
   Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 2000, 0, 0),
                                              ci::Vec3f( 50, 50, 0)));
   
@@ -103,8 +106,8 @@ CinderellaScene::CinderellaScene()
                                                               ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
-  Task::add("TownWindowLeft_1", std::make_shared<Townwindow>(ci::Vec3f( 2559, -7, 0), // 2559, -7
-                                                             ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  Task::add("TownWindowLeft_1", std::make_shared<TownwindowHit>(ci::Vec3f( 2559, -7, 0), // 2559, -7
+                                                                ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
   
   
   Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2607, 68, 0), // 2607, 68
@@ -119,8 +122,8 @@ CinderellaScene::CinderellaScene()
                                                               ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
-  Task::add("TownWindowOpen_2", std::make_shared<Townwindow>(ci::Vec3f( 2953, 74, 0), // 2953, 74
-                                                              ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 110, 90
+  Task::add("TownWindowOpen_2", std::make_shared<TownwindowHit>(ci::Vec3f( 2953, 74, 0), // 2953, 74
+                                                                ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 110, 90
   
   
   Task::add("TownWindowLeft_3", std::make_shared<Townwindow>(ci::Vec3f( 3127, -7, 0), // 3127, -7
@@ -206,6 +209,7 @@ CinderellaScene::CinderellaScene()
   
   mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50.f, 0.f), // 50
                                  ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
+  
   Task::add("Ball", mBall);
   
   
