@@ -59,7 +59,7 @@ public:
   float getViewTop();
   float getViewBottom();
   
-  void setGameOver();
+  void setGameOver(float offset);
 };
 
 }

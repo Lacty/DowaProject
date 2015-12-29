@@ -8,6 +8,7 @@ namespace dowa {
 Camera::Camera() :
 mPos(ci::Vec3f::zero()),
 mOffset(0.0f),
+offset(0.0f),
 mScale(0.0f),
 mIsGameOver(false) {}
 
@@ -105,12 +106,13 @@ float Camera::getViewBottom() {
   return mViewBottom;
 }
 
-void Camera::setGameOver() {
+void Camera::setGameOver(float offset) {
   if (mIsGameOver) return;
   mIsGameOver = true;
   mScale = 18.0f;
   mAngle = 0.0f;
   float time = 2.0f;
+  this->offset = offset;
   ci::app::timeline().apply(&mScale,
                             3.0f,
                             time, ci::easeOutSine);
@@ -141,6 +143,7 @@ void Camera::draw() {
   
   ci::Vec2f halfsize = mImage.getSize() * 0.5f;
   ci::gl::translate(mForcusObj->getPos().xy());
+  ci::gl::translate(ci::Vec2f(offset, 0.0f));
   ci::gl::scale(mScale, mScale);
   ci::gl::translate(-halfsize);
   ci::gl::draw(mImage);
