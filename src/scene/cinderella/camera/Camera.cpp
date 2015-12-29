@@ -105,7 +105,7 @@ float Camera::getViewBottom() {
   return mViewBottom;
 }
 
-void Camera::setGameOver() {
+void Camera::setGameOver(float offset) {
   if (mIsGameOver) return;
   mIsGameOver = true;
   mScale = 18.0f;
@@ -115,7 +115,7 @@ void Camera::setGameOver() {
                             3.0f,
                             time, ci::easeOutSine);
   ci::app::timeline().apply(&mAngle,
-                            mOffset,
+                            mOffset + offset,
                             time, ci::easeOutSine);
 }
 
