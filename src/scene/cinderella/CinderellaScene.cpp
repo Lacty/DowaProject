@@ -230,16 +230,12 @@ CinderellaScene::CinderellaScene()
   
   
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 3000, 50.f, 0.f), // 50, 50
-                                 ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 40, 40
-  
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
   Task::add("Ball", mBall);
   
   
-  Task::add("Cinderella", std::make_shared<Cinderella>(ci::Vec3f( 3000, // 150
-                                                                  50, 0), // 50
-                                                       ci::Vec3f( 75, // 75
-                                                                  75, 0))); // 75
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0));
+  Task::add("Cinderella", mCinderella);
   
   
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
@@ -274,6 +270,7 @@ CinderellaScene::CinderellaScene()
   
   // シンデレラの右側にカメラの焦点をあてる
   camera.setOffset(100.0f);
+  
 }
 
 CinderellaScene::~CinderellaScene()
@@ -281,11 +278,12 @@ CinderellaScene::~CinderellaScene()
   ci::gl::popMatrices();
   ci::gl::popModelView();
   
-  std::cout << "end cinderella" << std::endl;
+  std::cout << "end cinderella" << std::endl; // Debug
   
   Task::clear();
+  TextureManager::clear();
+  AudioManager::clear();
 }
-
 
 void CinderellaScene::update()
 {
@@ -295,19 +293,22 @@ void CinderellaScene::update()
                        camera.getViewTop(), camera.getViewBottom());
   
   // ballが左画面外にでたらtrueを返す
-  mBall -> isOutOfStage();
-  
-  if (dowa::Device::isTouchBegan()) {
-    camera.setGameOver();
+  if(mBall -> isOutOfStage()) {
+    SceneManager::create(SceneType::CinderellaLoad);
+//    mHouse.stop();
   }
-
-//  mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-//  if(mCinderellaPos.x > 2500)
-//  {
-//    AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
-//    AudioManager::addCrossFade(ResKey::CHousePiano, ResKey::CTown);
-//  }
+  // Gameover
+  if (mCinderella -> mGameOverRturen) camera.setGameOver();
+
+  if(mCinderella -> getPos().x >= 2499 && mCinderella -> getPos().x <= 2501)  {
+    if (AudioManager::find(ResKey::CHousePiano).getVolume() >= 0.9f) {
+      AudioManager::addCrossFade(ResKey::CHousePiano, ResKey::CTown);
+    }
+    else {
+      AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
+    }
+  }
 }
 
 void CinderellaScene::draw()

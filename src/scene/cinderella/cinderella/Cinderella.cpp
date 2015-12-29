@@ -16,6 +16,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mBookHitFlag = false;
   mSetFlag = true;
   mRiverHitFlag = false;
+  mGameOverRturen = false;
   
   mOffSet = ci::Vec3f( 0, 0, 0);
   
@@ -43,8 +44,6 @@ void Cinderella::update()
   if(!mBookHitFlag) mAcceleration += mGravityPower;
   if(!mBookHitFlag) mPos.y += mAcceleration;
   
-//  std::cout << "CinderellaPos = " << mPos << std::endl; // Debug
-  
   // 一回しか実行しない
   if(mBookHitFlag && mSetFlag)
   {
@@ -63,10 +62,7 @@ void Cinderella::update()
     mRotate.z += mAcceleration;
     mOffSet = ci::Vec3f( 50, 0, 0);
   }
-  if(mBookHitFlag && (int)mRotate.z == 0)
-  {
-    std::cout << "ゲームオーバーまたはフラグリターン処理を書いてください" << std::endl;
-  }
+  if(mBookHitFlag && (int)mRotate.z == 0) mGameOverRturen = true;
 }
 
 void Cinderella::draw()
@@ -146,6 +142,7 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mRiverHitFlag = true;
     mAcceleration = 0.f;
     mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
+    mGameOverRturen = true;
   }
   
 }

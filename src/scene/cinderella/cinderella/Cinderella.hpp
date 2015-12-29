@@ -11,9 +11,7 @@ class Cinderella : public Object
   float mGravityPower; // 重力パワー
   float mAcceleration; // 加速度
   
-  bool mBookHitFlag;
-  bool mSetFlag;
-  bool mRiverHitFlag;
+  bool mSetFlag, mBookHitFlag, mRiverHitFlag;
   
   ci::Vec3f mOffSet;
   
@@ -30,6 +28,8 @@ class Cinderella : public Object
 public:
   
   Cinderella(const ci::Vec3f&, const ci::Vec3f&);
+  
+  bool mGameOverRturen;
   
   void setup();
   void update();
