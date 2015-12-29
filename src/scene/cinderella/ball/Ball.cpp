@@ -22,7 +22,7 @@ mSpeedRate(speedRate)
   mHitSE = AudioManager::find(ResKey::CHitSE);
   
   // サウンドの音量を変更
-  mHitSE.setVolume(1.0f);
+  mHitSE.setVolume(0.1f);
   
   setColliderType(Collider::Rect);
 }

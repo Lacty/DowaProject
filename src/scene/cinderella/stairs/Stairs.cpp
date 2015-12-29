@@ -18,7 +18,7 @@ void Stairs::draw()
   ci::gl::pushModelView();
   
   glEnable(GL_BLEND);
-//  glBlendFunc(GL_ZERO, GL_ONE);
+  glBlendFunc(GL_ZERO, GL_ONE);
   ci::gl::drawCube(mPos, mSize);
   glDisable(GL_ZERO);
   glDisable(GL_ONE);
@@ -27,7 +27,4 @@ void Stairs::draw()
   ci::gl::popModelView();
 }
 
-void Stairs::onCollisionUpdate(const std::shared_ptr<Object>& compare)
-{
-  
-}
+void Stairs::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
