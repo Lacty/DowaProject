@@ -17,6 +17,7 @@ private:
 
   ci::Vec3f mPos;
   float mOffset;
+  float offset;
   
   ci::Vec3f TopLeft;
   ci::Vec3f TopRight;
@@ -58,7 +59,7 @@ public:
   float getViewTop();
   float getViewBottom();
   
-  void setGameOver(float offset);
+  void setGameOver();
 };
 
 }
