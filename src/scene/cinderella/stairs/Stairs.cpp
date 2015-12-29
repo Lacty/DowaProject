@@ -27,7 +27,4 @@ void Stairs::draw()
   ci::gl::popModelView();
 }
 
-void Stairs::onCollisionUpdate(const std::shared_ptr<Object>& compare)
-{
-  
-}
+void Stairs::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
