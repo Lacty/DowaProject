@@ -12,6 +12,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mCount = 0;
   mGravityPower = -0.2f;
   mAcceleration = 0.f;
+  mGameOverOffset = 0.f;
   
   mBookHitFlag = false;
   mSetFlag = true;
@@ -62,7 +63,11 @@ void Cinderella::update()
     mRotate.z += mAcceleration;
     mOffSet = ci::Vec3f( 50, 0, 0);
   }
-  if(mBookHitFlag && (int)mRotate.z == 0) mGameOverRturen = true;
+  if(mBookHitFlag && (int)mRotate.z == 0)
+  {
+    mGameOverRturen = true;
+    mGameOverOffset = 60.0f;
+  }
 }
 
 void Cinderella::draw()
@@ -143,6 +148,7 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mAcceleration = 0.f;
     mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
     mGameOverRturen = true;
+    mGameOverOffset = 0.f;
   }
   
 }

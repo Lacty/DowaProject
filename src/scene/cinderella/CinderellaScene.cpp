@@ -117,16 +117,48 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
 
   // 熊
-  Task::add("SatisfiedBear", std::make_shared<Bear>(ci::Vec3f( 1800.f, 0, 0.f),
-                                                    ci::Vec3f( 80.f, 130.f, 0.f), "SatisfiedBear"));
+  Task::add("HungryBear1", std::make_shared<Bear>(ci::Vec3f( 1800.f, -90, 0.f),
+                                                    ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
   
   
-  Task::add("HungryBear", std::make_shared<Bear>(ci::Vec3f( 2200.f, 0, 0.f),
+  Task::add("HungryBear2", std::make_shared<Bear>(ci::Vec3f( 2000.f, -90, 0.f),
                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
   
   
-  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 2000, 0, 0),
+  Task::add("HungryBear3", std::make_shared<Bear>(ci::Vec3f( 2150.f, -90, 0.f),
+                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
+  
+  
+  Task::add("HungryBear4", std::make_shared<Bear>(ci::Vec3f( 2400.f, -90, 0.f),
+                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
+  
+  
+  Task::add("Apple1", std::make_shared<Apple>(ci::Vec3f( 1650, 50, 0),
                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple2", std::make_shared<Apple>(ci::Vec3f( 1750, 75, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple3", std::make_shared<Apple>(ci::Vec3f( 1850, 55, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple4", std::make_shared<Apple>(ci::Vec3f( 2050, 85, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple5", std::make_shared<Apple>(ci::Vec3f( 2150, 95, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple6", std::make_shared<Apple>(ci::Vec3f( 2250, 65, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple7", std::make_shared<Apple>(ci::Vec3f( 2350, 78, 0),
+                                              ci::Vec3f( 50, 50, 0)));
   
   
   Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -7, 0), // 2664, -7
@@ -230,11 +262,11 @@ CinderellaScene::CinderellaScene()
   
   
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
+  mBall = std::make_shared<Ball>(ci::Vec3f( 500, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
   Task::add("Ball", mBall);
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0));
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 550, 50, 0), ci::Vec3f( 75, 75, 0));
   Task::add("Cinderella", mCinderella);
   
   
@@ -294,12 +326,17 @@ void CinderellaScene::update()
   
   // ballが左画面外にでたらtrueを返す
   if(mBall -> isOutOfStage()) {
-    SceneManager::create(SceneType::CinderellaLoad);
+//    SceneManager::create(SceneType::CinderellaLoad);
 //    mHouse.stop();
   }
   
   // Gameover
-  if (mCinderella -> mGameOverRturen) camera.setGameOver();
+  if (mCinderella -> mGameOverRturen)
+  {
+    camera.setGameOver(mCinderella -> mGameOverOffset);
+    
+    std::cout << mCinderella -> mGameOverOffset;
+  }
 
   if(mCinderella -> getPos().x >= 2499 && mCinderella -> getPos().x <= 2501)  {
     if (AudioManager::find(ResKey::CHousePiano).getVolume() >= 0.9f) {
