@@ -25,6 +25,9 @@ class CinderellaScene : public Scene
   
   Audio mTown;
   Audio mCastle;
+  Audio mGameOver;
+  
+  bool mOnceRunFlag;
   
 public:
   

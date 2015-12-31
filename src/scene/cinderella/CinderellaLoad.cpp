@@ -55,6 +55,14 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CChandelier);
   TextureManager::add(ResKey::CChandelierHit);
   
+  // TownTest
+  TextureManager::add(ResKey::CHorse1);
+  TextureManager::add(ResKey::CHorse2);
+  TextureManager::add(ResKey::CHorse3);
+  TextureManager::add(ResKey::CHorse4);
+  TextureManager::add(ResKey::CHorse5);
+  TextureManager::add(ResKey::CHorse6);
+  
   // background
   TextureManager::add(ResKey::CHouse1);
   TextureManager::add(ResKey::CHouse2);
@@ -82,6 +90,8 @@ void CinderellaLoad::load() {
   AudioManager::add(ResKey::CHousePiano);
   AudioManager::add(ResKey::CBookDrop);
   AudioManager::add(ResKey::CBookHit);
+  AudioManager::add(ResKey::CWindowClose);
+  AudioManager::add(ResKey::CPlateFallSE);
 
   std::cout << "finish load" << std::endl;
 }

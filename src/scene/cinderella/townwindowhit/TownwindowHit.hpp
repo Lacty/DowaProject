@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 
@@ -13,6 +14,8 @@ class TownwindowHit : public Object
   ci::gl::Texture mTownWindowOpen; // Boy
   
   std::string mTownwindowName;
+  
+  Audio mWindowClose;
   
   void drawTownwindow(const ci::gl::Texture&);
   

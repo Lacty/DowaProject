@@ -1,8 +1,6 @@
 
 #include "TownwindowHit.hpp"
 
-#include "../../../resource/Resource.hpp"
-
 
 TownwindowHit::TownwindowHit(const ci::Vec3f& Pos, const ci::Vec3f& Size, const std::string& Name)
 {
@@ -10,6 +8,12 @@ TownwindowHit::TownwindowHit(const ci::Vec3f& Pos, const ci::Vec3f& Size, const 
   mSize = Size;
   
   mTownwindowName = Name;
+  
+  // findは処理が重いので変数にサウンドを保存
+  mWindowClose = AudioManager::find(ResKey::CWindowClose);
+  
+  // サウンドの音量を変更
+  mWindowClose.setVolume(0.8f);
   
   mTownWindowTop = TextureManager::find(ResKey::CWindow1);
   mTownWindowLeft = TextureManager::find(ResKey::CWindow2);
@@ -59,10 +63,9 @@ void TownwindowHit::onCollisionUpdate(const std::shared_ptr<Object> &compare)
 {
   if(compare -> getName() == "Ball" && mTownwindowName == "TownWindowOpen")
   {
-    std::cout << compare -> getName() << std::endl;
-    
     mSize = ci::Vec3f( 75, 90, 0);
     mPos.y -= 5.f;
     mTownwindowName = "TownWindowTop";
+    mWindowClose.play();
   }
 }

@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 
@@ -16,6 +17,9 @@ class Plate : public Object
   
   void drawPlate();
   void drawPlateFall();
+  
+  Audio mPlateFallSE;
+  bool mSePlayFlag;
   
 public:
   

@@ -60,6 +60,14 @@ enum {
   CChandelier,
   CChandelierHit,
   
+  // Town
+  CHorse1,
+  CHorse2,
+  CHorse3,
+  CHorse4,
+  CHorse5,
+  CHorse6,
+  
   // background
   CHouse1,
   CHouse2,
@@ -92,6 +100,8 @@ enum {
   CHousePiano,
   CBookDrop,
   CBookHit,
+  CWindowClose,
+  CPlateFallSE,
 };
 
 static std::string getPath(int key) {
@@ -162,6 +172,12 @@ static std::string getPath(int key) {
     { CWitch1,        "object/town/Witch1" + tex_ext },
     { CWitch2,        "object/town/Witch2" + tex_ext },
     { CGrayCube,      "object/town/GrayCube" + tex_ext },
+    { CHorse1,        "object/town/Horse1" + tex_ext },
+    { CHorse2,        "object/town/Horse2" + tex_ext },
+    { CHorse3,        "object/town/Horse3" + tex_ext },
+    { CHorse4,        "object/town/Horse4" + tex_ext },
+    { CHorse5,        "object/town/Horse5" + tex_ext },
+    { CHorse6,        "object/town/Horse6" + tex_ext },
     
     // Background
     { CHouse1,        "background/house/1" + tex_ext },
@@ -196,6 +212,8 @@ static std::string getPath(int key) {
     { CHousePiano,  "sound/bgm/cinderella/HousePiano" + snd_ext },
     { CBookDrop,    "sound/se/cinderella/BookDrop" + snd_ext },
     { CBookHit,     "sound/se/cinderella/BookHit" + snd_ext },
+    { CWindowClose, "sound/se/cinderella/WindowClose" + snd_ext },
+    { CPlateFallSE, "sound/se/cinderella/PlateFallSE" + snd_ext },
   };
   
   return list[key];
