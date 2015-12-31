@@ -13,6 +13,9 @@ class Plate : public Object
   
   bool mFallFlag;
   
+  float mGravityPower; // 重力パワー
+  float mAcceleration; // 加速度
+  
   bool mTextureChangeFlag;
   
   void drawPlate();

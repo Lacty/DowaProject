@@ -9,6 +9,8 @@ Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mPos = Pos;
   mSize = Size;
   
+  mCount = 0;
+  
   mHorse1 = TextureManager::find(ResKey::CHorse1);
   mHorse2 = TextureManager::find(ResKey::CHorse2);
   mHorse3 = TextureManager::find(ResKey::CHorse3);

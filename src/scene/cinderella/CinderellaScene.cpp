@@ -276,11 +276,11 @@ CinderellaScene::CinderellaScene()
                                              ci::Vec3f( 200, 150, 0)));
   
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 2950, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3000, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
   
   

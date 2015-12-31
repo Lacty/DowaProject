@@ -13,6 +13,9 @@ Plate::Plate(const ci::Vec3f& PlatePos, const ci::Vec3f& PlateSize)
   
   // サウンドの音量を変更
   mPlateFallSE.setVolume(0.8f);
+  
+  mGravityPower = 0.03f;
+  mAcceleration = 0.f;
     
   mFallFlag = false;
   mTextureChangeFlag = false;
@@ -29,13 +32,18 @@ void Plate::setup() {}
 
 void Plate::update()
 {
-  if(mFallFlag) mRotate.z += 0.5f;
-  if(mRotate.z == 90 && mSePlayFlag)
+  if(mFallFlag)
+  {
+    mAcceleration += mGravityPower;
+    mRotate.z += mAcceleration;
+  }
+  
+  if((int)mRotate.z == 90 && mSePlayFlag)
   {
     mFallFlag = false;
     mTextureChangeFlag = true;
     mPos = ci::Vec3f( 3350, -150, 0);
-    mSize = ci::Vec3f(115, 10, 0);
+    mSize = ci::Vec3f( 115, 10, 0);
     mPlateFallSE.play();
     mSePlayFlag = false;
   }
