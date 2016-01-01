@@ -2,6 +2,7 @@
 #include "Horse.hpp"
 
 #include "../../../resource/Resource.hpp"
+#include "../../../object/Task.hpp"
 
 
 Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
@@ -10,6 +11,8 @@ Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mSize = Size;
   
   mCount = 0;
+  mAcceleration = 0.f;
+  mGravityPower = 0.01f;
   
   mHorse1 = TextureManager::find(ResKey::CHorse1);
   mHorse2 = TextureManager::find(ResKey::CHorse2);
@@ -18,13 +21,33 @@ Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mHorse5 = TextureManager::find(ResKey::CHorse5);
   mHorse6 = TextureManager::find(ResKey::CHorse6);
   
+  setColliderType(Collider::Rect);
+  
 }
 
 void Horse::setup() {}
 
 void Horse::update()
 {
-  mPos.x += 0.5f;
+  
+  ci::Vec3i mPumpkinPos = Task::find("Pumpkin1") -> getPos();
+  
+  if(mPumpkinPos.y > 200)
+  {
+    if((int)mPos.y > -63)
+    {
+      mAcceleration += mGravityPower;
+      mPos.y -= mAcceleration;
+    }
+  }
+  
+  ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
+ 
+  if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500)
+  {
+    mPos.x += 0.82f;
+  }
+  
 }
 
 void Horse::draw()

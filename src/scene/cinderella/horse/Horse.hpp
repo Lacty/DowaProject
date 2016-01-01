@@ -7,6 +7,7 @@
 
 class Horse : public Object
 {
+  
   ci::gl::Texture mHorse1;
   ci::gl::Texture mHorse2;
   ci::gl::Texture mHorse3;
@@ -15,6 +16,8 @@ class Horse : public Object
   ci::gl::Texture mHorse6;
   
   int mCount;
+  
+  float mGravityPower, mAcceleration;
   
   void drawHorse(ci::gl::Texture&);
   

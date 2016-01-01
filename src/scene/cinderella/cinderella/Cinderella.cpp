@@ -19,6 +19,8 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mRiverHitFlag = false;
   mGameOverRturen = false;
   
+  mStairs2Hit = false;
+  
   mOffSet = ci::Vec3f( 0, 0, 0);
   
   mCinderellaStatic = TextureManager::find(ResKey::CCharacterStatic);
@@ -40,6 +42,7 @@ void Cinderella::update()
 {
   if(mBookHitFlag) {}
   else if(mRiverHitFlag) {}
+//  else if(mStairs2Hit && (int)mPos.y > -70) {}
   else mPos.x += 0.7f; // 速度 0.7fで30秒
   
   if(!mBookHitFlag) mAcceleration += mGravityPower;
@@ -115,6 +118,9 @@ void Cinderella::drawCinderella(const ci::gl::Texture & texture, const ci::Vec3f
 void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
   
+  using std::cout;
+  using std::endl;
+  
   std::string name;
   name = compare -> getName();
   name.resize(5);
@@ -151,4 +157,10 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mGameOverOffset = 0.f;
   }
   
+  if(compare -> getName() == "Stairs2" && mPos.y < -70)
+  {
+    mAcceleration = 0.f;
+    mPos.y += 0.23f;
+    mStairs2Hit = true;
+  }
 }

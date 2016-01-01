@@ -10,6 +10,7 @@
 #include "ball/Ball.hpp"
 #include "floor/Floor.hpp"
 #include "stairs/Stairs.hpp"
+#include "stairs2/Stairs2.hpp"
 
 #include "bookshelf/BookShelf.hpp"
 #include "chandelier/Chandelier.hpp"
@@ -33,6 +34,7 @@
 #include "river/River.hpp"
 #include "horse/Horse.hpp"
 #include "graycube/GrayCube.hpp"
+#include "witch/Witch.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -262,10 +264,8 @@ CinderellaScene::CinderellaScene()
   Task::add("Shop", std::make_shared<Shop>(ci::Vec3f( 3723, -70, 0), // 3723, -70
                                            ci::Vec3f( 210, 155, 0))); // 210, 155
   
-  
   Task::add("WoodenBox", std::make_shared<WoodenBox>(ci::Vec3f( 3858, -110, 0), // 3858, -110
                                                      ci::Vec3f( 75, 80, 0))); // 75, 80
-  
   
   Task::add("Pumpkin2", std::make_shared<Pumpkin>(ci::Vec3f( 3858, -50, 0), // 3858, -50
                                                   ci::Vec3f( 80, 50, 0), "Pumpkin2")); // 80, 50
@@ -275,16 +275,11 @@ CinderellaScene::CinderellaScene()
                                                   ci::Vec3f( 40, 50, 0), "Pumpkin1")); // 40, 50
   
   
-  Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4000, -70, 0),
-                                             ci::Vec3f( 200, 150, 0)));
+  Task::add("Witch", std::make_shared<Witch>(ci::Vec3f( 3920, -100, 0),
+                                             ci::Vec3f( 75, 90, 0)));
   
-  
-  mBall = std::make_shared<Ball>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
-  
-  
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
-  Task::add("Cinderella", mCinderella);
   
   
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
@@ -305,6 +300,18 @@ CinderellaScene::CinderellaScene()
   
   Task::add("GameOver", std::make_shared<Floor>(ci::Vec3f( 3350, -187, 0.f),
                                                ci::Vec3f( 113, 20, 0.f)));
+  
+  
+  Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
+                                                ci::Vec3f( 190, 130, 0)));
+  
+  
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  Task::add("Cinderella", mCinderella);
+  
+  
+  Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
+                                             ci::Vec3f( 300, 160, 0)));
   
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);

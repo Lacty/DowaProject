@@ -13,6 +13,8 @@ class Cinderella : public Object
   
   bool mSetFlag, mBookHitFlag, mRiverHitFlag;
   
+  bool mStairs2Hit;
+  
   ci::Vec3f mOffSet;
   
   std::string mFloorStr;

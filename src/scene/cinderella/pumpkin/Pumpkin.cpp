@@ -23,7 +23,7 @@ void Pumpkin::update()
 {
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-  if(mCinderellaPos.x > 3500 && mPumpkinName == "Pumpkin1")
+  if(mCinderellaPos.x > 3600 && mPumpkinName == "Pumpkin1")
   {
     mPos.y += 5;
   }
