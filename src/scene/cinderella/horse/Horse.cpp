@@ -22,7 +22,10 @@ Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 
 void Horse::setup() {}
 
-void Horse::update() {}
+void Horse::update()
+{
+  mPos.x += 0.5f;
+}
 
 void Horse::draw()
 {
@@ -40,8 +43,9 @@ void Horse::draw()
   if(mCount >= 40 && mCount <= 50) drawHorse(mHorse5);
   if(mCount >= 50 && mCount <= 60) drawHorse(mHorse6);
   
-  if(mCount == 60) mCount = 0;
   mCount++;
+  
+  if(mCount == 60) mCount = 0;
   
   ci::gl::popModelView();
   

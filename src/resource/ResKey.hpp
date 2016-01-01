@@ -81,6 +81,8 @@ enum {
   CTown3,
   CForestGarden1,
   CForestGarden2,
+  CForestGarden3,
+  CForestGarden4,
   CDance,
   
   // Camera
@@ -192,6 +194,8 @@ static std::string getPath(int key) {
     { CTown3,         "background/town/3" + tex_ext },
     { CForestGarden1, "background/forestgarden/1" + tex_ext },
     { CForestGarden2, "background/forestgarden/2" + tex_ext },
+    { CForestGarden3, "background/forestgarden/3" + tex_ext },
+    { CForestGarden4, "background/forestgarden/4" + tex_ext },
     { CDance,         "background/dance/1" + tex_ext },
     
     // Camera

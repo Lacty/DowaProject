@@ -5,18 +5,22 @@
 #include "CinderellaScene.hpp"
 
 #include "background/BackGround.hpp"
+
 #include "cinderella/Cinderella.hpp"
-#include "floor/Floor.hpp"
 #include "ball/Ball.hpp"
+#include "floor/Floor.hpp"
+#include "stairs/Stairs.hpp"
+
 #include "bookshelf/BookShelf.hpp"
 #include "chandelier/Chandelier.hpp"
 #include "chandelierhit/ChandelierHit.hpp"
 #include "book/Book.hpp"
 #include "piano/Piano.hpp"
 #include "handrail/HandRail.hpp"
+
 #include "apple/Apple.hpp"
 #include "bear/Bear.hpp"
-#include "stairs/Stairs.hpp"
+
 #include "townwindow/Townwindow.hpp"
 #include "townwindowhit/TownwindowHit.hpp"
 #include "hydrant/Hydrant.hpp"
@@ -28,7 +32,6 @@
 #include "woodenbox/WoodenBox.hpp"
 #include "river/River.hpp"
 #include "horse/Horse.hpp"
-
 #include "graycube/GrayCube.hpp"
 
 #include "../../object/Task.hpp"
@@ -272,15 +275,15 @@ CinderellaScene::CinderellaScene()
                                                   ci::Vec3f( 40, 50, 0), "Pumpkin1")); // 40, 50
   
   
-  Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 2500, -50, 0),
+  Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4000, -70, 0),
                                              ci::Vec3f( 200, 150, 0)));
   
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 2950, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3000, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
   
   
@@ -311,7 +314,7 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setStageSize( 0.0f, 5000.0f);
+  camera.setStageSize( 0.0f, 7000.0f);
   camera.setForcusObj(Task::find("Cinderella"));
   
   // シンデレラの右側にカメラの焦点をあてる

@@ -76,6 +76,8 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CTown3);
   TextureManager::add(ResKey::CForestGarden1);
   TextureManager::add(ResKey::CForestGarden2);
+  TextureManager::add(ResKey::CForestGarden3);
+  TextureManager::add(ResKey::CForestGarden4);
   TextureManager::add(ResKey::CDance);
   
   // Camera
