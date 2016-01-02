@@ -25,6 +25,4 @@ public:
   void stop();
   void enableLoop();
   void disableLoop();
-  
-  void clear();
 };

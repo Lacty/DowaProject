@@ -68,6 +68,7 @@ void AudioManager::update() {
 
 void AudioManager::clear() {
   for (auto& it : get().mMap) {
+    it.second->stop();
     it.second->clear();
   }
 
