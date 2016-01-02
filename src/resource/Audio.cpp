@@ -5,8 +5,8 @@
 Audio::Audio(const std::string& path) {
   auto ctx = ci::audio::Context::master();
   
-  auto file = ci::audio::load(ci::app::loadAsset(path));
-  auto buf  = file->loadBuffer();
+  file = ci::audio::load(ci::app::loadAsset(path));
+  buf  = file->loadBuffer();
   
   bgm  = ctx->makeNode(new ci::audio::BufferPlayerNode(buf));
   gain = ctx->makeNode(new ci::audio::GainNode(0.0f));
@@ -14,6 +14,8 @@ Audio::Audio(const std::string& path) {
   bgm >> gain >> ctx->getOutput();
   ctx->enable();
 }
+
+Audio::~Audio() {}
 
 float Audio::getVolume() {
   return gain->getValue();
@@ -37,4 +39,12 @@ void Audio::enableLoop() {
 
 void Audio::disableLoop() {
   bgm->setLoopEnabled(false);
+}
+
+
+void Audio::clear() {
+  file->~SourceFile();
+  buf->~BufferT();
+  //bgm->~BufferPlayerNode();
+  //gain->~GainNode();
 }
