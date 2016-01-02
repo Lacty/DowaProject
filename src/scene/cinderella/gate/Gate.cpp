@@ -26,8 +26,8 @@ void Gate::update()
   
   if(mCinderellaPos.x > 4400)
   {
-    mPos = ci::Vec3i( 4773, 4, 0);
-    mSize = ci::Vec3i( 247, 300, 0);
+//    mPos = ci::Vec3i( 4773, 4, 0);
+//    mSize = ci::Vec3i( 247, 300, 0);
     mGateName = "GateBack";
   }
 }
@@ -37,7 +37,7 @@ void Gate::draw()
   ci::gl::enable(GL_CULL_FACE);
   
   ci::gl::enable(GL_TEXTURE_2D);
-//  ci::gl::enableAlphaBlending();
+  ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
   
@@ -47,7 +47,7 @@ void Gate::draw()
   
   ci::gl::popModelView();
   
-//  ci::gl::disableAlphaBlending();
+  ci::gl::disableAlphaBlending();
   ci::gl::disable(GL_TEXTURE_2D);
   
   ci::gl::disable(GL_CULL_FACE);
