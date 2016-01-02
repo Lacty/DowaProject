@@ -323,7 +323,7 @@ CinderellaScene::CinderellaScene()
                                                 ci::Vec3f( 190, 130, 0)));
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 4000, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 2600, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
   
   

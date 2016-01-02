@@ -41,7 +41,7 @@ void Horse::update()
   
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
  
-  if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500)
+  if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4900)
   {
     mPos.x += 0.82f;
     mCount++;
