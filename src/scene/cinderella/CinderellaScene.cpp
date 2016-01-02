@@ -4,37 +4,32 @@
 
 #include "CinderellaScene.hpp"
 
+#include "apple/Apple.hpp"
 #include "background/BackGround.hpp"
-
-#include "cinderella/Cinderella.hpp"
-#include "ball/Ball.hpp"
-#include "floor/Floor.hpp"
-#include "stairs/Stairs.hpp"
-#include "stairs2/Stairs2.hpp"
-
+#include "bear/Bear.hpp"
+#include "book/Book.hpp"
 #include "bookshelf/BookShelf.hpp"
+#include "bridge/Bridge.hpp"
 #include "chandelier/Chandelier.hpp"
 #include "chandelierhit/ChandelierHit.hpp"
-#include "book/Book.hpp"
-#include "piano/Piano.hpp"
+#include "floor/Floor.hpp"
+#include "gate/Gate.hpp"
+#include "graycube/GrayCube.hpp"
 #include "handrail/HandRail.hpp"
-
-#include "apple/Apple.hpp"
-#include "bear/Bear.hpp"
-
-#include "townwindow/Townwindow.hpp"
-#include "townwindowhit/TownwindowHit.hpp"
+#include "horse/Horse.hpp"
 #include "hydrant/Hydrant.hpp"
 #include "lamppost/LampPost.hpp"
-#include "bridge/Bridge.hpp"
+#include "piano/Piano.hpp"
 #include "plate/Plate.hpp"
-#include "shop/Shop.hpp"
 #include "pumpkin/Pumpkin.hpp"
-#include "woodenbox/WoodenBox.hpp"
 #include "river/River.hpp"
-#include "horse/Horse.hpp"
-#include "graycube/GrayCube.hpp"
+#include "shop/Shop.hpp"
+#include "stairs/Stairs.hpp"
+#include "stairs2/Stairs2.hpp"
+#include "townwindow/Townwindow.hpp"
+#include "townwindowhit/TownwindowHit.hpp"
 #include "witch/Witch.hpp"
+#include "woodenbox/WoodenBox.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -177,6 +172,22 @@ CinderellaScene::CinderellaScene()
                                               ci::Vec3f( 50, 50, 0)));
   
   
+  Task::add("Apple8", std::make_shared<Apple>(ci::Vec3f( 4300, 68, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple9", std::make_shared<Apple>(ci::Vec3f( 4400, 50, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple10", std::make_shared<Apple>(ci::Vec3f( 4500, 88, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple11", std::make_shared<Apple>(ci::Vec3f( 4650, 67, 0),
+                                               ci::Vec3f( 50, 50, 0)));
+  
+  
   Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -7, 0), // 2664, -7
                                                               ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
@@ -185,7 +196,7 @@ CinderellaScene::CinderellaScene()
                                                                 ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
   
   
-  Task::add("TownWindowTop_1", std::make_shared<Townwindow>(ci::Vec3f( 2607, 68, 0), // 2607, 68
+  Task::add("TownWindowTop_1", std::make_shared<TownwindowHit>(ci::Vec3f( 2607, 68, 0), // 2607, 68
                                                             ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
   
   
@@ -201,16 +212,24 @@ CinderellaScene::CinderellaScene()
                                                                 ci::Vec3f( 110, 90, 0), "TownWindowOpen")); // 110, 90
   
   
-  Task::add("TownWindowLeft_3", std::make_shared<Townwindow>(ci::Vec3f( 3127, -7, 0), // 3127, -7
+  Task::add("TownWindowLeft_3", std::make_shared<TownwindowHit>(ci::Vec3f( 3127, -7, 0), // 3127, -7
                                                              ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowRight_3", std::make_shared<Townwindow>(ci::Vec3f( 3232, -7, 0), // 3232, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
   Task::add("TownWindowTop_3", std::make_shared<Townwindow>(ci::Vec3f( 3175, 68, 0), // 3175, 68
                                                             ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
   
   
-  Task::add("TownWindowLeft_4", std::make_shared<Townwindow>(ci::Vec3f( 3473, -7, 0), // 3473, -7
+  Task::add("TownWindowLeft_4", std::make_shared<TownwindowHit>(ci::Vec3f( 3473, -7, 0), // 3473, -7
                                                              ci::Vec3f( 77, 105, 0), "TownWindowLeft")); // 77, 105
+  
+  
+  Task::add("TownWindowRight_4", std::make_shared<Townwindow>(ci::Vec3f( 3577, -7, 0), // 3577, -7
+                                                              ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
   Task::add("TownWindowTop_4", std::make_shared<Townwindow>(ci::Vec3f( 3520, 68, 0), // 3520, 68
@@ -225,7 +244,7 @@ CinderellaScene::CinderellaScene()
                                                               ci::Vec3f( 77, 105, 0), "TownWindowRight")); // 77, 105
   
   
-  Task::add("TownWindowTop_5", std::make_shared<Townwindow>(ci::Vec3f( 3743, 68, 0), // 3743, 68
+  Task::add("TownWindowTop_5", std::make_shared<TownwindowHit>(ci::Vec3f( 3743, 68, 0), // 3743, 68
                                                             ci::Vec3f( 75, 90, 0), "TownWindowTop")); // 75, 90
   
   
@@ -278,7 +297,10 @@ CinderellaScene::CinderellaScene()
   Task::add("Witch", std::make_shared<Witch>(ci::Vec3f( 3920, -100, 0),
                                              ci::Vec3f( 75, 90, 0)));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, 4, 0),
+                                           ci::Vec3i( 230, 300, 0), "Gate"));
+  
+  mBall = std::make_shared<Ball>(ci::Vec3f( 2500, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
@@ -293,11 +315,6 @@ CinderellaScene::CinderellaScene()
   Task::add("Plate", std::make_shared<Plate>(ci::Vec3f( 3247, -125, 0), // 3247, -123
                                              ci::Vec3f( 50, 147, 0))); // 50, 147
   
-  
-  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 3350, -165, 0.f),
-                                                   ci::Vec3f( 113, 20, 0.f)));
-  
-  
   Task::add("GameOver", std::make_shared<Floor>(ci::Vec3f( 3350, -187, 0.f),
                                                ci::Vec3f( 113, 20, 0.f)));
   
@@ -306,12 +323,16 @@ CinderellaScene::CinderellaScene()
                                                 ci::Vec3f( 190, 130, 0)));
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 4000, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
   
   
   Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
                                              ci::Vec3f( 300, 160, 0)));
+  
+  
+  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 3350, -165, 0.f),
+                                                   ci::Vec3f( 113, 20, 0.f)));
   
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);

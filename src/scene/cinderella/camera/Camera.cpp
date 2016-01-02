@@ -126,7 +126,7 @@ void Camera::update() {
   bound();
   
   if (mIsGameOver) {
-    std::cout << mAngle << std::endl;
+    //std::cout << mAngle << std::endl;
     mPos.x -= mAngle;
   }
   

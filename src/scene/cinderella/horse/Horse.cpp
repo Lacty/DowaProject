@@ -21,8 +21,6 @@ Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mHorse5 = TextureManager::find(ResKey::CHorse5);
   mHorse6 = TextureManager::find(ResKey::CHorse6);
   
-  setColliderType(Collider::Rect);
-  
 }
 
 void Horse::setup() {}
@@ -46,6 +44,7 @@ void Horse::update()
   if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500)
   {
     mPos.x += 0.82f;
+    mCount++;
   }
   
 }
@@ -65,8 +64,6 @@ void Horse::draw()
   if(mCount >= 30 && mCount <= 40) drawHorse(mHorse4);
   if(mCount >= 40 && mCount <= 50) drawHorse(mHorse5);
   if(mCount >= 50 && mCount <= 60) drawHorse(mHorse6);
-  
-  mCount++;
   
   if(mCount == 60) mCount = 0;
   

@@ -10,6 +10,8 @@ enum {
   //         _________         //
   // ------- |Texture| ------- //
   //         ¯¯¯¯¯¯¯¯¯         //
+  
+  // Title
   TBack,
   TFeatherBook,
   TLogo,
@@ -20,25 +22,31 @@ enum {
   TSphereGreen,
   TSphereRed,
   
+   // Cinderella
   CCharacterStatic,
   CCharacterLeft,
   CCharacterRight,
   CCharacterBookHit,
   CcharacterSubmerge,
   
-  CApple,
+  // Sphere
+  CSphereBlue,
+  CSphereGreen,
+  CSphereRed,
+  
+  // Hose
   CBookSide,
   CBookOpen,
   CBookShelf,
   CBookPile,
+  CPiano,
+  
+  // Forest
+  CApple,
   CHungryBear,
   CStatisfiedBrear,
-  CPiano,
-  CSphereBlue,
-  CSphereGreen,
-  CSphereRed,
-
-  // hiramasa
+  
+  // Town
   CBridge,
   CRiver,
   CHydrant,
@@ -51,6 +59,9 @@ enum {
   CWindow1,
   CWindow2,
   CWindow3,
+  CWindowHit1,
+  CWindowHit2,
+  CWindowHit3,
   CWindowOpen,
   CWoodenBox,
   CWitch1,
@@ -59,14 +70,17 @@ enum {
   CHandRail,
   CChandelier,
   CChandelierHit,
-  
-  // Town
   CHorse1,
   CHorse2,
   CHorse3,
   CHorse4,
   CHorse5,
   CHorse6,
+  
+  // ForestGarden
+  CGate,
+  CGateSide,
+  CGateBack,
   
   // background
   CHouse1,
@@ -116,6 +130,7 @@ static std::string getPath(int key) {
     // ------- |Texture| ------- //
     //         ¯¯¯¯¯¯¯¯¯         //
     
+    // Title
     { TBack,           "background/title/TitleBack" + tex_ext },
     { TFeatherBook,    "background/title/FeatherBookResize" + tex_ext },
     { TLogo,           "background/title/Logo" + tex_ext },
@@ -169,6 +184,9 @@ static std::string getPath(int key) {
     { CWindow1,       "object/town/Window1" + tex_ext },
     { CWindow2,       "object/town/Window2" + tex_ext },
     { CWindow3,       "object/town/Window3" + tex_ext },
+    { CWindowHit1,    "object/town/WindowHit1" + tex_ext },
+    { CWindowHit2,    "object/town/WindowHit2" + tex_ext },
+    { CWindowHit3,    "object/town/WindowHit3" + tex_ext },
     { CWindowOpen,    "object/town/WindowOpen" + tex_ext },
     { CWoodenBox,     "object/town/WoodenBox" + tex_ext },
     { CWitch1,        "object/town/Witch1" + tex_ext },
@@ -180,6 +198,11 @@ static std::string getPath(int key) {
     { CHorse4,        "object/town/Horse4" + tex_ext },
     { CHorse5,        "object/town/Horse5" + tex_ext },
     { CHorse6,        "object/town/Horse6" + tex_ext },
+    
+    // ForestGarden
+    { CGate,          "object/forestgarden/Gate" + tex_ext },
+    { CGateBack,      "object/forestgarden/GateBack" + tex_ext },
+    { CGateSide,      "object/forestgarden/GateSide" + tex_ext },
     
     // Background
     { CHouse1,        "background/house/1" + tex_ext },

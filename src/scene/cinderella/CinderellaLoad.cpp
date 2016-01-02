@@ -33,35 +33,43 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CSphereGreen);
   TextureManager::add(ResKey::CSphereRed);
   
-  // hiramasa
-  TextureManager::add(ResKey::CBridge);
-  TextureManager::add(ResKey::CRiver);
-  TextureManager::add(ResKey::CHydrant);
-  TextureManager::add(ResKey::CLampPost);
-  TextureManager::add(ResKey::CPlate);
-  TextureManager::add(ResKey::CPlateFall);
-  TextureManager::add(ResKey::CPumpkin1);
-  TextureManager::add(ResKey::CPumpkin2);
-  TextureManager::add(ResKey::CShop);
-  TextureManager::add(ResKey::CWindow1);
-  TextureManager::add(ResKey::CWindow2);
-  TextureManager::add(ResKey::CWindow3);
-  TextureManager::add(ResKey::CWindowOpen);
-  TextureManager::add(ResKey::CWoodenBox);
-  TextureManager::add(ResKey::CWitch1);
-  TextureManager::add(ResKey::CWitch2);
-  TextureManager::add(ResKey::CGrayCube);
+  // Hose
   TextureManager::add(ResKey::CHandRail);
   TextureManager::add(ResKey::CChandelier);
   TextureManager::add(ResKey::CChandelierHit);
   
-  // TownTest
+  // Town
+  TextureManager::add(ResKey::CBridge);
+  TextureManager::add(ResKey::CGrayCube);
   TextureManager::add(ResKey::CHorse1);
   TextureManager::add(ResKey::CHorse2);
   TextureManager::add(ResKey::CHorse3);
   TextureManager::add(ResKey::CHorse4);
   TextureManager::add(ResKey::CHorse5);
   TextureManager::add(ResKey::CHorse6);
+  TextureManager::add(ResKey::CHydrant);
+  TextureManager::add(ResKey::CLampPost);
+  TextureManager::add(ResKey::CPlate);
+  TextureManager::add(ResKey::CPlateFall);
+  TextureManager::add(ResKey::CPumpkin1);
+  TextureManager::add(ResKey::CPumpkin2);
+  TextureManager::add(ResKey::CRiver);
+  TextureManager::add(ResKey::CShop);
+  TextureManager::add(ResKey::CWindow1);
+  TextureManager::add(ResKey::CWindow2);
+  TextureManager::add(ResKey::CWindow3);
+  TextureManager::add(ResKey::CWindowHit1);
+  TextureManager::add(ResKey::CWindowHit2);
+  TextureManager::add(ResKey::CWindowHit3);
+  TextureManager::add(ResKey::CWindowOpen);
+  TextureManager::add(ResKey::CWitch1);
+  TextureManager::add(ResKey::CWitch2);
+  TextureManager::add(ResKey::CWoodenBox);
+  
+  // ForestGarden
+  TextureManager::add(ResKey::CGate);
+  TextureManager::add(ResKey::CGateBack);
+  TextureManager::add(ResKey::CGateSide);
   
   // background
   TextureManager::add(ResKey::CHouse1);

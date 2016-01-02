@@ -1,5 +1,6 @@
 
 #include "Plate.hpp"
+#include "../../../device/Device.hpp"
 
 
 Plate::Plate(const ci::Vec3f& PlatePos, const ci::Vec3f& PlateSize)
@@ -47,6 +48,9 @@ void Plate::update()
     mPlateFallSE.play();
     mSePlayFlag = false;
   }
+  
+  // シャア専用
+  if(dowa::Device::isTouchBegan()) mFallFlag = true;
 }
 
 void Plate::draw()
