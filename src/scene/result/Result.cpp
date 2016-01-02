@@ -1,6 +1,7 @@
 
 #include "Result.hpp"
-#include "../../scene/SceneManager.hpp"
+#include "../SceneManager.hpp"
+#include "../../device/Device.hpp"
 
 
 Result::Result() {
@@ -11,6 +12,10 @@ Result::~Result() {
   std::cout << "end result" << std::endl;
 }
 
-void Result::update() {}
+void Result::update() {
+  if (dowa::Device::isTouchBegan()) {
+    SceneManager::create(SceneType::Test);
+  }
+}
 
 void Result::draw() {}
