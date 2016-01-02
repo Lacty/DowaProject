@@ -1,46 +1,63 @@
 
 #pragma once
+
 #include "../../../object/Object.hpp"
 #include "../../../resource/Resource.hpp"
 
 
-class BackGround : public Object {
-private:
-  ci::Rectf mCinderellaHouseRect1; // 1
+class BackGround : public Object
+{
   
-  ci::Rectf mCinderellaHouseRect2_1; // 4
-  ci::Rectf mCinderellaHouseRect2_2; // 4
-  ci::Rectf mCinderellaHouseRect2_3; // 4
-  ci::Rectf mCinderellaHouseRect2_4; // 4
+  ci::gl::Texture mHouse1;
+  ci::gl::Texture mHouse2;
+  ci::gl::Texture mHouse3;
   
-  ci::Rectf mCinderellaHouseRect3; // 1
+  ci::gl::Texture mForest1;
+  ci::gl::Texture mForest2;
+  ci::gl::Texture mForest3;
+  ci::gl::Texture mForest4;
   
-  ci::Rectf mCinderellaForestRect1; // 1
-  ci::Rectf mCinderellaForestRect2; // 1
-  ci::Rectf mCinderellaForestRect3; // 1
-  ci::Rectf mCinderellaForestRect4; // 1
+  ci::gl::Texture mTown1;
+  ci::gl::Texture mTown2;
+  ci::gl::Texture mTown3;
   
-  ci::Rectf mCinderellaTownRect1;
-  ci::Rectf mCinderellaTownRect2;
-  ci::Rectf mCinderellaTownRect3;
+  ci::gl::Texture mForestGarden1;
+  ci::gl::Texture mForestGarden2;
+  ci::gl::Texture mForestGarden3;
+  ci::gl::Texture mForestGarden4;
   
-  ci::gl::Texture mCinderellaHouse1;
-  ci::gl::Texture mCinderellaHouse2;
-  ci::gl::Texture mCinderellaHouse3;
+  ci::gl::Texture mDance;
   
-  ci::gl::Texture mCinderellaForest1;
-  ci::gl::Texture mCinderellaForest2;
-  ci::gl::Texture mCinderellaForest3;
-  ci::gl::Texture mCinderellaForest4;
+  ci::Rectf mHouseRect1;
+  ci::Rectf mHouseRect2_1;
+  ci::Rectf mHouseRect2_2;
+  ci::Rectf mHouseRect2_3;
+  ci::Rectf mHouseRect2_4;
+  ci::Rectf mHouseRect3;
   
-  ci::gl::Texture mCinderellaTown1;
-  ci::gl::Texture mCinderellaTown2;
-  ci::gl::Texture mCinderellaTown3;
+  ci::Rectf mForestRect1;
+  ci::Rectf mForestRect2;
+  ci::Rectf mForestRect3;
+  ci::Rectf mForestRect4;
+  
+  ci::Rectf mTownRect1;
+  ci::Rectf mTownRect2;
+  ci::Rectf mTownRect3;
+  
+  ci::Rectf mForestGardenRect1;
+  ci::Rectf mForestGardenRect2;
+  ci::Rectf mForestGardenRect3;
+  ci::Rectf mForestGardenRect4;
+  
+  ci::Rectf mDanceRect1;
+  ci::Rectf mDanceRect2;
 
 public:
+  
   BackGround();
   
   void setup();
   void update();
   void draw();
+  
 };

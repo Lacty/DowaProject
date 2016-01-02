@@ -26,13 +26,7 @@ Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
 
 void Piano::setup(){}
 
-void Piano::update()
-{
-  if(mIsPlay)
-  {
-    
-  }
-}
+void Piano::update() {}
 
 void Piano::draw()
 {
@@ -56,7 +50,7 @@ void Piano::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   if(compare -> getName() == "Ball")
   {
     // サウンドの音量を変更
-    mHousePiano.setVolume(1.0f);
+    mHousePiano.setVolume(0.8f);
     
     AudioManager::addCrossFade(ResKey::CHouse, ResKey::CHousePiano);
   }

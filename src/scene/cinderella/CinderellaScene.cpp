@@ -5,18 +5,23 @@
 #include "CinderellaScene.hpp"
 
 #include "background/BackGround.hpp"
+
 #include "cinderella/Cinderella.hpp"
-#include "floor/Floor.hpp"
 #include "ball/Ball.hpp"
+#include "floor/Floor.hpp"
+#include "stairs/Stairs.hpp"
+#include "stairs2/Stairs2.hpp"
+
 #include "bookshelf/BookShelf.hpp"
 #include "chandelier/Chandelier.hpp"
 #include "chandelierhit/ChandelierHit.hpp"
 #include "book/Book.hpp"
 #include "piano/Piano.hpp"
 #include "handrail/HandRail.hpp"
+
 #include "apple/Apple.hpp"
 #include "bear/Bear.hpp"
-#include "stairs/Stairs.hpp"
+
 #include "townwindow/Townwindow.hpp"
 #include "townwindowhit/TownwindowHit.hpp"
 #include "hydrant/Hydrant.hpp"
@@ -27,8 +32,9 @@
 #include "pumpkin/Pumpkin.hpp"
 #include "woodenbox/WoodenBox.hpp"
 #include "river/River.hpp"
-
+#include "horse/Horse.hpp"
 #include "graycube/GrayCube.hpp"
+#include "witch/Witch.hpp"
 
 #include "../../object/Task.hpp"
 #include "../../device/Device.hpp"
@@ -45,15 +51,24 @@ CinderellaScene::CinderellaScene()
   mDeviceWindowWidth = ci::app::getWindowWidth();
   mDeviceWindowHeight = ci::app::getWindowHeight();
   
+  // 一回実行に使用
+  mOnceRunFlag = true;
+  
   // findは処理が重いので変数にサウンドを保存
   mHouse = AudioManager::find(ResKey::CHouse);
   mTown = AudioManager::find(ResKey::CTown);
   mCastle = AudioManager::find(ResKey::CCastle);
   
+  // SE
+  mGameOver = AudioManager::find(ResKey::CGameOverSE);
+  
   // サウンドの音量を変更
   mHouse.setVolume(0.5f);
   mTown.setVolume(0.5f);
+  mCastle.setVolume(0.5f);
+  mGameOver.setVolume(0.8f);
   
+  // 再生
   mHouse.play();
   
   // 背景
@@ -72,10 +87,11 @@ CinderellaScene::CinderellaScene()
   
   
   // 地面 一番下
-  Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 1646,
-                                                  -157.f, 0.f),
-                                                   ci::Vec3f( 3291,
-                                                   5, 0.f))); // 5
+  Task::add("Floor_Floor", std::make_shared<Floor>(ci::Vec3f( 1646, -157.f, 0.f), // 1646, -157
+                                                   ci::Vec3f( 3291, 5, 0.f))); // 3291, 5
+  
+  Task::add("Floor_Floor2", std::make_shared<Floor>(ci::Vec3f( 5000, -157.f, 0.f), //
+                                                    ci::Vec3f( 3180, 5, 0.f))); // 3291, 5
   
   Task::add("Chandelier1", std::make_shared<Chandelier>(ci::Vec3f( 400, 113, 0),
                                                         ci::Vec3f( 100, 100, 0)));
@@ -117,16 +133,48 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 55.f, 10.f, 0.f), "BookSide"));
 
   // 熊
-  Task::add("SatisfiedBear", std::make_shared<Bear>(ci::Vec3f( 1800.f, 0, 0.f),
-                                                    ci::Vec3f( 80.f, 130.f, 0.f), "SatisfiedBear"));
+  Task::add("HungryBear1", std::make_shared<Bear>(ci::Vec3f( 1800.f, -90, 0.f),
+                                                    ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
   
   
-  Task::add("HungryBear", std::make_shared<Bear>(ci::Vec3f( 2200.f, 0, 0.f),
+  Task::add("HungryBear2", std::make_shared<Bear>(ci::Vec3f( 2000.f, -90, 0.f),
                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
   
   
-  Task::add("Apple", std::make_shared<Apple>(ci::Vec3f( 2000, 0, 0),
+  Task::add("HungryBear3", std::make_shared<Bear>(ci::Vec3f( 2150.f, -90, 0.f),
+                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
+  
+  
+  Task::add("HungryBear4", std::make_shared<Bear>(ci::Vec3f( 2400.f, -90, 0.f),
+                                                  ci::Vec3f( 80.f, 130.f, 0.f), "HungryBear"));
+  
+  
+  Task::add("Apple1", std::make_shared<Apple>(ci::Vec3f( 1650, 50, 0),
                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple2", std::make_shared<Apple>(ci::Vec3f( 1750, 75, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple3", std::make_shared<Apple>(ci::Vec3f( 1850, 55, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple4", std::make_shared<Apple>(ci::Vec3f( 2050, 85, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple5", std::make_shared<Apple>(ci::Vec3f( 2150, 95, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple6", std::make_shared<Apple>(ci::Vec3f( 2250, 65, 0),
+                                              ci::Vec3f( 50, 50, 0)));
+  
+  
+  Task::add("Apple7", std::make_shared<Apple>(ci::Vec3f( 2350, 78, 0),
+                                              ci::Vec3f( 50, 50, 0)));
   
   
   Task::add("TownWindowRight_1", std::make_shared<Townwindow>(ci::Vec3f( 2664, -7, 0), // 2664, -7
@@ -216,10 +264,8 @@ CinderellaScene::CinderellaScene()
   Task::add("Shop", std::make_shared<Shop>(ci::Vec3f( 3723, -70, 0), // 3723, -70
                                            ci::Vec3f( 210, 155, 0))); // 210, 155
   
-  
   Task::add("WoodenBox", std::make_shared<WoodenBox>(ci::Vec3f( 3858, -110, 0), // 3858, -110
                                                      ci::Vec3f( 75, 80, 0))); // 75, 80
-  
   
   Task::add("Pumpkin2", std::make_shared<Pumpkin>(ci::Vec3f( 3858, -50, 0), // 3858, -50
                                                   ci::Vec3f( 80, 50, 0), "Pumpkin2")); // 80, 50
@@ -229,13 +275,11 @@ CinderellaScene::CinderellaScene()
                                                   ci::Vec3f( 40, 50, 0), "Pumpkin1")); // 40, 50
   
   
+  Task::add("Witch", std::make_shared<Witch>(ci::Vec3f( 3920, -100, 0),
+                                             ci::Vec3f( 75, 90, 0)));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f);
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
-  
-  
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0));
-  Task::add("Cinderella", mCinderella);
   
   
   Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
@@ -258,6 +302,18 @@ CinderellaScene::CinderellaScene()
                                                ci::Vec3f( 113, 20, 0.f)));
   
   
+  Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
+                                                ci::Vec3f( 190, 130, 0)));
+  
+  
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  Task::add("Cinderella", mCinderella);
+  
+  
+  Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
+                                             ci::Vec3f( 300, 160, 0)));
+  
+  
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
   
@@ -265,7 +321,7 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setStageSize( 0.0f, 5000.0f);
+  camera.setStageSize( 0.0f, 7000.0f);
   camera.setForcusObj(Task::find("Cinderella"));
   
   // シンデレラの右側にカメラの焦点をあてる
@@ -293,19 +349,32 @@ void CinderellaScene::update()
                        camera.getViewTop(), camera.getViewBottom());
   
   // ballが左画面外にでたらtrueを返す
-  if(mBall -> isOutOfStage()) {
-    SceneManager::create(SceneType::CinderellaLoad);
+  if(mBall -> isOutOfStage())
+  {
+//    SceneManager::create(SceneType::CinderellaLoad);
 //    mHouse.stop();
   }
   
-  // Gameover
-  if (mCinderella -> mGameOverRturen) camera.setGameOver();
+  // Gameover 一回しか実行しない
+  if (mCinderella -> mGameOverRturen && mOnceRunFlag)
+  {
+    camera.setGameOver(mCinderella -> mGameOverOffset);
+    mGameOver.play();
+    mHouse.stop();
+    mTown.stop();
+    AudioManager::find(ResKey::CHitSE).stop();
+    AudioManager::find(ResKey::CHousePiano).stop();
+    mOnceRunFlag = false;
+  }
 
-  if(mCinderella -> getPos().x >= 2499 && mCinderella -> getPos().x <= 2501)  {
-    if (AudioManager::find(ResKey::CHousePiano).getVolume() >= 0.9f) {
+  if(mCinderella -> getPos().x >= 2499 && mCinderella -> getPos().x <= 2501)
+  {
+    if (AudioManager::find(ResKey::CHousePiano).getVolume() >= 0.9f)
+    {
       AudioManager::addCrossFade(ResKey::CHousePiano, ResKey::CTown);
     }
-    else {
+    else
+    {
       AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
     }
   }

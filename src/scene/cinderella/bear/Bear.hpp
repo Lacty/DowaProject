@@ -13,6 +13,8 @@ class Bear : public Object
   
   std::string mBearName;
   
+  std::string mFloorStr;
+  
   void drawBear(ci::gl::Texture&);
   
 public:

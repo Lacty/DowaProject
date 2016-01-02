@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 
@@ -12,10 +13,16 @@ class Plate : public Object
   
   bool mFallFlag;
   
+  float mGravityPower; // 重力パワー
+  float mAcceleration; // 加速度
+  
   bool mTextureChangeFlag;
   
   void drawPlate();
   void drawPlateFall();
+  
+  Audio mPlateFallSE;
+  bool mSePlayFlag;
   
 public:
   

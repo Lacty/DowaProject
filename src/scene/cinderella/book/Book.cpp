@@ -26,8 +26,8 @@ Book::Book(const ci::Vec3f& mBookPos, const ci::Vec3f& mBookSize, const std::str
   mBookHit = AudioManager::find(ResKey::CBookHit);
   
   // サウンドの音量を変更
-  mBookDrop.setVolume(1.0f);
-  mBookHit.setVolume(1.0f);
+  mBookDrop.setVolume(0.8f);
+  mBookHit.setVolume(0.8f);
   
   mFallFlag = false;
   mDoropAudioFlag = false;
@@ -70,8 +70,6 @@ void Book::update()
     mDoropAudioFlag = false;
   }
   
-//  std::cout << "BookPos = " << mPos << std::endl;
-  
 }
 
 void Book::draw()
@@ -101,7 +99,6 @@ void Book::drawBook(const ci::gl::Texture& mTexturef, const ci::Vec3f& mRotatef)
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   mTexturef.unbind();
   
-//  std::cout << "BookPos = " <<  mPos << std::endl;
 }
 
 void Book::onCollisionUpdate(const std::shared_ptr<Object>& compare)

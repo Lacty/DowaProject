@@ -2,6 +2,7 @@
 #include "Pumpkin.hpp"
 
 #include "../../../resource/Resource.hpp"
+#include "../../../object/Task.hpp"
 
 
 Pumpkin::Pumpkin(const ci::Vec3f& PumpkinPos, const ci::Vec3f& PumpkinSize, const std::string& PumpkinNamef)
@@ -18,7 +19,15 @@ Pumpkin::Pumpkin(const ci::Vec3f& PumpkinPos, const ci::Vec3f& PumpkinSize, cons
 
 void Pumpkin::setup() {}
 
-void Pumpkin::update() {}
+void Pumpkin::update()
+{
+  ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
+  
+  if(mCinderellaPos.x > 3600 && mPumpkinName == "Pumpkin1")
+  {
+    mPos.y += 5;
+  }
+}
 
 void Pumpkin::draw()
 {

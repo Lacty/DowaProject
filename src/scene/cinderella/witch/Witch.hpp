@@ -7,7 +7,13 @@
 
 class Witch : public Object
 {
-  ci::gl::Texture mWitch;
+  
+  bool mTexChange;
+  
+  ci::gl::Texture mWitch1;
+  ci::gl::Texture mWitch2;
+  
+  void drawWitch(const ci::gl::Texture&);
   
 public:
   

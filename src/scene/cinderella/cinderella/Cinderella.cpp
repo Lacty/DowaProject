@@ -12,11 +12,14 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mCount = 0;
   mGravityPower = -0.2f;
   mAcceleration = 0.f;
+  mGameOverOffset = 0.f;
   
   mBookHitFlag = false;
   mSetFlag = true;
   mRiverHitFlag = false;
   mGameOverRturen = false;
+  
+  mStairs2Hit = false;
   
   mOffSet = ci::Vec3f( 0, 0, 0);
   
@@ -39,6 +42,7 @@ void Cinderella::update()
 {
   if(mBookHitFlag) {}
   else if(mRiverHitFlag) {}
+//  else if(mStairs2Hit && (int)mPos.y > -70) {}
   else mPos.x += 0.7f; // 速度 0.7fで30秒
   
   if(!mBookHitFlag) mAcceleration += mGravityPower;
@@ -62,7 +66,11 @@ void Cinderella::update()
     mRotate.z += mAcceleration;
     mOffSet = ci::Vec3f( 50, 0, 0);
   }
-  if(mBookHitFlag && (int)mRotate.z == 0) mGameOverRturen = true;
+  if(mBookHitFlag && (int)mRotate.z == 0)
+  {
+    mGameOverRturen = true;
+    mGameOverOffset = 60.0f;
+  }
 }
 
 void Cinderella::draw()
@@ -110,6 +118,9 @@ void Cinderella::drawCinderella(const ci::gl::Texture & texture, const ci::Vec3f
 void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
   
+  using std::cout;
+  using std::endl;
+  
   std::string name;
   name = compare -> getName();
   name.resize(5);
@@ -143,6 +154,13 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mAcceleration = 0.f;
     mPos.y = compare -> getPos().y + compare -> getSize().y / 2 + mSize.y / 2;
     mGameOverRturen = true;
+    mGameOverOffset = 0.f;
   }
   
+  if(compare -> getName() == "Stairs2" && mPos.y < -70)
+  {
+    mAcceleration = 0.f;
+    mPos.y += 0.23f;
+    mStairs2Hit = true;
+  }
 }

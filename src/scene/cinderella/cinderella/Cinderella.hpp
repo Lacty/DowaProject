@@ -13,6 +13,8 @@ class Cinderella : public Object
   
   bool mSetFlag, mBookHitFlag, mRiverHitFlag;
   
+  bool mStairs2Hit;
+  
   ci::Vec3f mOffSet;
   
   std::string mFloorStr;
@@ -30,6 +32,7 @@ public:
   Cinderella(const ci::Vec3f&, const ci::Vec3f&);
   
   bool mGameOverRturen;
+  float mGameOverOffset;
   
   void setup();
   void update();
