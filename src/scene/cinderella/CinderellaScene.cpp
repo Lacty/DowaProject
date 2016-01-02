@@ -300,7 +300,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, 4, 0),
                                            ci::Vec3i( 230, 300, 0), "Gate"));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 2500, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
@@ -323,7 +323,7 @@ CinderellaScene::CinderellaScene()
                                                 ci::Vec3f( 190, 130, 0)));
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 2600, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
   
   
@@ -364,17 +364,6 @@ CinderellaScene::~CinderellaScene()
 
 void CinderellaScene::update()
 {
-  camera.update();
-  
-  mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
-                       camera.getViewTop(), camera.getViewBottom());
-  
-  // ballが左画面外にでたらtrueを返す
-  if(mBall -> isOutOfStage())
-  {
-//    SceneManager::create(SceneType::CinderellaLoad);
-//    mHouse.stop();
-  }
   
   // Gameover 一回しか実行しない
   if (mCinderella -> mGameOverRturen && mOnceRunFlag)
@@ -399,6 +388,15 @@ void CinderellaScene::update()
       AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
     }
   }
+  
+  camera.update();
+  
+  mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
+                       camera.getViewTop(), camera.getViewBottom());
+  
+  // ballが左画面外にでたらtrueを返す
+  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::TitleLoad);
+  
 }
 
 void CinderellaScene::draw()
