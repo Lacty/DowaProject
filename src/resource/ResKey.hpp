@@ -22,7 +22,7 @@ enum {
   TSphereGreen,
   TSphereRed,
   
-   // Cinderella
+  // Cinderella
   CCharacterStatic,
   CCharacterLeft,
   CCharacterRight,
@@ -35,10 +35,13 @@ enum {
   CSphereRed,
   
   // Hose
-  CBookSide,
   CBookOpen,
-  CBookShelf,
   CBookPile,
+  CBookShelf,
+  CBookSide,
+  CChandelier,
+  CChandelierHit,
+  CHandRail,
   CPiano,
   
   // Forest
@@ -48,13 +51,20 @@ enum {
   
   // Town
   CBridge,
-  CRiver,
+  CGrayCube,
+  CHorse1,
+  CHorse2,
+  CHorse3,
+  CHorse4,
+  CHorse5,
+  CHorse6,
   CHydrant,
   CLampPost,
   CPlate,
   CPlateFall,
   CPumpkin1,
   CPumpkin2,
+  CRiver,
   CShop,
   CWindow1,
   CWindow2,
@@ -63,24 +73,14 @@ enum {
   CWindowHit2,
   CWindowHit3,
   CWindowOpen,
-  CWoodenBox,
   CWitch1,
   CWitch2,
-  CGrayCube,
-  CHandRail,
-  CChandelier,
-  CChandelierHit,
-  CHorse1,
-  CHorse2,
-  CHorse3,
-  CHorse4,
-  CHorse5,
-  CHorse6,
+  CWoodenBox,
   
   // ForestGarden
   CGate,
-  CGateSide,
   CGateBack,
+  CGateSide,
   
   // background
   CHouse1,
@@ -173,13 +173,20 @@ static std::string getPath(int key) {
     
     // Town
     { CBridge,        "object/town/Bridge" + tex_ext },
-    { CRiver,         "object/town/River" + tex_ext },
+    { CGrayCube,      "object/town/GrayCube" + tex_ext },
+    { CHorse1,        "object/town/Horse1" + tex_ext },
+    { CHorse2,        "object/town/Horse2" + tex_ext },
+    { CHorse3,        "object/town/Horse3" + tex_ext },
+    { CHorse4,        "object/town/Horse4" + tex_ext },
+    { CHorse5,        "object/town/Horse5" + tex_ext },
+    { CHorse6,        "object/town/Horse6" + tex_ext },
     { CHydrant,       "object/town/Hydrant" + tex_ext },
     { CLampPost,      "object/town/LampPost" + tex_ext },
     { CPlate,         "object/town/Plate" + tex_ext },
     { CPlateFall,     "object/town/PlateFall" + tex_ext },
     { CPumpkin1,      "object/town/Pumpkin1" + tex_ext },
     { CPumpkin2,      "object/town/Pumpkin2" + tex_ext },
+    { CRiver,         "object/town/River" + tex_ext },
     { CShop,          "object/town/Shop" + tex_ext },
     { CWindow1,       "object/town/Window1" + tex_ext },
     { CWindow2,       "object/town/Window2" + tex_ext },
@@ -188,16 +195,9 @@ static std::string getPath(int key) {
     { CWindowHit2,    "object/town/WindowHit2" + tex_ext },
     { CWindowHit3,    "object/town/WindowHit3" + tex_ext },
     { CWindowOpen,    "object/town/WindowOpen" + tex_ext },
-    { CWoodenBox,     "object/town/WoodenBox" + tex_ext },
     { CWitch1,        "object/town/Witch1" + tex_ext },
     { CWitch2,        "object/town/Witch2" + tex_ext },
-    { CGrayCube,      "object/town/GrayCube" + tex_ext },
-    { CHorse1,        "object/town/Horse1" + tex_ext },
-    { CHorse2,        "object/town/Horse2" + tex_ext },
-    { CHorse3,        "object/town/Horse3" + tex_ext },
-    { CHorse4,        "object/town/Horse4" + tex_ext },
-    { CHorse5,        "object/town/Horse5" + tex_ext },
-    { CHorse6,        "object/town/Horse6" + tex_ext },
+    { CWoodenBox,     "object/town/WoodenBox" + tex_ext },
     
     // ForestGarden
     { CGate,          "object/forestgarden/Gate" + tex_ext },
