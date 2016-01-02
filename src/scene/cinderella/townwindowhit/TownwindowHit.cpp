@@ -15,9 +15,9 @@ TownwindowHit::TownwindowHit(const ci::Vec3f& Pos, const ci::Vec3f& Size, const 
   // サウンドの音量を変更
   mWindowClose.setVolume(0.8f);
   
-  mTownWindowTop = TextureManager::find(ResKey::CWindow1);
-  mTownWindowLeft = TextureManager::find(ResKey::CWindow2);
-  mTownWindowRight = TextureManager::find(ResKey::CWindow3);
+  mTownWindowTop = TextureManager::find(ResKey::CWindowHit1);
+  mTownWindowLeft = TextureManager::find(ResKey::CWindowHit2);
+  mTownWindowRight = TextureManager::find(ResKey::CWindowHit3);
   mTownWindowOpen = TextureManager::find(ResKey::CWindowOpen);
   
   setColliderType(Collider::Rect);
