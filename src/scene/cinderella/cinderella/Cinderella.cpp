@@ -157,10 +157,10 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mGameOverOffset = 0.f;
   }
   
-  if(compare -> getName() == "Stairs2" && mPos.y < -70)
+  if(compare -> getName() == "Stairs2" && mPos.y < -80)
   {
     mAcceleration = 0.f;
-    mPos.y += 0.23f;
+    mPos.y += 0.27f;
     mStairs2Hit = true;
   }
 }

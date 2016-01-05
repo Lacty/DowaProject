@@ -18,9 +18,9 @@ void Stairs2::update()
   
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-  if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4900)
+  if(mCinderellaPos.y == -80 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4950)
   {
-    mPos.x += 4.6f;
+    mPos.x += 1.94f;
   }
 
 }

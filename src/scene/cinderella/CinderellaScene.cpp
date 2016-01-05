@@ -14,6 +14,7 @@
 #include "chandelierhit/ChandelierHit.hpp"
 #include "floor/Floor.hpp"
 #include "gate/Gate.hpp"
+#include "gateside/GateSide.hpp"
 #include "graycube/GrayCube.hpp"
 #include "handrail/HandRail.hpp"
 #include "horse/Horse.hpp"
@@ -297,10 +298,13 @@ CinderellaScene::CinderellaScene()
   Task::add("Witch", std::make_shared<Witch>(ci::Vec3f( 3920, -100, 0),
                                              ci::Vec3f( 75, 90, 0)));
   
-  Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, 4, 0),
+  Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, -6, 0),
                                            ci::Vec3i( 230, 300, 0), "Gate"));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  Task::add("GateSide", std::make_shared<GateSide>(ci::Vec3i( 4790, 500, 0),
+                                                   ci::Vec3i( 230, 300, 0)));
+  
+  mBall = std::make_shared<Ball>(ci::Vec3f( 3000, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
@@ -320,10 +324,10 @@ CinderellaScene::CinderellaScene()
   
   
   Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
-                                                ci::Vec3f( 190, 130, 0)));
+                                                 ci::Vec3f( 100, 100, 0)));
   
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
   
   
@@ -394,8 +398,8 @@ void CinderellaScene::update()
   mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
                        camera.getViewTop(), camera.getViewBottom());
   
-  // ballが左画面外にでたらtrueを返す
-  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::TitleLoad);
+  // ballが左画面外に出たらシーン切り替え
+//  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::TitleLoad);
   
 }
 

@@ -14,7 +14,6 @@ Gate::Gate(const ci::Vec3f& Pos, const ci::Vec3f& Size, const std::string& Name)
   
   mGate = TextureManager::find(ResKey::CGate);
   mGateBack = TextureManager::find(ResKey::CGateBack);
-  mGateSide = TextureManager::find(ResKey::CGateSide);
   
 }
 
@@ -24,12 +23,7 @@ void Gate::update()
 {
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-  if(mCinderellaPos.x > 4400)
-  {
-//    mPos = ci::Vec3i( 4773, 4, 0);
-//    mSize = ci::Vec3i( 247, 300, 0);
-    mGateName = "GateBack";
-  }
+  if(mCinderellaPos.x > 4480) mGateName = "GateBack";
 }
 
 void Gate::draw()
@@ -43,7 +37,6 @@ void Gate::draw()
   
   if(mGateName == "Gate") drawGate(mGate);
   if(mGateName == "GateBack") drawGate(mGateBack);
-  if(mGateName == "GateSide") drawGate(mGateSide);
   
   ci::gl::popModelView();
   

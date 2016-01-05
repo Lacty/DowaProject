@@ -12,7 +12,7 @@ Horse::Horse(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   
   mCount = 0;
   mAcceleration = 0.f;
-  mGravityPower = 0.01f;
+  mGravityPower = 0.03f;
   
   mHorse1 = TextureManager::find(ResKey::CHorse1);
   mHorse2 = TextureManager::find(ResKey::CHorse2);
@@ -32,7 +32,7 @@ void Horse::update()
   
   if(mPumpkinPos.y > 200)
   {
-    if((int)mPos.y > -63)
+    if((int)mPos.y > -70)
     {
       mAcceleration += mGravityPower;
       mPos.y -= mAcceleration;
@@ -41,9 +41,9 @@ void Horse::update()
   
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
  
-  if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4900)
+  if(mCinderellaPos.y == -80 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4950)
   {
-    mPos.x += 0.82f;
+    mPos.x += 1.073f;
     mCount++;
   }
   
