@@ -23,12 +23,11 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   
   mOffSet = ci::Vec3f( 0, 0, 0);
   
-  mCinderellaStatic = TextureManager::find(ResKey::CCharacterStatic);
-  mCinderellaLeft = TextureManager::find(ResKey::CCharacterLeft);
-  mCinderellaRight = TextureManager::find(ResKey::CCharacterRight);
-  
-  mCinderellaBookHit = TextureManager::find(ResKey::CCharacterBookHit);
-  mCinderellaSubmerge = TextureManager::find(ResKey::CcharacterSubmerge);
+  mCinderellaStatic = TextureManager::find(ResKey::CCinderella1);
+  mCinderellaLeft = TextureManager::find(ResKey::CCinderella2);
+  mCinderellaRight = TextureManager::find(ResKey::CCinderella3);
+  mCinderellaBookHit = TextureManager::find(ResKey::CCinderellaDown);
+  mCinderellaSubmerge = TextureManager::find(ResKey::CCinderellaCry);
   
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;

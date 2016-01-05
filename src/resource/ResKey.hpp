@@ -23,11 +23,12 @@ enum {
   TSphereRed,
   
   // Cinderella
-  CCharacterStatic,
-  CCharacterLeft,
-  CCharacterRight,
-  CCharacterBookHit,
-  CcharacterSubmerge,
+  CCinderella1,
+  CCinderella2,
+  CCinderella3,
+  CCinderellaDown,
+  CCinderellaCry,
+  CCinderellaDance,
   
   // Sphere
   CSphereBlue,
@@ -145,12 +146,13 @@ static std::string getPath(int key) {
     { TSphereRed,      "background/title/SphereRed" + tex_ext },
     
     // Cinderella
-    { CCharacterStatic,   "character/cinderella/1" + tex_ext },
-    { CCharacterLeft,     "character/cinderella/2" + tex_ext },
-    { CCharacterRight,    "character/cinderella/3" + tex_ext },
-    { CCharacterBookHit,  "character/cinderella/BookHit" + tex_ext },
-    { CcharacterSubmerge, "character/cinderella/Submerge" + tex_ext },
-    
+    { CCinderella1,     "character/cinderella/1" + tex_ext },
+    { CCinderella2,     "character/cinderella/2" + tex_ext },
+    { CCinderella3,     "character/cinderella/3" + tex_ext },
+    { CCinderellaDown,  "character/cinderella/4" + tex_ext },
+    { CCinderellaCry,   "character/cinderella/5" + tex_ext },
+    { CCinderellaDance, "character/cinderella/6" + tex_ext },
+     
     // Sphere
     { CSphereBlue,       "background/title/SphereBlue" + tex_ext },
     { CSphereGreen,      "background/title/SphereGreen" + tex_ext },

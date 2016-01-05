@@ -12,13 +12,15 @@ CinderellaLoad::~CinderellaLoad() {
   std::cout << "end cinderella load" << std::endl;
 }
 
-void CinderellaLoad::load() {
+void CinderellaLoad::load()
+{
   // Texture
-  TextureManager::add(ResKey::CCharacterStatic);
-  TextureManager::add(ResKey::CCharacterLeft);
-  TextureManager::add(ResKey::CCharacterRight);
-  TextureManager::add(ResKey::CCharacterBookHit);
-  TextureManager::add(ResKey::CcharacterSubmerge);
+  TextureManager::add(ResKey::CCinderella1);
+  TextureManager::add(ResKey::CCinderella2);
+  TextureManager::add(ResKey::CCinderella3);
+  TextureManager::add(ResKey::CCinderellaDown);
+  TextureManager::add(ResKey::CCinderellaCry);
+  TextureManager::add(ResKey::CCinderellaDance);
   
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);
