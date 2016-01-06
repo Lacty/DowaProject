@@ -12,8 +12,9 @@ Sister::Sister(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mSize = Size;
   mRotate = ci::Vec3f(180.f, 0.f, 0.f);
   
-  mSister1 = TextureManager::find(ResKey::CWitch1);
-  mSister2 = TextureManager::find(ResKey::CWitch2);
+  mSister1 = TextureManager::find(ResKey::CSister1);
+  mSister2 = TextureManager::find(ResKey::CSister2);
+  mSister3 = TextureManager::find(ResKey::CSister3);
   
 }
 
@@ -46,7 +47,7 @@ void Sister::draw()
   
 }
 
-void Sister::drawSister(const ci::gl::Texture & texture)
+void Sister::drawSister(const ci::gl::Texture& texture)
 {
   texture.bind();
   ci::gl::translate(mPos);

@@ -10,6 +10,7 @@ class Sister : public Object
   
   ci::gl::Texture mSister1;
   ci::gl::Texture mSister2;
+  ci::gl::Texture mSister3;
   
   void drawSister(const ci::gl::Texture&);
   

@@ -22,6 +22,19 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CCinderellaCry);
   TextureManager::add(ResKey::CCinderellaDance);
   
+  // Witch
+  TextureManager::add(ResKey::CWitch1);
+  TextureManager::add(ResKey::CWitch2);
+  
+  // King
+  TextureManager::find(ResKey::CKing1);
+  TextureManager::find(ResKey::CKing2);
+  
+  // Sister
+  TextureManager::find(ResKey::CSister1);
+  TextureManager::find(ResKey::CSister2);
+  TextureManager::find(ResKey::CSister3);
+  
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);
   TextureManager::add(ResKey::CBookOpen);
@@ -64,8 +77,6 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CWindowHit2);
   TextureManager::add(ResKey::CWindowHit3);
   TextureManager::add(ResKey::CWindowOpen);
-  TextureManager::add(ResKey::CWitch1);
-  TextureManager::add(ResKey::CWitch2);
   TextureManager::add(ResKey::CWoodenBox);
   
   // ForestGarden

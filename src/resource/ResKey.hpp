@@ -30,6 +30,19 @@ enum {
   CCinderellaCry,
   CCinderellaDance,
   
+  // Witch
+  CWitch1,
+  CWitch2,
+  
+  // King
+  CKing1,
+  CKing2,
+  
+  // Sister
+  CSister1,
+  CSister2,
+  CSister3,
+  
   // Sphere
   CSphereBlue,
   CSphereGreen,
@@ -74,8 +87,6 @@ enum {
   CWindowHit2,
   CWindowHit3,
   CWindowOpen,
-  CWitch1,
-  CWitch2,
   CWoodenBox,
   
   // ForestGarden
@@ -132,26 +143,39 @@ static std::string getPath(int key) {
     //         ¯¯¯¯¯¯¯¯¯         //
     
     // Title
-    { TBack,           "background/title/TitleBack" + tex_ext },
-    { TFeatherBook,    "background/title/FeatherBookResize" + tex_ext },
-    { TLogo,           "background/title/Logo" + tex_ext },
-    { TTapToStartEng,  "background/title/TapToStartEng" + tex_ext },
-    { TTrance,         "background/title/Trace" + tex_ext },
-    { TTa,             "background/title/KanaLetterTa" + tex_ext },
-    { TMa,             "background/title/KanaLetterMa" + tex_ext },
-    { TKo,             "background/title/KanaLetterKo" + tex_ext },
-    { TRo,             "background/title/KanaLetterRo" + tex_ext },
-    { TSphereBlue,     "background/title/SphereBlue" + tex_ext },
-    { TSphereGreen,    "background/title/SphereGreen" + tex_ext },
-    { TSphereRed,      "background/title/SphereRed" + tex_ext },
+    { TBack,             "background/title/TitleBack" + tex_ext },
+    { TFeatherBook,      "background/title/FeatherBookResize" + tex_ext },
+    { TLogo,             "background/title/Logo" + tex_ext },
+    { TTapToStartEng,    "background/title/TapToStartEng" + tex_ext },
+    { TTrance,           "background/title/Trace" + tex_ext },
+    { TTa,               "background/title/KanaLetterTa" + tex_ext },
+    { TMa,               "background/title/KanaLetterMa" + tex_ext },
+    { TKo,               "background/title/KanaLetterKo" + tex_ext },
+    { TRo,               "background/title/KanaLetterRo" + tex_ext },
+    { TSphereBlue,       "background/title/SphereBlue" + tex_ext },
+    { TSphereGreen,      "background/title/SphereGreen" + tex_ext },
+    { TSphereRed,        "background/title/SphereRed" + tex_ext },
     
     // Cinderella
-    { CCinderella1,     "character/cinderella/1" + tex_ext },
-    { CCinderella2,     "character/cinderella/2" + tex_ext },
-    { CCinderella3,     "character/cinderella/3" + tex_ext },
-    { CCinderellaDown,  "character/cinderella/4" + tex_ext },
-    { CCinderellaCry,   "character/cinderella/5" + tex_ext },
-    { CCinderellaDance, "character/cinderella/6" + tex_ext },
+    { CCinderella1,      "character/cinderella/1" + tex_ext },
+    { CCinderella2,      "character/cinderella/2" + tex_ext },
+    { CCinderella3,      "character/cinderella/3" + tex_ext },
+    { CCinderellaDown,   "character/cinderella/4" + tex_ext },
+    { CCinderellaCry,    "character/cinderella/5" + tex_ext },
+    { CCinderellaDance,  "character/cinderella/6" + tex_ext },
+    
+    // Witch
+    { CWitch1,           "character/witch/1" + tex_ext },
+    { CWitch2,           "character/witch/2" + tex_ext },
+    
+    // King
+    { CKing1,            "character/king/1" + tex_ext },
+    { CKing2,            "character/king/2" + tex_ext },
+    
+    // Sister
+    { CSister1,          "character/sister/1" + tex_ext },
+    { CSister2,          "character/sister/2" + tex_ext },
+    { CSister3,          "character/sister/3" + tex_ext },
      
     // Sphere
     { CSphereBlue,       "background/title/SphereBlue" + tex_ext },
@@ -197,8 +221,6 @@ static std::string getPath(int key) {
     { CWindowHit2,    "object/town/WindowHit2" + tex_ext },
     { CWindowHit3,    "object/town/WindowHit3" + tex_ext },
     { CWindowOpen,    "object/town/WindowOpen" + tex_ext },
-    { CWitch1,        "object/town/Witch1" + tex_ext },
-    { CWitch2,        "object/town/Witch2" + tex_ext },
     { CWoodenBox,     "object/town/WoodenBox" + tex_ext },
     
     // ForestGarden

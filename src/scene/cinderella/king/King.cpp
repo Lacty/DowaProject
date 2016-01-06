@@ -12,8 +12,8 @@ King::King(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mSize = Size;
   mRotate = ci::Vec3f(180.f, 0.f, 0.f);
   
-  mKing1 = TextureManager::find(ResKey::CWitch1);
-  mKing2 = TextureManager::find(ResKey::CWitch2);
+  mKing1 = TextureManager::find(ResKey::CKing1);
+  mKing2 = TextureManager::find(ResKey::CKing2);
   
 }
 
@@ -22,6 +22,8 @@ void King::setup() {}
 void King::update()
 {
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
+  
+  std::cout << mCinderellaPos << std::endl;
 }
 
 void King::draw()
@@ -46,7 +48,7 @@ void King::draw()
   
 }
 
-void King::drawKing(const ci::gl::Texture & texture)
+void King::drawKing(const ci::gl::Texture& texture)
 {
   texture.bind();
   ci::gl::translate(mPos);

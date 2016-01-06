@@ -19,12 +19,14 @@
 #include "handrail/HandRail.hpp"
 #include "horse/Horse.hpp"
 #include "hydrant/Hydrant.hpp"
+#include "king/King.hpp"
 #include "lamppost/LampPost.hpp"
 #include "piano/Piano.hpp"
 #include "plate/Plate.hpp"
 #include "pumpkin/Pumpkin.hpp"
 #include "river/River.hpp"
 #include "shop/Shop.hpp"
+#include "sister/Sister.hpp"
 #include "stairs/Stairs.hpp"
 #include "stairs2/Stairs2.hpp"
 #include "townwindow/Townwindow.hpp"
@@ -301,9 +303,6 @@ CinderellaScene::CinderellaScene()
   Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, -6, 0),
                                            ci::Vec3i( 230, 300, 0), "Gate"));
   
-  Task::add("GateSide", std::make_shared<GateSide>(ci::Vec3i( 4790, 500, 0),
-                                                   ci::Vec3i( 230, 300, 0)));
-  
   mBall = std::make_shared<Ball>(ci::Vec3f( 3000, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
@@ -320,12 +319,19 @@ CinderellaScene::CinderellaScene()
                                              ci::Vec3f( 50, 147, 0))); // 50, 147
   
   Task::add("GameOver", std::make_shared<Floor>(ci::Vec3f( 3350, -187, 0.f),
-                                               ci::Vec3f( 113, 20, 0.f)));
+                                                ci::Vec3f( 113, 20, 0.f)));
+  
+  
+  Task::add("King", std::make_shared<King>(ci::Vec3f( 0, 0, 0),
+                                           ci::Vec3f( 0, 0, 0)));
+  
+  
+//  Task::add("Sister", std::make_shared<Sister>(ci::Vec3i( 0, 0, 0),
+//                                               ci::Vec3i( 0, 0, 0)));
   
   
   Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
                                                  ci::Vec3f( 100, 100, 0)));
-  
   
   mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
   Task::add("Cinderella", mCinderella);
@@ -334,7 +340,11 @@ CinderellaScene::CinderellaScene()
   Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
                                              ci::Vec3f( 300, 160, 0)));
   
+  // Fixing
+  Task::add("GateSide", std::make_shared<GateSide>(ci::Vec3i( 4790, 500, 0),
+                                                   ci::Vec3i( 230, 300, 0)));
   
+  // Last Placement
   Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 3350, -165, 0.f),
                                                    ci::Vec3f( 113, 20, 0.f)));
   

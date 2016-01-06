@@ -53,7 +53,7 @@ void Witch::draw()
   
 }
 
-void Witch::drawWitch(const ci::gl::Texture & texture)
+void Witch::drawWitch(const ci::gl::Texture& texture)
 {
   texture.bind();
   ci::gl::translate(mPos);
