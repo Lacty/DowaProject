@@ -11,7 +11,7 @@ class GrayCube : public Object
   
 public:
   
-  GrayCube(const ci::Vec3f&, const ci::Vec3f&);
+  GrayCube(const ci::Vec3i&, const ci::Vec3i&);
   
   void setup();
   void update();

@@ -10,7 +10,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mFloorStr = "Floor";
   
   mCount = 0;
-  mGravityPower = -0.2f;
+  mGravityPower = 0.2f;
   mAcceleration = 0.f;
   mGameOverOffset = 0.f;
   
@@ -21,13 +21,17 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   
   mStairs2Hit = false;
   
-  mOffSet = ci::Vec3f( 0, 0, 0);
+  mDanceSetFlag = false;
+  mDanceFlag = false;
   
-  mCinderellaStatic = TextureManager::find(ResKey::CCinderella1);
+  mOffSet = ci::Vec3f( 0.f, 0.f, 0.f);
+  
+//  mCinderellaStatic = TextureManager::find(ResKey::CCinderella1);
   mCinderellaLeft = TextureManager::find(ResKey::CCinderella2);
   mCinderellaRight = TextureManager::find(ResKey::CCinderella3);
   mCinderellaBookHit = TextureManager::find(ResKey::CCinderellaDown);
   mCinderellaSubmerge = TextureManager::find(ResKey::CCinderellaCry);
+  mCinderellaDance = TextureManager::find(ResKey::CCinderellaDance);
   
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
@@ -37,28 +41,22 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
 }
 
 void Cinderella::setup() {}
+
 void Cinderella::update()
 {
+  // 両方がGameOverでなければ移動させる
   if(mBookHitFlag) {}
   else if(mRiverHitFlag) {}
-//  else if(mStairs2Hit && (int)mPos.y > -70) {}
-  else mPos.x += 0.7f; // 速度 0.7fで30秒
+  else mPos.x += 0.7f;
   
+  // 本と当たってなければ重力をつける
   if(!mBookHitFlag) mAcceleration += mGravityPower;
-  if(!mBookHitFlag) mPos.y += mAcceleration;
+  if(!mBookHitFlag) mPos.y -= mAcceleration;
   
   // 一回しか実行しない
-  if(mBookHitFlag && mSetFlag)
-  {
-    mPos = ci::Vec3f( 1216, -150, 0);
-    mSize = ci::Vec3f( 100, 50, 0);
-    mRotate = mRotate = ci::Vec3f( 180.f, 0.f, -45.f);
-    mOffSet = ci::Vec3f(0.f, -25.f, 0.f);
-    mAcceleration = 0.f;
-    mGravityPower = 0.03f;
-    mSetFlag = false;
-  }
+  if(mBookHitFlag && mSetFlag) bookHitSet();
   
+  // 本を回転させる
   if(mBookHitFlag && (int)mRotate.z != 0)
   {
     mAcceleration += mGravityPower;
@@ -70,6 +68,20 @@ void Cinderella::update()
     mGameOverRturen = true;
     mGameOverOffset = 60.0f;
   }
+  
+  // 一回しか実行しない
+  if(mDanceSetFlag)
+  {
+    danceSet();
+    mDanceSetFlag = false;
+  }
+  
+  // 王子と衝突したとき踊る
+  if(mDanceFlag && mPos.x < 6000)
+  {
+    mSize.x += 2.f;
+    std::cout << mSize.x << std::endl; // バグ発生中
+  }
 }
 
 void Cinderella::draw()
@@ -77,14 +89,17 @@ void Cinderella::draw()
   ci::gl::enable(GL_CULL_FACE);
   
   ci::gl::pushModelView();
+  
   ci::gl::enable(GL_TEXTURE_2D);
   cinder::gl::enableAlphaBlending();
   
-  if(mCount <= 75 && !mBookHitFlag && !mBookHitFlag && !mRiverHitFlag)
+  if(mCount <= 75 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag)
     drawCinderella(mCinderellaLeft, mOffSet);
   
-  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag)
+  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag)
     drawCinderella(mCinderellaRight, mOffSet);
+  
+  if(mDanceFlag) drawDance();
   
   if(mBookHitFlag) drawCinderella(mCinderellaBookHit, mOffSet);
   if(mRiverHitFlag) drawCinderella(mCinderellaSubmerge, mOffSet);
@@ -95,6 +110,7 @@ void Cinderella::draw()
   
   cinder::gl::disableAlphaBlending();
   ci::gl::disable(GL_TEXTURE_2D);
+  
   ci::gl::popModelView();
   
   ci::gl::disable(GL_CULL_FACE);
@@ -112,6 +128,34 @@ void Cinderella::drawCinderella(const ci::gl::Texture & texture, const ci::Vec3f
   texture.unbind();
   
   ci::gl::popModelView();
+}
+
+void Cinderella::drawDance()
+{
+  ci::gl::pushModelView();
+  
+  mCinderellaDance.bind();
+  ci::gl::translate(mPos);
+  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
+  mCinderellaDance.unbind();
+  
+  ci::gl::popModelView();
+}
+
+void Cinderella::bookHitSet()
+{
+  mPos = ci::Vec3f( 1216, -150, 0);
+  mSize = ci::Vec3f( 100, 50, 0);
+  mRotate = mRotate = ci::Vec3f( 180.f, 0.f, -45.f);
+  mOffSet = ci::Vec3f(0.f, -25.f, 0.f);
+  mAcceleration = 0.f;
+  mGravityPower = 0.03f;
+  mSetFlag = false;
+}
+
+void Cinderella::danceSet()
+{
+  mSize = ci::Vec3f( -100, 85, 0);
 }
 
 void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
@@ -161,5 +205,12 @@ void Cinderella::onCollisionUpdate(const std::shared_ptr<Object>& compare)
     mAcceleration = 0.f;
     mPos.y += 0.27f;
     mStairs2Hit = true;
+  }
+  
+  if(compare -> getName() == "King")
+  {
+    mDanceSetFlag = true;
+    mDanceFlag = true;
+    compare -> setState(State::Dead);
   }
 }

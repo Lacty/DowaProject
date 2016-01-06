@@ -15,6 +15,8 @@ King::King(const ci::Vec3f& Pos, const ci::Vec3f& Size)
   mKing1 = TextureManager::find(ResKey::CKing1);
   mKing2 = TextureManager::find(ResKey::CKing2);
   
+  setColliderType(Collider::Rect);
+  
 }
 
 void King::setup() {}
@@ -22,8 +24,6 @@ void King::setup() {}
 void King::update()
 {
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
-  
-  std::cout << mCinderellaPos << std::endl;
 }
 
 void King::draw()
@@ -56,3 +56,5 @@ void King::drawKing(const ci::gl::Texture& texture)
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   texture.unbind();
 }
+
+void King::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}

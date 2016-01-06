@@ -27,13 +27,13 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CWitch2);
   
   // King
-  TextureManager::find(ResKey::CKing1);
-  TextureManager::find(ResKey::CKing2);
+  TextureManager::add(ResKey::CKing1);
+  TextureManager::add(ResKey::CKing2);
   
   // Sister
-  TextureManager::find(ResKey::CSister1);
-  TextureManager::find(ResKey::CSister2);
-  TextureManager::find(ResKey::CSister3);
+  TextureManager::add(ResKey::CSister1);
+  TextureManager::add(ResKey::CSister2);
+  TextureManager::add(ResKey::CSister3);
   
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);

@@ -303,7 +303,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, -6, 0),
                                            ci::Vec3i( 230, 300, 0), "Gate"));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 3000, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
@@ -321,19 +321,16 @@ CinderellaScene::CinderellaScene()
   Task::add("GameOver", std::make_shared<Floor>(ci::Vec3f( 3350, -187, 0.f),
                                                 ci::Vec3f( 113, 20, 0.f)));
   
+  Task::add("King", std::make_shared<King>(ci::Vec3f( 5395, -115, 0),
+                                           ci::Vec3f( 75, 75, 0)));
   
-  Task::add("King", std::make_shared<King>(ci::Vec3f( 0, 0, 0),
-                                           ci::Vec3f( 0, 0, 0)));
-  
-  
-//  Task::add("Sister", std::make_shared<Sister>(ci::Vec3i( 0, 0, 0),
-//                                               ci::Vec3i( 0, 0, 0)));
-  
+  Task::add("Sister", std::make_shared<Sister>(ci::Vec3i( 5500, -114, 0),
+                                               ci::Vec3i( 170, 75, 0)));
   
   Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
                                                  ci::Vec3f( 100, 100, 0)));
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 3400, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   
   
@@ -345,8 +342,8 @@ CinderellaScene::CinderellaScene()
                                                    ci::Vec3i( 230, 300, 0)));
   
   // Last Placement
-  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 3350, -165, 0.f),
-                                                   ci::Vec3f( 113, 20, 0.f)));
+  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0.f),
+                                                   ci::Vec3i( 113, 20, 0.f)));
   
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);

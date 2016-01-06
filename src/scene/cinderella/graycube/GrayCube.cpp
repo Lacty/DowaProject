@@ -4,10 +4,10 @@
 #include "../../../resource/Resource.hpp"
 
 
-GrayCube::GrayCube(const ci::Vec3f& GrayCubePos, const ci::Vec3f& GrayCubeSize)
+GrayCube::GrayCube(const ci::Vec3i& Pos, const ci::Vec3i& Size)
 {
-  mPos = GrayCubePos;
-  mSize = GrayCubeSize;
+  mPos = Pos;
+  mSize = Size;
   
   mGrayCube = TextureManager::find(ResKey::CGrayCube);
   

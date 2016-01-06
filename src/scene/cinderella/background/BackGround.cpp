@@ -139,8 +139,8 @@ void BackGround::update() {}
 void BackGround::draw()
 {
   
-  ci::gl::enable(GL_TEXTURE_2D);
-  cinder::gl::enableAlphaBlending();
+//  ci::gl::enable(GL_TEXTURE_2D);
+//  cinder::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
   
@@ -173,7 +173,7 @@ void BackGround::draw()
   
   ci::gl::popModelView();
   
-  ci::gl::disableAlphaBlending();
-  ci::gl::disable(GL_TEXTURE_2D);
+//  ci::gl::disableAlphaBlending();
+//  ci::gl::disable(GL_TEXTURE_2D);
   
 }
