@@ -10,7 +10,6 @@ class Gate : public Object
   
   ci::gl::Texture mGate;
   ci::gl::Texture mGateBack;
-  ci::gl::Texture mGateSide;
   
   std::string mGateName;
   

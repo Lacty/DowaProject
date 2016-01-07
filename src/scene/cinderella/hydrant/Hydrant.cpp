@@ -4,10 +4,10 @@
 #include "../../../resource/Resource.hpp"
 
 
-Hydrant::Hydrant(const ci::Vec3f& mHydrantPos, const ci::Vec3f& mHydrantSize)
+Hydrant::Hydrant(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
-  mPos = mHydrantPos;
-  mSize = mHydrantSize;
+  mPos = Pos;
+  mSize = Size;
   
   mHydrant = TextureManager::find(ResKey::CHydrant);
   

@@ -1,37 +1,31 @@
 
-#include "Witch.hpp"
+#include "Sister.hpp"
 
 #include "../../../resource/Resource.hpp"
 #include "../../../object/Task.hpp"
 
 
-Witch::Witch(const ci::Vec3f& WitchPos, const ci::Vec3f& WitchSize)
+Sister::Sister(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
   
-  mTexChange = false;
-  
-  mPos = WitchPos;
-  mSize = WitchSize;
+  mPos = Pos;
+  mSize = Size;
   mRotate = ci::Vec3f(180.f, 0.f, 0.f);
   
-  mWitch1 = TextureManager::find(ResKey::CWitch1);
-  mWitch2 = TextureManager::find(ResKey::CWitch2);
+  mSister1 = TextureManager::find(ResKey::CSister1);
+  mSister2 = TextureManager::find(ResKey::CSister2);
+  mSister3 = TextureManager::find(ResKey::CSister3);
   
 }
 
-void Witch::setup() {}
+void Sister::setup() {}
 
-void Witch::update()
+void Sister::update()
 {
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
-  
-  if(mCinderellaPos.x > 3600)
-  {
-    mTexChange = true;
-  }
 }
 
-void Witch::draw()
+void Sister::draw()
 {
   
   ci::gl::enable(GL_CULL_FACE);
@@ -41,8 +35,8 @@ void Witch::draw()
   
   ci::gl::pushModelView();
   
-  if(mTexChange) drawWitch(mWitch2);
-  else drawWitch(mWitch1);
+  // 描画
+  drawSister(mSister1);
   
   ci::gl::popModelView();
   
@@ -53,7 +47,7 @@ void Witch::draw()
   
 }
 
-void Witch::drawWitch(const ci::gl::Texture& texture)
+void Sister::drawSister(const ci::gl::Texture& texture)
 {
   texture.bind();
   ci::gl::translate(mPos);

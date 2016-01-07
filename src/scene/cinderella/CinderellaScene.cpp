@@ -14,16 +14,19 @@
 #include "chandelierhit/ChandelierHit.hpp"
 #include "floor/Floor.hpp"
 #include "gate/Gate.hpp"
+#include "gateside/GateSide.hpp"
 #include "graycube/GrayCube.hpp"
 #include "handrail/HandRail.hpp"
 #include "horse/Horse.hpp"
 #include "hydrant/Hydrant.hpp"
+#include "king/King.hpp"
 #include "lamppost/LampPost.hpp"
 #include "piano/Piano.hpp"
 #include "plate/Plate.hpp"
 #include "pumpkin/Pumpkin.hpp"
 #include "river/River.hpp"
 #include "shop/Shop.hpp"
+#include "sister/Sister.hpp"
 #include "stairs/Stairs.hpp"
 #include "stairs2/Stairs2.hpp"
 #include "townwindow/Townwindow.hpp"
@@ -297,10 +300,10 @@ CinderellaScene::CinderellaScene()
   Task::add("Witch", std::make_shared<Witch>(ci::Vec3f( 3920, -100, 0),
                                              ci::Vec3f( 75, 90, 0)));
   
-  Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, 4, 0),
+  Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, -6, 0),
                                            ci::Vec3i( 230, 300, 0), "Gate"));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 2500, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
@@ -316,23 +319,31 @@ CinderellaScene::CinderellaScene()
                                              ci::Vec3f( 50, 147, 0))); // 50, 147
   
   Task::add("GameOver", std::make_shared<Floor>(ci::Vec3f( 3350, -187, 0.f),
-                                               ci::Vec3f( 113, 20, 0.f)));
+                                                ci::Vec3f( 113, 20, 0.f)));
   
+  Task::add("King", std::make_shared<King>(ci::Vec3f( 5395, -115, 0),
+                                           ci::Vec3f( 75, 75, 0)));
+  
+  Task::add("Sister", std::make_shared<Sister>(ci::Vec3i( 5500, -114, 0),
+                                               ci::Vec3i( 170, 75, 0)));
   
   Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
-                                                ci::Vec3f( 190, 130, 0)));
+                                                 ci::Vec3f( 100, 100, 0)));
   
-  
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 2600, 50, 0), ci::Vec3f( 75, 75, 0)); // 150
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   
   
   Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
                                              ci::Vec3f( 300, 160, 0)));
   
+  // Fixing
+  Task::add("GateSide", std::make_shared<GateSide>(ci::Vec3i( 4790, 500, 0),
+                                                   ci::Vec3i( 230, 300, 0)));
   
-  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3f( 3350, -165, 0.f),
-                                                   ci::Vec3f( 113, 20, 0.f)));
+  // Last Placement
+  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0.f),
+                                                   ci::Vec3i( 113, 20, 0.f)));
   
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
@@ -364,17 +375,6 @@ CinderellaScene::~CinderellaScene()
 
 void CinderellaScene::update()
 {
-  camera.update();
-  
-  mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
-                       camera.getViewTop(), camera.getViewBottom());
-  
-  // ballが左画面外にでたらtrueを返す
-  if(mBall -> isOutOfStage())
-  {
-//    SceneManager::create(SceneType::CinderellaLoad);
-//    mHouse.stop();
-  }
   
   // Gameover 一回しか実行しない
   if (mCinderella -> mGameOverRturen && mOnceRunFlag)
@@ -399,6 +399,15 @@ void CinderellaScene::update()
       AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
     }
   }
+  
+  camera.update();
+  
+  mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
+                       camera.getViewTop(), camera.getViewBottom());
+  
+  // ballが左画面外に出たらシーン切り替え
+//  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::TitleLoad);
+  
 }
 
 void CinderellaScene::draw()

@@ -12,13 +12,28 @@ CinderellaLoad::~CinderellaLoad() {
   std::cout << "end cinderella load" << std::endl;
 }
 
-void CinderellaLoad::load() {
+void CinderellaLoad::load()
+{
   // Texture
-  TextureManager::add(ResKey::CCharacterStatic);
-  TextureManager::add(ResKey::CCharacterLeft);
-  TextureManager::add(ResKey::CCharacterRight);
-  TextureManager::add(ResKey::CCharacterBookHit);
-  TextureManager::add(ResKey::CcharacterSubmerge);
+  TextureManager::add(ResKey::CCinderella1);
+  TextureManager::add(ResKey::CCinderella2);
+  TextureManager::add(ResKey::CCinderella3);
+  TextureManager::add(ResKey::CCinderellaDown);
+  TextureManager::add(ResKey::CCinderellaCry);
+  TextureManager::add(ResKey::CCinderellaDance);
+  
+  // Witch
+  TextureManager::add(ResKey::CWitch1);
+  TextureManager::add(ResKey::CWitch2);
+  
+  // King
+  TextureManager::add(ResKey::CKing1);
+  TextureManager::add(ResKey::CKing2);
+  
+  // Sister
+  TextureManager::add(ResKey::CSister1);
+  TextureManager::add(ResKey::CSister2);
+  TextureManager::add(ResKey::CSister3);
   
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);
@@ -62,8 +77,6 @@ void CinderellaLoad::load() {
   TextureManager::add(ResKey::CWindowHit2);
   TextureManager::add(ResKey::CWindowHit3);
   TextureManager::add(ResKey::CWindowOpen);
-  TextureManager::add(ResKey::CWitch1);
-  TextureManager::add(ResKey::CWitch2);
   TextureManager::add(ResKey::CWoodenBox);
   
   // ForestGarden

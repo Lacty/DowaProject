@@ -55,10 +55,10 @@ void Title::update()
   if(dowa::Device::isTouchBegan())
   {
     mGameStart.play();
+    mMenu.stop();
     
     SceneManager::create(SceneType::CinderellaLoad);
     
-    mMenu.stop();
   }
   
   mSphereMotion++;

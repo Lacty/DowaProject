@@ -50,7 +50,7 @@ void Plate::update()
   }
   
   // シャア専用
-  if(dowa::Device::isTouchBegan()) mFallFlag = true;
+//  if(dowa::Device::isTouchBegan()) mFallFlag = true;
 }
 
 void Plate::draw()

@@ -5,13 +5,13 @@
 
 #include "cinder/gl/Texture.h"
 
-class GrayCube : public Object
+class GateSide : public Object
 {
-  ci::gl::Texture mGrayCube;
+  ci::gl::Texture mGateSide;
   
 public:
   
-  GrayCube(const ci::Vec3i&, const ci::Vec3i&);
+  GateSide(const ci::Vec3f&, const ci::Vec3f&);
   
   void setup();
   void update();

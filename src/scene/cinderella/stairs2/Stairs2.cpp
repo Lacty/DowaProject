@@ -18,9 +18,9 @@ void Stairs2::update()
   
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-  if(mCinderellaPos.y == -70 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4900)
+  if(mCinderellaPos.y == -80 && mCinderellaPos.x > 3500 && mCinderellaPos.x < 4950)
   {
-    mPos.x += 4.6f;
+    mPos.x += 1.94f;
   }
 
 }
@@ -32,8 +32,8 @@ void Stairs2::draw()
   glEnable(GL_BLEND);
   glBlendFunc(GL_ZERO, GL_ONE);
   ci::gl::drawCube(mPos, mSize);
-  glDisable(GL_ZERO);
-  glDisable(GL_ONE);
+//  glDisable(GL_ZERO);
+//  glDisable(GL_ONE);
   glDisable(GL_BLEND);
   
   ci::gl::popModelView();

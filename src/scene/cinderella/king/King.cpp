@@ -1,37 +1,32 @@
 
-#include "Witch.hpp"
+#include "King.hpp"
 
 #include "../../../resource/Resource.hpp"
 #include "../../../object/Task.hpp"
 
 
-Witch::Witch(const ci::Vec3f& WitchPos, const ci::Vec3f& WitchSize)
+King::King(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
   
-  mTexChange = false;
-  
-  mPos = WitchPos;
-  mSize = WitchSize;
+  mPos = Pos;
+  mSize = Size;
   mRotate = ci::Vec3f(180.f, 0.f, 0.f);
   
-  mWitch1 = TextureManager::find(ResKey::CWitch1);
-  mWitch2 = TextureManager::find(ResKey::CWitch2);
+  mKing1 = TextureManager::find(ResKey::CKing1);
+  mKing2 = TextureManager::find(ResKey::CKing2);
+  
+  setColliderType(Collider::Rect);
   
 }
 
-void Witch::setup() {}
+void King::setup() {}
 
-void Witch::update()
+void King::update()
 {
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
-  
-  if(mCinderellaPos.x > 3600)
-  {
-    mTexChange = true;
-  }
 }
 
-void Witch::draw()
+void King::draw()
 {
   
   ci::gl::enable(GL_CULL_FACE);
@@ -41,8 +36,8 @@ void Witch::draw()
   
   ci::gl::pushModelView();
   
-  if(mTexChange) drawWitch(mWitch2);
-  else drawWitch(mWitch1);
+  // 描画
+  drawKing(mKing1);
   
   ci::gl::popModelView();
   
@@ -53,7 +48,7 @@ void Witch::draw()
   
 }
 
-void Witch::drawWitch(const ci::gl::Texture& texture)
+void King::drawKing(const ci::gl::Texture& texture)
 {
   texture.bind();
   ci::gl::translate(mPos);
@@ -61,3 +56,5 @@ void Witch::drawWitch(const ci::gl::Texture& texture)
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   texture.unbind();
 }
+
+void King::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
