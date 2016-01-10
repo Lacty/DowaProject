@@ -9,6 +9,7 @@ Stairs2::Stairs2(const ci::Vec3f& mStairsPosf, const ci::Vec3f& mStairsSizef)
   mSize = mStairsSizef;
   
   setColliderType(Collider::Rect);
+  
 }
 
 void Stairs2::setup() {}

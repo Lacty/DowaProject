@@ -20,13 +20,12 @@ Sister::Sister(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 
 void Sister::setup() {}
 
-void Sister::update()
-{
-  ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
-}
+void Sister::update() {}
 
 void Sister::draw()
 {
+  
+  ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
   
   ci::gl::enable(GL_CULL_FACE);
   
@@ -36,7 +35,9 @@ void Sister::draw()
   ci::gl::pushModelView();
   
   // 描画
-  drawSister(mSister1);
+  if(mCinderellaPos.x <= 5320) drawSister(mSister1);
+  if(mCinderellaPos.x >= 5321 && mCinderellaPos.x <= 5500) drawSister(mSister2);
+  if(mCinderellaPos.x >= 5501) drawSister(mSister3);
   
   ci::gl::popModelView();
   

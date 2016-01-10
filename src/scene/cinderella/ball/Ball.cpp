@@ -74,8 +74,8 @@ void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
   {
     mHitSE.play();
     
-    mPos.x += mAcc.y * 10;
-    mPos.y += mAcc.x * 10;
+    mPos.x += mAcc.y * 13;
+    mPos.y += mAcc.x * 13;
     
   }
 }
