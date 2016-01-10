@@ -5,6 +5,7 @@
 
 ResultLoad::ResultLoad() {
   std::cout << "start result load" << std::endl;
+  count = -1;
 }
 
 ResultLoad::~ResultLoad() {
@@ -25,6 +26,9 @@ void ResultLoad::load() {
 }
 
 void ResultLoad::update() {
+  ++count;
+  if (!count) return;
+
   load();
   SceneManager::create(SceneType::Result);
 }
