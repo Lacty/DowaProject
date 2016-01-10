@@ -6,6 +6,7 @@
 class CinderellaLoad : public Scene {
 private:
   void load();
+  int count;
 
 public:
   CinderellaLoad();

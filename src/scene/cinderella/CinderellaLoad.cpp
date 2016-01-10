@@ -6,6 +6,7 @@
 
 CinderellaLoad::CinderellaLoad() {
   std::cout << "start cinderella load" << std::endl;
+  count = -1;
 }
 
 CinderellaLoad::~CinderellaLoad() {
@@ -120,6 +121,9 @@ void CinderellaLoad::load()
 }
 
 void CinderellaLoad::update() {
+  ++count;
+  if (!count) return;
+
   load();
   SceneManager::create(SceneType::Cinderella);
 }
