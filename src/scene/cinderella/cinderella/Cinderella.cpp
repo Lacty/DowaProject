@@ -38,6 +38,7 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mRotate = ci::Vec3f(180.f, 0.f, 0.f);
   
   setColliderType(Collider::Rect);
+  
 }
 
 void Cinderella::setup() {}
@@ -79,8 +80,9 @@ void Cinderella::update()
   // 王子と衝突したとき踊る
   if(mDanceFlag && mPos.x < 6000)
   {
-    mSize.x += 2.f;
-    std::cout << mSize.x << std::endl; // バグ発生中
+    if(mSize.x < 100) mSize.x += 2.f;
+    else danceSet();
+//    std::cout << mSize.x << std::endl; // Debug
   }
 }
 
