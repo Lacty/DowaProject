@@ -8,6 +8,7 @@
 
 TitleLoad::TitleLoad() {
   std::cout << "start title load" << std::endl;
+  count = -1;
 }
 
 TitleLoad::~TitleLoad() {
@@ -38,6 +39,9 @@ void TitleLoad::load() {
 }
 
 void TitleLoad::update() {
+  ++count;
+  if (!count) return;
+
   load();
   SceneManager::create(SceneType::Title);
 }

@@ -6,6 +6,7 @@
 class TitleLoad : public Scene {
 private:
   void load();
+  int count;
   
 public:
   TitleLoad();
