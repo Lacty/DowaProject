@@ -3,11 +3,13 @@
 #include "../../object/Task.hpp"
 #include "../../resource/Resource.hpp"
 #include "../SceneManager.hpp"
+#include "../../window/Window.hpp"
 
 
 
 TitleLoad::TitleLoad() {
   std::cout << "start title load" << std::endl;
+  TextureManager::add(ResKey::NowLoad);
   count = -1;
 }
 
@@ -46,4 +48,18 @@ void TitleLoad::update() {
   SceneManager::create(SceneType::Title);
 }
 
-void TitleLoad::draw() {}
+void TitleLoad::draw() {
+  ci::gl::clear(ci::Color(0.4f, 0.4f, 0.4f));
+  
+  ci::gl::enableAlphaBlending();
+  
+  ci::gl::pushModelView();
+  ci::gl::Texture image = TextureManager::find(ResKey::NowLoad);
+  float offset_x = dowa::getWindowWidth() - image.getWidth();
+  float offset_y = dowa::getWindowHeight() - image.getHeight();
+  ci::gl::translate(offset_x, offset_y);
+  ci::gl::draw(image);
+  ci::gl::popModelView();
+  
+  ci::gl::disableAlphaBlending();
+}
