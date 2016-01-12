@@ -114,6 +114,9 @@ enum {
   // Camera
   CamHole,
   
+  // LoadScene
+  NowLoad,
+  
   //          _______          //
   // -------- |Audio| -------- //
   //          ¯¯¯¯¯¯¯          //
@@ -247,6 +250,9 @@ static std::string getPath(int key) {
     
     // Camera
     { CamHole,        "camera/hole" + tex_ext },
+    
+    // LoadScene
+    { NowLoad,        "loadscene/nowload" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //
