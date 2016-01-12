@@ -15,6 +15,8 @@ Pumpkin::Pumpkin(const ci::Vec3f& PumpkinPos, const ci::Vec3f& PumpkinSize, cons
   mPumpkin1 = TextureManager::find(ResKey::CPumpkin1);
   mPumpkin2 = TextureManager::find(ResKey::CPumpkin2);
   
+  setColliderType(Collider::Rect);
+  
 }
 
 void Pumpkin::setup() {}
@@ -58,3 +60,5 @@ void Pumpkin::drawPumpkin(const ci::gl::Texture & PumpkinTexture)
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   PumpkinTexture.unbind();
 }
+
+void Pumpkin::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
