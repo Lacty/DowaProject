@@ -307,10 +307,6 @@ CinderellaScene::CinderellaScene()
   Task::add("Ball", mBall);
   
   
-  Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
-                                                   ci::Vec3f( 145.f, 208.f, 0.f)));
-  
-  
   Task::add("River", std::make_shared<River>(ci::Vec3f( 3350, -152, 0),
                                              ci::Vec3f( 113, 20, 0)));
   
@@ -334,6 +330,11 @@ CinderellaScene::CinderellaScene()
   Task::add("Cinderella", mCinderella);
   
   
+  // HandRail
+  Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
+                                                   ci::Vec3f( 145.f, 208.f, 0.f)));
+  
+  // Horse
   Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
                                              ci::Vec3f( 300, 160, 0)));
   
