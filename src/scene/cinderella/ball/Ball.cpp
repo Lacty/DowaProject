@@ -70,7 +70,7 @@ void Ball::draw()
 
 void Ball::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-  if(compare -> getName() != "Cinderella")
+  if(compare -> getName() != "Cinderella" && compare -> getName() != "Stairs" && compare -> getName() != "Stairs2")
   {
     mHitSE.play();
     
