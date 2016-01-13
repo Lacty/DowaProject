@@ -24,6 +24,14 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CCinderellaDown);
   TextureManager::add(ResKey::CCinderellaCry);
   TextureManager::add(ResKey::CCinderellaDance);
+  TextureManager::add(ResKey::CDress1);
+  TextureManager::add(ResKey::CDress2);
+  TextureManager::add(ResKey::COut1);
+  TextureManager::add(ResKey::COut2);
+  TextureManager::add(ResKey::COut3);
+  TextureManager::add(ResKey::COut4);
+  
+  TextureManager::add(ResKey::CShoes);
   
   // Witch
   TextureManager::add(ResKey::CWitch1);
@@ -37,6 +45,10 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CSister1);
   TextureManager::add(ResKey::CSister2);
   TextureManager::add(ResKey::CSister3);
+  
+  // Orchestra
+  TextureManager::add(ResKey::COrchestra1);
+  TextureManager::add(ResKey::COrchestra2);
   
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);

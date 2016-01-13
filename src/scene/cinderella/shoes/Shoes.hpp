@@ -1,14 +1,22 @@
-//
-//  Shoes.hpp
-//  DowaProject
-//
-//  Created by nanashi on 2016/01/14.
-//
-//
 
-#ifndef Shoes_hpp
-#define Shoes_hpp
+# pragma once
 
-#include <stdio.h>
+#include "../../../object/Object.hpp"
 
-#endif /* Shoes_hpp */
+#include "cinder/gl/Texture.h"
+
+class Shoes : public Object
+{
+  ci::gl::Texture mShoes;
+  
+  void drawShoes(const ci::gl::Texture&);
+  
+public:
+  
+  Shoes(const ci::Vec3f&, const ci::Vec3f&);
+  
+  void setup();
+  void update();
+  void draw();
+  
+};

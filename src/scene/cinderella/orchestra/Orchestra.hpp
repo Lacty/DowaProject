@@ -1,14 +1,25 @@
-//
-//  Orchestra.hpp
-//  DowaProject
-//
-//  Created by nanashi on 2016/01/13.
-//
-//
 
-#ifndef Orchestra_hpp
-#define Orchestra_hpp
+#pragma once
 
-#include <stdio.h>
+#include "../../../object/Object.hpp"
 
-#endif /* Orchestra_hpp */
+#include "cinder/gl/Texture.h"
+
+class Orchestra : public Object
+{
+  ci::gl::Texture mOrchestra1;
+  ci::gl::Texture mOrchestra2;
+  
+  std::string mOrchestraName;
+  
+  void drawOrchestra(const ci::gl::Texture&);
+  
+public:
+  
+  Orchestra(const ci::Vec3i&, const ci::Vec3i&, const std::string&);
+  
+  void setup();
+  void update();
+  void draw();
+  
+};

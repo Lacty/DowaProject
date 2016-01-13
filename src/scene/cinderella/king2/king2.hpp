@@ -1,14 +1,23 @@
-//
-//  king2.hpp
-//  DowaProject
-//
-//  Created by nanashi on 2016/01/13.
-//
-//
 
-#ifndef king2_hpp
-#define king2_hpp
+#pragma once
 
-#include <stdio.h>
+#include "../../../object/Object.hpp"
 
-#endif /* king2_hpp */
+#include "cinder/gl/Texture.h"
+
+class King2 : public Object
+{
+  
+  ci::gl::Texture mKing2;
+  
+  void drawKing2(const ci::gl::Texture&);
+  
+public:
+  
+  King2(const ci::Vec3f&, const ci::Vec3f&);
+  
+  void setup();
+  void update();
+  void draw();
+  
+};
