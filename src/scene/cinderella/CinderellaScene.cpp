@@ -346,7 +346,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Shoes", std::make_shared<Shoes>(ci::Vec3i( 6100, 500, 0),
                                              ci::Vec3i( 12, 12, 0)));
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 5150, 50, 0),
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0),
                                              ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   

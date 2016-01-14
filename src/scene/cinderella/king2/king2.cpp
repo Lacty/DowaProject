@@ -23,7 +23,7 @@ void King2::update()
   
   ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
   
-  std::cout << mCinderellaPos.x << std::endl;
+//  std::cout << mCinderellaPos.x << std::endl;
   
   if(mCinderellaPos.x > 6000)
   {
