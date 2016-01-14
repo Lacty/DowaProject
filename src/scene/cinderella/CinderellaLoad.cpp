@@ -13,6 +13,7 @@ CinderellaLoad::CinderellaLoad() {
 
 CinderellaLoad::~CinderellaLoad() {
   std::cout << "end cinderella load" << std::endl;
+  //TextureManager::kill(ResKey::NowLoad);
 }
 
 void CinderellaLoad::load()
@@ -136,11 +137,11 @@ void CinderellaLoad::draw() {
   ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
-  ci::gl::Texture image = TextureManager::find(ResKey::NowLoad);
-  float offset_x = dowa::getWindowWidth() - image.getWidth();
-  float offset_y = dowa::getWindowHeight() - image.getHeight();
+  //TextureManager::add(ResKey::NowLoad);
+  float offset_x = dowa::getWindowWidth() - TextureManager::find(ResKey::NowLoad).getWidth();
+  float offset_y = dowa::getWindowHeight() - TextureManager::find(ResKey::NowLoad).getHeight();
   ci::gl::translate(offset_x, offset_y);
-  ci::gl::draw(image);
+  ci::gl::draw(TextureManager::find(ResKey::NowLoad));
   ci::gl::popModelView();
   
   ci::gl::disableAlphaBlending();
