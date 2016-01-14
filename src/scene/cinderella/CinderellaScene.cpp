@@ -20,11 +20,14 @@
 #include "horse/Horse.hpp"
 #include "hydrant/Hydrant.hpp"
 #include "king/King.hpp"
+#include "king2/king2.hpp"
 #include "lamppost/LampPost.hpp"
+#include "orchestra/Orchestra.hpp"
 #include "piano/Piano.hpp"
 #include "plate/Plate.hpp"
 #include "pumpkin/Pumpkin.hpp"
 #include "river/River.hpp"
+#include "shoes/Shoes.hpp"
 #include "shop/Shop.hpp"
 #include "sister/Sister.hpp"
 #include "stairs/Stairs.hpp"
@@ -56,15 +59,19 @@ CinderellaScene::CinderellaScene()
   mHouse = AudioManager::find(ResKey::CHouse);
   mTown = AudioManager::find(ResKey::CTown);
   mCastle = AudioManager::find(ResKey::CCastle);
+  mForest = AudioManager::find(ResKey::CForest);
   
   // SE
   mGameOver = AudioManager::find(ResKey::CGameOverSE);
   
   // サウンドの音量を変更
-  mHouse.setVolume(0.5f);
-  mTown.setVolume(0.5f);
-  mCastle.setVolume(0.5f);
-  mGameOver.setVolume(0.8f);
+  mHouse.setVolume(1.0f);
+  mTown.setVolume(1.0f);
+  mCastle.setVolume(1.0f);
+  mForest.setVolume(1.0f);
+  
+  // SE
+  mGameOver.setVolume(1.0f);
   
   // 再生
   mHouse.play();
@@ -300,15 +307,21 @@ CinderellaScene::CinderellaScene()
   Task::add("Witch", std::make_shared<Witch>(ci::Vec3f( 3920, -100, 0),
                                              ci::Vec3f( 75, 90, 0)));
   
+  
   Task::add("Gate", std::make_shared<Gate>(ci::Vec3i( 4790, -6, 0),
                                            ci::Vec3i( 230, 300, 0), "Gate"));
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  // Orchestra1
+  Task::add("Orchestra1", std::make_shared<Orchestra>(ci::Vec3i( 5790, -105, 0),
+                                                      ci::Vec3i( 320, 80, 0), "Orchestra1"));
+  
+  // Orchestra2
+  Task::add("Orchestra2", std::make_shared<Orchestra>(ci::Vec3i( 5796, -108, 0),
+                                                      ci::Vec3i( 60, 80, 0), "Orchestra2"));
+  
+  
+  mBall = std::make_shared<Ball>(ci::Vec3f( 2500, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
-  
-  
-  Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
-                                                   ci::Vec3f( 145.f, 208.f, 0.f)));
   
   
   Task::add("River", std::make_shared<River>(ci::Vec3f( 3350, -152, 0),
@@ -330,10 +343,23 @@ CinderellaScene::CinderellaScene()
   Task::add("Stairs2", std::make_shared<Stairs2>(ci::Vec3f( 4088, -80, 0),
                                                  ci::Vec3f( 100, 100, 0)));
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0), ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
+  Task::add("King2", std::make_shared<King2>(ci::Vec3f( 6000, 500, 0),
+                                             ci::Vec3f( 75, 75, 0)));
+  
+  // Shoes
+  Task::add("Shoes", std::make_shared<Shoes>(ci::Vec3i( 6100, 500, 0),
+                                             ci::Vec3i( 12, 12, 0)));
+  
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 2500, 50, 0),
+                                             ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   
   
+  // HandRail
+  Task::add("HandRail", std::make_shared<HandRail>(ci::Vec3f( 324.f, -40.f, 0.f),
+                                                   ci::Vec3f( 145.f, 208.f, 0.f)));
+  
+  // Horse
   Task::add("Horse", std::make_shared<Horse>(ci::Vec3f( 4140, 500, 0),
                                              ci::Vec3f( 300, 160, 0)));
   
@@ -398,6 +424,15 @@ void CinderellaScene::update()
     {
       AudioManager::addCrossFade(ResKey::CHouse, ResKey::CTown);
     }
+    
+//    std::cout << mCinderella -> getPos().x << std::endl;
+    
+    if(mCinderella -> getPos().x >= 4249 && mCinderella -> getPos().x <= 4251)
+    {
+      AudioManager::addCrossFade(ResKey::CTown, ResKey::CForest);
+      std::cout << 123 << std::endl;
+    }
+    
   }
   
   camera.update();

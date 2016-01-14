@@ -17,6 +17,10 @@ class Cinderella : public Object
   
   bool mDanceSetFlag, mDanceFlag;
   
+  bool mDressFlag;
+  
+  bool mOut1, mOut2;
+  
   ci::Vec3f mOffSet;
   
   std::string mFloorStr;
@@ -27,6 +31,13 @@ class Cinderella : public Object
   ci::gl::Texture mCinderellaBookHit;
   ci::gl::Texture mCinderellaSubmerge;
   ci::gl::Texture mCinderellaDance;
+  ci::gl::Texture mCinderellaDress1;
+  ci::gl::Texture mCinderellaDress2;
+  
+  ci::gl::Texture mCinderellaOut1;
+  ci::gl::Texture mCinderellaOut2;
+  ci::gl::Texture mCinderellaOut3;
+  ci::gl::Texture mCinderellaOut4;
   
   void drawCinderella(const ci::gl::Texture&, const ci::Vec3f&);
   

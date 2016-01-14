@@ -7,13 +7,13 @@
 
 CinderellaLoad::CinderellaLoad() {
   std::cout << "start cinderella load" << std::endl;
-  TextureManager::add(ResKey::NowLoad);
+//  TextureManager::add(ResKey::NowLoad);
   count = -1;
 }
 
 CinderellaLoad::~CinderellaLoad() {
   std::cout << "end cinderella load" << std::endl;
-  //TextureManager::kill(ResKey::NowLoad);
+//  TextureManager::kill(ResKey::NowLoad);
 }
 
 void CinderellaLoad::load()
@@ -25,6 +25,14 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CCinderellaDown);
   TextureManager::add(ResKey::CCinderellaCry);
   TextureManager::add(ResKey::CCinderellaDance);
+  TextureManager::add(ResKey::CDress1);
+  TextureManager::add(ResKey::CDress2);
+  TextureManager::add(ResKey::COut1);
+  TextureManager::add(ResKey::COut2);
+  TextureManager::add(ResKey::COut3);
+  TextureManager::add(ResKey::COut4);
+  
+  TextureManager::add(ResKey::CShoes);
   
   // Witch
   TextureManager::add(ResKey::CWitch1);
@@ -38,6 +46,10 @@ void CinderellaLoad::load()
   TextureManager::add(ResKey::CSister1);
   TextureManager::add(ResKey::CSister2);
   TextureManager::add(ResKey::CSister3);
+  
+  // Orchestra
+  TextureManager::add(ResKey::COrchestra1);
+  TextureManager::add(ResKey::COrchestra2);
   
   TextureManager::add(ResKey::CApple);
   TextureManager::add(ResKey::CBookSide);
@@ -119,6 +131,9 @@ void CinderellaLoad::load()
   AudioManager::add(ResKey::CBookHit);
   AudioManager::add(ResKey::CWindowClose);
   AudioManager::add(ResKey::CPlateFallSE);
+  
+  AudioManager::add(ResKey::CForest);
+  AudioManager::add(ResKey::COrchestra);
 
   std::cout << "finish load" << std::endl;
 }
@@ -137,11 +152,11 @@ void CinderellaLoad::draw() {
   ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
-  //TextureManager::add(ResKey::NowLoad);
-  float offset_x = dowa::getWindowWidth() - TextureManager::find(ResKey::NowLoad).getWidth();
-  float offset_y = dowa::getWindowHeight() - TextureManager::find(ResKey::NowLoad).getHeight();
-  ci::gl::translate(offset_x, offset_y);
-  ci::gl::draw(TextureManager::find(ResKey::NowLoad));
+//  ci::gl::Texture image = TextureManager::find(ResKey::NowLoad);
+//  float offset_x = dowa::getWindowWidth() - image.getWidth();
+//  float offset_y = dowa::getWindowHeight() - image.getHeight();
+//  ci::gl::translate(offset_x, offset_y);
+//  ci::gl::draw(image);
   ci::gl::popModelView();
   
   ci::gl::disableAlphaBlending();

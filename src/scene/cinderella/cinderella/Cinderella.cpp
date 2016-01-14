@@ -24,14 +24,24 @@ Cinderella::Cinderella(const ci::Vec3f& mCinderellaPos, const ci::Vec3f& mCinder
   mDanceSetFlag = false;
   mDanceFlag = false;
   
+  mDressFlag = false;
+  
+  mOut1 = false, mOut2 = false;
+  
   mOffSet = ci::Vec3f( 0.f, 0.f, 0.f);
   
-//  mCinderellaStatic = TextureManager::find(ResKey::CCinderella1);
   mCinderellaLeft = TextureManager::find(ResKey::CCinderella2);
   mCinderellaRight = TextureManager::find(ResKey::CCinderella3);
   mCinderellaBookHit = TextureManager::find(ResKey::CCinderellaDown);
   mCinderellaSubmerge = TextureManager::find(ResKey::CCinderellaCry);
   mCinderellaDance = TextureManager::find(ResKey::CCinderellaDance);
+  mCinderellaDress1 = TextureManager::find(ResKey::CDress1);
+  mCinderellaDress2 = TextureManager::find(ResKey::CDress2);
+  
+  mCinderellaOut1 = TextureManager::find(ResKey::COut1);
+  mCinderellaOut2 = TextureManager::find(ResKey::COut2);
+  mCinderellaOut3 = TextureManager::find(ResKey::COut3);
+  mCinderellaOut4 = TextureManager::find(ResKey::COut4);
   
   mPos = mCinderellaPos;
   mSize = mCinderellaSize;
@@ -77,6 +87,9 @@ void Cinderella::update()
     mDanceSetFlag = false;
   }
   
+  // 馬車が出たら服を変える
+  if(mPos.x > 3600) mDressFlag = true;
+  
   // 王子と衝突したとき踊る
   if(mDanceFlag && mPos.x < 6000)
   {
@@ -84,6 +97,24 @@ void Cinderella::update()
     else danceSet();
 //    std::cout << mSize.x << std::endl; // Debug
   }
+  
+  // 到底の位置に行ったら王子と離れる
+  if(mPos.x >= 6000)
+  {
+    mDanceFlag = false;
+    mSize = ci::Vec3f( 75, 75, 0);
+    mOut1 = true;
+  }
+  
+  // 特定の(ry
+  if(mPos.x >= 6100)
+  {
+    mOut1 = false;
+    mOut2 = true;
+  }
+  
+//  std::cout << mPos << std::endl;
+  
 }
 
 void Cinderella::draw()
@@ -95,12 +126,30 @@ void Cinderella::draw()
   ci::gl::enable(GL_TEXTURE_2D);
   cinder::gl::enableAlphaBlending();
   
-  if(mCount <= 75 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag)
+  if(mCount <= 75 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && !mDressFlag)
     drawCinderella(mCinderellaLeft, mOffSet);
   
-  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag)
+  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && !mDressFlag)
     drawCinderella(mCinderellaRight, mOffSet);
   
+  if(mCount <= 75 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && mDressFlag)
+    drawCinderella(mCinderellaDress1, mOffSet);
+  
+  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && mDressFlag)
+    drawCinderella(mCinderellaDress2, mOffSet);
+  
+  if(mCount <= 75 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && mOut1)
+    drawCinderella(mCinderellaOut1, mOffSet);
+  
+  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && mOut1)
+    drawCinderella(mCinderellaOut2, mOffSet);
+  
+  if(mCount <= 75 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && mOut2)
+    drawCinderella(mCinderellaOut3, mOffSet);
+  
+  if(mCount >= 75 && mCount <= 150 && !mBookHitFlag && !mRiverHitFlag && !mDanceFlag && mOut2)
+    drawCinderella(mCinderellaOut4, mOffSet);
+
   if(mDanceFlag) drawDance();
   
   if(mBookHitFlag) drawCinderella(mCinderellaBookHit, mOffSet);

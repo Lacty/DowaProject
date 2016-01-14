@@ -29,9 +29,9 @@ ci::gl::Texture& TextureManager::find(int key) {
 }
 
 void TextureManager::kill(int key) {
-  auto itr = get().mMap.find(key);
-  if (itr != get().mMap.end()) {
-    get().mMap.erase(itr);
+  get().mMap.erase(key);
+  if (get().mMap.find(key) == get().mMap.end()) {
+    std::cout << key << "を削除" << std::endl;
   }
 }
 

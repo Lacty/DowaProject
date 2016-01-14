@@ -24,10 +24,10 @@ void End::draw() {
   ci::gl::color(1.0, 1.0, 1.0, count);
   ci::gl::rotate(ci::Vec3f(180, 0, 0));
   ci::gl::draw(TextureManager::find(tex_key),
-               ci::Rectf(-dowa::getWindowWidth() * 0.5f,
-                         -dowa::getWindowHeight() * 0.5f,
-                         dowa::getWindowWidth() * 0.5f,
-                         dowa::getWindowHeight() * 0.5f));
+               ci::Rectf(-dowa::getWindowWidth() * 0.6f,
+                         -dowa::getWindowHeight() * 0.6f,
+                         dowa::getWindowWidth() * 0.6f,
+                         dowa::getWindowHeight() * 0.6f));
   ci::gl::color(1.0f, 1.0f, 1.0f, 1.0f);
   
   ci::gl::disableAlphaBlending();

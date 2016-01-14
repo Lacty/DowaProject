@@ -63,7 +63,7 @@ void Apple::onCollisionUpdate(const std::shared_ptr<Object> &compare)
     mFallFlag = true;
   }
   
-  if(compare -> getName() == "Floor_Floor")
+  if(compare -> getName() == "Floor_Floor" || compare -> getName() == "Floor_Floor2")
   {
     mFloorHitFlag = true;
     mRotate.z += 0.25f;

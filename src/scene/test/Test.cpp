@@ -14,8 +14,8 @@ Test::Test() {
   
   // 追加は必ず最後にすること
   // コンストラクタに使いたいResKeyを指定
-  end = std::make_shared<End>(ResKey::TBack);
-  Task::add("end", end);
+  //end = std::make_shared<End>(ResKey::TBack);
+  //Task::add("end", end);
 }
 
 Test::~Test() {
@@ -25,7 +25,7 @@ Test::~Test() {
 void Test::update() {
   // enableStartを呼べば開始される
   if (dowa::Device::isTouchBegan()) {
-    end->enableStart();
+    //end->enableStart();
   }
 }
 

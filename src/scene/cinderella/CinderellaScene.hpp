@@ -23,15 +23,16 @@ class CinderellaScene : public Scene
   ci::Vec3f mCameraPos;
   dowa::Camera camera;
   
+  Audio mHouse;
   Audio mTown;
   Audio mCastle;
+  Audio mForest;
+  
   Audio mGameOver;
   
   bool mOnceRunFlag;
   
 public:
-  
-  Audio mHouse;
   
   CinderellaScene();
   ~CinderellaScene();

@@ -33,8 +33,8 @@ void Stairs2::draw()
   glEnable(GL_BLEND);
   glBlendFunc(GL_ZERO, GL_ONE);
   ci::gl::drawCube(mPos, mSize);
-//  glDisable(GL_ZERO);
-//  glDisable(GL_ONE);
+  glDisable(GL_ZERO);
+  glDisable(GL_ONE);
   glDisable(GL_BLEND);
   
   ci::gl::popModelView();

@@ -13,6 +13,7 @@ ResultLoad::ResultLoad() {
 
 ResultLoad::~ResultLoad() {
   std::cout << "end result load" << std::endl;
+  TextureManager::kill(ResKey::NowLoad);
 }
 
 void ResultLoad::load() {
