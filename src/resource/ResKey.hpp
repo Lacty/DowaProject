@@ -132,6 +132,11 @@ namespace ResKey {
     // LoadScene
     NowLoad,
     
+    // Counter
+    Counter1,
+    Counter2,
+    Counter3,
+    
     //          _______          //
     // -------- |Audio| -------- //
     //          ¯¯¯¯¯¯¯          //
@@ -284,6 +289,10 @@ namespace ResKey {
       
       // LoadScene
       { NowLoad,        "loadscene/nowload" + tex_ext },
+      
+      { Counter1,       "counter/counter1" + tex_ext },
+      { Counter2,       "counter/counter2" + tex_ext },
+      { Counter3,       "counter/counter3" + tex_ext },
       
       //          _______          //
       // -------- |Audio| -------- //
