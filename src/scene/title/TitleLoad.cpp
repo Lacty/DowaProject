@@ -9,7 +9,7 @@
 
 TitleLoad::TitleLoad() {
   std::cout << "start title load" << std::endl;
-  TextureManager::add(ResKey::TBack);
+  TextureManager::add(ResKey::NowLoad);
   count = -1;
 }
 
@@ -54,7 +54,7 @@ void TitleLoad::draw() {
   ci::gl::enableAlphaBlending();
   
   ci::gl::pushModelView();
-  ci::gl::Texture image = TextureManager::find(ResKey::TBack);
+  ci::gl::Texture image = TextureManager::find(ResKey::NowLoad);
   float offset_x = dowa::getWindowWidth() - image.getWidth();
   float offset_y = dowa::getWindowHeight() - image.getHeight();
   ci::gl::translate(offset_x, offset_y);

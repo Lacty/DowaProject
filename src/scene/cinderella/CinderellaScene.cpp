@@ -428,7 +428,7 @@ void CinderellaScene::update()
                        camera.getViewTop(), camera.getViewBottom());
   
   // ballが左画面外に出たらシーン切り替え
-//  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::TitleLoad);
+//  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::CinderellaLoad);
   
 }
 

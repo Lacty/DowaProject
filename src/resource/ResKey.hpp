@@ -129,6 +129,9 @@ namespace ResKey {
     // Camera
     CamHole,
     
+    // LoadScene
+    NowLoad,
+    
     //          _______          //
     // -------- |Audio| -------- //
     //          ¯¯¯¯¯¯¯          //
@@ -278,6 +281,9 @@ namespace ResKey {
       
       // Camera
       { CamHole,          "camera/hole" + tex_ext },
+      
+      // LoadScene
+      { NowLoad,        "loadscene/nowload" + tex_ext },
       
       //          _______          //
       // -------- |Audio| -------- //
