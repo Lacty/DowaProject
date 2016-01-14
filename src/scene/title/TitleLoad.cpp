@@ -50,7 +50,7 @@ void TitleLoad::update() {
 }
 
 void TitleLoad::draw() {
-  ci::gl::clear(ci::Color(0.4f, 0.4f, 0.4f));
+  ci::gl::clear(ci::Color(0.0f, 0.0f, 0.0f));
   
   ci::gl::enableAlphaBlending();
   
