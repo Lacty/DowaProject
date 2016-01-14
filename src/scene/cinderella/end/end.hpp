@@ -8,6 +8,8 @@ private:
   bool mIsStart;
   float count;
   int tex_key;
+  
+  ci::Vec3f cam_pos;
 
 public:
   End() = default;
@@ -18,4 +20,6 @@ public:
   void draw();
   
   void enableStart();
+  
+  void setCamPos(const ci::Vec3f& pos);
 };

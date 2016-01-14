@@ -19,14 +19,16 @@ void End::draw() {
   
   ci::gl::enableAlphaBlending();
   
-  ci::gl::translate(dowa::getWindowCenter());
+  ci::gl::translate(cam_pos.xy());
   
   ci::gl::color(1.0, 1.0, 1.0, count);
+  ci::gl::rotate(ci::Vec3f(180, 0, 0));
   ci::gl::draw(TextureManager::find(tex_key),
                ci::Rectf(-dowa::getWindowWidth() * 0.5f,
                          -dowa::getWindowHeight() * 0.5f,
                          dowa::getWindowWidth() * 0.5f,
                          dowa::getWindowHeight() * 0.5f));
+  ci::gl::color(1.0f, 1.0f, 1.0f, 1.0f);
   
   ci::gl::disableAlphaBlending();
   
@@ -35,4 +37,8 @@ void End::draw() {
 
 void End::enableStart() {
   mIsStart = true;
+}
+
+void End::setCamPos(const ci::Vec3f &pos) {
+  cam_pos = pos;
 }

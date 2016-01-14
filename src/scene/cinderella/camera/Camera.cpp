@@ -90,6 +90,10 @@ void Camera::bound() {
   }
 }
 
+ci::Vec3f Camera::getPos() {
+  return mPos;
+}
+
 float Camera::getViewLeft() {
   return mViewLeft;
 }
