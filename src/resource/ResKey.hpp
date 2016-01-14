@@ -117,6 +117,11 @@ enum {
   // LoadScene
   NowLoad,
   
+  // Counter
+  Counter1,
+  Counter2,
+  Counter3,
+  
   //          _______          //
   // -------- |Audio| -------- //
   //          ¯¯¯¯¯¯¯          //
@@ -253,6 +258,11 @@ static std::string getPath(int key) {
     
     // LoadScene
     { NowLoad,        "loadscene/nowload" + tex_ext },
+    
+    // Counter
+    { Counter1,       "counter/counter1" + tex_ext },
+    { Counter2,       "counter/counter2" + tex_ext },
+    { Counter3,       "counter/counter3" + tex_ext },
     
     //          _______          //
     // -------- |Audio| -------- //

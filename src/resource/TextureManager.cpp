@@ -28,6 +28,13 @@ ci::gl::Texture& TextureManager::find(int key) {
   return *get().mMap[key];
 }
 
+void TextureManager::kill(int key) {
+  auto itr = get().mMap.find(key);
+  if (itr != get().mMap.end()) {
+    get().mMap.erase(itr);
+  }
+}
+
 void TextureManager::clear() {
   get().mMap.clear();
 }
