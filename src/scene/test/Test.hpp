@@ -1,12 +1,12 @@
 
 #pragma once
 #include "../Scene.hpp"
-#include "../../resource/Resource.hpp"
+#include "end/end.hpp"
 
 
 class Test : public Scene {
 private:
-  Audio mHitSE;
+  std::shared_ptr<End> end;
   
 public:
   Test();
