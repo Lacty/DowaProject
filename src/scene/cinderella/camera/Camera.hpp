@@ -54,6 +54,7 @@ public:
   void update();
   void draw();
   
+  ci::Vec3f getPos();
   float getViewLeft();
   float getViewRight();
   float getViewTop();

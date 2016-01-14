@@ -120,6 +120,9 @@ void CinderellaLoad::load()
   // Camera
   TextureManager::add(ResKey::CamHole);
   
+  // End
+  TextureManager::add(ResKey::CEnd);
+  
   // Sound
   AudioManager::add(ResKey::CHitSE);
   AudioManager::add(ResKey::CGameOverSE);

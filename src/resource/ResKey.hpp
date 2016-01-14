@@ -137,6 +137,9 @@ namespace ResKey {
     Counter2,
     Counter3,
     
+    // End
+    CEnd,
+    
     //          _______          //
     // -------- |Audio| -------- //
     //          ¯¯¯¯¯¯¯          //
@@ -296,6 +299,8 @@ namespace ResKey {
       { Counter1,       "counter/counter1" + tex_ext },
       { Counter2,       "counter/counter2" + tex_ext },
       { Counter3,       "counter/counter3" + tex_ext },
+      
+      { CEnd,           "background/end/1" + tex_ext },
       
       //          _______          //
       // -------- |Audio| -------- //

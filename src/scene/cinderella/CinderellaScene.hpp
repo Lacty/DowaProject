@@ -7,6 +7,7 @@
 
 #include "ball/Ball.hpp"
 #include "cinderella/Cinderella.hpp"
+#include "end/end.hpp"
 
 #include "../Scene.hpp"
 #include "../../resource/Resource.hpp"
@@ -29,6 +30,8 @@ class CinderellaScene : public Scene
   Audio mForest;
   
   Audio mGameOver;
+  
+  std::shared_ptr<End> end;
   
   bool mOnceRunFlag;
   

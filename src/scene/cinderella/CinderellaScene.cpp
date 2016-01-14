@@ -350,7 +350,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Shoes", std::make_shared<Shoes>(ci::Vec3i( 6100, 500, 0),
                                              ci::Vec3i( 12, 12, 0)));
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 2500, 50, 0),
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 5500, 50, 0),
                                              ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   
@@ -371,6 +371,9 @@ CinderellaScene::CinderellaScene()
   Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0.f),
                                                    ci::Vec3i( 113, 20, 0.f)));
   
+  // End
+  end = std::make_shared<End>(ResKey::CEnd);
+  Task::add("End", end);
   
   mCameraPos = ci::Vec3f( 250.f, 0.f, 300.f);
   camera = dowa::Camera(60.f, 0.5f, 300.f);
@@ -379,7 +382,7 @@ CinderellaScene::CinderellaScene()
                 ci::Vec3f(mCameraPos.x, mCameraPos.y, 0.f),
                 ci::Vec3f::yAxis());
   
-  camera.setStageSize( 0.0f, 7000.0f);
+  camera.setStageSize( 0.0f, 6300.0f);
   camera.setForcusObj(Task::find("Cinderella"));
   
   // シンデレラの右側にカメラの焦点をあてる
@@ -439,6 +442,13 @@ void CinderellaScene::update()
   
   mBall -> setViewSize(camera.getViewLeft(), camera. getViewRight(),
                        camera.getViewTop(), camera.getViewBottom());
+  
+  std::cout << "posX = " << mCinderella->getPos().x << std::endl;
+  if (mCinderella->getPos().x > 6300) {
+    end->setCamPos(camera.getPos());
+    end->enableStart();
+  }
+  
   
   // ballが左画面外に出たらシーン切り替え
 //  if(mBall -> isOutOfStage()) SceneManager::create(SceneType::TitleLoad);

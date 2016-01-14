@@ -82,12 +82,16 @@ void Camera::bound() {
   }
   
   if (topRight.x > TopRight.x) {
-    float offset = TopLeft.x - topLeft.x;
+    float offset = TopRight.x - topRight.x;
     //std::cout << offset << std::endl;
     mPos.x += offset;
     mCamera.setEyePoint(mPos);
     return;
   }
+}
+
+ci::Vec3f Camera::getPos() {
+  return mPos;
 }
 
 float Camera::getViewLeft() {
