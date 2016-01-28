@@ -2,6 +2,7 @@
 #include <iostream>
 #include "TextureManager.hpp"
 #include "ResKey.hpp"
+#include "cinder/app/AppNative.h"
 
 
 TextureManager& TextureManager::get() {
