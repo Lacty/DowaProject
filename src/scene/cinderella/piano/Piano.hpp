@@ -2,6 +2,7 @@
 # pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 
@@ -12,6 +13,8 @@ class Piano: public Object
   float mVolume;
   float mFadeSpeed;
   
+  Audio mHousePiano;
+  
 public:
   
   Piano(const ci::Vec3f&, const ci::Vec3f&);
@@ -21,4 +24,5 @@ public:
 	void draw();
 
 void onCollisionUpdate(const std::shared_ptr<Object>& compare);
+  
 };

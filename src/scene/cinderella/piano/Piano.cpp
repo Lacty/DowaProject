@@ -1,17 +1,23 @@
 
 #include "Piano.hpp"
 
-#include "../../../resource/Resource.hpp"
+#include "../CinderellaScene.hpp"
 
 
 Piano::Piano(const ci::Vec3f& mPianoPos, const ci::Vec3f& mPianoSize)
 {
-  mIsPlay = false;
+  mIsPlay = true;
   mVolume = 0.0f;
   mFadeSpeed = 0.05f;
   
   mPos = mPianoPos;
   mSize = mPianoSize;
+  
+  // findは処理が重いので変数にサウンドを保存
+  mHousePiano = AudioManager::find(ResKey::CHousePiano);
+  
+  // サウンドの音量を変更
+  mHousePiano.setVolume(0.0f);
   
   mPiano = TextureManager::find(ResKey::CPiano);
   
@@ -41,8 +47,13 @@ void Piano::draw()
 
 void Piano::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-  if(compare -> getName() == "Ball")
+  if(compare -> getName() == "Ball" && mIsPlay)
   {
-    mIsPlay = true;
+    // サウンドの音量を変更
+    mHousePiano.setVolume(0.8f);
+    
+    AudioManager::addCrossFade(ResKey::CHouse, ResKey::CHousePiano);
+    
+    mIsPlay = false;
   }
 }

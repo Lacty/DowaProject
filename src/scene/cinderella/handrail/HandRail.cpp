@@ -4,14 +4,13 @@
 #include "../../../resource/Resource.hpp"
 
 
-HandRail::HandRail(const ci::Vec3f& mHandRailPos, const ci::Vec3f& mHandRailSize)
+HandRail::HandRail(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
-  mPos = mHandRailPos;
-  mSize = mHandRailSize;
+  mPos = Pos;
+  mSize = Size;
   
   mHandRail = TextureManager::find(ResKey::CHandRail);
   
-  setColliderType(Collider::Rect);
 }
 
 void HandRail::setup() {}

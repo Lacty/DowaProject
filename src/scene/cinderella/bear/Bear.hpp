@@ -13,6 +13,8 @@ class Bear : public Object
   
   std::string mBearName;
   
+  std::string mFloorStr;
+  
   void drawBear(ci::gl::Texture&);
   
 public:
@@ -22,5 +24,7 @@ public:
   void setup();
   void update();
   void draw();
+  
+  void onCollisionUpdate(const std::shared_ptr<Object>&);
   
 };

@@ -1,7 +1,6 @@
 
 #include "Plate.hpp"
-
-#include "../../../resource/Resource.hpp"
+#include "../../../device/Device.hpp"
 
 
 Plate::Plate(const ci::Vec3f& PlatePos, const ci::Vec3f& PlateSize)
@@ -10,7 +9,18 @@ Plate::Plate(const ci::Vec3f& PlatePos, const ci::Vec3f& PlateSize)
   mSize = PlateSize;
   mRotate = ci::Vec3f(180.f, 0.f, 0.f);
   
+  // findは処理が重いので変数にサウンドを保存
+  mPlateFallSE = AudioManager::find(ResKey::CPlateFallSE);
+  
+  // サウンドの音量を変更
+  mPlateFallSE.setVolume(0.8f);
+  
+  mGravityPower = 0.03f;
+  mAcceleration = 0.f;
+    
   mFallFlag = false;
+  mTextureChangeFlag = false;
+  mSePlayFlag = true;
   
   mPlate = TextureManager::find(ResKey::CPlate);
   mPlateFall = TextureManager::find(ResKey::CPlateFall);
@@ -23,10 +33,24 @@ void Plate::setup() {}
 
 void Plate::update()
 {
-  if(mFallFlag == true)
+  if(mFallFlag)
   {
-    mRotate.z++;
+    mAcceleration += mGravityPower;
+    mRotate.z += mAcceleration;
   }
+  
+  if((int)mRotate.z == 90 && mSePlayFlag)
+  {
+    mFallFlag = false;
+    mTextureChangeFlag = true;
+    mPos = ci::Vec3f( 3350, -150, 0);
+    mSize = ci::Vec3f( 115, 10, 0);
+    mPlateFallSE.play();
+    mSePlayFlag = false;
+  }
+  
+  // シャア専用
+  if(dowa::Device::isTouchBegan()) mFallFlag = true;
 }
 
 void Plate::draw()
@@ -38,11 +62,8 @@ void Plate::draw()
   
   ci::gl::pushModelView();
   
-  mPlate.bind();
-  ci::gl::translate(mPos);
-  ci::gl::rotate(mRotate);
-  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
-  mPlate.unbind();
+  if(!mTextureChangeFlag) drawPlate();
+  if(mTextureChangeFlag) drawPlateFall();
   
   ci::gl::popModelView();
   
@@ -53,9 +74,29 @@ void Plate::draw()
   
 }
 
+void Plate::drawPlate()
+{
+  mPlate.bind();
+  ci::gl::translate(mPos);
+  ci::gl::rotate(mRotate);
+  ci::gl::translate(ci::Vec3f(0, -50, 0));
+  ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
+  mPlate.unbind();
+}
+
+void Plate::drawPlateFall()
+{
+  mPlateFall.bind();
+  ci::gl::translate(mPos);
+  ci::gl::rotate(ci::Vec3f(180.f, 0.f, 0.f));
+  ci::gl::translate(ci::Vec3f(0, 0, 0));
+  ci::gl::drawCube(ci::Vec3f(ci::Vec3f(ci::Vec3f::zero())), mSize);
+  mPlateFall.unbind();
+}
+
 void Plate::onCollisionUpdate(const std::shared_ptr<Object>& compare)
 {
-  if(compare -> getName() == "Ball")
+  if(compare -> getName() == "Ball" && mRotate.z == 0)
   {
     mFallFlag = true;
   }

@@ -3,15 +3,19 @@
 #include "../../object/Task.hpp"
 #include "../../resource/Resource.hpp"
 #include "../SceneManager.hpp"
+#include "../../window/Window.hpp"
 
 
 
 TitleLoad::TitleLoad() {
   std::cout << "start title load" << std::endl;
+  TextureManager::add(ResKey::NowLoad);
+  count = -1;
 }
 
 TitleLoad::~TitleLoad() {
   std::cout << "end title load" << std::endl;
+  TextureManager::kill(ResKey::NowLoad);
 }
 
 
@@ -38,8 +42,24 @@ void TitleLoad::load() {
 }
 
 void TitleLoad::update() {
+  ++count;
+  if (!count) return;
+
   load();
   SceneManager::create(SceneType::Title);
 }
 
-void TitleLoad::draw() {}
+void TitleLoad::draw() {
+  ci::gl::clear(ci::Color(0.0f, 0.0f, 0.0f));
+  
+  ci::gl::enableAlphaBlending();
+  
+  ci::gl::pushModelView();
+  float offset_x = dowa::getWindowWidth() - TextureManager::find(ResKey::NowLoad).getWidth();
+  float offset_y = dowa::getWindowHeight() - TextureManager::find(ResKey::NowLoad).getHeight();
+  ci::gl::translate(offset_x, offset_y);
+  ci::gl::draw(TextureManager::find(ResKey::NowLoad));
+  ci::gl::popModelView();
+  
+  ci::gl::disableAlphaBlending();
+}

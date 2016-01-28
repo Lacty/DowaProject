@@ -20,5 +20,7 @@ public:
   static void             add(int key);
   static ci::gl::Texture& find(int key);
   
+  static void kill(int key);
+  
   static void clear();
 };

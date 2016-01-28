@@ -23,7 +23,7 @@ private:
   
   static SceneManager& get();
   
-   bool isDuringFade();
+  bool isDuringFade();
   
   SceneManager();
   

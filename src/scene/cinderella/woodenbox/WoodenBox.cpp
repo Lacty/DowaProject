@@ -4,12 +4,15 @@
 #include "../../../resource/Resource.hpp"
 
 
-WoodenBox::WoodenBox(const ci::Vec3f& WoodenBoxPos, const ci::Vec3f& WoodenBoxSize)
+WoodenBox::WoodenBox(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
-  mPos = WoodenBoxPos;
-  mSize = WoodenBoxSize;
+  mPos = Pos;
+  mSize = Size;
   
   mWoodenBox = TextureManager::find(ResKey::CWoodenBox);
+  
+  
+  setColliderType(Collider::Rect);
   
 }
 
@@ -40,3 +43,5 @@ void WoodenBox::draw()
   ci::gl::disable(GL_CULL_FACE);
   
 }
+
+void WoodenBox::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}

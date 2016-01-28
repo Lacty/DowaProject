@@ -12,30 +12,11 @@
 		00A66A361965AC8800B17EB3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A66A351965AC8800B17EB3 /* Accelerate.framework */; };
 		00CFDF6B1138442D0091E310 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CFDF6A1138442D0091E310 /* CoreGraphics.framework */; };
 		0A386FFC32984F4CADC5B8AB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B112C46395B542438FB8D300 /* CoreMotion.framework */; };
-		142C54B11C2A71D600D80B94 /* Apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C547F1C2A71D600D80B94 /* Apple.cpp */; };
-		142C54B21C2A71D600D80B94 /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54821C2A71D600D80B94 /* Ball.cpp */; };
-		142C54B31C2A71D600D80B94 /* Bear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54851C2A71D600D80B94 /* Bear.cpp */; };
-		142C54B41C2A71D600D80B94 /* Book.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54881C2A71D600D80B94 /* Book.cpp */; };
-		142C54B51C2A71D600D80B94 /* BookShelf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C548B1C2A71D600D80B94 /* BookShelf.cpp */; };
-		142C54B61C2A71D600D80B94 /* Bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C548E1C2A71D600D80B94 /* Bridge.cpp */; };
-		142C54B71C2A71D600D80B94 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54911C2A71D600D80B94 /* Camera.cpp */; };
-		142C54B81C2A71D600D80B94 /* Cinderella.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54941C2A71D600D80B94 /* Cinderella.cpp */; };
-		142C54B91C2A71D600D80B94 /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54971C2A71D600D80B94 /* Floor.cpp */; };
-		142C54BA1C2A71D600D80B94 /* HandRail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C549A1C2A71D600D80B94 /* HandRail.cpp */; };
-		142C54BD1C2A71D600D80B94 /* Piano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54A11C2A71D600D80B94 /* Piano.cpp */; };
-		142C54C11C2A71D600D80B94 /* Stairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54AA1C2A71D600D80B94 /* Stairs.cpp */; };
-		142C54C21C2A71D600D80B94 /* Townwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54AD1C2A71D600D80B94 /* Townwindow.cpp */; };
-		142C54C61C2A729500D80B94 /* Hydrant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142C54C41C2A729500D80B94 /* Hydrant.cpp */; };
 		1476D40C1C2911ED00F5CC31 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1476D4021C2911ED00F5CC31 /* Audio.cpp */; };
 		1476D40D1C2911ED00F5CC31 /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1476D4041C2911ED00F5CC31 /* AudioManager.cpp */; };
 		1476D40E1C2911ED00F5CC31 /* ResKey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1476D4061C2911ED00F5CC31 /* ResKey.cpp */; };
 		1476D40F1C2911ED00F5CC31 /* Resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1476D4081C2911ED00F5CC31 /* Resource.cpp */; };
 		1476D4101C2911ED00F5CC31 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1476D40A1C2911ED00F5CC31 /* TextureManager.cpp */; };
-		148FF11F1C2ADACE00DCBDC9 /* Shop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 148FF11D1C2ADACE00DCBDC9 /* Shop.cpp */; };
-		148FF1221C2ADEFA00DCBDC9 /* WoodenBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 148FF1201C2ADEFA00DCBDC9 /* WoodenBox.cpp */; };
-		148FF1251C2ADF1C00DCBDC9 /* Pumpkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 148FF1231C2ADF1C00DCBDC9 /* Pumpkin.cpp */; };
-		14A06D711C2ACBFA005CF8B8 /* LampPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A06D6F1C2ACBFA005CF8B8 /* LampPost.cpp */; };
-		14A06D741C2AD21D005CF8B8 /* Plate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A06D721C2AD21D005CF8B8 /* Plate.cpp */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2061D27971614E10A906E1B2 /* CinderApp_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = C0EC8E147D564C46829F7611 /* CinderApp_ios.png */; };
@@ -48,15 +29,52 @@
 		AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A261BFB359500345AA5 /* FadeIn.cpp */; };
 		AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3A281BFB359500345AA5 /* FadeOut.cpp */; };
 		AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5873F91C06A43B00D40AE6 /* Utility.cpp */; };
+		AC9D8ABC1C2E9E9B001A7217 /* CrossFade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8ABA1C2E9E9B001A7217 /* CrossFade.cpp */; };
+		AC9D8C9A1C4769DD001A7217 /* Apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C2B1C4769DD001A7217 /* Apple.cpp */; };
+		AC9D8C9B1C4769DD001A7217 /* BackGround.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C2E1C4769DD001A7217 /* BackGround.cpp */; };
+		AC9D8C9C1C4769DD001A7217 /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C311C4769DD001A7217 /* Ball.cpp */; };
+		AC9D8C9D1C4769DD001A7217 /* Bear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C341C4769DD001A7217 /* Bear.cpp */; };
+		AC9D8C9E1C4769DD001A7217 /* Book.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C371C4769DD001A7217 /* Book.cpp */; };
+		AC9D8C9F1C4769DD001A7217 /* BookShelf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C3A1C4769DD001A7217 /* BookShelf.cpp */; };
+		AC9D8CA01C4769DD001A7217 /* Bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C3D1C4769DD001A7217 /* Bridge.cpp */; };
+		AC9D8CA11C4769DD001A7217 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C401C4769DD001A7217 /* Camera.cpp */; };
+		AC9D8CA21C4769DD001A7217 /* Chandelier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C431C4769DD001A7217 /* Chandelier.cpp */; };
+		AC9D8CA31C4769DD001A7217 /* ChandelierHit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C461C4769DD001A7217 /* ChandelierHit.cpp */; };
+		AC9D8CA41C4769DD001A7217 /* Cinderella.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C491C4769DD001A7217 /* Cinderella.cpp */; };
+		AC9D8CA51C4769DD001A7217 /* CinderellaLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C4B1C4769DD001A7217 /* CinderellaLoad.cpp */; };
+		AC9D8CA61C4769DD001A7217 /* CinderellaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C4D1C4769DD001A7217 /* CinderellaScene.cpp */; };
+		AC9D8CA71C4769DD001A7217 /* end.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C501C4769DD001A7217 /* end.cpp */; };
+		AC9D8CA81C4769DD001A7217 /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C531C4769DD001A7217 /* Floor.cpp */; };
+		AC9D8CA91C4769DD001A7217 /* Gate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C561C4769DD001A7217 /* Gate.cpp */; };
+		AC9D8CAA1C4769DD001A7217 /* GateSide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C591C4769DD001A7217 /* GateSide.cpp */; };
+		AC9D8CAB1C4769DD001A7217 /* GrayCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C5C1C4769DD001A7217 /* GrayCube.cpp */; };
+		AC9D8CAC1C4769DD001A7217 /* HandRail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C5F1C4769DD001A7217 /* HandRail.cpp */; };
+		AC9D8CAD1C4769DD001A7217 /* Horse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C621C4769DD001A7217 /* Horse.cpp */; };
+		AC9D8CAE1C4769DD001A7217 /* Hydrant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C651C4769DD001A7217 /* Hydrant.cpp */; };
+		AC9D8CAF1C4769DD001A7217 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C681C4769DD001A7217 /* King.cpp */; };
+		AC9D8CB01C4769DD001A7217 /* king2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C6B1C4769DD001A7217 /* king2.cpp */; };
+		AC9D8CB11C4769DD001A7217 /* LampPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C6E1C4769DD001A7217 /* LampPost.cpp */; };
+		AC9D8CB21C4769DD001A7217 /* Orchestra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C711C4769DD001A7217 /* Orchestra.cpp */; };
+		AC9D8CB31C4769DD001A7217 /* Piano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C741C4769DD001A7217 /* Piano.cpp */; };
+		AC9D8CB41C4769DD001A7217 /* Plate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C771C4769DD001A7217 /* Plate.cpp */; };
+		AC9D8CB51C4769DD001A7217 /* Pumpkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C7A1C4769DD001A7217 /* Pumpkin.cpp */; };
+		AC9D8CB61C4769DD001A7217 /* River.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C7D1C4769DD001A7217 /* River.cpp */; };
+		AC9D8CB71C4769DD001A7217 /* Shoes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C801C4769DD001A7217 /* Shoes.cpp */; };
+		AC9D8CB81C4769DD001A7217 /* Shop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C831C4769DD001A7217 /* Shop.cpp */; };
+		AC9D8CB91C4769DD001A7217 /* Sister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C861C4769DD001A7217 /* Sister.cpp */; };
+		AC9D8CBA1C4769DD001A7217 /* Stairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C891C4769DD001A7217 /* Stairs.cpp */; };
+		AC9D8CBB1C4769DD001A7217 /* Stairs2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C8C1C4769DD001A7217 /* Stairs2.cpp */; };
+		AC9D8CBC1C4769DD001A7217 /* Townwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C8F1C4769DD001A7217 /* Townwindow.cpp */; };
+		AC9D8CBD1C4769DD001A7217 /* TownwindowHit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C921C4769DD001A7217 /* TownwindowHit.cpp */; };
+		AC9D8CBE1C4769DD001A7217 /* Witch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C951C4769DD001A7217 /* Witch.cpp */; };
+		AC9D8CBF1C4769DD001A7217 /* WoodenBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9D8C981C4769DD001A7217 /* WoodenBox.cpp */; };
 		ACA081D91BF25720005FB898 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081D71BF25720005FB898 /* Collision.cpp */; };
 		ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA081DB1BF317CD005FB898 /* Test.cpp */; };
 		ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA20F251C087E2B0017DCA9 /* Window.cpp */; };
-		ACAE91DE1C1805400008B83E /* CinderellaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */; };
 		ACDB32F21BEF124F00046195 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F01BEF124F00046195 /* Object.cpp */; };
 		ACDB32FA1BF040F000046195 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDB32F81BF040F000046195 /* Task.cpp */; };
 		ACF594D21C1EE83500806B39 /* TitleLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D01C1EE83500806B39 /* TitleLoad.cpp */; };
 		ACF594D51C1EE8C000806B39 /* ResultLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594D31C1EE8C000806B39 /* ResultLoad.cpp */; };
-		ACF594DE1C207E6200806B39 /* CinderellaLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */; };
 		ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91ED91BE757CD00AF6824 /* Scene.cpp */; };
 		ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EDE1BE75ABC00AF6824 /* Title.cpp */; };
 		ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF91EE11BE75BC600AF6824 /* SceneMaker.cpp */; };
@@ -79,34 +97,6 @@
 		00CFDF6A1138442D0091E310 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		00CFDF6A1138442D0091FFFF /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		126206D7B0E14E02971D9B65 /* DowaProject_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DowaProject_Prefix.pch; sourceTree = "<group>"; };
-		142C547F1C2A71D600D80B94 /* Apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Apple.cpp; sourceTree = "<group>"; };
-		142C54801C2A71D600D80B94 /* Apple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Apple.hpp; sourceTree = "<group>"; };
-		142C54821C2A71D600D80B94 /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
-		142C54831C2A71D600D80B94 /* Ball.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ball.hpp; sourceTree = "<group>"; };
-		142C54851C2A71D600D80B94 /* Bear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bear.cpp; sourceTree = "<group>"; };
-		142C54861C2A71D600D80B94 /* Bear.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bear.hpp; sourceTree = "<group>"; };
-		142C54881C2A71D600D80B94 /* Book.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Book.cpp; sourceTree = "<group>"; };
-		142C54891C2A71D600D80B94 /* Book.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Book.hpp; sourceTree = "<group>"; };
-		142C548B1C2A71D600D80B94 /* BookShelf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BookShelf.cpp; sourceTree = "<group>"; };
-		142C548C1C2A71D600D80B94 /* BookShelf.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BookShelf.hpp; sourceTree = "<group>"; };
-		142C548E1C2A71D600D80B94 /* Bridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bridge.cpp; sourceTree = "<group>"; };
-		142C548F1C2A71D600D80B94 /* Bridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bridge.hpp; sourceTree = "<group>"; };
-		142C54911C2A71D600D80B94 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
-		142C54921C2A71D600D80B94 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
-		142C54941C2A71D600D80B94 /* Cinderella.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cinderella.cpp; sourceTree = "<group>"; };
-		142C54951C2A71D600D80B94 /* Cinderella.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cinderella.hpp; sourceTree = "<group>"; };
-		142C54971C2A71D600D80B94 /* Floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Floor.cpp; sourceTree = "<group>"; };
-		142C54981C2A71D600D80B94 /* Floor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Floor.hpp; sourceTree = "<group>"; };
-		142C549A1C2A71D600D80B94 /* HandRail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HandRail.cpp; sourceTree = "<group>"; };
-		142C549B1C2A71D600D80B94 /* HandRail.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HandRail.hpp; sourceTree = "<group>"; };
-		142C54A11C2A71D600D80B94 /* Piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piano.cpp; sourceTree = "<group>"; };
-		142C54A21C2A71D600D80B94 /* Piano.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Piano.hpp; sourceTree = "<group>"; };
-		142C54AA1C2A71D600D80B94 /* Stairs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stairs.cpp; sourceTree = "<group>"; };
-		142C54AB1C2A71D600D80B94 /* Stairs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stairs.hpp; sourceTree = "<group>"; };
-		142C54AD1C2A71D600D80B94 /* Townwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Townwindow.cpp; sourceTree = "<group>"; };
-		142C54AE1C2A71D600D80B94 /* Townwindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Townwindow.hpp; sourceTree = "<group>"; };
-		142C54C41C2A729500D80B94 /* Hydrant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hydrant.cpp; sourceTree = "<group>"; };
-		142C54C51C2A729500D80B94 /* Hydrant.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hydrant.hpp; sourceTree = "<group>"; };
 		1476D4021C2911ED00F5CC31 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio.cpp; sourceTree = "<group>"; };
 		1476D4031C2911ED00F5CC31 /* Audio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Audio.hpp; sourceTree = "<group>"; };
 		1476D4041C2911ED00F5CC31 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioManager.cpp; sourceTree = "<group>"; };
@@ -117,16 +107,6 @@
 		1476D4091C2911ED00F5CC31 /* Resource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Resource.hpp; sourceTree = "<group>"; };
 		1476D40A1C2911ED00F5CC31 /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
 		1476D40B1C2911ED00F5CC31 /* TextureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
-		148FF11D1C2ADACE00DCBDC9 /* Shop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shop.cpp; sourceTree = "<group>"; };
-		148FF11E1C2ADACE00DCBDC9 /* Shop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shop.hpp; sourceTree = "<group>"; };
-		148FF1201C2ADEFA00DCBDC9 /* WoodenBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WoodenBox.cpp; sourceTree = "<group>"; };
-		148FF1211C2ADEFA00DCBDC9 /* WoodenBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WoodenBox.hpp; sourceTree = "<group>"; };
-		148FF1231C2ADF1C00DCBDC9 /* Pumpkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pumpkin.cpp; sourceTree = "<group>"; };
-		148FF1241C2ADF1C00DCBDC9 /* Pumpkin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pumpkin.hpp; sourceTree = "<group>"; };
-		14A06D6F1C2ACBFA005CF8B8 /* LampPost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LampPost.cpp; sourceTree = "<group>"; };
-		14A06D701C2ACBFA005CF8B8 /* LampPost.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LampPost.hpp; sourceTree = "<group>"; };
-		14A06D721C2AD21D005CF8B8 /* Plate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plate.cpp; sourceTree = "<group>"; };
-		14A06D731C2AD21D005CF8B8 /* Plate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plate.hpp; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24EAB30525624A3FA99EA6CD /* MotionManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = MotionManager.cpp; path = ../blocks/MotionManager/src/cinder/MotionManager.cpp; sourceTree = "<group>"; };
@@ -145,14 +125,90 @@
 		AC5873DB1C0129DA00D40AE6 /* FadeOut.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FadeOut.hpp; sourceTree = "<group>"; };
 		AC5873F91C06A43B00D40AE6 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		AC5873FA1C06A43B00D40AE6 /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
+		AC9D8ABA1C2E9E9B001A7217 /* CrossFade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrossFade.cpp; sourceTree = "<group>"; };
+		AC9D8ABB1C2E9E9B001A7217 /* CrossFade.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CrossFade.hpp; sourceTree = "<group>"; };
+		AC9D8C2B1C4769DD001A7217 /* Apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Apple.cpp; sourceTree = "<group>"; };
+		AC9D8C2C1C4769DD001A7217 /* Apple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Apple.hpp; sourceTree = "<group>"; };
+		AC9D8C2E1C4769DD001A7217 /* BackGround.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackGround.cpp; sourceTree = "<group>"; };
+		AC9D8C2F1C4769DD001A7217 /* BackGround.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BackGround.hpp; sourceTree = "<group>"; };
+		AC9D8C311C4769DD001A7217 /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
+		AC9D8C321C4769DD001A7217 /* Ball.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ball.hpp; sourceTree = "<group>"; };
+		AC9D8C341C4769DD001A7217 /* Bear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bear.cpp; sourceTree = "<group>"; };
+		AC9D8C351C4769DD001A7217 /* Bear.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bear.hpp; sourceTree = "<group>"; };
+		AC9D8C371C4769DD001A7217 /* Book.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Book.cpp; sourceTree = "<group>"; };
+		AC9D8C381C4769DD001A7217 /* Book.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Book.hpp; sourceTree = "<group>"; };
+		AC9D8C3A1C4769DD001A7217 /* BookShelf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BookShelf.cpp; sourceTree = "<group>"; };
+		AC9D8C3B1C4769DD001A7217 /* BookShelf.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BookShelf.hpp; sourceTree = "<group>"; };
+		AC9D8C3D1C4769DD001A7217 /* Bridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bridge.cpp; sourceTree = "<group>"; };
+		AC9D8C3E1C4769DD001A7217 /* Bridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bridge.hpp; sourceTree = "<group>"; };
+		AC9D8C401C4769DD001A7217 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		AC9D8C411C4769DD001A7217 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		AC9D8C431C4769DD001A7217 /* Chandelier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chandelier.cpp; sourceTree = "<group>"; };
+		AC9D8C441C4769DD001A7217 /* Chandelier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Chandelier.hpp; sourceTree = "<group>"; };
+		AC9D8C461C4769DD001A7217 /* ChandelierHit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChandelierHit.cpp; sourceTree = "<group>"; };
+		AC9D8C471C4769DD001A7217 /* ChandelierHit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ChandelierHit.hpp; sourceTree = "<group>"; };
+		AC9D8C491C4769DD001A7217 /* Cinderella.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cinderella.cpp; sourceTree = "<group>"; };
+		AC9D8C4A1C4769DD001A7217 /* Cinderella.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cinderella.hpp; sourceTree = "<group>"; };
+		AC9D8C4B1C4769DD001A7217 /* CinderellaLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaLoad.cpp; sourceTree = "<group>"; };
+		AC9D8C4C1C4769DD001A7217 /* CinderellaLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CinderellaLoad.hpp; sourceTree = "<group>"; };
+		AC9D8C4D1C4769DD001A7217 /* CinderellaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaScene.cpp; sourceTree = "<group>"; };
+		AC9D8C4E1C4769DD001A7217 /* CinderellaScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CinderellaScene.hpp; sourceTree = "<group>"; };
+		AC9D8C501C4769DD001A7217 /* end.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = end.cpp; sourceTree = "<group>"; };
+		AC9D8C511C4769DD001A7217 /* end.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = end.hpp; sourceTree = "<group>"; };
+		AC9D8C531C4769DD001A7217 /* Floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Floor.cpp; sourceTree = "<group>"; };
+		AC9D8C541C4769DD001A7217 /* Floor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Floor.hpp; sourceTree = "<group>"; };
+		AC9D8C561C4769DD001A7217 /* Gate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gate.cpp; sourceTree = "<group>"; };
+		AC9D8C571C4769DD001A7217 /* Gate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Gate.hpp; sourceTree = "<group>"; };
+		AC9D8C591C4769DD001A7217 /* GateSide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GateSide.cpp; sourceTree = "<group>"; };
+		AC9D8C5A1C4769DD001A7217 /* GateSide.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GateSide.hpp; sourceTree = "<group>"; };
+		AC9D8C5C1C4769DD001A7217 /* GrayCube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GrayCube.cpp; sourceTree = "<group>"; };
+		AC9D8C5D1C4769DD001A7217 /* GrayCube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GrayCube.hpp; sourceTree = "<group>"; };
+		AC9D8C5F1C4769DD001A7217 /* HandRail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HandRail.cpp; sourceTree = "<group>"; };
+		AC9D8C601C4769DD001A7217 /* HandRail.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HandRail.hpp; sourceTree = "<group>"; };
+		AC9D8C621C4769DD001A7217 /* Horse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Horse.cpp; sourceTree = "<group>"; };
+		AC9D8C631C4769DD001A7217 /* Horse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Horse.hpp; sourceTree = "<group>"; };
+		AC9D8C651C4769DD001A7217 /* Hydrant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hydrant.cpp; sourceTree = "<group>"; };
+		AC9D8C661C4769DD001A7217 /* Hydrant.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hydrant.hpp; sourceTree = "<group>"; };
+		AC9D8C681C4769DD001A7217 /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
+		AC9D8C691C4769DD001A7217 /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
+		AC9D8C6B1C4769DD001A7217 /* king2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = king2.cpp; sourceTree = "<group>"; };
+		AC9D8C6C1C4769DD001A7217 /* king2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = king2.hpp; sourceTree = "<group>"; };
+		AC9D8C6E1C4769DD001A7217 /* LampPost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LampPost.cpp; sourceTree = "<group>"; };
+		AC9D8C6F1C4769DD001A7217 /* LampPost.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LampPost.hpp; sourceTree = "<group>"; };
+		AC9D8C711C4769DD001A7217 /* Orchestra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Orchestra.cpp; sourceTree = "<group>"; };
+		AC9D8C721C4769DD001A7217 /* Orchestra.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Orchestra.hpp; sourceTree = "<group>"; };
+		AC9D8C741C4769DD001A7217 /* Piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piano.cpp; sourceTree = "<group>"; };
+		AC9D8C751C4769DD001A7217 /* Piano.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Piano.hpp; sourceTree = "<group>"; };
+		AC9D8C771C4769DD001A7217 /* Plate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plate.cpp; sourceTree = "<group>"; };
+		AC9D8C781C4769DD001A7217 /* Plate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plate.hpp; sourceTree = "<group>"; };
+		AC9D8C7A1C4769DD001A7217 /* Pumpkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pumpkin.cpp; sourceTree = "<group>"; };
+		AC9D8C7B1C4769DD001A7217 /* Pumpkin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pumpkin.hpp; sourceTree = "<group>"; };
+		AC9D8C7D1C4769DD001A7217 /* River.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = River.cpp; sourceTree = "<group>"; };
+		AC9D8C7E1C4769DD001A7217 /* River.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = River.hpp; sourceTree = "<group>"; };
+		AC9D8C801C4769DD001A7217 /* Shoes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shoes.cpp; sourceTree = "<group>"; };
+		AC9D8C811C4769DD001A7217 /* Shoes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shoes.hpp; sourceTree = "<group>"; };
+		AC9D8C831C4769DD001A7217 /* Shop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shop.cpp; sourceTree = "<group>"; };
+		AC9D8C841C4769DD001A7217 /* Shop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shop.hpp; sourceTree = "<group>"; };
+		AC9D8C861C4769DD001A7217 /* Sister.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sister.cpp; sourceTree = "<group>"; };
+		AC9D8C871C4769DD001A7217 /* Sister.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sister.hpp; sourceTree = "<group>"; };
+		AC9D8C891C4769DD001A7217 /* Stairs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stairs.cpp; sourceTree = "<group>"; };
+		AC9D8C8A1C4769DD001A7217 /* Stairs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stairs.hpp; sourceTree = "<group>"; };
+		AC9D8C8C1C4769DD001A7217 /* Stairs2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stairs2.cpp; sourceTree = "<group>"; };
+		AC9D8C8D1C4769DD001A7217 /* Stairs2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stairs2.hpp; sourceTree = "<group>"; };
+		AC9D8C8F1C4769DD001A7217 /* Townwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Townwindow.cpp; sourceTree = "<group>"; };
+		AC9D8C901C4769DD001A7217 /* Townwindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Townwindow.hpp; sourceTree = "<group>"; };
+		AC9D8C921C4769DD001A7217 /* TownwindowHit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TownwindowHit.cpp; sourceTree = "<group>"; };
+		AC9D8C931C4769DD001A7217 /* TownwindowHit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TownwindowHit.hpp; sourceTree = "<group>"; };
+		AC9D8C951C4769DD001A7217 /* Witch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Witch.cpp; sourceTree = "<group>"; };
+		AC9D8C961C4769DD001A7217 /* Witch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Witch.hpp; sourceTree = "<group>"; };
+		AC9D8C981C4769DD001A7217 /* WoodenBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WoodenBox.cpp; sourceTree = "<group>"; };
+		AC9D8C991C4769DD001A7217 /* WoodenBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WoodenBox.hpp; sourceTree = "<group>"; };
 		ACA081D71BF25720005FB898 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		ACA081D81BF25720005FB898 /* Collision.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 		ACA081DB1BF317CD005FB898 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		ACA081DC1BF317CD005FB898 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 		ACA20F251C087E2B0017DCA9 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		ACA20F261C087E2B0017DCA9 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
-		ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaScene.cpp; sourceTree = "<group>"; tabWidth = 2; };
-		ACAE91DD1C1805400008B83E /* CinderellaScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = CinderellaScene.hpp; sourceTree = "<group>"; tabWidth = 2; };
 		ACDB32F01BEF124F00046195 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 		ACDB32F11BEF124F00046195 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		ACDB32F81BF040F000046195 /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
@@ -161,8 +217,6 @@
 		ACF594D11C1EE83500806B39 /* TitleLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TitleLoad.hpp; sourceTree = "<group>"; };
 		ACF594D31C1EE8C000806B39 /* ResultLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResultLoad.cpp; sourceTree = "<group>"; };
 		ACF594D41C1EE8C000806B39 /* ResultLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResultLoad.hpp; sourceTree = "<group>"; };
-		ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinderellaLoad.cpp; sourceTree = "<group>"; };
-		ACF594DD1C207E6200806B39 /* CinderellaLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CinderellaLoad.hpp; sourceTree = "<group>"; };
 		ACF91ED91BE757CD00AF6824 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		ACF91EDA1BE757CD00AF6824 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		ACF91EDE1BE75ABC00AF6824 /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
@@ -277,177 +331,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		142C547E1C2A71D600D80B94 /* apple */ = {
-			isa = PBXGroup;
-			children = (
-				142C547F1C2A71D600D80B94 /* Apple.cpp */,
-				142C54801C2A71D600D80B94 /* Apple.hpp */,
-			);
-			path = apple;
-			sourceTree = "<group>";
-		};
-		142C54811C2A71D600D80B94 /* ball */ = {
-			isa = PBXGroup;
-			children = (
-				142C54821C2A71D600D80B94 /* Ball.cpp */,
-				142C54831C2A71D600D80B94 /* Ball.hpp */,
-			);
-			path = ball;
-			sourceTree = "<group>";
-		};
-		142C54841C2A71D600D80B94 /* bear */ = {
-			isa = PBXGroup;
-			children = (
-				142C54851C2A71D600D80B94 /* Bear.cpp */,
-				142C54861C2A71D600D80B94 /* Bear.hpp */,
-			);
-			path = bear;
-			sourceTree = "<group>";
-		};
-		142C54871C2A71D600D80B94 /* book */ = {
-			isa = PBXGroup;
-			children = (
-				142C54881C2A71D600D80B94 /* Book.cpp */,
-				142C54891C2A71D600D80B94 /* Book.hpp */,
-			);
-			path = book;
-			sourceTree = "<group>";
-		};
-		142C548A1C2A71D600D80B94 /* bookshelf */ = {
-			isa = PBXGroup;
-			children = (
-				142C548B1C2A71D600D80B94 /* BookShelf.cpp */,
-				142C548C1C2A71D600D80B94 /* BookShelf.hpp */,
-			);
-			path = bookshelf;
-			sourceTree = "<group>";
-		};
-		142C548D1C2A71D600D80B94 /* bridge */ = {
-			isa = PBXGroup;
-			children = (
-				142C548E1C2A71D600D80B94 /* Bridge.cpp */,
-				142C548F1C2A71D600D80B94 /* Bridge.hpp */,
-			);
-			path = bridge;
-			sourceTree = "<group>";
-		};
-		142C54901C2A71D600D80B94 /* camera */ = {
-			isa = PBXGroup;
-			children = (
-				142C54911C2A71D600D80B94 /* Camera.cpp */,
-				142C54921C2A71D600D80B94 /* Camera.hpp */,
-			);
-			path = camera;
-			sourceTree = "<group>";
-		};
-		142C54931C2A71D600D80B94 /* cinderella */ = {
-			isa = PBXGroup;
-			children = (
-				142C54941C2A71D600D80B94 /* Cinderella.cpp */,
-				142C54951C2A71D600D80B94 /* Cinderella.hpp */,
-			);
-			path = cinderella;
-			sourceTree = "<group>";
-		};
-		142C54961C2A71D600D80B94 /* floor */ = {
-			isa = PBXGroup;
-			children = (
-				142C54971C2A71D600D80B94 /* Floor.cpp */,
-				142C54981C2A71D600D80B94 /* Floor.hpp */,
-			);
-			path = floor;
-			sourceTree = "<group>";
-		};
-		142C54991C2A71D600D80B94 /* handrail */ = {
-			isa = PBXGroup;
-			children = (
-				142C549A1C2A71D600D80B94 /* HandRail.cpp */,
-				142C549B1C2A71D600D80B94 /* HandRail.hpp */,
-			);
-			path = handrail;
-			sourceTree = "<group>";
-		};
-		142C549C1C2A71D600D80B94 /* hydrant */ = {
-			isa = PBXGroup;
-			children = (
-				142C54C41C2A729500D80B94 /* Hydrant.cpp */,
-				142C54C51C2A729500D80B94 /* Hydrant.hpp */,
-			);
-			path = hydrant;
-			sourceTree = "<group>";
-		};
-		142C549E1C2A71D600D80B94 /* lamppost */ = {
-			isa = PBXGroup;
-			children = (
-				14A06D6F1C2ACBFA005CF8B8 /* LampPost.cpp */,
-				14A06D701C2ACBFA005CF8B8 /* LampPost.hpp */,
-			);
-			path = lamppost;
-			sourceTree = "<group>";
-		};
-		142C54A01C2A71D600D80B94 /* piano */ = {
-			isa = PBXGroup;
-			children = (
-				142C54A11C2A71D600D80B94 /* Piano.cpp */,
-				142C54A21C2A71D600D80B94 /* Piano.hpp */,
-			);
-			path = piano;
-			sourceTree = "<group>";
-		};
-		142C54A31C2A71D600D80B94 /* plate */ = {
-			isa = PBXGroup;
-			children = (
-				14A06D721C2AD21D005CF8B8 /* Plate.cpp */,
-				14A06D731C2AD21D005CF8B8 /* Plate.hpp */,
-			);
-			path = plate;
-			sourceTree = "<group>";
-		};
-		142C54A51C2A71D600D80B94 /* pumpkin */ = {
-			isa = PBXGroup;
-			children = (
-				148FF1231C2ADF1C00DCBDC9 /* Pumpkin.cpp */,
-				148FF1241C2ADF1C00DCBDC9 /* Pumpkin.hpp */,
-			);
-			path = pumpkin;
-			sourceTree = "<group>";
-		};
-		142C54A71C2A71D600D80B94 /* shop */ = {
-			isa = PBXGroup;
-			children = (
-				148FF11D1C2ADACE00DCBDC9 /* Shop.cpp */,
-				148FF11E1C2ADACE00DCBDC9 /* Shop.hpp */,
-			);
-			path = shop;
-			sourceTree = "<group>";
-		};
-		142C54A91C2A71D600D80B94 /* stairs */ = {
-			isa = PBXGroup;
-			children = (
-				142C54AA1C2A71D600D80B94 /* Stairs.cpp */,
-				142C54AB1C2A71D600D80B94 /* Stairs.hpp */,
-			);
-			path = stairs;
-			sourceTree = "<group>";
-		};
-		142C54AC1C2A71D600D80B94 /* townwindow */ = {
-			isa = PBXGroup;
-			children = (
-				142C54AD1C2A71D600D80B94 /* Townwindow.cpp */,
-				142C54AE1C2A71D600D80B94 /* Townwindow.hpp */,
-			);
-			path = townwindow;
-			sourceTree = "<group>";
-		};
-		142C54AF1C2A71D600D80B94 /* woodenbox */ = {
-			isa = PBXGroup;
-			children = (
-				148FF1201C2ADEFA00DCBDC9 /* WoodenBox.cpp */,
-				148FF1211C2ADEFA00DCBDC9 /* WoodenBox.hpp */,
-			);
-			path = woodenbox;
-			sourceTree = "<group>";
-		};
 		1476D4011C2911ED00F5CC31 /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +344,8 @@
 				1476D4091C2911ED00F5CC31 /* Resource.hpp */,
 				1476D40A1C2911ED00F5CC31 /* TextureManager.cpp */,
 				1476D40B1C2911ED00F5CC31 /* TextureManager.hpp */,
+				AC9D8ABA1C2E9E9B001A7217 /* CrossFade.cpp */,
+				AC9D8ABB1C2E9E9B001A7217 /* CrossFade.hpp */,
 			);
 			name = resource;
 			path = ../src/resource;
@@ -542,6 +427,330 @@
 			path = ../src/utility;
 			sourceTree = "<group>";
 		};
+		AC9D8C2A1C4769DD001A7217 /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C2B1C4769DD001A7217 /* Apple.cpp */,
+				AC9D8C2C1C4769DD001A7217 /* Apple.hpp */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+		AC9D8C2D1C4769DD001A7217 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C2E1C4769DD001A7217 /* BackGround.cpp */,
+				AC9D8C2F1C4769DD001A7217 /* BackGround.hpp */,
+			);
+			path = background;
+			sourceTree = "<group>";
+		};
+		AC9D8C301C4769DD001A7217 /* ball */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C311C4769DD001A7217 /* Ball.cpp */,
+				AC9D8C321C4769DD001A7217 /* Ball.hpp */,
+			);
+			path = ball;
+			sourceTree = "<group>";
+		};
+		AC9D8C331C4769DD001A7217 /* bear */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C341C4769DD001A7217 /* Bear.cpp */,
+				AC9D8C351C4769DD001A7217 /* Bear.hpp */,
+			);
+			path = bear;
+			sourceTree = "<group>";
+		};
+		AC9D8C361C4769DD001A7217 /* book */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C371C4769DD001A7217 /* Book.cpp */,
+				AC9D8C381C4769DD001A7217 /* Book.hpp */,
+			);
+			path = book;
+			sourceTree = "<group>";
+		};
+		AC9D8C391C4769DD001A7217 /* bookshelf */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C3A1C4769DD001A7217 /* BookShelf.cpp */,
+				AC9D8C3B1C4769DD001A7217 /* BookShelf.hpp */,
+			);
+			path = bookshelf;
+			sourceTree = "<group>";
+		};
+		AC9D8C3C1C4769DD001A7217 /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C3D1C4769DD001A7217 /* Bridge.cpp */,
+				AC9D8C3E1C4769DD001A7217 /* Bridge.hpp */,
+			);
+			path = bridge;
+			sourceTree = "<group>";
+		};
+		AC9D8C3F1C4769DD001A7217 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C401C4769DD001A7217 /* Camera.cpp */,
+				AC9D8C411C4769DD001A7217 /* Camera.hpp */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		AC9D8C421C4769DD001A7217 /* chandelier */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C431C4769DD001A7217 /* Chandelier.cpp */,
+				AC9D8C441C4769DD001A7217 /* Chandelier.hpp */,
+			);
+			path = chandelier;
+			sourceTree = "<group>";
+		};
+		AC9D8C451C4769DD001A7217 /* chandelierhit */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C461C4769DD001A7217 /* ChandelierHit.cpp */,
+				AC9D8C471C4769DD001A7217 /* ChandelierHit.hpp */,
+			);
+			path = chandelierhit;
+			sourceTree = "<group>";
+		};
+		AC9D8C481C4769DD001A7217 /* cinderella */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C491C4769DD001A7217 /* Cinderella.cpp */,
+				AC9D8C4A1C4769DD001A7217 /* Cinderella.hpp */,
+			);
+			path = cinderella;
+			sourceTree = "<group>";
+		};
+		AC9D8C4F1C4769DD001A7217 /* end */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C501C4769DD001A7217 /* end.cpp */,
+				AC9D8C511C4769DD001A7217 /* end.hpp */,
+			);
+			path = end;
+			sourceTree = "<group>";
+		};
+		AC9D8C521C4769DD001A7217 /* floor */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C531C4769DD001A7217 /* Floor.cpp */,
+				AC9D8C541C4769DD001A7217 /* Floor.hpp */,
+			);
+			path = floor;
+			sourceTree = "<group>";
+		};
+		AC9D8C551C4769DD001A7217 /* gate */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C561C4769DD001A7217 /* Gate.cpp */,
+				AC9D8C571C4769DD001A7217 /* Gate.hpp */,
+			);
+			path = gate;
+			sourceTree = "<group>";
+		};
+		AC9D8C581C4769DD001A7217 /* gateside */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C591C4769DD001A7217 /* GateSide.cpp */,
+				AC9D8C5A1C4769DD001A7217 /* GateSide.hpp */,
+			);
+			path = gateside;
+			sourceTree = "<group>";
+		};
+		AC9D8C5B1C4769DD001A7217 /* graycube */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C5C1C4769DD001A7217 /* GrayCube.cpp */,
+				AC9D8C5D1C4769DD001A7217 /* GrayCube.hpp */,
+			);
+			path = graycube;
+			sourceTree = "<group>";
+		};
+		AC9D8C5E1C4769DD001A7217 /* handrail */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C5F1C4769DD001A7217 /* HandRail.cpp */,
+				AC9D8C601C4769DD001A7217 /* HandRail.hpp */,
+			);
+			path = handrail;
+			sourceTree = "<group>";
+		};
+		AC9D8C611C4769DD001A7217 /* horse */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C621C4769DD001A7217 /* Horse.cpp */,
+				AC9D8C631C4769DD001A7217 /* Horse.hpp */,
+			);
+			path = horse;
+			sourceTree = "<group>";
+		};
+		AC9D8C641C4769DD001A7217 /* hydrant */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C651C4769DD001A7217 /* Hydrant.cpp */,
+				AC9D8C661C4769DD001A7217 /* Hydrant.hpp */,
+			);
+			path = hydrant;
+			sourceTree = "<group>";
+		};
+		AC9D8C671C4769DD001A7217 /* king */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C681C4769DD001A7217 /* King.cpp */,
+				AC9D8C691C4769DD001A7217 /* King.hpp */,
+			);
+			path = king;
+			sourceTree = "<group>";
+		};
+		AC9D8C6A1C4769DD001A7217 /* king2 */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C6B1C4769DD001A7217 /* king2.cpp */,
+				AC9D8C6C1C4769DD001A7217 /* king2.hpp */,
+			);
+			path = king2;
+			sourceTree = "<group>";
+		};
+		AC9D8C6D1C4769DD001A7217 /* lamppost */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C6E1C4769DD001A7217 /* LampPost.cpp */,
+				AC9D8C6F1C4769DD001A7217 /* LampPost.hpp */,
+			);
+			path = lamppost;
+			sourceTree = "<group>";
+		};
+		AC9D8C701C4769DD001A7217 /* orchestra */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C711C4769DD001A7217 /* Orchestra.cpp */,
+				AC9D8C721C4769DD001A7217 /* Orchestra.hpp */,
+			);
+			path = orchestra;
+			sourceTree = "<group>";
+		};
+		AC9D8C731C4769DD001A7217 /* piano */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C741C4769DD001A7217 /* Piano.cpp */,
+				AC9D8C751C4769DD001A7217 /* Piano.hpp */,
+			);
+			path = piano;
+			sourceTree = "<group>";
+		};
+		AC9D8C761C4769DD001A7217 /* plate */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C771C4769DD001A7217 /* Plate.cpp */,
+				AC9D8C781C4769DD001A7217 /* Plate.hpp */,
+			);
+			path = plate;
+			sourceTree = "<group>";
+		};
+		AC9D8C791C4769DD001A7217 /* pumpkin */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C7A1C4769DD001A7217 /* Pumpkin.cpp */,
+				AC9D8C7B1C4769DD001A7217 /* Pumpkin.hpp */,
+			);
+			path = pumpkin;
+			sourceTree = "<group>";
+		};
+		AC9D8C7C1C4769DD001A7217 /* river */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C7D1C4769DD001A7217 /* River.cpp */,
+				AC9D8C7E1C4769DD001A7217 /* River.hpp */,
+			);
+			path = river;
+			sourceTree = "<group>";
+		};
+		AC9D8C7F1C4769DD001A7217 /* shoes */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C801C4769DD001A7217 /* Shoes.cpp */,
+				AC9D8C811C4769DD001A7217 /* Shoes.hpp */,
+			);
+			path = shoes;
+			sourceTree = "<group>";
+		};
+		AC9D8C821C4769DD001A7217 /* shop */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C831C4769DD001A7217 /* Shop.cpp */,
+				AC9D8C841C4769DD001A7217 /* Shop.hpp */,
+			);
+			path = shop;
+			sourceTree = "<group>";
+		};
+		AC9D8C851C4769DD001A7217 /* sister */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C861C4769DD001A7217 /* Sister.cpp */,
+				AC9D8C871C4769DD001A7217 /* Sister.hpp */,
+			);
+			path = sister;
+			sourceTree = "<group>";
+		};
+		AC9D8C881C4769DD001A7217 /* stairs */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C891C4769DD001A7217 /* Stairs.cpp */,
+				AC9D8C8A1C4769DD001A7217 /* Stairs.hpp */,
+			);
+			path = stairs;
+			sourceTree = "<group>";
+		};
+		AC9D8C8B1C4769DD001A7217 /* stairs2 */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C8C1C4769DD001A7217 /* Stairs2.cpp */,
+				AC9D8C8D1C4769DD001A7217 /* Stairs2.hpp */,
+			);
+			path = stairs2;
+			sourceTree = "<group>";
+		};
+		AC9D8C8E1C4769DD001A7217 /* townwindow */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C8F1C4769DD001A7217 /* Townwindow.cpp */,
+				AC9D8C901C4769DD001A7217 /* Townwindow.hpp */,
+			);
+			path = townwindow;
+			sourceTree = "<group>";
+		};
+		AC9D8C911C4769DD001A7217 /* townwindowhit */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C921C4769DD001A7217 /* TownwindowHit.cpp */,
+				AC9D8C931C4769DD001A7217 /* TownwindowHit.hpp */,
+			);
+			path = townwindowhit;
+			sourceTree = "<group>";
+		};
+		AC9D8C941C4769DD001A7217 /* witch */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C951C4769DD001A7217 /* Witch.cpp */,
+				AC9D8C961C4769DD001A7217 /* Witch.hpp */,
+			);
+			path = witch;
+			sourceTree = "<group>";
+		};
+		AC9D8C971C4769DD001A7217 /* woodenbox */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8C981C4769DD001A7217 /* WoodenBox.cpp */,
+				AC9D8C991C4769DD001A7217 /* WoodenBox.hpp */,
+			);
+			path = woodenbox;
+			sourceTree = "<group>";
+		};
 		ACA081D61BF2570E005FB898 /* collision */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,29 +783,46 @@
 		ACAE91D41C16E4C70008B83E /* cinderella */ = {
 			isa = PBXGroup;
 			children = (
-				ACAE91DC1C1805400008B83E /* CinderellaScene.cpp */,
-				ACAE91DD1C1805400008B83E /* CinderellaScene.hpp */,
-				ACF594DC1C207E6200806B39 /* CinderellaLoad.cpp */,
-				ACF594DD1C207E6200806B39 /* CinderellaLoad.hpp */,
-				142C547E1C2A71D600D80B94 /* apple */,
-				142C54811C2A71D600D80B94 /* ball */,
-				142C54841C2A71D600D80B94 /* bear */,
-				142C54871C2A71D600D80B94 /* book */,
-				142C548A1C2A71D600D80B94 /* bookshelf */,
-				142C548D1C2A71D600D80B94 /* bridge */,
-				142C54901C2A71D600D80B94 /* camera */,
-				142C54931C2A71D600D80B94 /* cinderella */,
-				142C54961C2A71D600D80B94 /* floor */,
-				142C54991C2A71D600D80B94 /* handrail */,
-				142C549C1C2A71D600D80B94 /* hydrant */,
-				142C549E1C2A71D600D80B94 /* lamppost */,
-				142C54A01C2A71D600D80B94 /* piano */,
-				142C54A31C2A71D600D80B94 /* plate */,
-				142C54A51C2A71D600D80B94 /* pumpkin */,
-				142C54A71C2A71D600D80B94 /* shop */,
-				142C54A91C2A71D600D80B94 /* stairs */,
-				142C54AC1C2A71D600D80B94 /* townwindow */,
-				142C54AF1C2A71D600D80B94 /* woodenbox */,
+				AC9D8C2A1C4769DD001A7217 /* apple */,
+				AC9D8C2D1C4769DD001A7217 /* background */,
+				AC9D8C301C4769DD001A7217 /* ball */,
+				AC9D8C331C4769DD001A7217 /* bear */,
+				AC9D8C361C4769DD001A7217 /* book */,
+				AC9D8C391C4769DD001A7217 /* bookshelf */,
+				AC9D8C3C1C4769DD001A7217 /* bridge */,
+				AC9D8C3F1C4769DD001A7217 /* camera */,
+				AC9D8C421C4769DD001A7217 /* chandelier */,
+				AC9D8C451C4769DD001A7217 /* chandelierhit */,
+				AC9D8C481C4769DD001A7217 /* cinderella */,
+				AC9D8C4B1C4769DD001A7217 /* CinderellaLoad.cpp */,
+				AC9D8C4C1C4769DD001A7217 /* CinderellaLoad.hpp */,
+				AC9D8C4D1C4769DD001A7217 /* CinderellaScene.cpp */,
+				AC9D8C4E1C4769DD001A7217 /* CinderellaScene.hpp */,
+				AC9D8C4F1C4769DD001A7217 /* end */,
+				AC9D8C521C4769DD001A7217 /* floor */,
+				AC9D8C551C4769DD001A7217 /* gate */,
+				AC9D8C581C4769DD001A7217 /* gateside */,
+				AC9D8C5B1C4769DD001A7217 /* graycube */,
+				AC9D8C5E1C4769DD001A7217 /* handrail */,
+				AC9D8C611C4769DD001A7217 /* horse */,
+				AC9D8C641C4769DD001A7217 /* hydrant */,
+				AC9D8C671C4769DD001A7217 /* king */,
+				AC9D8C6A1C4769DD001A7217 /* king2 */,
+				AC9D8C6D1C4769DD001A7217 /* lamppost */,
+				AC9D8C701C4769DD001A7217 /* orchestra */,
+				AC9D8C731C4769DD001A7217 /* piano */,
+				AC9D8C761C4769DD001A7217 /* plate */,
+				AC9D8C791C4769DD001A7217 /* pumpkin */,
+				AC9D8C7C1C4769DD001A7217 /* river */,
+				AC9D8C7F1C4769DD001A7217 /* shoes */,
+				AC9D8C821C4769DD001A7217 /* shop */,
+				AC9D8C851C4769DD001A7217 /* sister */,
+				AC9D8C881C4769DD001A7217 /* stairs */,
+				AC9D8C8B1C4769DD001A7217 /* stairs2 */,
+				AC9D8C8E1C4769DD001A7217 /* townwindow */,
+				AC9D8C911C4769DD001A7217 /* townwindowhit */,
+				AC9D8C941C4769DD001A7217 /* witch */,
+				AC9D8C971C4769DD001A7217 /* woodenbox */,
 			);
 			path = cinderella;
 			sourceTree = "<group>";
@@ -721,51 +947,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF594DE1C207E6200806B39 /* CinderellaLoad.cpp in Sources */,
+				AC9D8CB41C4769DD001A7217 /* Plate.cpp in Sources */,
 				ACF594D21C1EE83500806B39 /* TitleLoad.cpp in Sources */,
 				ACA081D91BF25720005FB898 /* Collision.cpp in Sources */,
-				142C54C11C2A71D600D80B94 /* Stairs.cpp in Sources */,
 				1476D40F1C2911ED00F5CC31 /* Resource.cpp in Sources */,
-				142C54B71C2A71D600D80B94 /* Camera.cpp in Sources */,
 				ACF91EE61BE764F000AF6824 /* SceneManager.cpp in Sources */,
-				148FF1251C2ADF1C00DCBDC9 /* Pumpkin.cpp in Sources */,
+				AC9D8CA31C4769DD001A7217 /* ChandelierHit.cpp in Sources */,
+				AC9D8CA11C4769DD001A7217 /* Camera.cpp in Sources */,
 				1476D40D1C2911ED00F5CC31 /* AudioManager.cpp in Sources */,
-				ACAE91DE1C1805400008B83E /* CinderellaScene.cpp in Sources */,
-				142C54B91C2A71D600D80B94 /* Floor.cpp in Sources */,
 				ACF91EDB1BE757CD00AF6824 /* Scene.cpp in Sources */,
-				142C54B61C2A71D600D80B94 /* Bridge.cpp in Sources */,
+				AC9D8CBD1C4769DD001A7217 /* TownwindowHit.cpp in Sources */,
 				ACDB32F21BEF124F00046195 /* Object.cpp in Sources */,
-				142C54B11C2A71D600D80B94 /* Apple.cpp in Sources */,
-				142C54C61C2A729500D80B94 /* Hydrant.cpp in Sources */,
 				ACF91EE31BE75BC600AF6824 /* SceneMaker.cpp in Sources */,
+				AC9D8CBC1C4769DD001A7217 /* Townwindow.cpp in Sources */,
+				AC9D8CAE1C4769DD001A7217 /* Hydrant.cpp in Sources */,
+				AC9D8CA01C4769DD001A7217 /* Bridge.cpp in Sources */,
 				53FFB58AAE664DE1A8BEC021 /* DowaProjectApp.cpp in Sources */,
+				AC9D8CB71C4769DD001A7217 /* Shoes.cpp in Sources */,
 				ACF91EEF1BE8069000AF6824 /* Result.cpp in Sources */,
-				14A06D741C2AD21D005CF8B8 /* Plate.cpp in Sources */,
-				142C54C21C2A71D600D80B94 /* Townwindow.cpp in Sources */,
-				142C54BA1C2A71D600D80B94 /* HandRail.cpp in Sources */,
+				AC9D8CAB1C4769DD001A7217 /* GrayCube.cpp in Sources */,
+				AC9D8CB21C4769DD001A7217 /* Orchestra.cpp in Sources */,
+				AC9D8C9A1C4769DD001A7217 /* Apple.cpp in Sources */,
+				AC9D8ABC1C2E9E9B001A7217 /* CrossFade.cpp in Sources */,
+				AC9D8CB51C4769DD001A7217 /* Pumpkin.cpp in Sources */,
 				1476D40E1C2911ED00F5CC31 /* ResKey.cpp in Sources */,
-				142C54BD1C2A71D600D80B94 /* Piano.cpp in Sources */,
+				AC9D8CAD1C4769DD001A7217 /* Horse.cpp in Sources */,
 				ACA20F271C087E2B0017DCA9 /* Window.cpp in Sources */,
 				BA2EA85C90F44FF3B2FE96CE /* MotionManager.cpp in Sources */,
-				142C54B51C2A71D600D80B94 /* BookShelf.cpp in Sources */,
+				AC9D8CA51C4769DD001A7217 /* CinderellaLoad.cpp in Sources */,
+				AC9D8CA91C4769DD001A7217 /* Gate.cpp in Sources */,
+				AC9D8CBE1C4769DD001A7217 /* Witch.cpp in Sources */,
+				AC9D8CAF1C4769DD001A7217 /* King.cpp in Sources */,
 				ACA081DD1BF317CD005FB898 /* Test.cpp in Sources */,
-				148FF1221C2ADEFA00DCBDC9 /* WoodenBox.cpp in Sources */,
-				148FF11F1C2ADACE00DCBDC9 /* Shop.cpp in Sources */,
-				142C54B81C2A71D600D80B94 /* Cinderella.cpp in Sources */,
+				AC9D8CBB1C4769DD001A7217 /* Stairs2.cpp in Sources */,
+				AC9D8C9F1C4769DD001A7217 /* BookShelf.cpp in Sources */,
+				AC9D8CA61C4769DD001A7217 /* CinderellaScene.cpp in Sources */,
 				AC5873FB1C06A43B00D40AE6 /* Utility.cpp in Sources */,
-				142C54B31C2A71D600D80B94 /* Bear.cpp in Sources */,
+				AC9D8CB91C4769DD001A7217 /* Sister.cpp in Sources */,
 				AC0DB5DA1BEDA14E00E9EFC0 /* Device.cpp in Sources */,
+				AC9D8C9D1C4769DD001A7217 /* Bear.cpp in Sources */,
+				AC9D8CA21C4769DD001A7217 /* Chandelier.cpp in Sources */,
+				AC9D8CBF1C4769DD001A7217 /* WoodenBox.cpp in Sources */,
+				AC9D8CB81C4769DD001A7217 /* Shop.cpp in Sources */,
+				AC9D8CAA1C4769DD001A7217 /* GateSide.cpp in Sources */,
 				9A062A5CA8124C4296DBBCF6 /* MotionImplCoreMotion.mm in Sources */,
-				142C54B21C2A71D600D80B94 /* Ball.cpp in Sources */,
 				1476D40C1C2911ED00F5CC31 /* Audio.cpp in Sources */,
+				AC9D8CA81C4769DD001A7217 /* Floor.cpp in Sources */,
+				AC9D8CBA1C4769DD001A7217 /* Stairs.cpp in Sources */,
+				AC9D8CAC1C4769DD001A7217 /* HandRail.cpp in Sources */,
+				AC9D8CA41C4769DD001A7217 /* Cinderella.cpp in Sources */,
+				AC9D8CB01C4769DD001A7217 /* king2.cpp in Sources */,
+				AC9D8C9C1C4769DD001A7217 /* Ball.cpp in Sources */,
+				AC9D8CA71C4769DD001A7217 /* end.cpp in Sources */,
 				AC2D3A2A1BFB359500345AA5 /* FadeIn.cpp in Sources */,
-				142C54B41C2A71D600D80B94 /* Book.cpp in Sources */,
+				AC9D8CB61C4769DD001A7217 /* River.cpp in Sources */,
+				AC9D8CB31C4769DD001A7217 /* Piano.cpp in Sources */,
 				ACF91EE01BE75ABC00AF6824 /* Title.cpp in Sources */,
+				AC9D8C9E1C4769DD001A7217 /* Book.cpp in Sources */,
+				AC9D8C9B1C4769DD001A7217 /* BackGround.cpp in Sources */,
 				AC2D3A2B1BFB359500345AA5 /* FadeOut.cpp in Sources */,
 				ACDB32FA1BF040F000046195 /* Task.cpp in Sources */,
 				ACF594D51C1EE8C000806B39 /* ResultLoad.cpp in Sources */,
 				1476D4101C2911ED00F5CC31 /* TextureManager.cpp in Sources */,
-				14A06D711C2ACBFA005CF8B8 /* LampPost.cpp in Sources */,
+				AC9D8CB11C4769DD001A7217 /* LampPost.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

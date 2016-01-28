@@ -9,6 +9,11 @@ class Apple : public Object
 {
   ci::gl::Texture mApple;
   
+  bool mFallFlag, mFloorHitFlag;
+  
+  float mGravityPower;
+  float mAcceleration;
+  
 public:
   
   Apple(const ci::Vec3f&, const ci::Vec3f&);
@@ -16,5 +21,7 @@ public:
   void setup();
   void update();
   void draw();
+  
+  void onCollisionUpdate(const std::shared_ptr<Object>&);
   
 };

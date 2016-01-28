@@ -1,7 +1,12 @@
 
 #pragma once
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
+
 #include "cinder/Camera.h"
+
+#include "cinder/Timeline.h"
+#include "cinder/Tween.h"
 
 
 namespace dowa {
@@ -12,9 +17,21 @@ private:
 
   ci::Vec3f mPos;
   float mOffset;
+  float offset;
   
   ci::Vec3f TopLeft;
   ci::Vec3f TopRight;
+  
+  float mViewLeft;
+  float mViewRight;
+  float mViewTop;
+  float mViewBottom;
+  
+  ci::gl::Texture mImage;
+  ci::Anim<float> mScale;
+  
+  ci::Anim<float> mAngle;
+  bool mIsGameOver;
 
   std::shared_ptr<Object> mForcusObj;
   
@@ -35,6 +52,15 @@ public:
   void bound();
   
   void update();
+  void draw();
+  
+  ci::Vec3f getPos();
+  float getViewLeft();
+  float getViewRight();
+  float getViewTop();
+  float getViewBottom();
+  
+  void setGameOver(float offset);
 };
 
 }

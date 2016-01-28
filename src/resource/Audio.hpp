@@ -10,9 +10,13 @@ private:
   ci::audio::BufferPlayerNodeRef bgm;
   ci::audio::GainNodeRef         gain;
   
+  std::shared_ptr<ci::audio::SourceFile>     file;
+  std::shared_ptr<ci::audio::BufferT<float>> buf;
+  
 public:
   Audio() = default;
   Audio(const std::string& path);
+  ~Audio();
   
   float getVolume();
   void  setVolume(float volume);
@@ -21,4 +25,6 @@ public:
   void stop();
   void enableLoop();
   void disableLoop();
+  
+  void clear();
 };

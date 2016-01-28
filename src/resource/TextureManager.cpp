@@ -28,6 +28,13 @@ ci::gl::Texture& TextureManager::find(int key) {
   return *get().mMap[key];
 }
 
+void TextureManager::kill(int key) {
+  get().mMap.erase(key);
+  if (get().mMap.find(key) == get().mMap.end()) {
+    std::cout << key << "を削除" << std::endl;
+  }
+}
+
 void TextureManager::clear() {
   get().mMap.clear();
 }

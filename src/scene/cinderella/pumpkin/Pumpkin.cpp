@@ -2,6 +2,7 @@
 #include "Pumpkin.hpp"
 
 #include "../../../resource/Resource.hpp"
+#include "../../../object/Task.hpp"
 
 
 Pumpkin::Pumpkin(const ci::Vec3f& PumpkinPos, const ci::Vec3f& PumpkinSize, const std::string& PumpkinNamef)
@@ -14,11 +15,21 @@ Pumpkin::Pumpkin(const ci::Vec3f& PumpkinPos, const ci::Vec3f& PumpkinSize, cons
   mPumpkin1 = TextureManager::find(ResKey::CPumpkin1);
   mPumpkin2 = TextureManager::find(ResKey::CPumpkin2);
   
+  setColliderType(Collider::Rect);
+  
 }
 
 void Pumpkin::setup() {}
 
-void Pumpkin::update() {}
+void Pumpkin::update()
+{
+  ci::Vec3i mCinderellaPos = Task::find("Cinderella") -> getPos();
+  
+  if(mCinderellaPos.x > 3600 && mPumpkinName == "Pumpkin1")
+  {
+    mPos.y += 5;
+  }
+}
 
 void Pumpkin::draw()
 {
@@ -49,3 +60,5 @@ void Pumpkin::drawPumpkin(const ci::gl::Texture & PumpkinTexture)
   ci::gl::drawCube(ci::Vec3f(ci::Vec3f::zero()), mSize);
   PumpkinTexture.unbind();
 }
+
+void Pumpkin::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}

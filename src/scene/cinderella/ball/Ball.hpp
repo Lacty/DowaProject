@@ -2,19 +2,29 @@
 #pragma once
 
 #include "../../../object/Object.hpp"
+#include "../../../resource/Resource.hpp"
 
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
 
-class Ball : public Object
-{
+
+class Ball : public Object {
 private:
   ci::Vec3f mAcc;
   ci::Vec3f mRot;
   ci::Quatf mQua;
-  float speedRate;
+  float mSpeedRate;
+  
+  float mViewLeft;
+  float mViewRight;
+  float mViewTop;
+  float mViewBottom;
+  
+  void bound();
   
   ci::gl::Texture mSphereBlue;
+  
+  Audio mHitSE;
   
 public:
   
@@ -27,4 +37,7 @@ public:
   void draw();
   
   void onCollisionUpdate(const std::shared_ptr<Object>& compare);
+  
+  void setViewSize(float left, float right, float top, float bottom);
+  bool isOutOfStage();
 };

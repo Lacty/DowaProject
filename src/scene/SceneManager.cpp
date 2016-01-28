@@ -2,6 +2,7 @@
 #include "SceneManager.hpp"
 #include "Scene.hpp"
 #include "../object/Task.hpp"
+#include "../resource/Resource.hpp"
 
 
 SceneManager::SceneManager() {}
@@ -41,6 +42,8 @@ void SceneManager::update() {
   get().mScene->update();
   Task::update();
   
+  AudioManager::update();
+  
   get().mFadeIn.update();
   get().mFadeOut.update();
   
@@ -50,8 +53,9 @@ void SceneManager::update() {
 }
 
 void SceneManager::draw() {
-  get().mScene->draw();
   Task::draw();
+  get().mScene->draw();
+  
   get().mFadeIn.draw();
   get().mFadeOut.draw();
 }

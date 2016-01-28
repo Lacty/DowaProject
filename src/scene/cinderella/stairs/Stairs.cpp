@@ -1,10 +1,12 @@
 
 #include "Stairs.hpp"
+#include "../../../object/Task.hpp"
 
-Stairs::Stairs(const ci::Vec3f& mStairsPosf, const ci::Vec3f& mStairsSizef)
+
+Stairs::Stairs(const ci::Vec3f& Pos, const ci::Vec3f& Size)
 {
-  mPos = mStairsPosf;
-  mSize = mStairsSizef;
+  mPos = Pos;
+  mSize = Size;
   
   setColliderType(Collider::Rect);
 }
@@ -27,7 +29,4 @@ void Stairs::draw()
   ci::gl::popModelView();
 }
 
-void Stairs::onCollisionUpdate(const std::shared_ptr<Object>& compare)
-{
-  
-}
+void Stairs::onCollisionUpdate(const std::shared_ptr<Object>& compare) {}
