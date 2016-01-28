@@ -350,7 +350,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Shoes", std::make_shared<Shoes>(ci::Vec3i( 6100, 500, 0),
                                              ci::Vec3i( 12, 12, 0)));
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 5500, 50, 0),
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0),
                                              ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   
@@ -368,8 +368,8 @@ CinderellaScene::CinderellaScene()
                                                    ci::Vec3i( 230, 300, 0)));
   
   // Last Placement
-  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0.f),
-                                                   ci::Vec3i( 113, 20, 0.f)));
+  //Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0.f),
+  //                                                 ci::Vec3i( 113, 20, 0.f)));
   
   // End
   end = std::make_shared<End>(ResKey::CEnd);
