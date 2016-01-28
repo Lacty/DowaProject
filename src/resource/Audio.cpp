@@ -1,5 +1,6 @@
 
 #include "Audio.hpp"
+#include "cinder/app/AppNative.h"
 
 
 Audio::Audio(const std::string& path) {

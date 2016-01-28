@@ -82,6 +82,96 @@
     <Filter Include="Source Files\scene\cinderella\piano">
       <UniqueIdentifier>{8e428be1-9a6d-4f6c-bd9c-2ef8ee25cdf6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\scene\cinderella\woodenBox">
+      <UniqueIdentifier>{eced1865-73b3-4bd8-8bc5-b564c5f3a751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\witch">
+      <UniqueIdentifier>{b1506c0e-51c9-410a-b430-dfba8fffe16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\townwindowhit">
+      <UniqueIdentifier>{58a98315-9870-446e-ae1a-91ee6e6534e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\townwindow">
+      <UniqueIdentifier>{e45dde5d-9819-44b0-8ae0-59c89e17f5ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\stairs2">
+      <UniqueIdentifier>{86e95daa-a939-4d68-93b7-55ca073f644a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\stairs">
+      <UniqueIdentifier>{463f684d-498c-477b-a515-28994c7754e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\sister">
+      <UniqueIdentifier>{390320bb-75a5-4f27-8d98-758b2f9284a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\shop">
+      <UniqueIdentifier>{fceebaa7-c073-45d2-8cb4-dd552408ae6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\shoes">
+      <UniqueIdentifier>{3103ed09-8d31-4625-8a9a-77d3efd09f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\river">
+      <UniqueIdentifier>{3814a525-df32-491f-8add-cf8d027039e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\pumpkin">
+      <UniqueIdentifier>{06463ae7-c211-4f8b-a5fa-402a14200732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\plate">
+      <UniqueIdentifier>{6b117be7-2d87-4980-87af-4b7347b8fcab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\orchestra">
+      <UniqueIdentifier>{84817ca8-2f4f-44d7-87e1-deba04f61a36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\lamppost">
+      <UniqueIdentifier>{570217ab-1564-4a81-bffc-96da7a221a48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\king2">
+      <UniqueIdentifier>{6a63d2d2-939c-46c0-99ed-3e47e07b5f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\king">
+      <UniqueIdentifier>{56122620-9bab-4bdc-81d2-9dad6fd79f56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\hydrant">
+      <UniqueIdentifier>{a1fa8f13-51b3-4f44-a151-7cb70704c071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\horse">
+      <UniqueIdentifier>{7789c4db-7d0e-4513-a2f0-dccd74e76c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\handrail">
+      <UniqueIdentifier>{9b435027-48d6-48dd-9722-2d1361a4fcd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\graycube">
+      <UniqueIdentifier>{8ceef6e8-7665-43dd-9587-a7cf7b3700be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\gateside">
+      <UniqueIdentifier>{2ad24192-3e9a-4aa4-9265-1d45bb0318a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\gate">
+      <UniqueIdentifier>{4dbdde38-ffd5-4422-b601-a336bca073e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\fall">
+      <UniqueIdentifier>{088ad315-0542-4c84-ad3f-da6f4e8d1c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\end">
+      <UniqueIdentifier>{cedf8d54-5ff7-4ef5-bf9f-4de303f241c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\chandelierhit">
+      <UniqueIdentifier>{9d288b77-61d3-4a51-8b52-441b24434a7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\chandelier">
+      <UniqueIdentifier>{e188505a-26c8-46c4-9858-736eda3c6ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\bridge">
+      <UniqueIdentifier>{e64c117e-7fe4-4a0f-aa4e-46d672f44045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\bear">
+      <UniqueIdentifier>{70ef8871-871b-4c45-b306-def9ff11ea50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\background">
+      <UniqueIdentifier>{9ee771f9-b568-42ca-98c4-606f4b0d33c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\cinderella\apple">
+      <UniqueIdentifier>{e869fb67-d730-457b-9898-eb435ce1ff52}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DowaProjectApp.cpp">
@@ -101,12 +191,6 @@
     </ClCompile>
     <ClCompile Include="..\src\LightUp\LightUp.cpp">
       <Filter>Source Files\lightup</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\resource\DataManager.cpp">
-      <Filter>Source Files\resource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\resource\ResourceManager.cpp">
-      <Filter>Source Files\resource</Filter>
     </ClCompile>
     <ClCompile Include="..\src\object\Object.cpp">
       <Filter>Source Files\object</Filter>
@@ -186,6 +270,117 @@
     <ClCompile Include="..\src\scene\cinderella\piano\Piano.cpp">
       <Filter>Source Files\scene\cinderella\piano</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\woodenbox\WoodenBox.cpp">
+      <Filter>Source Files\scene\cinderella\woodenBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\witch\Witch.cpp">
+      <Filter>Source Files\scene\cinderella\witch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\townwindowhit\TownwindowHit.cpp">
+      <Filter>Source Files\scene\cinderella\townwindowhit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\townwindow\Townwindow.cpp">
+      <Filter>Source Files\scene\cinderella\townwindow</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\stairs2\Stairs2.cpp">
+      <Filter>Source Files\scene\cinderella\stairs2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\stairs\Stairs.cpp">
+      <Filter>Source Files\scene\cinderella\stairs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\sister\Sister.cpp">
+      <Filter>Source Files\scene\cinderella\sister</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\shop\Shop.cpp">
+      <Filter>Source Files\scene\cinderella\shop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\shoes\Shoes.cpp">
+      <Filter>Source Files\scene\cinderella\shoes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\river\River.cpp">
+      <Filter>Source Files\scene\cinderella\river</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\pumpkin\Pumpkin.cpp">
+      <Filter>Source Files\scene\cinderella\pumpkin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\plate\Plate.cpp">
+      <Filter>Source Files\scene\cinderella\plate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\orchestra\Orchestra.cpp">
+      <Filter>Source Files\scene\cinderella\orchestra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\lamppost\LampPost.cpp">
+      <Filter>Source Files\scene\cinderella\lamppost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\king2\king2.cpp">
+      <Filter>Source Files\scene\cinderella\king2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\king\King.cpp">
+      <Filter>Source Files\scene\cinderella\king</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\hydrant\Hydrant.cpp">
+      <Filter>Source Files\scene\cinderella\hydrant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\horse\Horse.cpp">
+      <Filter>Source Files\scene\cinderella\horse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\handrail\HandRail.cpp">
+      <Filter>Source Files\scene\cinderella\handrail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\graycube\GrayCube.cpp">
+      <Filter>Source Files\scene\cinderella\graycube</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\gateside\GateSide.cpp">
+      <Filter>Source Files\scene\cinderella\gateside</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\gate\Gate.cpp">
+      <Filter>Source Files\scene\cinderella\gate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\end\end.cpp">
+      <Filter>Source Files\scene\cinderella\end</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\chandelierhit\ChandelierHit.cpp">
+      <Filter>Source Files\scene\cinderella\chandelierhit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\chandelier\Chandelier.cpp">
+      <Filter>Source Files\scene\cinderella\chandelier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\bridge\Bridge.cpp">
+      <Filter>Source Files\scene\cinderella\bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\bear\Bear.cpp">
+      <Filter>Source Files\scene\cinderella\bear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\background\BackGround.cpp">
+      <Filter>Source Files\scene\cinderella\background</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scene\cinderella\apple\Apple.cpp">
+      <Filter>Source Files\scene\cinderella\apple</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\Audio.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\AudioManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\CrossFade.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\DataManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\ResKey.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\Resource.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\ResourceManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\TextureManager.cpp">
+      <Filter>Source Files\resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -199,15 +394,6 @@
     </ClInclude>
     <ClInclude Include="..\src\LightUp\LightUp.hpp">
       <Filter>Source Files\lightup</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\resource\DataManager.hpp">
-      <Filter>Source Files\resource</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\resource\ResourceKeys.hpp">
-      <Filter>Source Files\resource</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\resource\ResourceManager.hpp">
-      <Filter>Source Files\resource</Filter>
     </ClInclude>
     <ClInclude Include="..\src\object\Object.hpp">
       <Filter>Source Files\object</Filter>
@@ -289,6 +475,120 @@
     </ClInclude>
     <ClInclude Include="..\src\scene\cinderella\piano\Piano.hpp">
       <Filter>Source Files\scene\cinderella\piano</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\woodenbox\WoodenBox.hpp">
+      <Filter>Source Files\scene\cinderella\woodenBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\witch\Witch.hpp">
+      <Filter>Source Files\scene\cinderella\witch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\townwindowhit\TownwindowHit.hpp">
+      <Filter>Source Files\scene\cinderella\townwindowhit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\townwindow\Townwindow.hpp">
+      <Filter>Source Files\scene\cinderella\townwindow</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\stairs2\Stairs2.hpp">
+      <Filter>Source Files\scene\cinderella\stairs2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\stairs\Stairs.hpp">
+      <Filter>Source Files\scene\cinderella\stairs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\sister\Sister.hpp">
+      <Filter>Source Files\scene\cinderella\sister</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\shop\Shop.hpp">
+      <Filter>Source Files\scene\cinderella\shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\shoes\Shoes.hpp">
+      <Filter>Source Files\scene\cinderella\shoes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\river\River.hpp">
+      <Filter>Source Files\scene\cinderella\river</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\pumpkin\Pumpkin.hpp">
+      <Filter>Source Files\scene\cinderella\pumpkin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\plate\Plate.hpp">
+      <Filter>Source Files\scene\cinderella\plate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\orchestra\Orchestra.hpp">
+      <Filter>Source Files\scene\cinderella\orchestra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\lamppost\LampPost.hpp">
+      <Filter>Source Files\scene\cinderella\lamppost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\king2\king2.hpp">
+      <Filter>Source Files\scene\cinderella\king2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\king\King.hpp">
+      <Filter>Source Files\scene\cinderella\king</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\hydrant\Hydrant.hpp">
+      <Filter>Source Files\scene\cinderella\hydrant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\horse\Horse.hpp">
+      <Filter>Source Files\scene\cinderella\horse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\handrail\HandRail.hpp">
+      <Filter>Source Files\scene\cinderella\handrail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\graycube\GrayCube.hpp">
+      <Filter>Source Files\scene\cinderella\graycube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\gateside\GateSide.hpp">
+      <Filter>Source Files\scene\cinderella\gateside</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\gate\Gate.hpp">
+      <Filter>Source Files\scene\cinderella\gate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\end\end.hpp">
+      <Filter>Source Files\scene\cinderella\end</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\chandelierhit\ChandelierHit.hpp">
+      <Filter>Source Files\scene\cinderella\chandelierhit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\chandelier\Chandelier.hpp">
+      <Filter>Source Files\scene\cinderella\chandelier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\bridge\Bridge.hpp">
+      <Filter>Source Files\scene\cinderella\bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\bear\Bear.hpp">
+      <Filter>Source Files\scene\cinderella\bear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\background\BackGround.hpp">
+      <Filter>Source Files\scene\cinderella\background</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scene\cinderella\apple\Apple.hpp">
+      <Filter>Source Files\scene\cinderella\apple</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\Audio.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\AudioManager.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\CrossFade.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\DataManager.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResKey.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\Resource.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceKeys.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\ResourceManager.hpp">
+      <Filter>Source Files\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\TextureManager.hpp">
+      <Filter>Source Files\resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
