@@ -1,4 +1,4 @@
-
+﻿
 #include "Title.hpp"
 
 #include "cinder/app/AppNative.h"
@@ -26,8 +26,8 @@ Title::Title()
   mMenu.play();
   
   // デバイスのウィンドサイズを取得し、代入
-  mDeviceWindowWidth = ci::app::getWindowWidth();
-  mDeviceWindowHeight = ci::app::getWindowHeight();
+  mDeviceWindowWidth = (float)ci::app::getWindowWidth();
+  mDeviceWindowHeight = (float)ci::app::getWindowHeight();
   
   // 画像座標設定
   mFeatherBookRect = ci::Rectf(mDeviceWindowWidth / 5.0f,  mDeviceWindowHeight / 20.0f,
@@ -67,7 +67,7 @@ void Title::update()
   mKanaLetterTaRect = ci::Rectf(mDeviceWindowWidth / 4.5f,
                                 mDeviceWindowHeight / 4.0f + sin(M_PI * 2 / 240 * mSphereMotion) * 2,
                                 mDeviceWindowWidth / 2.5f,
-                                mDeviceWindowHeight / 2.0f + sin(M_PI * 2 / 240 * mSphereMotion) * 2); // た
+                                mDeviceWindowHeight / 2.0f + sin(M_PI * 2 / 240 * mSphereMotion) * 2.0f); // た
   
   mKanaLetterMaRect = ci::Rectf(mDeviceWindowWidth / 2.7f,
                                 mDeviceWindowHeight / 10.0f + sin(M_PI * 2 / 240 * mSphereMotion) * -2,
