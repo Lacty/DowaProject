@@ -7,6 +7,8 @@
 #include "scene/SceneManager.hpp"
 #include "resource/Resource.hpp"
 
+//#include <thread>
+
 using namespace ci;
 using namespace ci::app;
 using namespace dowa;
@@ -25,7 +27,8 @@ public:
 	void setup();
 
 	void prepareSettings(Settings* settings) {
-		settings->disableFrameRate();
+		//settings->disableFrameRate();
+		
 
 		//Add Code----------------
 		settings->setWindowSize(TEXTURE_WIDTH, TEXTURE_HEIGHT);
@@ -50,7 +53,7 @@ void DowaProjectApp::setup() {
 	AudioManager::enable();
 	TextureManager::enable();
 	SceneManager::enable();
-	SceneManager::create(SceneType::CinderellaLoad);
+	SceneManager::create(SceneType::TitleLoad);
 }
 
 void DowaProjectApp::mouseDown(MouseEvent event) {
@@ -68,6 +71,8 @@ void DowaProjectApp::touchesBegan(TouchEvent event) {
 
 void DowaProjectApp::update() {
 	SceneManager::update();
+
+	//std::this_thread::sleep_for(std::chrono::milliseconds(16));
 }
 
 void DowaProjectApp::draw() {

@@ -1,4 +1,4 @@
-
+﻿
 // mDeviceWindowWidth = 568
 // mDeviceWindowHeight = 320
 
@@ -49,8 +49,8 @@ CinderellaScene::CinderellaScene()
   ci::gl::pushMatrices();
   ci::gl::pushModelView();
   
-  mDeviceWindowWidth = ci::app::getWindowWidth();
-  mDeviceWindowHeight = ci::app::getWindowHeight();
+  mDeviceWindowWidth = (float)ci::app::getWindowWidth();
+  mDeviceWindowHeight = (float)ci::app::getWindowHeight();
   
   // 一回実行に使用
   mOnceRunFlag = true;
@@ -320,7 +320,7 @@ CinderellaScene::CinderellaScene()
                                                       ci::Vec3i( 60, 80, 0), "Orchestra2"));
   
   
-  mBall = std::make_shared<Ball>(ci::Vec3f( 2500, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
+  mBall = std::make_shared<Ball>(ci::Vec3f( 50, 50, 0), ci::Vec3f( 40.f, 40.f, 0.f), 0.2f); // 50
   Task::add("Ball", mBall);
   
   
@@ -350,7 +350,7 @@ CinderellaScene::CinderellaScene()
   Task::add("Shoes", std::make_shared<Shoes>(ci::Vec3i( 6100, 500, 0),
                                              ci::Vec3i( 12, 12, 0)));
   
-  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 5500, 50, 0),
+  mCinderella = std::make_shared<Cinderella>(ci::Vec3f( 150, 50, 0),
                                              ci::Vec3f( 75, 75, 0)); // 150, 50 Debug 5150, 0
   Task::add("Cinderella", mCinderella);
   
@@ -368,8 +368,8 @@ CinderellaScene::CinderellaScene()
                                                    ci::Vec3i( 230, 300, 0)));
   
   // Last Placement
-  Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0.f),
-                                                   ci::Vec3i( 113, 20, 0.f)));
+  //Task::add("GrayCube", std::make_shared<GrayCube>(ci::Vec3i( 3350, -165, 0),
+  //                                                 ci::Vec3i( 113, 20, 0)));
   
   // End
   end = std::make_shared<End>(ResKey::CEnd);
@@ -404,11 +404,15 @@ CinderellaScene::~CinderellaScene()
 
 void CinderellaScene::update()
 {
+
+	ci::app::console() << "camera" << camera.getPos() << std::endl;
+	ci::app::console() << "cinderer" << mCinderella->getPos() << std::endl;
   
   // Gameover 一回しか実行しない
   if (mCinderella -> mGameOverRturen && mOnceRunFlag)
   {
     camera.setGameOver(mCinderella -> mGameOverOffset);
+
     mGameOver.play();
     mHouse.stop();
     mTown.stop();
